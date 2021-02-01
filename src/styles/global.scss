@@ -1,0 +1,16 @@
+@import './animations.scss';
+@import './reset.scss';
+@import './fonts.scss';
+
+/* setup viewport */
+html {
+  @include fullscreenSetup();
+
+  overflow: hidden;
+  background: #FBFBFD;
+  body {
+    @include fullsize();
+
+    position: relative;
+  }
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html
+  lang="<%= htmlWebpackPlugin.options.language %>"
+  data-region="<%= htmlWebpackPlugin.options.region %>"
+>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
+    <title>Apple</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=<%= `${htmlWebpackPlugin.options.gaId}` %>"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', '<%= `${htmlWebpackPlugin.options.gaId}` %>');
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>

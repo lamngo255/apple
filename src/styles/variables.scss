@@ -1,0 +1,11 @@
+/* default font */
+$defaultFont: 'Beaufort', 'Noto Sans TC400', 'Microsoft YaHei',
+  \5fae\8f6f\96c5\9ed1, PMingLiU, \65b0\7d30\660e\9ad4;
+
+/* media query */
+$queryIphoneXPortrait: '(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)';
+$queryIphoneXLandscape: '(device-width: 812px) and (device-height: 375px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)';
+$queryIphone678PlusPortrait: '(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)';
+$queryIphone678PlusLandscape: '(device-width: 736px) and (device-height: 414px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)';
+$queryIphone678Portrait: '(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)';
+$queryIphone678Landscape: '(device-width: 667px) and (device-height: 375px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)';

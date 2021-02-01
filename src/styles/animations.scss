@@ -1,0 +1,19 @@
+@keyframes floating {
+  0% {
+    backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    backface-visibility: hidden;
+    transform: translate3d(0, -0.2rem, 0);
+  }
+}
+
+@keyframes blinking {
+  from {
+    filter: brightness(1);
+  }
+  to {
+    filter: brightness(1.3);
+  }
+}
