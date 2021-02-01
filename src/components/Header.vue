@@ -40,15 +40,17 @@ export default {
 <style lang="scss" scoped>
 .header {
   width: 100%;
-  background: #333;
+  z-index: 1;
+  margin-top: 0.45rem;
 }
 
 #navbar {
+  @include position(fixed, $top: 0, $left: 0);
   @include sizeWH(100%, 0.45rem);
   @include flexCenter(row);
   @include textMixin(rgb(226, 223, 223), 0.15rem);
-  margin-top: -0.03rem;
-  margin-left: 0.2rem;
+  background: #333;
+  padding-left: 0.3rem;
   li {
     margin-right: 0.68rem;
     cursor: pointer;
@@ -75,8 +77,8 @@ export default {
 
   .shop-online {
     @include sizeWH(100%, 0.62rem);
-    @include textMixin(#1e1e1f, 0.15rem);
-    padding-top: 0.12rem;
+    @include textMixin(#1e1e1f, 0.145rem);
+    padding-top: 0.1rem;
     background: #f5f5f7;
     line-height: 0.2rem;
   }

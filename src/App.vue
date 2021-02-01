@@ -48,7 +48,6 @@ export default {
 #app {
   @include textMixin(#212121, 0.24rem, $align: center);
   @include flexCenter(row);
-  width: 100%;
   background: #fbfbfd;
   position: relative;
   font-family: 'San Francisco', sans-serif;

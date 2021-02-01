@@ -85,6 +85,7 @@ acronym {
 
 a {
   text-decoration: none;
+  color: #2A97FF;
 }
 
 input,
@@ -119,6 +120,9 @@ li {
   &:active {
     transition: all 0s;
     transform: scale(1.07);
+  }
+  &:hover {
+    text-decoration: underline;
   }
 }
 

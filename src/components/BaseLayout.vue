@@ -22,7 +22,10 @@ export default {
 <style lang="scss" scoped>
 .base-layout {
   @include flexCenter(column);
-  @include sizeWH(100%, auto);
+  @include sizeWH(100%, 100vh);
+  justify-content: flex-start;
   position: relative;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 </style>
