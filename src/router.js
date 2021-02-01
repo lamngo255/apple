@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import GameBoard from '@/components/GameBoard.vue';
+import MainPage from '@/components/MainPage.vue';
 
 Vue.use(Router);
 
@@ -10,13 +10,13 @@ export default new Router({
     {
       path: '/',
       redirect: {
-        name: 'GameBoard',
+        name: 'MainPage',
       },
     },
     {
       path: '/home',
-      name: 'GameBoard',
-      component: GameBoard,
+      name: 'MainPage',
+      component: MainPage,
     },
   ],
 });

@@ -1,6 +1,5 @@
 <template>
   <BaseModalSmall @close="closePopup">
-    
     <template #header>
       <span>{{ $t('textError') }}</span>
     </template>
@@ -10,15 +9,14 @@
 
     <template #footer>
       <ButtonPrimary @click="closePopup">
-        <span>{{ $t('btnConfirm')}}</span>
+        <span>{{ $t('btnConfirm') }}</span>
       </ButtonPrimary>
     </template>
-    
   </BaseModalSmall>
 </template>
 
 <script>
-import utils from '@/utils'
+import utils from '@/utils';
 import { mapActions, mapState } from 'vuex';
 import ButtonPrimary from '../ff/ButtonPrimary.vue';
 import BaseModalSmall from '../ff/BaseModalSmall.vue';
@@ -37,7 +35,6 @@ export default {
     message() {
       return this.$t(utils.capitalize(this.error));
     },
-
   },
 
   methods: {
