@@ -1,20 +1,21 @@
 <template>
   <div class="base-layout">
-    <Header />
-    <main>
-      <slot></slot>
-    </main>
+    <BaseHeader />
+    <slot></slot>
+    <BaseFooter />
   </div>
 </template>
 
 <script>
-import Header from './Header.vue';
+import BaseHeader from './BaseHeader.vue';
+import BaseFooter from './BaseFooter.vue';
 
 export default {
   name: 'BaseLayout',
 
   components: {
-    Header,
+    BaseHeader,
+    BaseFooter,
   },
 };
 </script>

@@ -1,8 +1,8 @@
 <template>
-  <div class="header">
+  <div class="base-header">
     <ul id="navbar">
-      <li class="logo" />
-      <li>Mac</li>
+      <li class="logo" @click="$router.push('/')" />
+      <li @click="$router.push('mac')">Mac</li>
       <li>iPad</li>
       <li>iPhone</li>
       <li>Watch</li>
@@ -13,7 +13,7 @@
       <li class="bag"></li>
     </ul>
 
-    <div class="extra">
+    <div class="extra" v-if="showExtra">
       <div class="covid">
         Evaluate COVID‑19 symptoms and understand next steps
       </div>
@@ -33,12 +33,18 @@
 
 <script>
 export default {
-  name: 'Header',
+  name: 'BaseHeader',
+
+  computed: {
+    showExtra() {
+      return window.location.pathname === '/home';
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
-.header {
+.base-header {
   width: 100%;
   z-index: 1;
   margin-top: 0.45rem;
@@ -49,8 +55,9 @@ export default {
   @include sizeWH(100%, 0.45rem);
   @include flexCenter(row);
   @include textMixin(rgb(226, 223, 223), 0.15rem);
-  background: #333;
+  background: rgba(0, 0, 0, 0.8);
   padding-left: 0.3rem;
+
   li {
     margin-right: 0.68rem;
     cursor: pointer;

@@ -48,12 +48,20 @@ export default {
 #app {
   @include textMixin(#212121, 0.24rem, $align: center);
   @include flexCenter(row);
-  background: #fbfbfd;
+  background: #fff;
   position: relative;
   font-family: 'San Francisco', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
   text-align: center;
+}
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  transition: opacity 150ms;
 }
 </style>
