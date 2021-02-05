@@ -48,12 +48,7 @@ Vue.filter('prependZero', (number, length = 2) => {
 // output: 'Helloworld'
 Vue.filter('capitalize', (value) => {
   if (!value) return '';
-  return (
-    value
-      .toString()
-      .charAt(0)
-      .toUpperCase() + value.slice(1)
-  );
+  return value.toString().charAt(0).toUpperCase() + value.slice(1);
 });
 
 /* camelizeStr */

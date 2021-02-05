@@ -92,9 +92,7 @@
           <img :src="$assetsUrl('main-page/gift-big.jpg')" />
           <div class="content">
             <div class="logo" />
-            <div class="title">
-              For lovers of Apple
-            </div>
+            <div class="title">For lovers of Apple</div>
             <div class="buttons">
               <a class="btn-shop" href="/shop">Shop gifts</a>
             </div>

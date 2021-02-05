@@ -7,8 +7,6 @@ const prodCdnMap = {
   sg: 'https://freefiremobile-a.akamaihd.net/common/web_event/apple',
 };
 
-// the config should be the same as specified in egeria.
-// https://egeria.garenanow.com/admin/transify/resource/
 const langMap = {
   sg: {
     sg_en: 18,
@@ -25,7 +23,6 @@ const locales = Object.keys(langMap[region]);
 process.env.CDN = process.env.CDN || prodCdnMap[region];
 process.env.LANG_MAP = JSON.stringify(langMap[region]);
 [process.env.LOCALE] = locales;
-process.env.REFERER = 'apple.ff.garena.com';
 process.env.REGION = region;
 process.env.TRANSIFY_ID = 0;
 

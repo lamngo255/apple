@@ -1,0 +1,40 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "extends": [
+      "eslint:recommended",
+      "airbnb-base",
+      "plugin:vue/essential",
+      "plugin:prettier/recommended"
+  ],
+  "globals": {
+      "Atomics": "readonly",
+      "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+      "ecmaVersion": 2019,
+      "sourceType": "module",
+      "parser": "babel-eslint"
+  },
+  "plugins": [
+      "vue",
+      "prettier"
+  ],
+  "rules": {
+    "prettier/prettier": "error",
+    "no-param-reassign": ["error", { "props": false}],
+    "no-unused-vars": "warn"
+  },
+  "settings": {
+    "import/resolver": {
+      "webpack": "webpack",
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"],
+        "paths": ["src/"]
+      }
+    }
+  }
+}

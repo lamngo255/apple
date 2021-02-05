@@ -205,16 +205,3 @@
   @include sizeWH($width, $height);
   background: url('#{$cdn}/#{$path}') center / $mode no-repeat;
 }
-
-@mixin i18nBgImg($paths...) {
-  @each $lang in $languages {
-    html:lang(#{$lang}) & {
-      $urls: ();
-      @each $path in $paths {
-        $urls: ($urls, assetsUrl('#{$lang}/#{$path}'));
-      }
-
-      background-image: $urls;
-    }
-  }
-}

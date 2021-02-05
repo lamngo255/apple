@@ -20,7 +20,6 @@ function getRegion() {
   return region;
 }
 
-
 function camelizeStr(str) {
   if (str.startsWith('_')) return str.slice(1, str.length);
   return str.replace(/[_.-](\w|$)/g, (_, x) => x.toUpperCase());

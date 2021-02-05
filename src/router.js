@@ -2,7 +2,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import MainPage from '@/components/MainPage.vue';
 // import Mac from '@/components/pages/Mac.vue';
-import Ipad from '@/components/pages/Ipad.vue';
+import Ipad from '@/components/pages/Ipad/index.vue';
 
 Vue.use(Router);
 
