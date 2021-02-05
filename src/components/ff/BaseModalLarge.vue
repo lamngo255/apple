@@ -55,7 +55,6 @@ export default {
   width: 100%;
   display: flex;
   font-size: 0.26rem;
-  font-family: 'Oswald-Medium', sans-serif;
   text-transform: uppercase;
 }
 

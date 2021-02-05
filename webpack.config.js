@@ -9,9 +9,6 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const extendedConfig = require('./webpack.config.extend');
 
-const deploymentRegion = process.env.REGION;
-const locale = process.env.LOCALE;
-const [localeRegion] = locale.split('_');
 const nodeEnv = process.env.NODE_ENV;
 const isProd = nodeEnv === 'production';
 const sourceMap = !isProd;
@@ -34,7 +31,7 @@ const config = {
   entry: fromSrc('main.js'),
   devtool: isProd ? false : 'source-map',
   output: {
-    path: path.join(__dirname, `dist/${deploymentRegion}`),
+    path: path.join(__dirname, 'dist'),
     filename: `${assetsPrefix}/js/${
       isProd ? '[name].[contenthash].js' : '[name].js'
     }`,
@@ -137,9 +134,6 @@ const config = {
             removeAttributeQuotes: true,
           }
         : false,
-      gaId: isProd ? extendedConfig.gaId : '',
-      language: locale,
-      region: localeRegion,
     }),
   ],
 
@@ -167,11 +161,7 @@ const config = {
 };
 
 if (isProd) {
-  config.plugins.unshift(
-    new CleanWebpackPlugin([
-      deploymentRegion ? `dist/${deploymentRegion}` : 'dist',
-    ]),
-  );
+  config.plugins.unshift(new CleanWebpackPlugin(['dist']));
   config.plugins.push(
     new MiniCssExtractPlugin({
       filename: `${assetsPrefix}/css/[name].[contenthash].css`,

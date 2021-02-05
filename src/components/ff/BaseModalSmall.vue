@@ -67,7 +67,6 @@ export default {
   width: 100%;
   overflow: auto;
   color: #000;
-  font-family: 'Oswald', sans-serif;
   text-align: center;
   overflow-y: hidden;
 }

@@ -1,26 +1,10 @@
 import axios from 'axios';
 import utils from '../utils';
 
-const API = 'api/v1';
-
-// store access_token
-let token = utils.getParam('access_token');
-if (token) localStorage.setItem('TOKEN', token);
-else token = localStorage.getItem('TOKEN');
-
-let language = utils.getParam('language');
-if (language) localStorage.setItem('LANGUAGE', language);
-else language = localStorage.getItem('LANGUAGE') || 'en';
-
-window.history.replaceState(
-  {},
-  '',
-  `${window.location.pathname}?language=${language}`,
-);
+const API = 'api';
 
 function api(method, svc, data = {}) {
   const url = `${API}/${svc}`;
-  const TOKEN = localStorage.getItem('TOKEN');
 
   const params = {
     method,
@@ -28,7 +12,6 @@ function api(method, svc, data = {}) {
     data: utils.snakifyKeys(data),
     headers: {
       'Content-Type': 'application/json',
-      'Sso-Token': TOKEN,
     },
     withCredentials: true,
   };
