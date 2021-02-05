@@ -1,7 +1,7 @@
 const linkingTarget = 'https://test.apple.com';
 
 // variables accessible in project src code
-const env = ['REGION', 'CDN', 'LANG_MAP', 'LOCALE', 'TRANSIFY_ID'];
+const env = ['CDN'];
 process.env.CDN = '/cdn/assets';
 
 module.exports = {
