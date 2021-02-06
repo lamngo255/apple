@@ -4,7 +4,7 @@
     <div class="compare">Compare iPad models</div>
 
     <div class="products">
-      <IpadFindProduct
+      <IpadCompareProduct
         v-for="(product, i) in products"
         :key="i"
         v-bind="product"
@@ -14,20 +14,20 @@
 </template>
 
 <script>
-import IpadFindProduct from './IpadFindProduct.vue';
+import IpadCompareProduct from './IpadCompareProduct.vue';
 
 export default {
   name: 'IpadFind',
 
   components: {
-    IpadFindProduct,
+    IpadCompareProduct,
   },
 
   data() {
     return {
       products: [
         {
-          image: this.$assetsUrl('pages/ipad/find/ipad-pro.png'),
+          image: this.$assetsUrl('pages/ipad/compare/ipad-pro.png'),
           name: 'Ipad Pro',
           price: 799,
           screenSize: '12.9” and 11”',
@@ -40,7 +40,7 @@ export default {
           pencil: 'Compatible with Apple Pencil (2nd generation)',
         },
         {
-          image: this.$assetsUrl('pages/ipad/find/ipad-air.png'),
+          image: this.$assetsUrl('pages/ipad/compare/ipad-air.png'),
           name: 'Ipad Air',
           price: 599,
           screenSize: '10.9”',
@@ -53,7 +53,7 @@ export default {
           pencil: 'Compatible with Apple Pencil (2nd generation)',
         },
         {
-          image: this.$assetsUrl('pages/ipad/find/ipad.png'),
+          image: this.$assetsUrl('pages/ipad/compare/ipad.png'),
           name: 'Ipad',
           price: 329,
           screenSize: '10.2”',
@@ -66,7 +66,7 @@ export default {
           pencil: 'Compatible with Apple Pencil (1st generation)',
         },
         {
-          image: this.$assetsUrl('pages/ipad/find/ipad-mini.png'),
+          image: this.$assetsUrl('pages/ipad/compare/ipad-mini.png'),
           name: 'Ipad Mini',
           price: 399,
           screenSize: '7.9”',

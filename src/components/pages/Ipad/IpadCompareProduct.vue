@@ -30,7 +30,7 @@
 
 <script>
 export default {
-  name: 'IpadFindProduct',
+  name: 'IpadCompareProduct',
 
   props: {
     image: { type: String, required: true },

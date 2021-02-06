@@ -1,8 +1,8 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import MainPage from '@/components/MainPage.vue';
-// import Mac from '@/components/pages/Mac.vue';
-import Ipad from '@/components/pages/Ipad/index.vue';
+import Mac from '@/components/pages/Mac';
+import Ipad from '@/components/pages/Ipad';
 
 Vue.use(Router);
 
@@ -20,11 +20,11 @@ export default new Router({
       name: 'MainPage',
       component: MainPage,
     },
-    // {
-    //   path: '/mac',
-    //   name: 'Mac',
-    //   component: Mac,
-    // },
+    {
+      path: '/mac',
+      name: 'Mac',
+      component: Mac,
+    },
     {
       path: '/ipad',
       name: 'Ipad',

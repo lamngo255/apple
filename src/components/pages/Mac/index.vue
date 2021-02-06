@@ -13,10 +13,10 @@
         Installments.* Learn more
       </div>
 
-      <IpadShowcase />
+      <MacShowcase />
 
       <div class="wrapper">
-        <IpadCompare />
+        <MacCompare />
       </div>
     </div>
   </BaseLayout>
@@ -24,38 +24,39 @@
 
 <script>
 import BaseLayout from '@/components/BaseLayout.vue';
-import IpadShowcase from './IpadShowcase.vue';
-import IpadCompare from './IpadCompare.vue';
+import MacShowcase from './MacShowcase.vue';
+import MacCompare from './MacCompare.vue';
 
 export default {
   name: 'Mac',
 
   components: {
     BaseLayout,
-    IpadShowcase,
-    IpadCompare,
+    MacShowcase,
+    MacCompare,
   },
 
   data() {
     return {
       productIcons: [
-        { name: 'iPad Pro', img: 'ipad-pro' },
-        { name: 'iPad Air', img: 'ipad-air' },
-        { name: 'iPad', img: 'ipad-light' },
-        { name: 'iPad Mini', img: 'ipad-mini' },
-        { name: 'Compare', img: 'ipad-compare' },
-        { name: 'Apple Pencil', img: 'apple-pencil' },
-        { name: 'Keyboards', img: 'keyboard' },
-        { name: 'Airpods', img: 'airpods' },
+        { name: 'Macbook Air', img: 'macbook-air' },
+        { name: 'Macbook Pro 13”', img: 'macbook-pro-13' },
+        { name: 'Macbook Pro 16”', img: 'macbook-pro-16' },
+        { name: 'iMac', img: 'imac' },
+        { name: 'iMac Pro', img: 'imac-pro' },
+        { name: 'Mac Pro', img: 'macpro' },
+        { name: 'Mac Mini', img: 'mac-mini' },
+        { name: 'Compare', img: 'compare' },
+        { name: 'Pro Display XDR', img: 'pro-display-xdr' },
         { name: 'Accessories', img: 'accessories' },
-        { name: 'iPadOS', img: 'ipad-os' },
+        { name: 'Big Sur', img: 'bigsur' },
       ],
     };
   },
 
   methods: {
     genIcon(path) {
-      return this.$assetsUrl(`product-icons/ipad/${path}.svg`);
+      return this.$assetsUrl(`product-icons/mac/${path}.svg`);
     },
   },
 };
@@ -70,19 +71,19 @@ export default {
 .products {
   @include sizeWH(100%, 1.15rem);
   @include flexCenter(row);
-  background: #fbfbfd;
+  background: #151515;
   padding-left: 0.2rem;
 
   .product {
     @include position(relative, $top: -0.08rem);
-    margin-right: 0.27rem;
+    margin-right: 0.3rem;
     cursor: pointer;
 
     .icon {
       @include sizeWH(0.5rem, 0.5rem);
     }
     .name {
-      @include textMixin(#000, 0.13rem);
+      @include textMixin(#fff, 0.13rem);
     }
 
     &:hover {
@@ -94,15 +95,15 @@ export default {
 }
 
 .cashback {
-  @include sizeWH(100%, 0.43rem);
-  @include textMixin(#000, 0.13rem);
-  padding-top: 0.14rem;
-  background: #f5f5f7;
+  @include sizeWH(100%, 0.3rem);
+  @include textMixin(#fff, 0.13rem);
+  padding-top: 0.05rem;
+  background: #151515;
 }
 
 .wrapper {
   @include sizeWH(100%, auto);
-  background: #f5f5f7;
+  background: #fff;
   padding: 0.3rem 0.7rem;
 }
 </style>
