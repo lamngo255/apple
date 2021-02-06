@@ -2,13 +2,13 @@
   <div class="base-header">
     <ul id="navbar">
       <li class="logo" @click="$router.push('/')" />
-      <li @click="$router.push('mac')">Mac</li>
-      <li>iPad</li>
-      <li>iPhone</li>
-      <li>Watch</li>
-      <li>TV</li>
-      <li>Music</li>
-      <li>Support</li>
+      <li
+        v-for="(data, i) in navData"
+        :key="i"
+        @click="$router.push(data.link)"
+      >
+        {{ data.name }}
+      </li>
       <li class="search"></li>
       <li class="bag"></li>
     </ul>
@@ -39,6 +39,20 @@ export default {
     showExtra() {
       return window.location.pathname === '/home';
     },
+  },
+
+  data() {
+    return {
+      navData: [
+        { name: 'Mac', link: 'mac' },
+        { name: 'Ipad', link: 'ipad' },
+        { name: 'Iphone', link: 'iphone' },
+        { name: 'Watch', link: 'watch' },
+        { name: 'TV', link: 'tv' },
+        { name: 'Music', link: 'music' },
+        { name: 'Support', link: 'support' },
+      ],
+    };
   },
 };
 </script>

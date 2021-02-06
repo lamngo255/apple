@@ -14,6 +14,10 @@
       </div>
 
       <IpadShowcase />
+
+      <div class="wrapper">
+        <IpadFind />
+      </div>
     </div>
   </BaseLayout>
 </template>
@@ -21,6 +25,7 @@
 <script>
 import BaseLayout from '@/components/BaseLayout.vue';
 import IpadShowcase from './IpadShowcase.vue';
+import IpadFind from './IpadFind.vue';
 
 export default {
   name: 'Mac',
@@ -28,6 +33,7 @@ export default {
   components: {
     BaseLayout,
     IpadShowcase,
+    IpadFind,
   },
 
   data() {
@@ -92,5 +98,11 @@ export default {
   @include textMixin(#000, 0.13rem);
   padding-top: 0.14rem;
   background: #f5f5f7;
+}
+
+.wrapper {
+  @include sizeWH(100%, auto);
+  background: #f5f5f7;
+  padding: 0.3rem 0.7rem;
 }
 </style>
