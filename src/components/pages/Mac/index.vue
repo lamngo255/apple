@@ -19,6 +19,7 @@
         <MacCompare />
         <MacTiles />
         <MacMaking />
+        <MacGetMore />
       </div>
     </div>
   </BaseLayout>
@@ -30,6 +31,7 @@ import MacShowcase from './MacShowcase.vue';
 import MacCompare from './MacCompare.vue';
 import MacTiles from './MacTiles.vue';
 import MacMaking from './MacMaking.vue';
+import MacGetMore from './MacGetMore.vue';
 
 export default {
   name: 'Mac',
@@ -40,6 +42,7 @@ export default {
     MacCompare,
     MacTiles,
     MacMaking,
+    MacGetMore,
   },
 
   data() {
