@@ -59,6 +59,7 @@ export default {
 
   img {
     @include sizeWH(6.98rem, 3.76rem);
+    margin-right: 0.2rem;
   }
 
   .details {
@@ -68,12 +69,12 @@ export default {
       width: 5rem;
     }
     .subtitle {
-      @include textMixin(#000, 0.22rem);
+      @include textMixin(#000, 0.21rem);
       margin: 0.1rem auto;
-      width: 6rem;
+      width: 5.5rem;
     }
     .btn-learn {
-      @include textMixin(#0171e3, 0.22rem);
+      @include textMixin(#0171e3, 0.19rem);
       border: none;
       background: none;
     }
