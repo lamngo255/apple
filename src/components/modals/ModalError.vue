@@ -8,9 +8,9 @@
     </div>
 
     <template #footer>
-      <ButtonPrimary @click="closePopup">
+      <!-- <ButtonPrimary @click="closePopup">
         <span>{{ $t('btnConfirm') }}</span>
-      </ButtonPrimary>
+      </ButtonPrimary> -->
     </template>
   </BaseModalSmall>
 </template>
@@ -18,14 +18,12 @@
 <script>
 import utils from '@/utils';
 import { mapActions, mapState } from 'vuex';
-import ButtonPrimary from '../ff/ButtonPrimary.vue';
 import BaseModalSmall from '../ff/BaseModalSmall.vue';
 
 export default {
   name: 'ModalError',
 
   components: {
-    ButtonPrimary,
     BaseModalSmall,
   },
 

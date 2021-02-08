@@ -15,6 +15,30 @@
         </div>
       </div>
     </div>
+
+    <div class="row">
+      <div class="apple-tv">
+        <img class="overlay" :src="genMoreJpg('apple-tv')" />
+        <img class="logo" :src="genMorePng('logo-apple-tv')" />
+        <div class="desc">
+          <div>Get 1 year of Apple TV+ free</div>
+          <div>when you buy a Mac.</div>
+        </div>
+        <div class="buttons">
+          <button class="btn-try">Try it free</button>
+          <button class="btn-learn">Learn more</button>
+        </div>
+      </div>
+      <div class="apple-card">
+        <img class="overlay" :src="genMoreJpg('apple-card')" />
+        <img class="logo" :src="genMorePng('logo-apple-card')" />
+        <div class="desc">
+          <div>Get 3% Daily Cash back on purchases from</div>
+          <div>Apple when you use Apple Card.</div>
+        </div>
+        <button class="btn-learn">Learn more</button>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -25,6 +49,9 @@ export default {
   methods: {
     genMoreJpg(path) {
       return this.$assetsUrl(`pages/mac/more/${path}.jpg`);
+    },
+    genMorePng(path) {
+      return this.$assetsUrl(`pages/mac/more/${path}.png`);
     },
   },
 };
@@ -68,6 +95,75 @@ export default {
           margin-right: 0.2rem;
         }
       }
+    }
+  }
+}
+
+.row {
+  @include flexCenter(row);
+  margin-top: 0.3rem;
+  justify-content: space-around;
+
+  .apple-tv {
+    @include sizeWH(49%, 7rem);
+    margin-right: 0.3rem;
+    background: #000;
+    position: relative;
+
+    .overlay {
+      @include position(absolute, $bottom: 0, $left: 0);
+      @include sizeWH(100%, 4rem);
+      object-fit: cover;
+      object-position: 28% 0;
+    }
+
+    .logo {
+      @include sizeWH(1rem, 0.4rem);
+      margin-top: 0.6rem;
+    }
+
+    .desc {
+      @include textMixin(#fff, 0.24rem);
+      margin-top: 0.2rem;
+    }
+
+    .buttons {
+      @include flexCenter(row);
+      margin-top: 0.15rem;
+
+      .btn-learn,
+      .btn-try {
+        @include textMixin(#2a97ff, 0.23rem);
+        border: none;
+        background: none;
+        margin-right: 0.2rem;
+      }
+    }
+  }
+
+  .apple-card {
+    @extend .apple-tv;
+    margin-right: 0;
+    background: #cccccc;
+
+    .overlay {
+      @include position(absolute, $bottom: 0, $left: 0);
+      @include sizeWH(100%, 4.7rem);
+      object-fit: cover;
+      object-position: 5% 0;
+    }
+
+    .logo {
+      @include sizeWH(1.4rem, 0.4rem);
+    }
+    .desc {
+      color: #000;
+    }
+    .btn-learn {
+      @include textMixin(#000, 0.21rem);
+      border: none;
+      background: none;
+      margin-top: 0.15rem;
     }
   }
 }
