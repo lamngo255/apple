@@ -69,7 +69,7 @@ export default {
 .showcase {
   background: #000;
   padding-top: 0.5rem;
-  padding-bottom: 0.7rem;
+  padding-bottom: 1.4rem;
 
   .m1 {
     @include imageCDN('pages/mac/logo-m1.jpg', 1rem, 1rem);
@@ -166,11 +166,11 @@ export default {
     @extend .macbook-air;
     @include position(relative, $left: 1.8rem);
     .info {
-      @include position(relative, $top: 0.2rem, $left: 0.5rem);
+      @include position(relative, $top: 0.2rem, $left: 0rem);
     }
     img {
       @include sizeWH(8rem, 4.46rem);
-      @include position(relative, $left: -1.5rem);
+      @include position(relative, $left: -2.1rem);
     }
   }
 }

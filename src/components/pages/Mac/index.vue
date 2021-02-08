@@ -17,6 +17,7 @@
 
       <div class="wrapper">
         <MacCompare />
+        <MacTiles />
       </div>
     </div>
   </BaseLayout>
@@ -26,6 +27,7 @@
 import BaseLayout from '@/components/BaseLayout.vue';
 import MacShowcase from './MacShowcase.vue';
 import MacCompare from './MacCompare.vue';
+import MacTiles from './MacTiles.vue';
 
 export default {
   name: 'Mac',
@@ -34,6 +36,7 @@ export default {
     BaseLayout,
     MacShowcase,
     MacCompare,
+    MacTiles,
   },
 
   data() {
