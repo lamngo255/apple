@@ -18,6 +18,7 @@
       <div class="wrapper">
         <IpadCompare />
         <IpadTiles />
+        <IpadGetMore />
       </div>
     </div>
   </BaseLayout>
@@ -28,6 +29,7 @@ import BaseLayout from '@/components/BaseLayout.vue';
 import IpadShowcase from './IpadShowcase.vue';
 import IpadCompare from './IpadCompare.vue';
 import IpadTiles from './IpadTiles.vue';
+import IpadGetMore from './IpadGetMore.vue';
 
 export default {
   name: 'Mac',
@@ -37,6 +39,7 @@ export default {
     IpadShowcase,
     IpadCompare,
     IpadTiles,
+    IpadGetMore,
   },
 
   data() {
