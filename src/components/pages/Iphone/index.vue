@@ -16,7 +16,10 @@
       <IphoneShowcase />
       <IphoneCompare />
 
-      <div class="wrapper"></div>
+      <div class="wrapper">
+        <IphoneTiles />
+        <IphoneGetMore />
+      </div>
     </div>
   </BaseLayout>
 </template>
@@ -25,6 +28,8 @@
 import BaseLayout from '@/components/BaseLayout.vue';
 import IphoneShowcase from './IphoneShowcase.vue';
 import IphoneCompare from './IphoneCompare.vue';
+import IphoneTiles from './IphoneTiles.vue';
+import IphoneGetMore from './IphoneGetMore.vue';
 
 export default {
   name: 'Mac',
@@ -33,6 +38,8 @@ export default {
     BaseLayout,
     IphoneShowcase,
     IphoneCompare,
+    IphoneTiles,
+    IphoneGetMore,
   },
 
   data() {
@@ -101,7 +108,7 @@ export default {
 
 .wrapper {
   @include sizeWH(100%, auto);
-  background: #f5f5f7;
+  background: #f2f2f2;
   padding: 0.3rem 0.7rem;
 }
 </style>

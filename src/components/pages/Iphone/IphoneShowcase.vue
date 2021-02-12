@@ -49,7 +49,7 @@ export default {
   .content {
     @include position(absolute, $top: 0, $left: 50%);
     transform: translate(-50%, 0);
-    margin-top: 0.5rem;
+    margin-top: 0.4rem;
 
     .title {
       @include textMixin(#000, 0.27rem, bold);
