@@ -135,14 +135,14 @@ export default {
       margin-left: 0.15rem;
 
       .text {
-        @include position(absolute, $top: 1.2rem, $right: 4.5rem);
+        @include position(absolute, $top: 1.2rem, $right: 4.7rem);
         p:nth-child(2) {
           color: #ff0031;
         }
       }
 
       img {
-        @include position(absolute, $top: 0rem, $left: 2.2rem);
+        @include position(absolute, $top: 0rem, $left: 1.75rem);
         @include sizeWH(auto, 100%);
         border-top-right-radius: 0.2rem;
         border-bottom-right-radius: 0.2rem;
