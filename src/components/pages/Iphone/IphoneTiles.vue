@@ -115,7 +115,7 @@ export default {
       position: relative;
 
       .text {
-        @include position(absolute, $top: 1.2rem, $right: 0.5rem);
+        @include position(absolute, $top: 1.2rem, $right: 0.3rem);
         p {
           @include textMixin(#000, 0.32rem, bold);
           &:nth-child(2) {
@@ -135,7 +135,7 @@ export default {
       margin-left: 0.15rem;
 
       .text {
-        @include position(absolute, $top: 1.2rem, $right: 5rem);
+        @include position(absolute, $top: 1.2rem, $right: 4.5rem);
         p:nth-child(2) {
           color: #ff0031;
         }
@@ -213,12 +213,12 @@ export default {
   .trade-in,
   .upgrade {
     .title {
-      @include textMixin(#000, 0.53rem, bold);
+      @include textMixin(#000, 0.48rem, bold);
       margin: 0.35rem auto 0;
       width: 5.3rem;
     }
     .desc {
-      @include textMixin(#000, 0.22rem);
+      @include textMixin(#000, 0.21rem);
       margin: 0.15rem auto;
       width: 5rem;
     }
