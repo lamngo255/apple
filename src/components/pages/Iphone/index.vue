@@ -14,12 +14,9 @@
       </div>
 
       <IphoneShowcase />
+      <IphoneCompare />
 
-      <!-- <div class="wrapper">
-        <IpadCompare />
-        <IpadTiles />
-        <IpadGetMore />
-      </div> -->
+      <div class="wrapper"></div>
     </div>
   </BaseLayout>
 </template>
@@ -27,6 +24,7 @@
 <script>
 import BaseLayout from '@/components/BaseLayout.vue';
 import IphoneShowcase from './IphoneShowcase.vue';
+import IphoneCompare from './IphoneCompare.vue';
 
 export default {
   name: 'Mac',
@@ -34,6 +32,7 @@ export default {
   components: {
     BaseLayout,
     IphoneShowcase,
+    IphoneCompare,
   },
 
   data() {
