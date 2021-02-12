@@ -18,7 +18,7 @@
 <script>
 import utils from '@/utils';
 import { mapActions, mapState } from 'vuex';
-import BaseModalSmall from '../ff/BaseModalSmall.vue';
+import BaseModalSmall from '../common/BaseModalSmall.vue';
 
 export default {
   name: 'ModalError',
