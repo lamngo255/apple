@@ -10,7 +10,7 @@
     "link": "cross-env CDN=/cdn/assets NODE_ENV=linking webpack-dev-server --inline --hot --disable-host-check --host 0.0.0.0"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "date-fns": "^2.1.0",
     "howler": "^2.2.1",
     "path": "^0.12.7",
