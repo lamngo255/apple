@@ -25,16 +25,4 @@ export default {
   getBalances() {
     return api('get', 'profile/bal/');
   },
-  getConfig() {
-    return api('get', 'events/');
-  },
-  getAllItems() {
-    return api('get', 'items/');
-  },
-  getGameState() {
-    return api('get', 'state/');
-  },
-  getDrawHistory() {
-    return api('get', 'profile/txns/');
-  },
 };
