@@ -3,6 +3,7 @@ import Router from 'vue-router';
 import MainPage from '@/components/MainPage.vue';
 import Mac from '@/components/pages/Mac';
 import Ipad from '@/components/pages/Ipad';
+import Iphone from '@/components/pages/Iphone';
 
 Vue.use(Router);
 
@@ -29,6 +30,11 @@ export default new Router({
       path: '/ipad',
       name: 'Ipad',
       component: Ipad,
+    },
+    {
+      path: '/iphone',
+      name: 'Iphone',
+      component: Iphone,
     },
   ],
 });
