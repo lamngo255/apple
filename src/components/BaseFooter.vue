@@ -1,5 +1,5 @@
 <template>
-  <div class="base-footer">
+  <div :class="['base-footer', [theme]]">
     <div class="container">
       <div class="policies">
         <p>1. Available for qualifying applicants in the United States.</p>
@@ -31,6 +31,10 @@
 <script>
 export default {
   name: 'BaseFooter',
+
+  props: {
+    theme: { type: String, default: 'light' },
+  },
 
   data() {
     return {
@@ -119,23 +123,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.base-footer {
-  @include sizeWH(100%, auto);
-  position: relative;
-  background: #f5f5f7;
-  padding-bottom: 0.5rem;
-}
-
 .container {
   width: 68%;
   margin: 0 auto;
 
-  hr {
-    border-top: 0.01rem solid #d2d2d7;
-  }
-
   .policies {
-    @include textMixin(#929296, 0.15rem, $align: left);
+    @include textMixin(#929296, 0.14rem, $align: left);
     margin: 0.2rem auto;
   }
 
@@ -147,7 +140,7 @@ export default {
 
     .col {
       @include flexCenter(column);
-      margin-right: 0.5rem;
+      margin-right: 0.7rem;
       align-items: flex-start;
 
       .row {
@@ -158,6 +151,28 @@ export default {
         div {
           font-weight: normal;
           margin-top: 0.09rem;
+        }
+      }
+    }
+  }
+}
+
+.base-footer {
+  @include sizeWH(100%, auto);
+  position: relative;
+  background: #f5f5f7;
+  padding-bottom: 0.5rem;
+
+  &.dark {
+    background: #111;
+
+    .grid {
+      color: #a1a1a6;
+      .col {
+        .row {
+          div.header {
+            color: #fff;
+          }
         }
       }
     }

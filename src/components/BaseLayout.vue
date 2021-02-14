@@ -2,7 +2,7 @@
   <div class="base-layout">
     <BaseHeader />
     <slot></slot>
-    <BaseFooter />
+    <BaseFooter :theme="theme" />
   </div>
 </template>
 
@@ -12,6 +12,10 @@ import BaseFooter from './BaseFooter.vue';
 
 export default {
   name: 'BaseLayout',
+
+  props: {
+    theme: { type: String, default: 'light' },
+  },
 
   components: {
     BaseHeader,

@@ -4,6 +4,7 @@ import MainPage from '@/components/MainPage.vue';
 import Mac from '@/components/pages/Mac';
 import Ipad from '@/components/pages/Ipad';
 import Iphone from '@/components/pages/Iphone';
+import Iphone12Pro from '@/components/product-details/iphone-12-pro';
 
 Vue.use(Router);
 
@@ -35,6 +36,13 @@ export default new Router({
       path: '/iphone',
       name: 'Iphone',
       component: Iphone,
+    },
+
+    // Products
+    {
+      path: '/iphone-12-pro',
+      name: 'Iphone-12',
+      component: Iphone12Pro,
     },
   ],
 });

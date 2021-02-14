@@ -2,7 +2,12 @@
   <BaseLayout>
     <div class="page-mac">
       <div class="products">
-        <div class="product" v-for="(product, i) in productIcons" :key="i">
+        <div
+          class="product"
+          v-for="(product, i) in productIcons"
+          :key="i"
+          @click="$router.push(product.path)"
+        >
           <img class="icon" :src="genIcon(product.img)" />
           <div class="name">{{ product.name }}</div>
         </div>
@@ -45,13 +50,12 @@ export default {
   data() {
     return {
       productIcons: [
-        { name: 'Iphone 12 Pro', img: 'ip-12-pro' },
-        { name: 'Iphone 12', img: 'ip-12' },
-        { name: 'Iphone SE', img: 'ip-se' },
-        { name: 'Iphone 11', img: 'ip-11' },
-        { name: 'Iphone Xr', img: 'ip-xr' },
-        { name: 'Compare', img: 'compare' },
-        { name: 'Airpods', img: 'airpods' },
+        { name: 'Iphone 12 Pro', img: 'ip-12-pro', path: 'iphone-12-pro' },
+        { name: 'Iphone 12', img: 'ip-12', path: 'iphone-12' },
+        { name: 'Iphone SE', img: 'ip-se', path: 'iphone-se' },
+        { name: 'Iphone 11', img: 'ip-11', path: 'shop/iphone-11' },
+        { name: 'Iphone Xr', img: 'ip-xr', path: 'shop/iphone-xr' },
+        { name: 'Airpods', img: 'airpods', path: 'airpods' },
         { name: 'Accessories', img: 'accessories' },
         { name: 'Apple Card', img: 'apple-card' },
         { name: 'iOs 14', img: 'ios-14' },
