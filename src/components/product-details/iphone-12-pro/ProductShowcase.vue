@@ -4,9 +4,7 @@
       <div class="title">iPhone 12 Pro and iPhone 12 Pro Max</div>
       <div class="subtitle">It’s a leap year.</div>
       <video autoplay playsinline muted>
-        <source
-          :src="$assetsUrl('product-details/iphone-12-pro/leap-year.mp4')"
-        />
+        <source :src="genLink('leap-year.mp4')" />
       </video>
       <div class="desc">
         5G goes Pro. A14 Bionic rockets past every other smartphone chip. The
@@ -23,11 +21,30 @@
 
     <div class="section-2">
       <div class="title">Less bezel, more screen.</div>
+      <div class="pro-max">
+        <div class="pro-max-title">iPhone 12 Pro Max</div>
+        <div class="pro-max-subtitle">
+          <div>6.7” Super Retina</div>
+          <div>XDR display</div>
+        </div>
+      </div>
+      <div class="pro">
+        <div class="pro-title">iPhone 12 Pro</div>
+        <div class="pro-subtitle">
+          <div>6.1” Super Retina</div>
+          <div>XDR display</div>
+        </div>
+      </div>
       <video autoplay playsinline muted>
-        <source
-          :src="$assetsUrl('product-details/iphone-12-pro/compare.mp4')"
-        />
+        <source :src="genLink('compare.mp4')" />
       </video>
+      <button class="btn-compare">Compare sizes to iPhone 11 Pro</button>
+    </div>
+
+    <div class="section-3">
+      <div class="title">Kicks glass.</div>
+      <img :src="genLink('tougher-glass.jpg')" />
+      <div class="desc">Ceramic Shield, tougher than any smartphone glass</div>
     </div>
   </div>
 </template>
@@ -35,6 +52,12 @@
 <script>
 export default {
   name: 'ProductShowcase',
+
+  methods: {
+    genLink(name) {
+      return this.$assetsUrl(`product-details/iphone-12-pro/${name}`);
+    },
+  },
 };
 </script>
 
@@ -81,13 +104,67 @@ export default {
   }
 
   .section-2 {
+    @include flexCenter(column);
     margin-top: 3rem;
+    position: relative;
     .title {
       @include textMixin(#fff, 0.5rem, bold);
     }
     video {
       @include sizeWH(auto, 5.7rem);
       margin: 0.4rem auto;
+    }
+
+    .pro-max {
+      @include position(absolute, $top: 3.6rem, $left: 3.2rem);
+      text-align: right;
+
+      &-title {
+        @include textMixin(#fff, 0.23rem, bold);
+      }
+      &-subtitle {
+        @include textMixin(#8f8f93, 0.2rem, bold);
+      }
+    }
+
+    .pro {
+      @include position(absolute, $top: 3.6rem, $right: 3.6rem);
+      text-align: left;
+
+      &-title {
+        @include textMixin(#fff, 0.23rem, bold);
+      }
+      &-subtitle {
+        @include textMixin(#8f8f93, 0.2rem, bold);
+      }
+    }
+
+    .btn-compare {
+      @include textMixin(#d4d4d4, 0.19rem);
+      background: none;
+      border: #fff solid 0.01rem;
+      border-radius: 0.2rem;
+      padding: 0.05rem 0.2rem;
+      text-decoration: none;
+      transition: all 0.3s;
+
+      &:hover {
+        background: #d4d4d4;
+        color: rgb(26, 25, 25);
+      }
+    }
+  }
+
+  .section-3 {
+    @include flexCenter(column);
+    margin-top: 4rem;
+
+    .title {
+      @include textMixin(#d4d4d4, 0.6rem, bold);
+    }
+    img {
+      @include sizeWH(auto, 2.4rem);
+      margin-top: 0.6rem;
     }
   }
 }
