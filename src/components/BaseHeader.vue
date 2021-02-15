@@ -1,5 +1,5 @@
 <template>
-  <div class="base-header">
+  <div :class="['base-header', { nofloat: !showExtra }]">
     <ul id="navbar">
       <li class="logo" @click="$router.push('/')" />
       <li
@@ -58,12 +58,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.base-header {
-  width: 100%;
-  z-index: 1;
-  margin-top: 0.45rem;
-}
-
 #navbar {
   @include position(fixed, $top: 0, $left: 0);
   @include sizeWH(100%, 0.45rem);
@@ -85,6 +79,21 @@ export default {
     }
     &.bag {
       @include imageCDN('icons/icon-bag.svg', 0.45rem, 0.45rem);
+    }
+  }
+}
+
+.base-header {
+  width: 100%;
+  z-index: 1;
+  margin-top: 0.45rem;
+
+  &.nofloat {
+    margin-top: 0;
+
+    #navbar {
+      position: inherit;
+      background: #0a0a0a;
     }
   }
 }

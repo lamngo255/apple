@@ -123,7 +123,7 @@ export default {
   .products {
     @include sizeWH(100%, 1.2rem);
     @include flexCenter(row);
-    background: #151515;
+    background: #000;
     padding-left: 0.2rem;
 
     .product {
