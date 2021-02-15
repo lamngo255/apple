@@ -42,7 +42,7 @@ export default {
     position: relative;
 
     .red-shape {
-      @include imageCDN('pages/watch/shape-red.svg', 300%, 2.1rem);
+      @include imageCDN('pages/watch/shape-red.svg', 300%, 1.8rem);
       @include position(absolute, $top: 0, $left: -15rem);
       z-index: 1;
     }
@@ -53,7 +53,6 @@ export default {
     }
 
     .left {
-      // @include position(absolute, $top: 2.5rem, $left: 1.3rem);
       @include flexCenter(column);
       @include position(absolute, $top: 2.2rem);
       margin-right: 6.5rem;
