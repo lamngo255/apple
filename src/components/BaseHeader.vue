@@ -1,17 +1,13 @@
 <template>
   <div :class="['base-header', { nofloat: !showExtra }]">
-    <ul id="navbar">
-      <li class="logo" @click="$router.push('/')" />
-      <li
-        v-for="(data, i) in navData"
-        :key="i"
-        @click="$router.push(data.link)"
-      >
+    <div id="navbar">
+      <a class="logo" href="/" />
+      <a v-for="(data, i) in navData" :key="i" :href="data.link">
         {{ data.name }}
-      </li>
+      </a>
       <li class="search"></li>
       <li class="bag"></li>
-    </ul>
+    </div>
 
     <div class="extra" v-if="showExtra">
       <div class="covid">
@@ -66,9 +62,11 @@ export default {
   background: rgba(10, 10, 10, 0.85);
   padding-left: 0.3rem;
 
-  li {
+  li,
+  a {
     margin-right: 0.68rem;
     text-decoration: none;
+    color: #fff;
     cursor: pointer;
 
     &.logo {
