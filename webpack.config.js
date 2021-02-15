@@ -7,6 +7,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
+const CopyPlugin = require("copy-webpack-plugin");
+
 const extendedConfig = require('./webpack.config.extend');
 
 const nodeEnv = process.env.NODE_ENV;
@@ -135,6 +137,11 @@ const config = {
           }
         : false,
     }),
+    new CopyPlugin({
+      patterns: [
+        { from: './_redirects', to: "./"}
+      ]
+    })
   ],
 
   devServer: {
