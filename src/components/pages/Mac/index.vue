@@ -1,18 +1,23 @@
 <template>
   <BaseLayout>
     <div class="page-mac">
-      <div class="products">
-        <a
-          class="product"
-          v-for="(product, i) in productIcons"
-          :key="i"
-          :href="product.path"
-        >
-          <img class="icon" :src="genIcon(product.img)" />
-          <div class="name">{{ product.name }}</div>
-          <div class="new" v-if="product.new">New</div>
-        </a>
+      <div class="container">
+        <transition name="fade">
+          <div class="products" v-if="show">
+            <a
+              class="product"
+              v-for="(product, i) in productIcons"
+              :key="i"
+              :href="product.path"
+            >
+              <img class="icon" :src="genIcon(product.img)" />
+              <div class="name">{{ product.name }}</div>
+              <div class="new" v-if="product.new">New</div>
+            </a>
+          </div>
+        </transition>
       </div>
+
       <div class="cashback">
         Get 3% Daily Cash back with Apple Card. And pay for your new iPad over
         12 months, interest‑free when you choose Apple Card Monthly
@@ -53,6 +58,7 @@ export default {
 
   data() {
     return {
+      show: false,
       productIcons: [
         {
           name: 'Macbook Air',
@@ -92,6 +98,13 @@ export default {
       return this.$assetsUrl(`product-icons/mac/${path}.svg`);
     },
   },
+
+  mounted() {
+    document.title = 'Mac - Apple';
+    setTimeout(() => {
+      this.show = true;
+    }, 150);
+  },
 };
 </script>
 
@@ -99,36 +112,39 @@ export default {
 .page-mac {
   @include sizeWH(100%, auto);
   position: relative;
-}
 
-.products {
-  @include sizeWH(100%, 1.15rem);
-  @include flexCenter(row);
-  background: #151515;
-  padding-left: 0.2rem;
+  .container {
+    @include sizeWH(100%, 1.15rem);
+    background: #000;
+    padding-left: 0.2rem;
+  }
 
-  .product {
-    @include position(relative, $top: -0.08rem);
-    margin-right: 0.3rem;
-    position: relative;
-    text-decoration: none;
-    cursor: pointer;
+  .products {
+    @include flexCenter(row);
 
-    .icon {
-      @include sizeWH(0.5rem, 0.5rem);
-    }
-    .name {
-      @include textMixin(#fff, 0.13rem);
-    }
-    .new {
-      @include textMixin(#e46917, 0.11rem);
-      @include position(absolute, $top: 0.73rem, $left: 50%);
-      transform: translate(-50%, 0);
-    }
+    .product {
+      @include position(relative, $top: 0.08rem);
+      margin-right: 0.3rem;
+      position: relative;
+      text-decoration: none;
+      cursor: pointer;
 
-    &:hover {
+      .icon {
+        @include sizeWH(0.5rem, 0.5rem);
+      }
       .name {
-        color: #1976d2;
+        @include textMixin(#fff, 0.13rem);
+      }
+      .new {
+        @include textMixin(#e46917, 0.11rem);
+        @include position(absolute, $top: 0.73rem, $left: 50%);
+        transform: translate(-50%, 0);
+      }
+
+      &:hover {
+        .name {
+          color: #1976d2;
+        }
       }
     }
   }
@@ -145,5 +161,18 @@ export default {
   @include sizeWH(100%, auto);
   background: #fff;
   padding: 0.3rem 0.7rem;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s, margin-right 0.3s;
+}
+.fade-enter {
+  opacity: 0;
+  margin-right: -0.6rem;
+}
+.fade-leave-to {
+  opacity: 0;
+  margin-right: 0.6rem;
 }
 </style>

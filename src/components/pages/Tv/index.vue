@@ -1,17 +1,21 @@
 <template>
   <BaseLayout>
     <div class="page-tv">
-      <div class="products">
-        <a
-          class="product"
-          v-for="(product, i) in productIcons"
-          :key="i"
-          :href="product.path"
-        >
-          <img class="icon" :src="genIcon(product.img)" />
-          <div class="name">{{ product.name }}</div>
-          <div class="new" v-if="product.new">New</div>
-        </a>
+      <div class="container">
+        <transition name="fade">
+          <div class="products" v-if="show">
+            <a
+              class="product"
+              v-for="(product, i) in productIcons"
+              :key="i"
+              :href="product.path"
+            >
+              <img class="icon" :src="genIcon(product.img)" />
+              <div class="name">{{ product.name }}</div>
+              <div class="new" v-if="product.new">New</div>
+            </a>
+          </div>
+        </transition>
       </div>
       <div class="trade-in">
         Get extra trade‑in savings on Apple Watch during Heart Month. Shop
@@ -57,6 +61,7 @@ export default {
 
   data() {
     return {
+      show: false,
       productIcons: [
         {
           name: 'Apple TV+',
@@ -92,6 +97,13 @@ export default {
       return this.$assetsUrl(`product-icons/tv/${path}.svg`);
     },
   },
+
+  mounted() {
+    document.title = 'TV - Apple';
+    setTimeout(() => {
+      this.show = true;
+    }, 150);
+  },
 };
 </script>
 
@@ -100,11 +112,14 @@ export default {
   @include sizeWH(100%, auto);
   position: relative;
 
-  .products {
+  .container {
     @include sizeWH(100%, 1.2rem);
-    @include flexCenter(row);
     background: #151515;
     padding-left: 0.2rem;
+  }
+
+  .products {
+    @include flexCenter(row);
 
     .product {
       @include position(relative, $top: 0.13rem);
@@ -153,5 +168,18 @@ export default {
   @include sizeWH(100%, auto);
   background: #f5f5f7;
   padding: 0.3rem 0.7rem;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s, margin-right 0.3s;
+}
+.fade-enter {
+  opacity: 0;
+  margin-right: -0.6rem;
+}
+.fade-leave-to {
+  opacity: 0;
+  margin-right: 0.6rem;
 }
 </style>
