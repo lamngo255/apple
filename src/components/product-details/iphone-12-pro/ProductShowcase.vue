@@ -43,8 +43,18 @@
 
     <div class="section-3">
       <div class="title">Kicks glass.</div>
-      <img :src="genLink('tougher-glass.jpg')" />
+      <img class="photo" :src="genLink('tougher-glass.jpg')" />
       <div class="desc">Ceramic Shield, tougher than any smartphone glass</div>
+    </div>
+
+    <div class="section-4">
+      <div class="text-1">Surgical-grade</div>
+      <div class="text-2">stainless steel.</div>
+      <img class="photo" :src="genLink('surgical-grade.jpg')" alt="" />
+    </div>
+
+    <div class="section-5">
+      <img :src="genLink('water-resistance.jpg')" />
     </div>
   </div>
 </template>
@@ -162,9 +172,37 @@ export default {
     .title {
       @include textMixin(#d4d4d4, 0.6rem, bold);
     }
-    img {
+    .photo {
       @include sizeWH(auto, 2.4rem);
       margin-top: 0.6rem;
+    }
+    .desc {
+      @include textMixin(#1d5467, 0.36rem, bold);
+      width: 7rem;
+      margin-top: 0.7rem;
+      background: -webkit-linear-gradient(45deg, #0c3f56, #4d9fb6);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  .section-4 {
+    margin-top: 4rem;
+    position: relative;
+
+    .photo {
+      @include sizeWH(2rem, auto);
+    }
+
+    .text-1 {
+      @include position(absolute, $top: 2.5rem, $left: 3rem);
+      @include textMixin(#fff, 0.58rem, bold);
+      transform: rotate(90deg);
+    }
+    .text-2 {
+      @include position(absolute, $top: 7.5rem, $right: 3rem);
+      @include textMixin(#fff, 0.58rem, bold);
+      transform: rotate(90deg);
     }
   }
 }
