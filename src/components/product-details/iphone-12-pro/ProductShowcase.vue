@@ -54,7 +54,52 @@
     </div>
 
     <div class="section-5">
-      <img :src="genLink('water-resistance.jpg')" />
+      <img class="photo" :src="genLink('water-resistance.jpg')" />
+      <div class="title">Blows other phones out of the water.</div>
+      <div class="subtitle">Industry‑leading IP68 water resistance</div>
+    </div>
+
+    <div class="section-6">
+      <video autoplay playsinline muted>
+        <source :src="genLink('four-colors.mp4')" />
+      </video>
+      <div class="title">Four finishing touches.</div>
+      <div class="subtitle">Pacific Blue, Gold, Silver, and Graphite</div>
+    </div>
+
+    <div class="section-7">
+      <div class="container">
+        <div class="title">Pro camera system</div>
+        <div class="subtitle">A new day for Night mode.</div>
+      </div>
+      <img class="photo" :src="genLink('night-photography.jpg')" />
+    </div>
+
+    <div class="section-8">
+      <div class="container">
+        <div class="title">12 Pro Max.</div>
+        <div class="subtitle">Camerus maximus.</div>
+      </div>
+      <img class="photo" :src="genLink('camera.jpg')" />
+    </div>
+
+    <div class="section-9">
+      <div class="container">
+        <div class="title">Super Retina XDR display .</div>
+        <div class="subtitle">An infinity pool of pixels.</div>
+      </div>
+      <img class="photo" :src="genLink('retina-screen.jpg')" />
+      <div class="desc">
+        How do you make our brightest display even better? Make it bigger. A new
+        design with flat edges and our flexible custom OLED allowed us to push
+        the screen’s amazing color, brightness, and contrast right to the very
+        edge.
+      </div>
+
+      <div class="table">
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
     </div>
   </div>
 </template>
@@ -203,6 +248,107 @@ export default {
       @include position(absolute, $top: 7.5rem, $right: 3rem);
       @include textMixin(#fff, 0.58rem, bold);
       transform: rotate(90deg);
+    }
+  }
+
+  .section-5 {
+    margin-top: 4rem;
+    position: relative;
+    .photo {
+      @include sizeWH(70%, auto);
+      @include position(relative, $left: 2rem);
+    }
+    .title {
+      @include textMixin(#bcbcbe, 0.56rem, bold, $align: left);
+      @include position(absolute, $top: 5rem, $left: 2.2rem);
+      width: 4rem;
+      line-height: 0.64rem;
+    }
+    .subtitle {
+      @include textMixin(#89898d, 0.27rem, bold, $align: left);
+      @include position(absolute, $top: 7.35rem, $left: 2.2rem);
+      width: 3rem;
+    }
+  }
+
+  .section-6 {
+    @include flexCenter(column);
+
+    video {
+      @include sizeWH(80%, auto);
+      margin: 0 auto;
+    }
+    .title {
+      @include textMixin(#fff, 0.58rem, bold, $align: left);
+      margin-top: 0.5rem;
+    }
+    .subtitle {
+      @include textMixin(#89898d, 0.24rem, bold, $align: left);
+      margin-top: 0.15rem;
+    }
+  }
+
+  .section-7 {
+    @include flexCenter(column);
+    margin-top: 3rem;
+
+    .container {
+      width: 60%;
+      text-align: left;
+    }
+    .title {
+      @include textMixin(#6e6e73, 0.8rem, bold);
+    }
+    .subtitle {
+      @include textMixin(#fff, 0.8rem, bold);
+    }
+
+    .photo {
+      @include sizeWH(80%, auto);
+      @include position(relative, $left: 2rem);
+      margin-top: 0.7rem;
+    }
+  }
+
+  .section-8 {
+    @extend .section-7;
+    .title,
+    .subtitle {
+      color: #fff;
+      font-size: 0.65rem;
+    }
+    .photo {
+      left: 0;
+      margin-top: 0.2rem;
+    }
+  }
+
+  .section-9 {
+    @extend .section-7;
+
+    .photo {
+      @include sizeWH(90%, auto);
+      left: 0;
+      margin-top: 1rem;
+    }
+
+    .desc {
+      @include textMixin(#a1a1a6, 0.28rem, bold);
+      width: 50%;
+      margin: 0.9rem auto 0.2rem;
+    }
+
+    .table {
+      @include flexCenter(row);
+
+      .left,
+      .right {
+        @include sizeWH(5rem, 2.5rem);
+        background: #161616;
+        margin-right: 0.1rem;
+        margin-top: 0.4rem;
+        border-radius: 0.2rem;
+      }
     }
   }
 }
