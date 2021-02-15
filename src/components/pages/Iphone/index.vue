@@ -2,15 +2,16 @@
   <BaseLayout>
     <div class="page-mac">
       <div class="products">
-        <div
+        <a
           class="product"
           v-for="(product, i) in productIcons"
           :key="i"
-          @click="$router.push(product.path)"
+          :href="product.path"
         >
           <img class="icon" :src="genIcon(product.img)" />
           <div class="name">{{ product.name }}</div>
-        </div>
+          <div class="new" v-if="product.new">New</div>
+        </a>
       </div>
       <div class="cashback">
         Get 3% Daily Cash back with Apple Card. And pay for your new iPad over
@@ -50,12 +51,18 @@ export default {
   data() {
     return {
       productIcons: [
-        { name: 'Iphone 12 Pro', img: 'ip-12-pro', path: 'iphone-12-pro' },
-        { name: 'Iphone 12', img: 'ip-12', path: 'iphone-12' },
+        {
+          name: 'Iphone 12 Pro',
+          img: 'ip-12-pro',
+          path: 'iphone-12-pro',
+          new: true,
+        },
+        { name: 'Iphone 12', img: 'ip-12', path: 'iphone-12', new: true },
         { name: 'Iphone SE', img: 'ip-se', path: 'iphone-se' },
         { name: 'Iphone 11', img: 'ip-11', path: 'shop/iphone-11' },
         { name: 'Iphone Xr', img: 'ip-xr', path: 'shop/iphone-xr' },
         { name: 'Airpods', img: 'airpods', path: 'airpods' },
+        { name: 'Compare', img: 'compare' },
         { name: 'Accessories', img: 'accessories' },
         { name: 'Apple Card', img: 'apple-card' },
         { name: 'iOs 14', img: 'ios-14' },
@@ -86,6 +93,8 @@ export default {
   .product {
     @include position(relative, $top: -0.08rem);
     margin-right: 0.35rem;
+    text-decoration: none;
+    position: relative;
     cursor: pointer;
 
     .icon {
@@ -93,6 +102,11 @@ export default {
     }
     .name {
       @include textMixin(#fff, 0.13rem);
+    }
+    .new {
+      @include textMixin(#e46917, 0.11rem);
+      @include position(absolute, $top: 0.73rem, $left: 50%);
+      transform: translate(-50%, 0);
     }
 
     &:hover {

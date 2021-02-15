@@ -5,7 +5,6 @@
         <div class="left">iPhone 12 Pro</div>
         <div class="right">
           <div>Overview</div>
-          <div>Tech Specs</div>
           <button class="btn-buy">Buy</button>
         </div>
       </div>
@@ -16,7 +15,6 @@
         Buy iPhone 12 and iPhone 12 Pro directly from Apple with special offers
         from AT&T, T‑Mobile/Sprint, and Verizon.
       </span>
-      <span>See offers</span>
     </div>
   </div>
 </template>

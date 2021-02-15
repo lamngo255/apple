@@ -127,3 +127,10 @@
   @include sizeWH($width, $height);
   background: url('#{$cdn}/#{$path}') center / $mode no-repeat;
 }
+
+@mixin gradient($deg, $color1, $color2) {
+  background: -webkit-linear-gradient($deg, $color1, $color2);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+

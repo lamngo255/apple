@@ -2,10 +2,16 @@
   <BaseLayout>
     <div class="page-mac">
       <div class="products">
-        <div class="product" v-for="(product, i) in productIcons" :key="i">
+        <a
+          class="product"
+          v-for="(product, i) in productIcons"
+          :key="i"
+          :href="product.path"
+        >
           <img class="icon" :src="genIcon(product.img)" />
           <div class="name">{{ product.name }}</div>
-        </div>
+          <div class="new" v-if="product.new">New</div>
+        </a>
       </div>
       <div class="cashback">
         Get 3% Daily Cash back with Apple Card. And pay for your new iPad over
@@ -48,15 +54,33 @@ export default {
   data() {
     return {
       productIcons: [
-        { name: 'Macbook Air', img: 'macbook-air' },
-        { name: 'Macbook Pro 13”', img: 'macbook-pro-13' },
-        { name: 'Macbook Pro 16”', img: 'macbook-pro-16' },
-        { name: 'iMac', img: 'imac' },
-        { name: 'iMac Pro', img: 'imac-pro' },
-        { name: 'Mac Pro', img: 'macpro' },
-        { name: 'Mac Mini', img: 'mac-mini' },
+        {
+          name: 'Macbook Air',
+          img: 'macbook-air',
+          path: 'macbook-air',
+          new: true,
+        },
+        {
+          name: 'Macbook Pro 13”',
+          img: 'macbook-pro-13',
+          path: 'macbook-pro-13',
+          new: true,
+        },
+        {
+          name: 'Macbook Pro 16”',
+          img: 'macbook-pro-16',
+          path: 'macbook-pro-16',
+        },
+        { name: 'iMac', img: 'imac', path: 'imac' },
+        { name: 'iMac Pro', img: 'imac-pro', path: 'imac-pro' },
+        { name: 'Mac Pro', img: 'macpro', path: 'macpro' },
+        { name: 'Mac Mini', img: 'mac-mini', path: 'mac-mini', new: true },
         { name: 'Compare', img: 'compare' },
-        { name: 'Pro Display XDR', img: 'pro-display-xdr' },
+        {
+          name: 'Pro Display XDR',
+          img: 'pro-display-xdr',
+          path: 'pro-display-xdr',
+        },
         { name: 'Accessories', img: 'accessories' },
         { name: 'Big Sur', img: 'bigsur' },
       ],
@@ -86,6 +110,8 @@ export default {
   .product {
     @include position(relative, $top: -0.08rem);
     margin-right: 0.3rem;
+    position: relative;
+    text-decoration: none;
     cursor: pointer;
 
     .icon {
@@ -93,6 +119,11 @@ export default {
     }
     .name {
       @include textMixin(#fff, 0.13rem);
+    }
+    .new {
+      @include textMixin(#e46917, 0.11rem);
+      @include position(absolute, $top: 0.73rem, $left: 50%);
+      transform: translate(-50%, 0);
     }
 
     &:hover {

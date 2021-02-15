@@ -1,6 +1,6 @@
 <template>
   <div class="product-showcase">
-    <div class="section-1">
+    <div class="section-1 leap-year">
       <div class="title">iPhone 12 Pro and iPhone 12 Pro Max</div>
       <div class="subtitle">It’s a leap year.</div>
       <video autoplay playsinline muted>
@@ -19,7 +19,7 @@
       </div>
     </div>
 
-    <div class="section-2">
+    <div class="section-2 less-bezel">
       <div class="title">Less bezel, more screen.</div>
       <div class="pro-max">
         <div class="pro-max-title">iPhone 12 Pro Max</div>
@@ -41,25 +41,25 @@
       <button class="btn-compare">Compare sizes to iPhone 11 Pro</button>
     </div>
 
-    <div class="section-3">
+    <div class="section-3 kicks-glass">
       <div class="title">Kicks glass.</div>
       <img class="photo" :src="genLink('tougher-glass.jpg')" />
       <div class="desc">Ceramic Shield, tougher than any smartphone glass</div>
     </div>
 
-    <div class="section-4">
+    <div class="section-4 surgical-grade">
       <div class="text-1">Surgical-grade</div>
       <div class="text-2">stainless steel.</div>
       <img class="photo" :src="genLink('surgical-grade.jpg')" alt="" />
     </div>
 
-    <div class="section-5">
+    <div class="section-5 water-resistance">
       <img class="photo" :src="genLink('water-resistance.jpg')" />
       <div class="title">Blows other phones out of the water.</div>
       <div class="subtitle">Industry‑leading IP68 water resistance</div>
     </div>
 
-    <div class="section-6">
+    <div class="section-6 four-colors">
       <video autoplay playsinline muted>
         <source :src="genLink('four-colors.mp4')" />
       </video>
@@ -67,7 +67,7 @@
       <div class="subtitle">Pacific Blue, Gold, Silver, and Graphite</div>
     </div>
 
-    <div class="section-7">
+    <div class="section-7 night-photography">
       <div class="container">
         <div class="title">Pro camera system</div>
         <div class="subtitle">A new day for Night mode.</div>
@@ -75,7 +75,7 @@
       <img class="photo" :src="genLink('night-photography.jpg')" />
     </div>
 
-    <div class="section-8">
+    <div class="section-8 camerus-maximus">
       <div class="container">
         <div class="title">12 Pro Max.</div>
         <div class="subtitle">Camerus maximus.</div>
@@ -83,7 +83,7 @@
       <img class="photo" :src="genLink('camera.jpg')" />
     </div>
 
-    <div class="section-9">
+    <div class="section-9 retina-screen">
       <div class="container">
         <div class="title">Super Retina XDR display .</div>
         <div class="subtitle">An infinity pool of pixels.</div>
@@ -97,9 +97,50 @@
       </div>
 
       <div class="table">
-        <div class="left"></div>
-        <div class="right"></div>
+        <div class="left">
+          <p>Up to</p>
+          <p class="number">1200 nits</p>
+          <p>peak brightness for</p>
+          <p>HDR photos and movies</p>
+        </div>
+        <div class="right">
+          <p class="number">2,000,000:1</p>
+          <p>contrast ratio for true blacks</p>
+          <p>and bright whites</p>
+        </div>
       </div>
+
+      <div class="desc-2">
+        Over 3.4 million pixels in 12 Pro Max, the most ever in an iPhone
+      </div>
+    </div>
+
+    <div class="section-10 instance-attraction">
+      <div class="title">Instant attraction.</div>
+      <video autoplay playsinline muted>
+        <source :src="genLink('instant-attraction.mp4')" />
+      </video>
+      <div class="subtitle">
+        Each piece magnetically snaps together like magic.
+      </div>
+    </div>
+
+    <div class="section-11 stack-and-go">
+      <video autoplay playsinline muted>
+        <source :src="genLink('stack.mp4')" />
+      </video>
+      <div class="title">Stack and go.</div>
+      <div class="subtitle">
+        Snap on a case, a wallet, or both. (Fear not, the wallet is shielded so
+        it’s safe for credit cards.)
+      </div>
+    </div>
+
+    <div class="section-12 carbon-footprint">
+      <div class="title">
+        We reduced our carbon footprint. By thinking inside the box.
+      </div>
+      <img class="photo" :src="genLink('iphone-box.jpg')" />
     </div>
   </div>
 </template>
@@ -218,16 +259,14 @@ export default {
       @include textMixin(#d4d4d4, 0.6rem, bold);
     }
     .photo {
-      @include sizeWH(auto, 2.4rem);
+      @include sizeWH(90%, auto);
       margin-top: 0.6rem;
     }
     .desc {
       @include textMixin(#1d5467, 0.36rem, bold);
-      width: 7rem;
+      @include gradient(45deg, #0c3f56, #4d9fb6);
+      width: 6rem;
       margin-top: 0.7rem;
-      background: -webkit-linear-gradient(45deg, #0c3f56, #4d9fb6);
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
     }
   }
 
@@ -236,7 +275,7 @@ export default {
     position: relative;
 
     .photo {
-      @include sizeWH(2rem, auto);
+      @include sizeWH(1.6rem, auto);
     }
 
     .text-1 {
@@ -297,10 +336,10 @@ export default {
       text-align: left;
     }
     .title {
-      @include textMixin(#6e6e73, 0.8rem, bold);
+      @include textMixin(#6e6e73, 0.68rem, bold);
     }
     .subtitle {
-      @include textMixin(#fff, 0.8rem, bold);
+      @include textMixin(#fff, 0.68rem, bold);
     }
 
     .photo {
@@ -326,6 +365,11 @@ export default {
   .section-9 {
     @extend .section-7;
 
+    .title,
+    .subtitle {
+      font-size: 0.6rem;
+    }
+
     .photo {
       @include sizeWH(90%, auto);
       left: 0;
@@ -334,7 +378,7 @@ export default {
 
     .desc {
       @include textMixin(#a1a1a6, 0.28rem, bold);
-      width: 50%;
+      width: 48%;
       margin: 0.9rem auto 0.2rem;
     }
 
@@ -348,7 +392,83 @@ export default {
         margin-right: 0.1rem;
         margin-top: 0.4rem;
         border-radius: 0.2rem;
+        padding: 0.4rem 0 0 0.5rem;
+
+        p {
+          @include textMixin(#fff, 0.23rem, bold, $align: left);
+
+          &.number {
+            @include gradient(45deg, #16617f, #5fb4cb);
+            font-size: 0.6rem;
+          }
+        }
       }
+
+      .right {
+        p.number {
+          font-size: 0.7rem;
+        }
+        padding-top: 0.5rem;
+      }
+    }
+
+    .desc-2 {
+      @include gradient(45deg, #16617f, #5fb4cb);
+      font-size: 0.35rem;
+      font-weight: bold;
+      width: 40%;
+      margin-top: 0.7rem;
+    }
+  }
+
+  .section-10 {
+    @include flexCenter(column);
+    margin-top: 4rem;
+
+    video {
+      @include sizeWH(60%, auto);
+    }
+    .title {
+      @include textMixin(#fff, 0.6rem, bold);
+    }
+    .subtitle {
+      @include textMixin(#a1a1a6, 0.28rem, bold);
+      margin-top: 0.4rem;
+    }
+  }
+
+  .section-11 {
+    margin-top: 3rem;
+
+    video {
+      @include sizeWH(7rem, auto);
+    }
+
+    .title {
+      @include textMixin(#fff, 0.6rem, bold);
+      margin-top: 0.4rem;
+    }
+
+    .subtitle {
+      @include textMixin(#a1a1a6, 0.23rem, bold);
+      width: 40%;
+      margin: 0.3rem auto;
+    }
+  }
+
+  .section-12 {
+    position: relative;
+    margin-top: 5rem;
+
+    .title {
+      @include textMixin(#fff, 0.55rem, bold, $align: left);
+      @include position(absolute, $top: -2.3rem, $left: 3rem);
+      @include gradient(135deg, #fff, #a1a1a6);
+      width: 4rem;
+    }
+
+    .photo {
+      @include sizeWH(10rem, auto);
     }
   }
 }
