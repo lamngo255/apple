@@ -50,7 +50,7 @@ export default {
         { name: 'Watch', link: 'watch' },
         { name: 'TV', link: 'tv' },
         { name: 'Music', link: 'music' },
-        { name: 'Support', link: 'support' },
+        { name: 'Support', link: '#' },
       ],
     };
   },
@@ -69,11 +69,12 @@ export default {
   @include sizeWH(100%, 0.45rem);
   @include flexCenter(row);
   @include textMixin(rgb(226, 223, 223), 0.15rem);
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(10, 10, 10, 0.85);
   padding-left: 0.3rem;
 
   li {
     margin-right: 0.68rem;
+    text-decoration: none;
     cursor: pointer;
 
     &.logo {
