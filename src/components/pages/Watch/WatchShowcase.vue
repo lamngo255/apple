@@ -106,11 +106,6 @@ export default {
       .black-unity {
         @include imageCDN('pages/watch/black-unity.jpg', 6.88rem, 9.68rem);
         @include position(absolute, $top: 0, $right: 0);
-        mask-image: assetsUrl('pages/watch/black-unity-mask.png');
-        mask-size: 100%;
-        mask-repeat: no-repeat;
-        mask-position: top;
-        mask-mode: alpha;
       }
       .front {
         @include sizeWH(2.9rem, 5rem);
