@@ -17,44 +17,26 @@
           </div>
         </transition>
       </div>
-      <div class="trade-in">
-        Get extra trade‑in savings on Apple Watch during Heart Month. Shop
-        Series 6 from $239 or SE from $199.
-      </div>
-      <div class="cashback">
-        Get 3% Daily Cash back with Apple Card. And pay for your new Apple Watch
-        over 24 months, interest‑free when you choose Apple Card Monthly
-        Installments.
+      <div class="apple-one">
+        Introducing Apple One. Bundle your favorite services and enjoy more of
+        Apple for less.
       </div>
 
-      <!-- <WatchShowcase /> -->
-
-      <!-- <div class="wrapper">
-        <MacCompare />
-        <MacTiles />
-        <MacMaking />
-        <MacGetMore />
-      </div> -->
+      <MusicShowcase />
     </div>
   </BaseLayout>
 </template>
 
 <script>
 import BaseLayout from '@/components/BaseLayout.vue';
-// import MacCompare from './MacCompare.vue';
-// import MacTiles from './MacTiles.vue';
-// import MacMaking from './MacMaking.vue';
-// import MacGetMore from './MacGetMore.vue';
+import MusicShowcase from './MusicShowcase.vue';
 
 export default {
   name: 'Music',
 
   components: {
     BaseLayout,
-    // MacCompare,
-    // MacTiles,
-    // MacMaking,
-    // MacGetMore,
+    MusicShowcase,
   },
 
   data() {
@@ -155,17 +137,10 @@ export default {
     }
   }
 
-  .trade-in {
-    @include sizeWH(100%, 0.38rem);
-    @include textMixin(#000, 0.13rem);
-    padding-top: 0.12rem;
-    background: #f5f5f7;
-  }
-
-  .cashback {
-    @include sizeWH(100%, 0.35rem);
-    @include textMixin(#fff, 0.13rem);
-    padding-top: 0.1rem;
+  .apple-one {
+    @include sizeWH(100%, 0.5rem);
+    @include textMixin(#fff, 0.16rem);
+    padding-top: 0.15rem;
     background: #1d1d20;
   }
 }

@@ -22,7 +22,6 @@
       </div>
 
       <TvShowcase />
-
       <div class="wrapper">
         <TvTiles />
       </div>
