@@ -21,7 +21,7 @@
         <img class="logo" :src="genMorePng('logo-apple-tv')" />
         <div class="desc">
           <div>Get 1 year of Apple TV+ free</div>
-          <div>when you buy an Ipad.</div>
+          <div>when you buy an Apple Tv.</div>
         </div>
         <div class="buttons">
           <button class="btn-try">Try it free</button>
@@ -86,10 +86,10 @@ export default {
 
   methods: {
     genMoreJpg(path) {
-      return this.$assetsUrl(`pages/ipad/more/${path}.jpg`);
+      return this.$assetsUrl(`pages/tv/more/${path}.jpg`);
     },
     genMorePng(path) {
-      return this.$assetsUrl(`pages/ipad/more/${path}.png`);
+      return this.$assetsUrl(`pages/tv/more/${path}.png`);
     },
   },
 };
