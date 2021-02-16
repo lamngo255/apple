@@ -95,7 +95,7 @@ export default {
       @include textMixin(#1d1d20, 0.28rem, bold);
     }
     .subtitle {
-      @include textMixin(#000, 0.9rem, bold);
+      @include textMixin(#1d1d20, 0.9rem, bold);
     }
 
     .buttons {
@@ -156,10 +156,10 @@ export default {
 
     .tv-4k-remote {
       @include sizeWH(6rem, auto);
-      margin-top: 0.6rem;
+      margin-top: 1rem;
     }
     .note {
-      @include textMixin(#fff, 0.26rem, bold);
+      @include textMixin(#fff, 0.24rem, bold);
       margin-top: 0.2rem;
     }
   }

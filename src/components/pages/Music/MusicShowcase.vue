@@ -7,7 +7,7 @@
       <img class="logo-music" :src="genLink('logo-music.png')" />
       <div class="title">Music lives here.</div>
       <div class="buttons">
-        <button class="btn-try">Try it free</button>
+        <button class="btn-try">Try it free*</button>
         <button class="btn-learn">Learn more</button>
       </div>
     </div>
