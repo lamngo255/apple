@@ -182,10 +182,10 @@ export default {
 }
 .fade-enter {
   opacity: 0;
-  margin-right: -0.6rem;
+  margin-right: -1rem;
 }
 .fade-leave-to {
   opacity: 0;
-  margin-right: 0.6rem;
+  margin-right: 1rem;
 }
 </style>

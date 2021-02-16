@@ -17,46 +17,31 @@
           </div>
         </transition>
       </div>
-      <div class="trade-in">
-        Get extra trade‑in savings on Apple Watch during Heart Month. Shop
-        Series 6 from $239 or SE from $199.
-      </div>
-      <div class="cashback">
-        Get 3% Daily Cash back with Apple Card. And pay for your new Apple Watch
-        over 24 months, interest‑free when you choose Apple Card Monthly
-        Installments.
+      <div class="free-apple-tv">
+        Get 1 year of Apple TV+ free when you buy an Apple device.
       </div>
 
-      <!-- <MacShowcase />
+      <TvShowcase />
 
       <div class="wrapper">
-        <MacCompare />
-        <MacTiles />
-        <MacMaking />
-        <MacGetMore />
-      </div> -->
+        <TvTiles />
+      </div>
     </div>
   </BaseLayout>
 </template>
 
 <script>
 import BaseLayout from '@/components/BaseLayout.vue';
-// import MacShowcase from './MacShowcase.vue';
-// import MacCompare from './MacCompare.vue';
-// import MacTiles from './MacTiles.vue';
-// import MacMaking from './MacMaking.vue';
-// import MacGetMore from './MacGetMore.vue';
+import TvShowcase from './TvShowcase.vue';
+import TvTiles from './TvTiles.vue';
 
 export default {
   name: 'Tv',
 
   components: {
     BaseLayout,
-    // MacShowcase,
-    // MacCompare,
-    // MacTiles,
-    // MacMaking,
-    // MacGetMore,
+    TvShowcase,
+    TvTiles,
   },
 
   data() {
@@ -149,17 +134,10 @@ export default {
     }
   }
 
-  .trade-in {
-    @include sizeWH(100%, 0.38rem);
-    @include textMixin(#000, 0.13rem);
-    padding-top: 0.12rem;
-    background: #f5f5f7;
-  }
-
-  .cashback {
-    @include sizeWH(100%, 0.35rem);
-    @include textMixin(#fff, 0.13rem);
-    padding-top: 0.1rem;
+  .free-apple-tv {
+    @include sizeWH(100%, 0.5rem);
+    @include textMixin(#fff, 0.16rem);
+    padding-top: 0.15rem;
     background: #1d1d20;
   }
 }
@@ -176,10 +154,10 @@ export default {
 }
 .fade-enter {
   opacity: 0;
-  margin-right: -0.6rem;
+  margin-right: -1rem;
 }
 .fade-leave-to {
   opacity: 0;
-  margin-right: 0.6rem;
+  margin-right: 1rem;
 }
 </style>

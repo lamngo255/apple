@@ -29,13 +29,12 @@
       </div>
 
       <WatchShowcase />
-      <!-- 
+
       <div class="wrapper">
-        <MacCompare />
-        <MacTiles />
-        <MacMaking />
-        <MacGetMore />
-      </div> -->
+        <WatchCompare />
+        <WatchFitness />
+        <WatchWhy />
+      </div>
     </div>
   </BaseLayout>
 </template>
@@ -43,10 +42,9 @@
 <script>
 import BaseLayout from '@/components/BaseLayout.vue';
 import WatchShowcase from './WatchShowcase.vue';
-// import MacCompare from './MacCompare.vue';
-// import MacTiles from './MacTiles.vue';
-// import MacMaking from './MacMaking.vue';
-// import MacGetMore from './MacGetMore.vue';
+import WatchCompare from './WatchCompare.vue';
+import WatchFitness from './WatchFitness.vue';
+import WatchWhy from './WatchWhy.vue';
 
 export default {
   name: 'Watch',
@@ -54,10 +52,9 @@ export default {
   components: {
     BaseLayout,
     WatchShowcase,
-    // MacCompare,
-    // MacTiles,
-    // MacMaking,
-    // MacGetMore,
+    WatchCompare,
+    WatchFitness,
+    WatchWhy,
   },
 
   data() {
@@ -187,8 +184,8 @@ export default {
 
 .wrapper {
   @include sizeWH(100%, auto);
-  background: #f5f5f7;
-  padding: 0.3rem 0.7rem;
+  background: #fff;
+  padding: 0.3rem 0.5rem;
 }
 
 .fade-enter-active,
@@ -197,10 +194,10 @@ export default {
 }
 .fade-enter {
   opacity: 0;
-  margin-right: -1.5rem;
+  margin-right: -1rem;
 }
 .fade-leave-to {
   opacity: 0;
-  margin-right: 1.5rem;
+  margin-right: 1rem;
 }
 </style>

@@ -1,10 +1,10 @@
 <template>
   <div :class="['base-header', { nofloat: !showExtra }]">
     <div id="navbar">
-      <a class="logo" href="/" />
+      <li class="logo" @click="$router.push('/')" />
       <li
-        :class="{ active: active(data.link) }"
         v-for="(data, i) in navData"
+        :class="{ active: active(data.link) }"
         :key="i"
         @click="$router.push(data.link)"
       >
