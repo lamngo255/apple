@@ -2,17 +2,17 @@
   <div :class="['base-header', { nofloat: !showExtra }]">
     <div id="navbar">
       <a class="logo" href="/" />
-      <a
+      <li
         :class="{ active: active(data.link) }"
         v-for="(data, i) in navData"
         :key="i"
-        :href="data.link"
+        @click="$router.push(data.link)"
       >
         {{ data.name }}
-      </a>
+      </li>
       <li class="search"></li>
       <li class="bag" @mousedown="showBag" v-on-clickaway="hideBag">
-        <MyBag v-if="showMyBag" />
+        <BagPopup v-if="showMyBag" />
       </li>
     </div>
 
@@ -36,7 +36,7 @@
 
 <script>
 import { mixin as clickaway } from 'vue-clickaway';
-import MyBag from './modals/MyBag/index.vue';
+import BagPopup from './modals/BagPopup/index.vue';
 
 export default {
   name: 'BaseHeader',
@@ -44,7 +44,7 @@ export default {
   mixins: [clickaway],
 
   components: {
-    MyBag,
+    BagPopup,
   },
 
   computed: {
@@ -57,12 +57,12 @@ export default {
     return {
       showMyBag: false,
       navData: [
-        { name: 'Mac', link: 'mac' },
-        { name: 'Ipad', link: 'ipad' },
-        { name: 'Iphone', link: 'iphone' },
-        { name: 'Watch', link: 'watch' },
-        { name: 'TV', link: 'tv' },
-        { name: 'Music', link: 'music' },
+        { name: 'Mac', link: '/mac' },
+        { name: 'Ipad', link: '/ipad' },
+        { name: 'Iphone', link: '/iphone' },
+        { name: 'Watch', link: '/watch' },
+        { name: 'TV', link: '/tv' },
+        { name: 'Music', link: '/music' },
         { name: 'Support', link: '#' },
       ],
     };
@@ -103,6 +103,10 @@ export default {
       color: #929292;
     }
 
+    &:hover {
+      filter: brightness(1.2);
+    }
+
     &.logo {
       @include imageCDN('icons/icon-apple.svg', 0.45rem, 0.45rem);
     }
@@ -111,6 +115,9 @@ export default {
     }
     &.bag {
       @include imageCDN('icons/icon-bag.svg', 0.45rem, 0.45rem);
+      &:hover {
+        filter: brightness(1);
+      }
     }
   }
 }

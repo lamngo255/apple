@@ -11,6 +11,9 @@ import Music from '@/components/pages/Music';
 import Iphone12Pro from '@/components/product-details/iphone-12-pro';
 import Iphone12 from '@/components/product-details/iphone-12';
 
+import PageMyBag from '@/components/shop/PageMyBag';
+import PageLogin from '@/components/pages/PageLogin';
+
 Vue.use(Router);
 
 export default new Router({
@@ -57,6 +60,18 @@ export default new Router({
       path: '/music',
       name: 'Music',
       component: Music,
+    },
+
+    // ---------- FUNCTIONS -------------
+    {
+      path: '/shop/bag',
+      name: 'PageMyBag',
+      component: PageMyBag,
+    },
+    {
+      path: '/login',
+      name: 'PageLogin',
+      component: PageLogin,
     },
 
     // ---------- PRODUCTS ------------

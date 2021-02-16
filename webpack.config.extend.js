@@ -2,7 +2,7 @@ const linkingTarget = 'https://test.apple.com';
 
 // variables accessible in project src code
 const env = ['CDN'];
-process.env.CDN = 'https://do2y4hg02hvd7.cloudfront.net/assets';
+process.env.CDN = '/cdn/assets';
 
 module.exports = {
   linkingTarget,

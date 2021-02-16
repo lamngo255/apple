@@ -102,19 +102,22 @@ div {
 }
 
 input {
-  background-color: transparent;
-  border: 0;
-  outline: none;
+  // background-color: transparent;
+  // border: 0;
+  // outline: none;
   box-shadow: none;
 }
 
 a,
-button,
-li {
+button {
   cursor: pointer;
   border: none;
+  transition: all 0.3s;
   &:hover {
     filter: brightness(1.2);
+  }
+  &:active {
+    transform: scale(1.05);
   }
 }
 
