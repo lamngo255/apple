@@ -20,7 +20,7 @@ export default {
   },
 
   computed: {
-    ...mapState('Game', ['error', 'openedPopup']),
+    ...mapState('Product', ['error', 'openedPopup']),
   },
 };
 </script>

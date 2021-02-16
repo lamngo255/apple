@@ -14,7 +14,6 @@ const initialState = {
 };
 
 const UPDATE_PROFILE = 'UPDATE_PROFILE';
-const UPDATE_PROFILE_BALANCE = 'UPDATE_PROFILE_BALANCE';
 
 // common actions
 const SET_ERROR = 'SET_ERROR';
@@ -24,13 +23,8 @@ const OPEN_POPUP = 'OPEN_POPUP';
 const actions = {
   initData: withLoading(
     withErrorHandling(async ({ commit }) => {
-      const [profile, balances] = await Promise.all([
-        services.getProfile(),
-        services.getBalances(),
-      ]);
-
+      const profile = await services.getProfile();
       commit(UPDATE_PROFILE, profile);
-      commit(UPDATE_PROFILE_BALANCE, balances);
     }),
   ),
 
@@ -52,9 +46,6 @@ const actions = {
 const mutations = {
   [UPDATE_PROFILE](state, profile) {
     state.profile = profile;
-  },
-  [UPDATE_PROFILE_BALANCE](state, balances) {
-    state.profile.balances = balances;
   },
   [SET_ERROR](state, error) {
     state.error = error;

@@ -9,9 +9,4 @@ export default {
       region: 'sg',
     });
   },
-
-  async getBalances() {
-    await utils.delay(100);
-    return { coins: 305, gems: 777777 };
-  },
 };

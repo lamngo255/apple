@@ -29,7 +29,7 @@ export default {
   },
 
   computed: {
-    ...mapState('Game', ['profile', 'loading']),
+    ...mapState('Product', ['profile', 'loading']),
   },
 
   async created() {
@@ -38,7 +38,7 @@ export default {
   },
 
   methods: {
-    ...mapActions('Game', ['initData']),
+    ...mapActions('Product', ['initData']),
   },
 };
 </script>

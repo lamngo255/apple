@@ -2,11 +2,18 @@
   <div :class="['base-header', { nofloat: !showExtra }]">
     <div id="navbar">
       <a class="logo" href="/" />
-      <a v-for="(data, i) in navData" :key="i" :href="data.link">
+      <a
+        :class="{ active: active(data.link) }"
+        v-for="(data, i) in navData"
+        :key="i"
+        :href="data.link"
+      >
         {{ data.name }}
       </a>
       <li class="search"></li>
-      <li class="bag"></li>
+      <li class="bag" @mousedown="showBag" v-on-clickaway="hideBag">
+        <MyBag v-if="showMyBag" />
+      </li>
     </div>
 
     <div class="extra" v-if="showExtra">
@@ -28,8 +35,17 @@
 </template>
 
 <script>
+import { mixin as clickaway } from 'vue-clickaway';
+import MyBag from './modals/MyBag/index.vue';
+
 export default {
   name: 'BaseHeader',
+
+  mixins: [clickaway],
+
+  components: {
+    MyBag,
+  },
 
   computed: {
     showExtra() {
@@ -39,6 +55,7 @@ export default {
 
   data() {
     return {
+      showMyBag: false,
       navData: [
         { name: 'Mac', link: 'mac' },
         { name: 'Ipad', link: 'ipad' },
@@ -49,6 +66,18 @@ export default {
         { name: 'Support', link: '#' },
       ],
     };
+  },
+
+  methods: {
+    active(slug) {
+      return window.location.pathname.includes(slug);
+    },
+    showBag() {
+      this.showMyBag = true;
+    },
+    hideBag() {
+      this.showMyBag = false;
+    },
   },
 };
 </script>
@@ -66,8 +95,13 @@ export default {
   a {
     margin-right: 0.68rem;
     text-decoration: none;
-    color: #fff;
+    color: #d6d6d6;
+    position: relative;
     cursor: pointer;
+
+    &.active {
+      color: #929292;
+    }
 
     &.logo {
       @include imageCDN('icons/icon-apple.svg', 0.45rem, 0.45rem);

@@ -36,7 +36,7 @@ export default {
   },
 
   methods: {
-    ...mapActions('Game', ['closePopup']),
+    ...mapActions('Product', ['closePopup']),
   },
 };
 </script>

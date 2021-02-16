@@ -113,16 +113,8 @@ button,
 li {
   cursor: pointer;
   border: none;
-  transition: all 0.13s;
   &:hover {
     filter: brightness(1.2);
-  }
-  &:active {
-    transition: all 0s;
-    transform: scale(1.02);
-  }
-  &:hover {
-    text-decoration: underline;
   }
 }
 
