@@ -121,10 +121,8 @@ export default {
   margin-top: 0.45rem;
 
   &.nofloat {
-    margin-top: 0;
-
     #navbar {
-      position: inherit;
+      position: absolute;
       background: #0a0a0a;
     }
   }

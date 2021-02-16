@@ -1,8 +1,6 @@
 <template>
   <div class="watch-showcase">
     <div class="section-1">
-      <div class="red-shape" />
-      <div class="green-shape" />
       <div class="left">
         <div class="logo" />
         <div class="title">Black Unity</div>
@@ -18,6 +16,8 @@
       </div>
       <div class="right">
         <div class="black-unity"></div>
+        <div class="red-shape" />
+        <div class="green-shape" />
         <img
           class="front"
           :src="$assetsUrl('pages/watch/black-unity-front.jpg')"
@@ -40,17 +40,6 @@ export default {
     @include flexCenter(row);
     background: #000;
     position: relative;
-
-    .red-shape {
-      @include imageCDN('pages/watch/shape-red.svg', 300%, 1.8rem);
-      @include position(absolute, $top: 0, $left: -15rem);
-      z-index: 1;
-    }
-    .green-shape {
-      @include imageCDN('pages/watch/shape-green.svg', 300%, 2rem);
-      @include position(absolute, $bottom: 0.1rem, $left: -16rem);
-      z-index: 1;
-    }
 
     .left {
       @include flexCenter(column);
@@ -103,6 +92,15 @@ export default {
     }
 
     .right {
+      .red-shape {
+        @include imageCDN('pages/watch/shape-red.svg', 300%, 1.8rem);
+        @include position(absolute, $top: 0, $left: -15rem);
+      }
+      .green-shape {
+        @include imageCDN('pages/watch/shape-green.svg', 300%, 2rem);
+        @include position(absolute, $bottom: 0.1rem, $left: -16rem);
+        z-index: 1;
+      }
       .black-unity {
         @include imageCDN('pages/watch/black-unity.jpg', 6.88rem, 9.68rem);
         @include position(absolute, $top: 0, $right: 0);

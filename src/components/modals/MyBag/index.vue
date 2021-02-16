@@ -15,5 +15,6 @@ export default {
   background: #fff;
   border-radius: 0.2rem;
   border: #d2d2d7 solid 0.01rem;
+  z-index: 2;
 }
 </style>
