@@ -166,11 +166,11 @@ export default {
     @extend .macbook-air;
     @include position(relative, $left: 1.8rem);
     .info {
-      @include position(relative, $top: 0.2rem, $left: 0rem);
+      @include position(relative, $top: 0rem, $left: -0.3rem);
     }
     img {
       @include sizeWH(8rem, 4.46rem);
-      @include position(relative, $left: -2.1rem);
+      @include position(relative, $left: -1.8rem);
     }
   }
 }
