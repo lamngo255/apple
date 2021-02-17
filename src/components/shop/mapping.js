@@ -3,6 +3,10 @@ const colorLink = `${process.env.CDN}/shop/color-plates`;
 const colorMapping = {
   pacificBlue: {
     name: 'Pacific Blue',
+    image: `${colorLink}/pacificBlue.jpeg`,
+  },
+  blue: {
+    name: 'Blue',
     image: `${colorLink}/blue.jpeg`,
   },
   gold: {
@@ -16,6 +20,34 @@ const colorMapping = {
   graphite: {
     name: 'Graphite',
     image: `${colorLink}/graphite.jpeg`,
+  },
+  white: {
+    name: 'White',
+    image: `${colorLink}/white.jpeg`,
+  },
+  black: {
+    name: 'Black',
+    image: `${colorLink}/black.jpeg`,
+  },
+  green: {
+    name: 'Green',
+    image: `${colorLink}/green.jpeg`,
+  },
+  red: {
+    name: 'Red',
+    image: `${colorLink}/red.jpeg`,
+  },
+  yellow: {
+    name: 'Yellow',
+    image: `${colorLink}/yellow.jpeg`,
+  },
+  purple: {
+    name: 'Purple',
+    image: `${colorLink}/purple.jpeg`,
+  },
+  coral: {
+    name: 'Coral',
+    image: `${colorLink}/coral.jpeg`,
   },
 };
 

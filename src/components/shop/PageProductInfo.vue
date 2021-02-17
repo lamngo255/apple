@@ -87,7 +87,7 @@
 
           <div class="continue">
             <div class="price">Price: ${{ productPrice }}</div>
-            <button class="btn-continue">Continue</button>
+            <button class="btn-continue">Add to Bag</button>
 
             <div class="delivery">
               <img class="icon" :src="genLink('delivery.png')" />
@@ -178,7 +178,7 @@ export default {
 
   async created() {
     this.$nextTick(async () => {
-      await this.getProduct({ id: 'iphone-12-pro' });
+      await this.getProduct({ id: this.productId });
     });
   },
 };
@@ -198,10 +198,11 @@ export default {
       width: 32%;
       margin-right: 1rem;
       .photo {
-        @include sizeWH(4.5rem, auto);
+        @include sizeWH(4.7rem, auto);
       }
       .strip {
         @include flexCenter(row);
+        margin-top: 0.15rem;
         .item {
           @include flexCenter(column);
           align-self: flex-start;
@@ -284,12 +285,12 @@ export default {
           width: 5rem;
 
           .option {
-            @include sizeWH(2rem, 1.2rem);
+            @include sizeWH(2.3rem, 1rem);
             @include flexCenter(column);
             margin-top: 0.15rem;
             border: #dbdbdb solid 0.015rem;
             border-radius: 0.1rem;
-            margin-right: 0.15rem;
+            margin-right: 0.12rem;
 
             .color {
               @include sizeWH(0.3rem, 0.3rem);
@@ -363,7 +364,7 @@ export default {
         align-items: flex-start;
         text-align: left;
         padding: 0.2rem 0 0.2rem 0.3rem;
-        background: #fafafa;
+        background: #f7f5f5;
         border-radius: 0.1rem;
 
         .price {

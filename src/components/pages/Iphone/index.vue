@@ -63,7 +63,7 @@ export default {
           path: 'iphone-12-pro',
           new: true,
         },
-        { name: 'Iphone 12', img: 'ip-12', path: 'iphone-12', new: true },
+        { name: 'Iphone 12', img: 'ip-12', path: 'shop/iphone-12', new: true },
         { name: 'Iphone SE', img: 'ip-se', path: 'shop/iphone-se' },
         { name: 'Iphone 11', img: 'ip-11', path: 'shop/iphone-11' },
         { name: 'Iphone Xr', img: 'ip-xr', path: 'shop/iphone-xr' },
