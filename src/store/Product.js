@@ -8,12 +8,14 @@ const initialState = {
     balances: null,
     region: null,
   },
+  product: null,
   error: null,
   loading: false,
   openedPopup: null,
 };
 
 const UPDATE_PROFILE = 'UPDATE_PROFILE';
+const UPDATE_CURRENT_PRODUCT = 'UPDATE_CURRENT_PRODUCT';
 
 // common actions
 const SET_ERROR = 'SET_ERROR';
@@ -25,6 +27,13 @@ const actions = {
     withErrorHandling(async ({ commit }) => {
       const profile = await services.getProfile();
       commit(UPDATE_PROFILE, profile);
+    }),
+  ),
+
+  getProduct: withLoading(
+    withErrorHandling(async ({ commit }, { id }) => {
+      const product = await services.getProduct({ id });
+      commit(UPDATE_CURRENT_PRODUCT, product);
     }),
   ),
 
@@ -46,6 +55,9 @@ const actions = {
 const mutations = {
   [UPDATE_PROFILE](state, profile) {
     state.profile = profile;
+  },
+  [UPDATE_CURRENT_PRODUCT](state, product) {
+    state.product = product;
   },
   [SET_ERROR](state, error) {
     state.error = error;

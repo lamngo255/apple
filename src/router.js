@@ -68,6 +68,7 @@ export default new Router({
       path: '/shop/bag',
       name: 'PageMyBag',
       component: PageMyBag,
+      exact: true,
     },
     {
       path: '/login',

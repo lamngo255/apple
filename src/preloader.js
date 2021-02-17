@@ -3,7 +3,7 @@
  */
 
 /* eslint-disable global-require */
-const images = [`${process.env.CDN}/background.jpg`];
+const images = [];
 
 images.forEach((image) => {
   new Image().src = image;

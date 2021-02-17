@@ -82,8 +82,9 @@ export default {
     },
   },
 
-  mounted() {
+  async mounted() {
     document.title = 'iPhone - Apple';
+
     setTimeout(() => {
       this.show = true;
     }, 150);

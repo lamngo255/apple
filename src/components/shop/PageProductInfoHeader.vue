@@ -30,6 +30,7 @@ export default {
     @include sizeWH(100%, 0.55rem);
     @include flexCenter(row);
     background: #fff;
+    border-bottom: #dbdbdb solid 0.015rem;
 
     .container {
       @include flexCenter(row);
@@ -41,9 +42,9 @@ export default {
         padding-top: 0.07rem;
       }
       .right {
-        @include textMixin(#000, 0.24rem, bold);
-        padding-top: 0.05rem;
-        margin-right: 0.2rem;
+        @include textMixin(#000, 0.23rem, bold);
+        padding-top: 0.06rem;
+        margin-right: 0.25rem;
       }
     }
   }

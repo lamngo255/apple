@@ -7,10 +7,6 @@
         <span>Bag</span>
       </li>
       <li class="item">
-        <img :src="genIcon('favorites')" />
-        <span>Favorites</span>
-      </li>
-      <li class="item">
         <img :src="genIcon('orders')" />
         <span>Orders</span>
       </li>

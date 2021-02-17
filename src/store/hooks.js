@@ -3,8 +3,7 @@ const SET_ERROR = 'SET_ERROR';
 
 export const withLoading = (fn) => async (...args) => {
   const [ctx] = args;
-  const { commit, state } = ctx;
-  if (state.loading !== false) return null;
+  const { commit } = ctx;
 
   commit(SET_LOADING, true);
   const result = await fn(...args);
