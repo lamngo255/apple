@@ -4,16 +4,16 @@
       <div class="container">
         <transition name="fade">
           <div class="products" v-if="show">
-            <a
+            <li
               class="product"
               v-for="(product, i) in productIcons"
               :key="i"
-              :href="product.path"
+              @click="$router.push(product.path)"
             >
               <img class="icon" :src="genIcon(product.img)" />
               <div class="name">{{ product.name }}</div>
               <div class="new" v-if="product.new">New</div>
-            </a>
+            </li>
           </div>
         </transition>
       </div>
@@ -64,10 +64,10 @@ export default {
           new: true,
         },
         { name: 'Iphone 12', img: 'ip-12', path: 'iphone-12', new: true },
-        { name: 'Iphone SE', img: 'ip-se', path: 'iphone-se' },
+        { name: 'Iphone SE', img: 'ip-se', path: 'shop/iphone-se' },
         { name: 'Iphone 11', img: 'ip-11', path: 'shop/iphone-11' },
         { name: 'Iphone Xr', img: 'ip-xr', path: 'shop/iphone-xr' },
-        { name: 'Airpods', img: 'airpods', path: 'airpods' },
+        { name: 'Airpods', img: 'airpods', path: 'shop/airpods' },
         { name: 'Compare', img: 'compare' },
         { name: 'Accessories', img: 'accessories' },
         { name: 'Apple Card', img: 'apple-card' },

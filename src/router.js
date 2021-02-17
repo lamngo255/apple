@@ -13,6 +13,7 @@ import Iphone12 from '@/components/product-details/iphone-12';
 
 import PageMyBag from '@/components/shop/PageMyBag';
 import PageLogin from '@/components/pages/PageLogin';
+import PageProductInfo from '@/components/shop/PageProductInfo';
 
 Vue.use(Router);
 
@@ -72,6 +73,11 @@ export default new Router({
       path: '/login',
       name: 'PageLogin',
       component: PageLogin,
+    },
+    {
+      path: '/shop/:productId',
+      name: 'PageProductInfo',
+      component: PageProductInfo,
     },
 
     // ---------- PRODUCTS ------------

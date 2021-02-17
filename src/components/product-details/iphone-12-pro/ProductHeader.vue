@@ -5,7 +5,9 @@
         <div class="left">iPhone 12 Pro</div>
         <div class="right">
           <div>Overview</div>
-          <button class="btn-buy">Buy</button>
+          <button class="btn-buy" @click="$router.push('/shop/iphone-12-pro')">
+            <span>Buy</span>
+          </button>
         </div>
       </div>
     </div>
