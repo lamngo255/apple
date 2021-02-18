@@ -1,8 +1,24 @@
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,400,500,700,900|Roboto:300,300i,400,400i,500,500i,700,700i,900,900i&display=swap&subset=chinese-traditional,latin-ext,vietnamese');
-@import url('https://use.typekit.net/gzs4pfq.css');
-
 @font-face {
   font-family: "San Francisco";
   font-weight: 400;
   src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
 }
+
+@font-face {
+  font-family: "San Francisco Regular";
+  font-weight: 400;
+  src: url("./fonts/SF-Pro-Display-Regular.otf");
+}
+
+@font-face {
+  font-family: "San Francisco Bold";
+  font-weight: 400;
+  src: url("./fonts/SF-Pro-Display-Bold.otf");
+}
+
+@font-face {
+  font-family: "San Francisco Medium";
+  font-weight: 400;
+  src: url("./fonts/SF-Pro-Display-Medium.otf");
+}
+

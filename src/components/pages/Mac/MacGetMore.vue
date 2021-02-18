@@ -100,6 +100,7 @@ export default {
 .mac-getmore {
   .title {
     @include textMixin(#000, 0.6rem, bold);
+    font-family: 'San Francisco Regular', sans-serif;
     margin-top: 1rem;
   }
 

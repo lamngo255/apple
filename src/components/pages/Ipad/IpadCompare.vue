@@ -93,6 +93,7 @@ export default {
 
   .title {
     @include textMixin(#000, 0.6rem, bold);
+    font-family: 'San Francisco Regular', sans-serif;
   }
   .compare {
     @include textMixin(#0266cc, 0.21rem);

@@ -3,7 +3,7 @@ const colorLink = `${process.env.CDN}/shop/color-plates`;
 const colorMapping = {
   pacificBlue: {
     name: 'Pacific Blue',
-    image: `${colorLink}/pacificBlue.jpeg`,
+    image: `${colorLink}/pacific-blue.jpeg`,
   },
   blue: {
     name: 'Blue',
@@ -49,6 +49,50 @@ const colorMapping = {
     name: 'Coral',
     image: `${colorLink}/coral.jpeg`,
   },
+  roseGold: {
+    name: 'Rose Gold',
+    image: `${colorLink}/rose-gold.jpeg`,
+  },
+  spaceGray: {
+    name: 'Space Gray',
+    image: `${colorLink}/space-gray.png`,
+  },
+  skyBlue: {
+    name: 'Sky Blue',
+    image: `${colorLink}/sky-blue.png`,
+  },
+  blackUnity: {
+    name: 'Black Unity',
+    image: `${colorLink}/black-unity.jpeg`,
+  },
+  northernBlue: {
+    name: 'Northern Blue',
+    image: `${colorLink}/northern-blue.jpeg`,
+  },
+  anthraciteBlack: {
+    name: 'Anthracite/Black',
+    image: `${colorLink}/anthracite-black.jpeg`,
+  },
+  pride: {
+    name: 'Pride',
+    image: `${colorLink}/pride.jpeg`,
+  },
+  platinumBlack: {
+    name: 'Pure Platinum/Black',
+    image: `${colorLink}/platinum-black.jpeg`,
+  },
+  obsidianMist: {
+    name: 'Obsidian Mist',
+    image: `${colorLink}/obsidian-mist.jpeg`,
+  },
+  orange: {
+    name: 'Orange',
+    image: `${colorLink}/orange.jpeg`,
+  },
+  fauve: {
+    name: 'Fauve',
+    image: `${colorLink}/fauve.jpeg`,
+  },
 };
 
 const productMapping = {
@@ -57,6 +101,13 @@ const productMapping = {
   'iphone-se': 'iPhone SE',
   'iphone-11': 'iPhone 11',
   'iphone-xr': 'iPhone XR',
+
+  'ipad-pro': 'iPad Pro',
+  'ipad-air': 'iPad Air',
+  'imac-pro': 'iMac Pro',
+  imac: 'iMac',
+
+  'apple-watch-se': 'Apple Watch SE',
 };
 
 function capitalize(s) {

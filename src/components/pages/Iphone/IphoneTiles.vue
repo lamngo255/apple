@@ -89,6 +89,7 @@ export default {
 
   .title {
     @include textMixin(#000, 0.5rem, bold);
+    font-family: 'San Francisco Regular', sans-serif;
   }
   .desc {
     @include textMixin(#000, 0.22rem);
@@ -116,6 +117,7 @@ export default {
 
       .text {
         @include position(absolute, $top: 1.2rem, $right: 0.3rem);
+        font-family: 'San Francisco Regular', sans-serif;
         p {
           @include textMixin(#000, 0.32rem, bold);
           &:nth-child(2) {
@@ -135,7 +137,7 @@ export default {
       margin-left: 0.15rem;
 
       .text {
-        @include position(absolute, $top: 1.2rem, $right: 4.7rem);
+        @include position(absolute, $top: 1.2rem, $right: 5.3rem);
         p:nth-child(2) {
           color: #ff0031;
         }
@@ -165,6 +167,7 @@ export default {
   .details {
     .title {
       @include textMixin(#000, 0.5rem, bold);
+      font-family: 'San Francisco Regular', sans-serif;
       margin: 0 auto;
       width: 5rem;
     }
@@ -214,6 +217,7 @@ export default {
   .upgrade {
     .title {
       @include textMixin(#000, 0.48rem, bold);
+      font-family: 'San Francisco Regular', sans-serif;
       margin: 0.35rem auto 0;
       width: 5.3rem;
     }

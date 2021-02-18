@@ -78,6 +78,7 @@ export default {
   }
   .name {
     @include textMixin(#000, 0.63rem, bold);
+    font-family: 'San Francisco Regular', sans-serif;
   }
   .desc {
     @include textMixin(#000, 0.24rem, bold, $align: left);
@@ -110,6 +111,7 @@ export default {
     }
     img {
       @include sizeWH(5rem, 6rem);
+      margin-left: 0.6rem;
     }
   }
 

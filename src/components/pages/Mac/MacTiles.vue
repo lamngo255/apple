@@ -65,6 +65,7 @@ export default {
   .details {
     .title {
       @include textMixin(#000, 0.5rem, bold);
+      font-family: 'San Francisco Regular', sans-serif;
       margin: 0 auto;
       width: 5rem;
     }
@@ -118,6 +119,7 @@ export default {
     }
     .subtitle {
       @include textMixin(#000, 0.53rem, bold);
+      font-family: 'San Francisco Regular', sans-serif;
       margin: 0 auto;
       width: 5.3rem;
     }

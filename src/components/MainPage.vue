@@ -169,6 +169,7 @@ section.row {
 
     .title {
       @include textMixin(#000, 0.57rem, bold);
+      font-family: 'San Francisco Regular', sans-serif;
       margin-top: 0.35rem;
     }
     .subtitle {
@@ -209,6 +210,7 @@ section.row {
 
     .title {
       @include textMixin(#fff, 0.57rem, bold);
+      font-family: 'San Francisco Regular', sans-serif;
       margin-top: 0.35rem;
     }
     .subtitle {
@@ -289,6 +291,8 @@ section.row {
 
     .title {
       @include textMixin(#000, 0.47rem, bold);
+      font-family: 'San Francisco Regular', sans-serif;
+
       margin-top: 0.35rem;
     }
     .subtitle {
@@ -364,7 +368,7 @@ section.row {
       margin: 0.4rem auto 0.13rem;
     }
     .subtitle {
-      @include textMixin(#000, 0.22rem);
+      @include textMixin(#000, 0.2rem);
       width: 3.5rem;
     }
     .buttons {
@@ -402,6 +406,7 @@ section.row {
     }
     .title {
       @include textMixin(#000, 0.45rem, bold);
+      font-family: 'San Francisco Regular', sans-serif;
       width: 2.5rem;
     }
     .subtitle {
@@ -439,7 +444,7 @@ section.row {
       margin: 0.4rem auto 0.13rem;
     }
     .subtitle {
-      @include textMixin(#000, 0.22rem);
+      @include textMixin(#000, 0.2rem);
       width: 3rem;
     }
     .buttons {

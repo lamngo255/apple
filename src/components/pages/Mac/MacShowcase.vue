@@ -77,8 +77,8 @@ export default {
   }
 
   .welcome {
-    line-height: 0.75rem;
-    font-size: 0.7rem;
+    line-height: 0.82rem;
+    font-size: 0.75rem;
     font-weight: bold;
     background: #eff1ff;
     background: radial-gradient(ellipse at center, #eff1ff 10%, #000 100%);
@@ -87,6 +87,7 @@ export default {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-family: 'San Francisco Bold', sans-serif;
   }
 
   .btn-learn-m1 {

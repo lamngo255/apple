@@ -39,6 +39,7 @@ export default {
     }
     .subtitle {
       @include textMixin(#000, 0.46rem, bold);
+      font-family: 'San Francisco Regular', sans-serif;
       margin-top: 0.1rem;
       width: 5rem;
     }

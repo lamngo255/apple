@@ -47,6 +47,7 @@ export default {
     }
     .title {
       @include textMixin(#000, 0.5rem, bold);
+      font-family: 'San Francisco Regular', sans-serif;
     }
     .subtitle {
       @include textMixin(#000, 0.24rem);

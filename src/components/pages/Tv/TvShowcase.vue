@@ -95,7 +95,9 @@ export default {
       @include textMixin(#1d1d20, 0.28rem, bold);
     }
     .subtitle {
-      @include textMixin(#1d1d20, 0.9rem, bold);
+      @include textMixin(#1d1d20, 0.8rem, bold);
+      font-family: 'San Francisco Bold', sans-serif;
+      margin-top: 0.2rem;
     }
 
     .buttons {
@@ -135,7 +137,9 @@ export default {
       @include sizeWH(2rem, auto);
     }
     .title {
-      @include textMixin(#fff, 1rem, bold);
+      @include textMixin(#fff, 0.8rem, bold);
+      font-family: 'San Francisco Bold', sans-serif;
+      margin-top: 0.2rem;
     }
     .buttons {
       @include flexCenter(row);

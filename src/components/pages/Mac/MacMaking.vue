@@ -53,6 +53,7 @@ export default {
 .mac-making {
   .title {
     @include textMixin(#000, 0.6rem, bold);
+    font-family: 'San Francisco Regular', sans-serif;
     margin-top: 1.5rem;
   }
   .frame-banner {
@@ -128,6 +129,7 @@ export default {
     }
     .subtitle {
       @include textMixin(#000, 0.48rem, bold);
+      font-family: 'San Francisco Regular', sans-serif;
       margin: 0 auto;
     }
     .btn-learn {

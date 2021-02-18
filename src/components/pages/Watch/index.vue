@@ -64,41 +64,37 @@ export default {
         {
           name: 'Apple Watch Series 6',
           img: 'apple-watch-series-6',
-          path: 'apple-watch-series-6',
+          path: 'shop/apple-watch-series-6',
           new: true,
         },
         {
           name: 'Apple Watch SE',
           img: 'apple-watch-se',
-          path: 'apple-watch-se',
+          path: 'shop/apple-watch-se',
           new: true,
         },
         {
           name: 'Apple Watch Series 3',
           img: 'apple-watch-series-3',
-          path: 'apple-watch-series-3',
+          path: 'shop/apple-watch-series-3',
         },
         {
           name: 'Apple Watch Nike',
           img: 'apple-watch-nike',
-          path: 'apple-watch-nike',
+          path: 'shop/apple-watch-nike',
           new: true,
         },
         {
           name: 'Apple Watch Hermes',
           img: 'apple-watch-hermes',
-          path: 'apple-watch-hermes',
+          path: 'shop/apple-watch-hermes',
           new: true,
         },
-        {
-          name: 'Apple Watch Studio',
-          img: 'apple-watch-studio',
-          path: 'apple-watch-studio',
-        },
-        { name: 'Compare', img: 'compare', path: 'watch/compare' },
-        { name: 'Bands', img: 'bands', path: 'bands' },
-        { name: 'Airpods', img: 'airpods', path: 'airpods' },
-        { name: 'Accessories', img: 'accessories', path: 'accessories' },
+        { name: 'Apple Watch Studio', img: 'apple-watch-studio' },
+        { name: 'Compare', img: 'compare' },
+        { name: 'Bands', img: 'bands', path: 'shop/bands' },
+        { name: 'Airpods', img: 'airpods', path: 'shop/airpods' },
+        { name: 'Accessories', img: 'accessories' },
         {
           name: 'Apple Fitness+',
           img: 'apple-fitness',
@@ -169,8 +165,8 @@ export default {
 
   .trade-in {
     @include sizeWH(100%, 0.38rem);
-    @include textMixin(#000, 0.13rem);
-    padding-top: 0.12rem;
+    @include textMixin(#000, 0.14rem);
+    padding-top: 0.11rem;
     background: #f5f5f7;
   }
 

@@ -25,10 +25,6 @@
           Shop online and get Specialist help, free no‑contact delivery, and
           more.
         </p>
-        <p>
-          Some of our retail stores are temporarily closed or offering limited
-          services. Before you visit, check your store’s status.
-        </p>
       </div>
     </div>
   </div>
@@ -70,7 +66,7 @@ export default {
 
   methods: {
     active(slug) {
-      return window.location.pathname.includes(slug);
+      return window.location.pathname.includes(slug.slice(1));
     },
     showBag() {
       this.showMyBag = true;
@@ -144,9 +140,9 @@ export default {
   }
 
   .shop-online {
-    @include sizeWH(100%, 0.62rem);
+    @include sizeWH(100%, 0.45rem);
     @include textMixin(#1e1e1f, 0.145rem);
-    padding-top: 0.1rem;
+    padding-top: 0.13rem;
     background: #f5f5f7;
     line-height: 0.2rem;
   }

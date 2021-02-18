@@ -78,9 +78,11 @@ export default {
 
   .title {
     @include textMixin(#000, 0.5rem, bold);
+    font-family: 'San Francisco Regular', sans-serif;
   }
   .btn-shop {
     @include textMixin(#0171e3, 0.23rem);
+    font-family: 'San Francisco Regular', sans-serif;
     border: none;
     background: none;
     margin-top: 0.05rem;
@@ -164,6 +166,7 @@ export default {
     }
     .subtitle {
       @include textMixin(#000, 0.5rem, bold);
+      font-family: 'San Francisco Regular', sans-serif;
       margin: 0 auto;
       width: 5rem;
     }

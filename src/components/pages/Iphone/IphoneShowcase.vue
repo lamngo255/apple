@@ -57,6 +57,7 @@ export default {
     }
     .subtitle {
       @include textMixin(#000, 0.54rem, bold);
+      font-family: 'San Francisco Regular', sans-serif;
     }
     .desc {
       @include textMixin(#1e1e1f, 0.21rem);
@@ -103,6 +104,7 @@ export default {
     }
     .subtitle {
       @include textMixin(#fff, 0.54rem, bold);
+      font-family: 'San Francisco Regular', sans-serif;
     }
     .desc {
       @include textMixin(#fff, 0.24rem);
