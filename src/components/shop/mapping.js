@@ -108,6 +108,7 @@ const productMapping = {
   imac: 'iMac',
 
   'apple-watch-se': 'Apple Watch SE',
+  'watch-bands': 'Bands',
 };
 
 function capitalize(s) {

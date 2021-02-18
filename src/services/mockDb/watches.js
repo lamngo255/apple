@@ -137,5 +137,5 @@ export default {
   'apple-watch-se': watchSE(),
   'apple-watch-nike': watchNike(),
   'apple-watch-hermes': watchHermes(),
-  bands: bands(),
+  'watch-bands': bands(),
 };

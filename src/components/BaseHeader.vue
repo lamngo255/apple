@@ -6,7 +6,7 @@
         v-for="(data, i) in navData"
         :class="{ active: active(data.link) }"
         :key="i"
-        @click="$router.push(data.link)"
+        @click="goTo(data.link)"
       >
         {{ data.name }}
       </li>
@@ -59,7 +59,7 @@ export default {
         { name: 'Watch', link: '/watch' },
         { name: 'TV', link: '/tv' },
         { name: 'Music', link: '/music' },
-        { name: 'Support', link: '#' },
+        { name: 'Support', link: '/#' },
       ],
     };
   },
@@ -73,6 +73,9 @@ export default {
     },
     hideBag() {
       this.showMyBag = false;
+    },
+    goTo(link) {
+      if (!window.location.pathname.endsWith(link)) this.$router.push(link);
     },
   },
 };

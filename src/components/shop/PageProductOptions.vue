@@ -139,7 +139,7 @@ export default {
   methods: {
     ...mapActions('Product', ['getProduct']),
     genLink(name) {
-      return this.$assetsUrl(`/shop/${name}`);
+      return this.$assetsUrl(`shop/${name}`);
     },
     selectModel(id) {
       this.modelId = id;

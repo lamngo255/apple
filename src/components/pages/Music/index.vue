@@ -46,15 +46,15 @@ export default {
         {
           name: 'Apple Music',
           img: 'apple-music',
-          path: 'apple-music',
+          // path: 'apple-music',
           new: true,
         },
-        { name: 'Airpods', img: 'airpods', path: 'airpods' },
-        { name: 'Airpods Pro', img: 'airpods-pro', path: 'airpods-pro' },
+        { name: 'Airpods', img: 'airpods', path: 'shop/airpods' },
+        { name: 'Airpods Pro', img: 'airpods-pro', path: 'shop/airpods-pro' },
         {
           name: 'Airpods Max',
           img: 'airpods-max',
-          path: 'airpods-max',
+          path: 'shop/airpods-max',
           new: true,
         },
         {
