@@ -2,8 +2,6 @@
 import utils from '../utils';
 import mockDb from './mockDb';
 
-const CDN = '/cdn/assets';
-
 export default {
   async getProfile() {
     await utils.delay(100);

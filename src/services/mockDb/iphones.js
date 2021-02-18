@@ -1,4 +1,4 @@
-const CDN = '/cdn/assets';
+import { CDN } from '@/constants';
 
 const iphone12Pro = () => {
   const link = `${CDN}/shop/iphone/iphone-12-pro`;
@@ -124,22 +124,10 @@ const iphoneXR = () => {
   };
 };
 
-const airpods = () => {
-  const link = `${CDN}/shop/airpods/airpods`;
-
-  return {
-    name: 'iPhone XR',
-    mainImage: `${link}/main.jpeg`,
-    prices: [199],
-    specs: {},
-  };
-};
-
 export default {
   'iphone-12': iphone12(),
   'iphone-12-pro': iphone12Pro(),
   'iphone-se': iphoneSE(),
   'iphone-11': iphone11(),
   'iphone-xr': iphoneXR(),
-  airpods: airpods(),
 };
