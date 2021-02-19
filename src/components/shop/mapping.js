@@ -93,6 +93,10 @@ const colorMapping = {
     name: 'Fauve',
     image: `${colorLink}/fauve.jpeg`,
   },
+  pink: {
+    name: 'Pink',
+    image: `${colorLink}/pink.jpeg`,
+  },
 };
 
 const productMapping = {
@@ -109,6 +113,10 @@ const productMapping = {
 
   'apple-watch-se': 'Apple Watch SE',
   'watch-bands': 'Bands',
+  'apple-tv-4k': 'Apple TV 4K',
+  'apple-tv-hd': 'Apple TV HD',
+  homepod: 'HomePod',
+  'homepod-mini': 'HomePod Mini',
 };
 
 function capitalize(s) {

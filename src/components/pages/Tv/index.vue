@@ -50,28 +50,26 @@ export default {
         {
           name: 'Apple TV+',
           img: 'apple-tv-plus',
-          path: 'apple-tv-plus',
           new: true,
         },
         {
           name: 'Apple TV App',
           img: 'apple-tv-app',
-          path: 'apple-tv-app',
           new: true,
         },
         {
           name: 'Apple TV 4k',
           img: 'apple-tv-4k',
-          path: 'apple-tv-4k',
+          path: 'shop/apple-tv-4k',
         },
         {
           name: 'Apple TV HD',
           img: 'apple-tv-hd',
-          path: 'apple-tv-hd',
+          path: 'shop/apple-tv-hd',
         },
-        { name: 'AirPlay', img: 'airplay', path: 'airplay' },
-        { name: 'HomePod', img: 'homepod', path: 'homepod' },
-        { name: 'Accessories', img: 'accessories', path: 'tv/accessories' },
+        { name: 'AirPlay', img: 'airplay' },
+        { name: 'HomePod', img: 'homepod', path: 'shop/homepod' },
+        { name: 'Accessories', img: 'accessories' },
       ],
     };
   },

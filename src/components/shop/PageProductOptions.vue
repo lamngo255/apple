@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div :class="['container', { homepod, homepodMini }]">
     <div class="left">
       <img class="photo" :src="currentImage" />
       <div class="strip">
@@ -130,6 +130,13 @@ export default {
   },
 
   computed: {
+    homepod() {
+      return this.productName === 'HomePod';
+    },
+    homepodMini() {
+      return this.productName === 'HomePod Mini';
+    },
+
     currentImage() {
       if (this.colorId === -1) return this.mainImage;
       return this.productImages[this.colorId];
@@ -162,6 +169,20 @@ export default {
 .container {
   @include flexCenter(row);
   padding-bottom: 0.5rem;
+
+  &.homepod {
+    background: #f5f5f7;
+
+    .left .photo {
+      @include sizeWH(8rem, auto);
+    }
+  }
+
+  &.homepodMini {
+    .left .photo {
+      @include sizeWH(8rem, auto);
+    }
+  }
 
   .left {
     @include flexCenter(column);

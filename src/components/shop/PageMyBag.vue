@@ -65,7 +65,7 @@ export default {
       .btn-signin {
         @include textMixin(#fff, 0.19rem);
         background: #2d71e3;
-        padding: 0.17rem 1.6rem;
+        padding: 0.17rem 1.2rem;
         border-radius: 0.15rem;
         margin-right: 0.2rem;
       }

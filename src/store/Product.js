@@ -8,6 +8,15 @@ const initialState = {
     balances: null,
     region: null,
   },
+  myBag: [
+    {
+      id: 'iphone-12-pro',
+      colorId: 0,
+      modelId: 1,
+      capacityId: 1,
+      quantity: 2,
+    },
+  ],
   product: null,
   error: null,
   loading: false,

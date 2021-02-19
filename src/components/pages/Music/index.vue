@@ -60,12 +60,11 @@ export default {
         {
           name: 'Homepod Mini',
           img: 'homepod-mini',
-          path: 'homepod-mini',
+          path: 'shop/homepod-mini',
           new: true,
         },
-        { name: 'Homepod', img: 'homepod', path: 'homepod' },
-        { name: 'iPod Touch', img: 'ipod-touch', path: 'ipod-touch' },
-        { name: 'Beats', img: 'beats', path: 'beats' },
+        { name: 'Homepod', img: 'homepod', path: 'shop/homepod' },
+        { name: 'iPod Touch', img: 'ipod-touch', path: 'shop/ipod-touch' },
         {
           name: 'Music Accessories',
           img: 'music-accessories',
