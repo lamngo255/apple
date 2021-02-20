@@ -30,7 +30,7 @@ const airpodsMax = () => {
   const link = `${CDN}/shop/airpods/airpods-max`;
 
   return {
-    name: 'iPhone SE',
+    name: 'Airpods Max',
     mainImage: `${link}/main.jpeg`,
     images: [
       `${link}/colors/space-gray.png`,
@@ -51,7 +51,7 @@ const ipodTouch = () => {
   const link = `${CDN}/shop/ipod`;
 
   return {
-    name: 'iPhone SE',
+    name: 'iPod Touch',
     mainImage: `${link}/main.png`,
     images: [
       `${link}/colors/space-gray.png`,

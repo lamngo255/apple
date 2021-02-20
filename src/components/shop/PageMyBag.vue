@@ -19,7 +19,10 @@
         </template>
       </div>
 
-      <div class="container" v-else></div>
+      <div class="container" v-else>
+        <div class="title">Review your bag</div>
+        <div class="subtitle">Free delivery and free returns.</div>
+      </div>
     </div>
   </BaseLayout>
 </template>
@@ -85,6 +88,17 @@ export default {
           filter: brightness(1);
         }
       }
+    }
+  }
+
+  .container {
+    .title {
+      @include textMixin(#000, 0.47rem, bold);
+      margin-top: 0.5rem;
+    }
+    .subtitle {
+      @include textMixin(#000, 0.2rem, bold);
+      margin-top: 0.1rem;
     }
   }
 }
