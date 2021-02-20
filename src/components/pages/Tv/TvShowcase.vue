@@ -133,7 +133,7 @@ export default {
       #1a1d22 60%,
       #000 90%
     );
-    .logo {
+    .logo-tv-4k {
       @include sizeWH(2rem, auto);
     }
     .title {
