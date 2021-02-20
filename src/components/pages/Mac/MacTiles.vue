@@ -58,11 +58,12 @@ export default {
   background: #f2f2f2;
 
   img {
-    @include sizeWH(6.98rem, 3.76rem);
+    @include sizeWH(6.2rem, 3.16rem);
     margin-right: 0.2rem;
   }
 
   .details {
+    margin-right: 0.2rem;
     .title {
       @include textMixin(#000, 0.5rem, bold);
       font-family: 'San Francisco Regular', sans-serif;
@@ -72,7 +73,7 @@ export default {
     .subtitle {
       @include textMixin(#000, 0.21rem);
       margin: 0.1rem auto;
-      width: 5.5rem;
+      width: 5rem;
     }
     .btn-learn {
       @include textMixin(#0171e3, 0.19rem);

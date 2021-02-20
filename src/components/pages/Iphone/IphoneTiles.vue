@@ -105,7 +105,7 @@ export default {
     @include flexCenter(row);
     width: 100%;
     .creativity {
-      @include sizeWH(47%, 3.2rem);
+      @include sizeWH(47%, 2.8rem);
       background: #f5f5f7;
       margin-top: 0.2rem;
       margin-right: 0.15rem;
@@ -116,7 +116,7 @@ export default {
       position: relative;
 
       .text {
-        @include position(absolute, $top: 1.2rem, $right: 0.3rem);
+        @include position(absolute, $top: 1rem, $right: 0.3rem);
         font-family: 'San Francisco Regular', sans-serif;
         p {
           @include textMixin(#000, 0.32rem, bold);
@@ -128,7 +128,7 @@ export default {
 
       img {
         @include position(absolute, $top: 0.35rem, $left: 0);
-        @include sizeWH(auto, 2.6rem);
+        @include sizeWH(auto, 2.2rem);
       }
     }
     .music {
@@ -137,14 +137,14 @@ export default {
       margin-left: 0.15rem;
 
       .text {
-        @include position(absolute, $top: 1.2rem, $right: 5.3rem);
+        @include position(absolute, $top: 1rem, $right: 4.2rem);
         p:nth-child(2) {
           color: #ff0031;
         }
       }
 
       img {
-        @include position(absolute, $top: 0rem, $left: 1.75rem);
+        @include position(absolute, $top: 0rem, $left: 1.6rem);
         @include sizeWH(auto, 100%);
         border-top-right-radius: 0.2rem;
         border-bottom-right-radius: 0.2rem;
@@ -160,7 +160,7 @@ export default {
   margin-top: 0.3rem;
 
   img {
-    @include sizeWH(6.98rem, 3.76rem);
+    @include sizeWH(6.2rem, 3.3rem);
     margin-right: 0.2rem;
   }
 
@@ -174,7 +174,7 @@ export default {
     .subtitle {
       @include textMixin(#000, 0.21rem);
       margin: 0.1rem auto;
-      width: 5.5rem;
+      width: 5rem;
     }
     .btn-learn {
       @include textMixin(#0171e3, 0.19rem);

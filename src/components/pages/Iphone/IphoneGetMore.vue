@@ -253,7 +253,7 @@ export default {
   position: relative;
 
   .overlay {
-    @include sizeWH(10rem, 3.5rem);
+    @include sizeWH(9rem, 3.5rem);
   }
 
   .details {
