@@ -137,7 +137,7 @@ export default {
       margin-left: 0.15rem;
 
       .text {
-        @include position(absolute, $top: 1rem, $right: 4.2rem);
+        @include position(absolute, $top: 1rem, $right: 4.1rem);
         p:nth-child(2) {
           color: #ff0031;
         }

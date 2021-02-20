@@ -102,9 +102,9 @@ export default {
       position: relative;
 
       .text {
-        @include position(absolute, $top: 0.3rem, $left: 0.4rem);
+        @include position(absolute, $top: 0.3rem, $left: 0.2rem);
         p {
-          @include textMixin(#000, 0.32rem, bold);
+          @include textMixin(#000, 0.28rem, bold);
           &:nth-child(2) {
             color: #0086e6;
           }
@@ -122,6 +122,7 @@ export default {
       margin-left: 0.15rem;
 
       .text {
+        @include position(absolute, $top: 0.2rem, $left: 0.13rem);
         p:nth-child(2) {
           color: #fe8f04;
         }

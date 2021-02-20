@@ -7,8 +7,10 @@
         <div class="subtitle">Blast past fast.</div>
         <div class="desc">From $29.12/mo. or $699 before trade‑in</div>
         <div class="buttons">
-          <a class="btn-buy" href="/buy">Buy</a>
-          <a class="btn-learn" href="/learn">Learn more</a>
+          <button class="btn-buy" @click="$router.push('shop/iphone-12')">
+            Buy
+          </button>
+          <a class="btn-learn">Learn more</a>
         </div>
       </div>
     </div>
@@ -20,8 +22,10 @@
         <div class="subtitle">It's a leap year.</div>
         <div class="desc">From $41.62/mo. or $999 before trade‑in2</div>
         <div class="buttons">
-          <a class="btn-buy" href="/buy">Buy</a>
-          <a class="btn-learn" href="/learn">Learn more</a>
+          <button class="btn-buy" @click="$router.push('shop/iphone-12-pro')">
+            Buy
+          </button>
+          <button class="btn-learn">Learn more</button>
         </div>
       </div>
     </div>

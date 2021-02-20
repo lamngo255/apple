@@ -5,7 +5,24 @@ import { withLoading, withErrorHandling } from './hooks';
 const initialState = {
   profile: null,
   allProducts: {},
-  myBag: [],
+  myBag: [
+    {
+      id: 'iphone-12-pro',
+      colorId: 1,
+      modelId: 2,
+      sizeId: -1,
+      capacityId: 2,
+      quantity: 2,
+    },
+    {
+      id: 'iphone-12',
+      colorId: 1,
+      modelId: 2,
+      sizeId: -1,
+      capacityId: 1,
+      quantity: 3,
+    },
+  ],
   product: null,
   error: null,
   loading: false,
