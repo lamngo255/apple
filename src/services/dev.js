@@ -11,6 +11,11 @@ export default {
     });
   },
 
+  async getAllProducts() {
+    await utils.delay(100);
+    return mockDb;
+  },
+
   async getProduct(payload) {
     // payload format
     // {

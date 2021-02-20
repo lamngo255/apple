@@ -12,6 +12,7 @@
       </li>
       <li class="search"></li>
       <li class="bag" @mousedown="showBag" v-on-clickaway="hideBag">
+        <div class="badge">{{ bagSize }}</div>
         <BagPopup v-if="showMyBag" />
       </li>
     </div>
@@ -32,6 +33,7 @@
 
 <script>
 import { mixin as clickaway } from 'vue-clickaway';
+import { mapState } from 'vuex';
 import BagPopup from './modals/BagPopup/index.vue';
 
 export default {
@@ -44,6 +46,11 @@ export default {
   },
 
   computed: {
+    ...mapState('Product', ['myBag']),
+
+    bagSize() {
+      return this.myBag.reduce((acc, item) => acc + item.quantity, 0);
+    },
     showExtra() {
       return window.location.pathname === '/home';
     },
@@ -114,6 +121,15 @@ export default {
     }
     &.bag {
       @include imageCDN('icons/icon-bag.svg', 0.45rem, 0.45rem);
+      position: relative;
+      .badge {
+        @include sizeWH(auto, 0.13rem);
+        @include textMixin(#000, 0.1rem);
+        @include position(absolute, $top: 0.23rem, $left: 0.22rem);
+        background: #eee;
+        border-radius: 0.2rem;
+        padding: 0 0.04rem;
+      }
       &:hover {
         filter: brightness(1);
       }

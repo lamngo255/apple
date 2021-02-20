@@ -6,6 +6,7 @@
         v-if="product"
         v-bind="product"
         :colors="colors"
+        :productId="productId"
         :productPrice="productPrice"
         :productImages="productImages"
         :productName="productName"
@@ -16,11 +17,11 @@
 </template>
 
 <script>
-import { mapActions, mapState } from 'vuex';
+import { mapState } from 'vuex';
+import { normalizeStr, colorPicker } from '@/mapping';
 import BaseLayout from '@/components/BaseLayout.vue';
 import PageProductInfoHeader from './PageProductInfoHeader.vue';
 import PageProductOptions from './PageProductOptions.vue';
-import { normalizeStr, colorPicker } from './mapping';
 
 export default {
   name: 'PageProductInfo',
@@ -38,7 +39,10 @@ export default {
   },
 
   computed: {
-    ...mapState('Product', ['product']),
+    ...mapState('Product', ['allProducts']),
+    product() {
+      return this.allProducts[this.productId];
+    },
     productId() {
       return this.$route.params.productId;
     },
@@ -64,8 +68,6 @@ export default {
   },
 
   methods: {
-    ...mapActions('Product', ['getProduct']),
-
     setPrice(price) {
       this.currentPrice = price;
     },
@@ -73,12 +75,6 @@ export default {
 
   mounted() {
     this.currentPrice = -1;
-  },
-
-  async created() {
-    this.$nextTick(async () => {
-      await this.getProduct({ id: this.productId });
-    });
   },
 };
 </script>

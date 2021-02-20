@@ -88,7 +88,7 @@
 
       <div class="continue">
         <div class="price">Price: ${{ productPrice }}</div>
-        <button class="btn-continue">Add to Bag</button>
+        <button class="btn-continue" @click="addToBag()">Add to Bag</button>
 
         <div class="delivery">
           <img class="icon" :src="genLink('delivery.png')" />
@@ -111,6 +111,7 @@ export default {
 
   props: {
     specs: { type: Object, default: () => {} },
+    productId: { type: String, required: true },
     productPrice: { type: Number, default: 0 },
     productName: { type: String, default: '' },
     productImages: { type: Array, default: () => {} },
@@ -144,7 +145,17 @@ export default {
   },
 
   methods: {
-    ...mapActions('Product', ['getProduct']),
+    ...mapActions('Product', ['addProductToBag']),
+    addToBag() {
+      const product = {
+        id: this.productId,
+        colorId: this.colorId,
+        modelId: this.modelId,
+        capacityId: this.capacityId,
+        sizeId: this.sizeId,
+      };
+      this.addProductToBag(product);
+    },
     genLink(name) {
       return this.$assetsUrl(`shop/${name}`);
     },

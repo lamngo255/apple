@@ -4,16 +4,16 @@
       <div class="container">
         <transition name="fade">
           <div class="products" v-if="show">
-            <a
+            <li
               class="product"
               v-for="(product, i) in productIcons"
               :key="i"
-              :href="product.path"
+              @click="$router.push(product.path)"
             >
               <img class="icon" :src="genIcon(product.img)" />
               <div class="name">{{ product.name }}</div>
               <div class="new" v-if="product.new">New</div>
-            </a>
+            </li>
           </div>
         </transition>
       </div>

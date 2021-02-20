@@ -8,12 +8,14 @@ const initialState = {
     balances: null,
     region: null,
   },
+  allProducts: {},
   myBag: [
     {
       id: 'iphone-12-pro',
       colorId: 0,
       modelId: 1,
       capacityId: 1,
+      sizeId: -1,
       quantity: 2,
     },
   ],
@@ -25,6 +27,9 @@ const initialState = {
 
 const UPDATE_PROFILE = 'UPDATE_PROFILE';
 const UPDATE_CURRENT_PRODUCT = 'UPDATE_CURRENT_PRODUCT';
+const UPDATE_ALL_PRODUCTS = 'UPDATE_ALL_PRODUCTS';
+const UPDATE_BAG_ADD = 'UPDATE_BAG_ADD';
+const UPDATE_BAG_REMOVE = 'UPDATE_BAG_REMOVE';
 
 // common actions
 const SET_ERROR = 'SET_ERROR';
@@ -34,17 +39,19 @@ const OPEN_POPUP = 'OPEN_POPUP';
 const actions = {
   initData: withLoading(
     withErrorHandling(async ({ commit }) => {
-      const profile = await services.getProfile();
+      const [profile, allProducts] = await Promise.all([
+        services.getProfile(),
+        services.getAllProducts(),
+      ]);
+
       commit(UPDATE_PROFILE, profile);
+      commit(UPDATE_ALL_PRODUCTS, allProducts);
     }),
   ),
 
-  getProduct: withLoading(
-    withErrorHandling(async ({ commit }, { id }) => {
-      const product = await services.getProduct({ id });
-      commit(UPDATE_CURRENT_PRODUCT, product);
-    }),
-  ),
+  addProductToBag({ commit }, product) {
+    commit(UPDATE_BAG_ADD, product);
+  },
 
   openPopup({ commit }, openedPopup) {
     commit(OPEN_POPUP, openedPopup);
@@ -60,13 +67,41 @@ const actions = {
   },
 };
 
+const compareProducts = (itemA, itemB) => {
+  if (itemA.id === itemB.id) {
+    return (
+      itemA.colorId === itemB.colorId &&
+      itemA.modelId === itemB.modelId &&
+      itemA.capacityId === itemB.capacityId &&
+      itemA.sizeId === itemB.sizeId
+    );
+  }
+  return false;
+};
+
 /* eslint-disable no-param-reassign, no-shadow */
 const mutations = {
   [UPDATE_PROFILE](state, profile) {
     state.profile = profile;
   },
+  [UPDATE_ALL_PRODUCTS](state, products) {
+    state.allProducts = products;
+  },
   [UPDATE_CURRENT_PRODUCT](state, product) {
     state.product = product;
+  },
+  [UPDATE_BAG_ADD](state, product) {
+    let exist = false;
+    state.myBag.forEach((item, i) => {
+      if (compareProducts(item, product)) {
+        state.myBag[i].quantity += 1;
+        exist = true;
+      }
+    });
+
+    if (!exist) {
+      state.myBag.push({ ...product, quantity: 1 });
+    }
   },
   [SET_ERROR](state, error) {
     state.error = error;
