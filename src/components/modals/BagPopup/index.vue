@@ -13,11 +13,14 @@
     <div class="remaining" v-if="remaining">
       {{ remaining }} more items in your Bag
     </div>
-    <button class="btn-checkout" @click="$router.push('/shop/bag')">
+    <button
+      class="btn-checkout"
+      @click="$router.push('/shop/bag').catch((err) => {})"
+    >
       Checkout
     </button>
     <ul class="list">
-      <li class="item" @click="$router.push('/shop/bag')">
+      <li class="item" @click="$router.push('/shop/bag').catch((err) => {})">
         <img :src="genIcon('bag')" />
         <span v-if="bagSize === 0">Bag</span>
         <span v-else>Bag ({{ bagSize }})</span>
@@ -32,21 +35,23 @@
       </li>
       <li class="item" @click="$router.push('/login')">
         <img :src="genIcon('signin')" />
-        <span>Sign in</span>
+        <span v-if="!isLoggedIn">Sign in</span>
+        <span v-else>Sign out {{ profile.name }}</span>
       </li>
     </ul>
   </div>
 </template>
 
 <script>
-import { mapState } from 'vuex';
+import { mapState, mapGetters } from 'vuex';
 import { colorPicker } from '@/mapping';
 
 export default {
   name: 'BagPopup',
 
   computed: {
-    ...mapState('Apple', ['myBag', 'allProducts']),
+    ...mapState('Apple', ['myBag', 'allProducts', 'profile']),
+    ...mapGetters('Apple', ['isLoggedIn']),
 
     bagList() {
       return this.myBag.slice(0, 3).map((item) => {

@@ -4,8 +4,8 @@
       <div class="container">
         <div class="title">Please sign in.</div>
         <form class="form">
-          <input type="text" placeholder="Apple ID" />
-          <input type="password" placeholder="Password" />
+          <input type="text" placeholder="Apple ID" v-model="username" />
+          <input type="password" placeholder="Password" v-model="password" />
 
           <div class="desc">
             Your Apple ID is the email address you use to sign in to iTunes, the
@@ -24,6 +24,7 @@
 </template>
 
 <script>
+import { mapActions, mapGetters } from 'vuex';
 import BaseLayout from '@/components/BaseLayout.vue';
 
 export default {
@@ -33,10 +34,33 @@ export default {
     BaseLayout,
   },
 
+  data() {
+    return {
+      username: '',
+      password: '',
+    };
+  },
+
+  computed: {
+    ...mapGetters('Apple', ['isLoggedIn']),
+  },
+
   methods: {
-    login() {
+    ...mapActions('Apple', ['loginApple']),
+
+    async login() {
+      await this.loginApple({
+        username: this.username,
+        password: this.password,
+      });
       this.$router.push('/shop/bag');
     },
+  },
+
+  mounted() {
+    if (this.isLoggedIn) {
+      this.$router.push('/');
+    }
   },
 };
 </script>

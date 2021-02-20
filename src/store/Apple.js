@@ -3,22 +3,9 @@ import utils from '@/utils';
 import { withLoading, withErrorHandling } from './hooks';
 
 const initialState = {
-  profile: {
-    accountId: 12343243,
-    balances: null,
-    region: null,
-  },
+  profile: null,
   allProducts: {},
-  myBag: [
-    {
-      id: 'iphone-12-pro',
-      colorId: 0,
-      modelId: 1,
-      capacityId: 1,
-      sizeId: -1,
-      quantity: 2,
-    },
-  ],
+  myBag: [],
   product: null,
   error: null,
   loading: false,
@@ -46,6 +33,13 @@ const actions = {
 
       commit(UPDATE_PROFILE, profile);
       commit(UPDATE_ALL_PRODUCTS, allProducts);
+    }),
+  ),
+
+  loginApple: withLoading(
+    withErrorHandling(async ({ commit }, { username, password }) => {
+      const profile = await services.login({ username, password });
+      commit(UPDATE_PROFILE, profile);
     }),
   ),
 
@@ -114,9 +108,16 @@ const mutations = {
   },
 };
 
+const getters = {
+  isLoggedIn(state) {
+    return state.profile !== null;
+  },
+};
+
 export default {
   namespaced: true,
   state: initialState,
   actions,
   mutations,
+  getters,
 };

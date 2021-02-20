@@ -12,7 +12,7 @@
       </li>
       <li class="search"></li>
       <li class="bag" @mousedown="showBag" v-on-clickaway="hideBag">
-        <div class="badge">{{ bagSize }}</div>
+        <div class="badge" v-if="bagSize > 0">{{ bagSize }}</div>
         <BagPopup v-if="showMyBag" />
       </li>
     </div>

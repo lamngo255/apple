@@ -4,26 +4,28 @@
       <div class="empty" v-if="emptyBag">
         <div class="title">Your bag is empty.</div>
 
-        <div class="signin">
-          Sign in to see if you have any saved items. Or continue shopping.
-        </div>
-        <div class="buttons">
-          <button class="btn-signin" @click="$router.push('/login')">
-            Sign In
-          </button>
-          <button class="btn-continue" @click="$router.push('/')">
-            Continue Shopping
-          </button>
-        </div>
+        <template v-if="!isLoggedIn">
+          <div class="signin">
+            Sign in to see if you have any saved items. Or continue shopping.
+          </div>
+          <div class="buttons">
+            <button class="btn-signin" @click="$router.push('/login')">
+              Sign In
+            </button>
+            <button class="btn-continue" @click="$router.push('/')">
+              Continue Shopping
+            </button>
+          </div>
+        </template>
       </div>
 
-      <div class=""></div>
+      <div class="container" v-else></div>
     </div>
   </BaseLayout>
 </template>
 
 <script>
-import { mapState } from 'vuex';
+import { mapState, mapGetters } from 'vuex';
 import BaseLayout from '@/components/BaseLayout.vue';
 
 export default {
@@ -35,9 +37,10 @@ export default {
 
   computed: {
     ...mapState('Apple', ['myBag']),
+    ...mapGetters('Apple', ['isLoggedIn']),
 
     emptyBag() {
-      return this.myBag.length > 0;
+      return this.myBag.length === 0;
     },
   },
 };
@@ -48,6 +51,7 @@ export default {
   @include sizeWH(65%, auto);
   text-align: left;
   margin: 0 auto;
+  padding-bottom: 0.3rem;
 
   .empty {
     .title {
