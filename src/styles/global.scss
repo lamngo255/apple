@@ -4,8 +4,6 @@
 
 /* setup viewport */
 html {
-  @include fullscreenSetup();
-
   overflow: hidden;
   background: #fff;
   body {
