@@ -8,7 +8,7 @@
               class="product"
               v-for="(product, i) in productIcons"
               :key="i"
-              @click="$router.push(product.path)"
+              @click="product.path && $router.push(product.path)"
             >
               <img class="icon" :src="genIcon(product.img)" />
               <div class="name">{{ product.name }}</div>
