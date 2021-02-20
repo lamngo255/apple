@@ -39,7 +39,7 @@ export default {
   },
 
   computed: {
-    ...mapState('Product', ['allProducts']),
+    ...mapState('Apple', ['allProducts']),
     product() {
       return this.allProducts[this.productId];
     },

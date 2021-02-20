@@ -10,7 +10,7 @@
         </div>
       </div>
     </div>
-    <div class="remaining" v-if="remaining > 0">
+    <div class="remaining" v-if="remaining">
       {{ remaining }} more items in your Bag
     </div>
     <button class="btn-checkout" @click="$router.push('/shop/bag')">
@@ -46,7 +46,7 @@ export default {
   name: 'BagPopup',
 
   computed: {
-    ...mapState('Product', ['myBag', 'allProducts']),
+    ...mapState('Apple', ['myBag', 'allProducts']),
 
     bagList() {
       return this.myBag.slice(0, 3).map((item) => {
@@ -66,7 +66,7 @@ export default {
     },
 
     remaining() {
-      return Math.max(this.bagList.length - 3, 0);
+      return this.myBag.slice(3).reduce((acc, item) => acc + item.quantity, 0);
     },
 
     bagSize() {

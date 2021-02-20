@@ -46,7 +46,7 @@ export default {
   },
 
   computed: {
-    ...mapState('Product', ['myBag']),
+    ...mapState('Apple', ['myBag']),
 
     bagSize() {
       return this.myBag.reduce((acc, item) => acc + item.quantity, 0);

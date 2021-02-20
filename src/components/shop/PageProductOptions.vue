@@ -145,7 +145,7 @@ export default {
   },
 
   methods: {
-    ...mapActions('Product', ['addProductToBag']),
+    ...mapActions('Apple', ['addProductToBag']),
     addToBag() {
       const product = {
         id: this.productId,

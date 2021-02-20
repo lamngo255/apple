@@ -1,11 +1,11 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 
-import Product from './Product';
+import Apple from './Apple';
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-  modules: { Product },
+  modules: { Apple },
   strict: process.env.NODE_ENV !== 'production',
 });

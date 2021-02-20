@@ -28,7 +28,7 @@ export default {
   },
 
   computed: {
-    ...mapState('Modal', ['error']),
+    ...mapState('Apple', ['error']),
 
     message() {
       return this.$t(utils.capitalize(this.error));
@@ -36,7 +36,7 @@ export default {
   },
 
   methods: {
-    ...mapActions('Product', ['closePopup']),
+    ...mapActions('Apple', ['closePopup']),
   },
 };
 </script>

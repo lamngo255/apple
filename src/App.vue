@@ -27,7 +27,7 @@ export default {
   },
 
   computed: {
-    ...mapState('Product', ['profile', 'loading']),
+    ...mapState('Apple', ['profile', 'loading']),
   },
 
   async created() {
@@ -36,7 +36,7 @@ export default {
   },
 
   methods: {
-    ...mapActions('Product', ['initData']),
+    ...mapActions('Apple', ['initData']),
   },
 };
 </script>

@@ -7,7 +7,6 @@ export default {
     await utils.delay(100);
     return utils.camelizeKeys({
       account_id: '123456789',
-      region: 'sg',
     });
   },
 

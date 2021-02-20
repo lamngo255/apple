@@ -3,10 +3,10 @@
     <div class="my-bag">
       <div class="empty" v-if="emptyBag">
         <div class="title">Your bag is empty.</div>
-        <div class="subtitle">
+
+        <div class="signin">
           Sign in to see if you have any saved items. Or continue shopping.
         </div>
-
         <div class="buttons">
           <button class="btn-signin" @click="$router.push('/login')">
             Sign In
@@ -16,11 +16,14 @@
           </button>
         </div>
       </div>
+
+      <div class=""></div>
     </div>
   </BaseLayout>
 </template>
 
 <script>
+import { mapState } from 'vuex';
 import BaseLayout from '@/components/BaseLayout.vue';
 
 export default {
@@ -31,8 +34,10 @@ export default {
   },
 
   computed: {
+    ...mapState('Apple', ['myBag']),
+
     emptyBag() {
-      return true;
+      return this.myBag.length > 0;
     },
   },
 };
@@ -40,18 +45,16 @@ export default {
 
 <style lang="scss" scoped>
 .my-bag {
-  @include sizeWH(100%, auto);
+  @include sizeWH(65%, auto);
+  text-align: left;
+  margin: 0 auto;
 
   .empty {
-    text-align: left;
-    margin: 0 auto;
-    width: 65%;
-
     .title {
       @include textMixin(#000, 0.47rem, bold);
       margin-top: 0.5rem;
     }
-    .subtitle {
+    .signin {
       @include textMixin(#1d1d20, 0.18rem);
       margin-top: 0.1rem;
     }
