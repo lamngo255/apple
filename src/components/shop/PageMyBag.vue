@@ -22,6 +22,17 @@
       <div class="container" v-else>
         <div class="title">Review your bag</div>
         <div class="subtitle">Free delivery and free returns.</div>
+        <div class="products">
+          <div class="product" v-for="(product, i) in parsedBag" :key="i">
+            <img class="left" :src="product.image" alt="" />
+            <div class="right">
+              <div class="col">
+                <div class="name">{{ product.name }}</div>
+                <div class="quantity">x{{ product.quantity }}</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </BaseLayout>
@@ -29,6 +40,7 @@
 
 <script>
 import { mapState, mapGetters } from 'vuex';
+import { colorPicker } from '@/mapping';
 import BaseLayout from '@/components/BaseLayout.vue';
 
 export default {
@@ -39,11 +51,52 @@ export default {
   },
 
   computed: {
-    ...mapState('Apple', ['myBag']),
+    ...mapState('Apple', ['myBag', 'allProducts']),
     ...mapGetters('Apple', ['isLoggedIn']),
 
     emptyBag() {
       return this.myBag.length === 0;
+    },
+
+    bagList() {
+      return this.myBag.map((item) => {
+        return {
+          ...this.allProducts[item.id],
+          ...item,
+        };
+      });
+    },
+
+    parsedBag() {
+      return this.bagList.map((item) => ({
+        name: this.genName(item),
+        image: item.colorId >= 0 ? item.images[item.colorId] : item.mainImage,
+        quantity: item.quantity,
+      }));
+    },
+  },
+
+  methods: {
+    genName(item) {
+      const { specs } = item;
+      if (!specs) return '';
+
+      let itemName = item.name;
+      if (item.capacityId >= 0) {
+        const cap = specs.capacities[item.capacityId];
+        if (cap < 10) {
+          itemName += ` ${cap}TB`;
+        } else {
+          itemName += ` ${cap}GB`;
+        }
+      }
+
+      if (item.colorId >= 0) {
+        const colorCode = specs?.colors[item.colorId];
+        const colorName = colorPicker(colorCode).name;
+        itemName += ` ${colorName}`;
+      }
+      return itemName;
     },
   },
 };
@@ -93,12 +146,44 @@ export default {
 
   .container {
     .title {
-      @include textMixin(#000, 0.47rem, bold);
+      @include textMixin(#000, 0.38rem, bold);
       margin-top: 0.5rem;
     }
     .subtitle {
-      @include textMixin(#000, 0.2rem, bold);
+      @include textMixin(#000, 0.14rem, bold);
       margin-top: 0.1rem;
+    }
+  }
+}
+
+.products {
+  display: flex;
+  flex-flow: column wrap;
+  margin-top: 0.1rem;
+  padding: 0 0.2rem;
+
+  .product {
+    @include flexCenter(row);
+    justify-content: flex-start;
+    padding-top: 0.2rem;
+    padding-bottom: 0.1rem;
+    border-bottom: #d2d2d7 solid 0.01rem;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    .left {
+      @include sizeWH(1.1rem, 1.3rem);
+    }
+    .right {
+      @include textMixin(#000, 0.22rem, bold);
+      margin-left: 0.2rem;
+      text-align: left;
+
+      .quantity {
+        @include textMixin(#949499, 0.2rem, normal);
+      }
     }
   }
 }

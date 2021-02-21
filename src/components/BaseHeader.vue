@@ -91,7 +91,7 @@ export default {
 <style lang="scss" scoped>
 #navbar {
   @include position(fixed, $top: 0, $left: 0);
-  @include sizeWH(100%, 0.45rem);
+  @include sizeWH(100%, 0.35rem);
   @include flexCenter(row);
   @include textMixin(rgb(226, 223, 223), 0.15rem);
   background: rgba(10, 10, 10, 0.85);
@@ -99,7 +99,8 @@ export default {
 
   li,
   a {
-    margin-right: 0.68rem;
+    font-size: 0.12rem;
+    margin-right: 0.54rem;
     text-decoration: none;
     color: #d6d6d6;
     position: relative;
@@ -114,21 +115,21 @@ export default {
     }
 
     &.logo {
-      @include imageCDN('icons/icon-apple.svg', 0.45rem, 0.45rem);
+      @include imageCDN('icons/icon-apple.svg', 0.32rem, 0.32rem);
     }
     &.search {
-      @include imageCDN('icons/icon-search.svg', 0.45rem, 0.45rem);
+      @include imageCDN('icons/icon-search.svg', 0.32rem, 0.32rem);
     }
     &.bag {
-      @include imageCDN('icons/icon-bag.svg', 0.45rem, 0.45rem);
+      @include imageCDN('icons/icon-bag.svg', 0.32rem, 0.32rem);
       position: relative;
       .badge {
-        @include sizeWH(auto, 0.13rem);
-        @include textMixin(#000, 0.1rem);
-        @include position(absolute, $top: 0.23rem, $left: 0.22rem);
+        @include sizeWH(auto, 0.11rem);
+        @include textMixin(#000, 0.09rem);
+        @include position(absolute, $top: 0.16rem, $left: 0.17rem);
         background: #eee;
         border-radius: 0.2rem;
-        padding: 0 0.04rem;
+        padding: 0 0.03rem;
       }
       &:hover {
         filter: brightness(1);
@@ -140,7 +141,7 @@ export default {
 .base-header {
   width: 100%;
   z-index: 1;
-  margin-top: 0.45rem;
+  margin-top: 0.35rem;
 
   &.nofloat {
     #navbar {
@@ -152,16 +153,16 @@ export default {
 
 .extra {
   .covid {
-    @include sizeWH(100%, 0.44rem);
-    @include textMixin(#fff, 0.15rem);
-    padding-top: 0.12rem;
+    @include sizeWH(100%, 0.34rem);
+    @include textMixin(#fff, 0.12rem);
+    padding-top: 0.1rem;
     background: #0171e3;
   }
 
   .shop-online {
-    @include sizeWH(100%, 0.45rem);
-    @include textMixin(#1e1e1f, 0.145rem);
-    padding-top: 0.13rem;
+    @include sizeWH(100%, 0.35rem);
+    @include textMixin(#1e1e1f, 0.12rem);
+    padding-top: 0.07rem;
     background: #f5f5f7;
     line-height: 0.2rem;
   }

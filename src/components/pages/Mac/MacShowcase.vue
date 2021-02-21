@@ -68,30 +68,31 @@ export default {
 <style lang="scss" scoped>
 .showcase {
   background: #000;
-  padding-top: 0.5rem;
+  padding-top: 0.4rem;
   padding-bottom: 1.4rem;
 
   .m1 {
-    @include imageCDN('pages/mac/logo-m1.jpg', 1rem, 1rem);
+    @include imageCDN('pages/mac/logo-m1.jpg', 0.72rem, 0.72rem);
     margin: 0 auto;
   }
 
   .welcome {
-    line-height: 0.82rem;
-    font-size: 0.75rem;
+    line-height: 0.62rem;
+    font-size: 0.6rem;
     font-weight: bold;
     background: #eff1ff;
-    background: radial-gradient(ellipse at center, #eff1ff 10%, #000 100%);
+    background: radial-gradient(#eff1ff, #000);
     background-size: 54% 156%;
     background-position: center center;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: 'San Francisco Bold', sans-serif;
+    margin-top: 0.1rem;
   }
 
   .btn-learn-m1 {
-    @include textMixin(#2a97ff, 0.19rem);
+    @include textMixin(#2a97ff, 0.15rem);
     margin-top: 0.2rem;
     margin-left: -0.05rem;
     border: none;
@@ -112,25 +113,26 @@ export default {
     margin-bottom: -0.04rem;
   }
   .name {
-    @include textMixin(#fff, 0.63rem, bold);
+    @include textMixin(#fff, 0.45rem, bold);
+    font-family: 'San Francisco Bold', sans-serif;
   }
   .desc {
-    @include textMixin(#fff, 0.25rem, bold);
+    @include textMixin(#fff, 0.23rem, bold);
   }
   .price {
-    @include textMixin(#fff, 0.18rem);
+    @include textMixin(#fff, 0.14rem);
     margin-top: 0.2rem;
   }
   .btn-buy {
-    @include sizeWH(auto, 0.4rem);
-    @include textMixin(#fff, 0.17rem);
-    padding: 0rem 0.22rem;
+    @include sizeWH(auto, 0.37rem);
+    @include textMixin(#fff, 0.15rem);
+    padding: 0rem 0.17rem;
     border-radius: 0.2rem;
     background: #0171e3;
     margin-top: 0.15rem;
   }
   .btn-learn {
-    @include textMixin(#2a97ff, 0.18rem);
+    @include textMixin(#2a97ff, 0.14rem);
     margin-top: 0.1rem;
     margin-left: -0.05rem;
     border: none;
@@ -152,7 +154,7 @@ export default {
 
   .macbook-pro {
     @extend .macbook-air;
-    margin-top: -0.2rem;
+    margin-top: -0.1rem;
     .info {
       @include position(relative, $top: -0.5rem, $left: -0.5rem);
     }

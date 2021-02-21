@@ -25,7 +25,7 @@
           <button class="btn-buy" @click="$router.push('shop/iphone-12-pro')">
             Buy
           </button>
-          <button class="btn-learn">Learn more</button>
+          <a class="btn-learn">Learn more</a>
         </div>
       </div>
     </div>

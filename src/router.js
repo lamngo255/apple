@@ -10,6 +10,7 @@ import Music from '@/components/pages/Music';
 
 import Iphone12Pro from '@/components/product-details/iphone-12-pro';
 import Iphone12 from '@/components/product-details/iphone-12';
+import MacbookAir from '@/components/product-details/macbook-air';
 
 import PageMyBag from '@/components/shop/PageMyBag';
 import PageLogin from '@/components/pages/PageLogin';
@@ -92,6 +93,12 @@ export default new Router({
       path: '/iphone-12',
       name: 'Iphone-12',
       component: Iphone12,
+    },
+
+    {
+      path: '/macbook-air',
+      name: 'MacbookAir',
+      component: MacbookAir,
     },
   ],
 });

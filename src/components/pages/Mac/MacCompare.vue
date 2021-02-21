@@ -71,13 +71,13 @@ export default {
   position: relative;
 
   .title {
-    @include textMixin(#000, 0.6rem, bold);
+    @include textMixin(#1d1d20, 0.47rem, bold);
     font-family: 'San Francisco Regular', sans-serif;
     margin: 0 auto;
     width: 50%;
   }
   .compare {
-    @include textMixin(#0266cc, 0.21rem);
+    @include textMixin(#0266cc, 0.18rem);
     margin-top: 0.35rem;
   }
 

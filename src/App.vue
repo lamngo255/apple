@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <router-view />
+    <template v-if="isInitialized">
+      <router-view />
+    </template>
 
     <ModalContainer />
     <Loading v-if="loading" />

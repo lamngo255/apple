@@ -21,7 +21,7 @@
       <div class="cashback">
         Get 3% Daily Cash back with Apple Card. And pay for your new iPad over
         12 months, interest‑free when you choose Apple Card Monthly
-        Installments.* Learn more
+        Installments.
       </div>
 
       <MacShowcase />
@@ -63,7 +63,7 @@ export default {
         {
           name: 'Macbook Air',
           img: 'macbook-air',
-          path: 'shop/macbook-air',
+          path: 'macbook-air',
           new: true,
         },
         {
@@ -82,6 +82,7 @@ export default {
         { name: 'Mac Pro', img: 'mac-pro', path: 'shop/mac-pro' },
         { name: 'Mac Mini', img: 'mac-mini', path: 'shop/mac-mini', new: true },
         { name: 'Compare', img: 'compare' },
+        { name: 'Pro Display XDR', img: 'pro-display-xdr' },
         { name: 'Accessories', img: 'accessories' },
         { name: 'Big Sur', img: 'bigsur' },
       ],
@@ -109,8 +110,8 @@ export default {
   position: relative;
 
   .container {
-    @include sizeWH(100%, 1.15rem);
-    background: #000;
+    @include sizeWH(100%, 0.9rem);
+    background: #141414;
     padding-left: 0.2rem;
   }
 
@@ -125,14 +126,14 @@ export default {
       cursor: pointer;
 
       .icon {
-        @include sizeWH(0.5rem, 0.5rem);
+        @include sizeWH(0.42rem, 0.42rem);
       }
       .name {
-        @include textMixin(#fff, 0.13rem);
+        @include textMixin(#fff, 0.1rem);
       }
       .new {
-        @include textMixin(#e46917, 0.11rem);
-        @include position(absolute, $top: 0.73rem, $left: 50%);
+        @include textMixin(#e46917, 0.09rem, bold);
+        @include position(absolute, $top: 0.6rem, $left: 50%);
         transform: translate(-50%, 0);
       }
 
@@ -146,8 +147,8 @@ export default {
 }
 
 .cashback {
-  @include sizeWH(100%, 0.3rem);
-  @include textMixin(#fff, 0.13rem);
+  @include sizeWH(100%, 0.27rem);
+  @include textMixin(#fff, 0.11rem);
   padding-top: 0.05rem;
   background: #151515;
 }
