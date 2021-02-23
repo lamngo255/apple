@@ -4,9 +4,7 @@
       <div class="content">
         <div class="topic">Thermal Efficiency</div>
         <div class="title">
-          <div>No fan.</div>
-          <div>No noise.</div>
-          <div>Just Air.</div>
+          Active cooling sustains blazing-fast performance.
         </div>
         <div class="btn-learn" @click="$router.push('mac/m1')">
           Get the M1 thermal story
@@ -75,22 +73,12 @@ export default {
     margin-right: 0.2rem;
     position: relative;
     border-radius: 0.3rem;
-    background: linear-gradient(
-      225deg,
-      #1623a6 0%,
-      #3343d4 29%,
-      #175eac 73%,
-      #176682 100%
-    );
+    background: #151516;
 
     .title {
-      @include textMixin(#adbceb, 0.58rem, bold, $align: left);
+      @include textMixin(#fff, 0.3rem, bold, $align: left);
       font-family: 'San Francisco Bold', sans-serif;
-      margin: 0.5rem auto 0;
-
-      div:last-child {
-        color: #fff;
-      }
+      margin-top: 0.13rem;
     }
 
     .btn-learn {
