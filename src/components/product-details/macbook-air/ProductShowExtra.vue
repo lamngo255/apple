@@ -49,7 +49,7 @@
 
 <script>
 export default {
-  name: 'ProductShowcaseGPU',
+  name: 'ProductShowGPU',
 
   methods: {
     genLink(name) {
@@ -100,8 +100,8 @@ export default {
     }
 
     .icon {
-      @include sizeWH(0.6rem, 0.6rem);
-      margin-top: 0.1rem;
+      @include sizeWH(0.5rem, 0.5rem);
+      margin-top: 0.5rem;
     }
   }
 

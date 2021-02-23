@@ -22,7 +22,7 @@
 
 <script>
 export default {
-  name: 'ProductShowcase',
+  name: 'ProductShow2',
 
   methods: {
     genLink(name) {

@@ -23,7 +23,7 @@
 
 <script>
 export default {
-  name: 'ProductShowcaseCPU',
+  name: 'ProductShowCPU',
 
   methods: {
     genLink(name) {

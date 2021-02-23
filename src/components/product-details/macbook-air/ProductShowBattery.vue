@@ -27,7 +27,7 @@
 
 <script>
 export default {
-  name: 'ProductShowcaseGPU',
+  name: 'ProductShowBattery',
 
   methods: {
     genLink(name) {

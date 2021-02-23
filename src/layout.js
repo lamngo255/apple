@@ -1,5 +1,4 @@
 const baseWidth = 1334;
-const baseHeight = 750;
 
 export default () => {
   const docEl = document.documentElement;

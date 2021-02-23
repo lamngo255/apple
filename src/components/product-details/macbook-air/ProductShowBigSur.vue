@@ -19,7 +19,7 @@
 
 <script>
 export default {
-  name: 'ProductShowcaseCPU',
+  name: 'ProductShowBigSur',
 
   methods: {
     genLink(name) {

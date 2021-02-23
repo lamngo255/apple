@@ -27,7 +27,7 @@
 
 <script>
 export default {
-  name: 'ProductShowcase',
+  name: 'ProductShow1',
 
   methods: {
     genLink(name) {
