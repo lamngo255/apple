@@ -9,6 +9,8 @@
         <ProductShowcaseGPU />
         <ProductShowcaseBattery />
         <ProductShowcaseML />
+        <ProductShowcaseBigSur />
+        <ProductShowcaseExtra />
       </div>
     </div>
   </BaseLayout>
@@ -23,6 +25,8 @@ import ProductShowcaseCPU from './ProductShowcaseCPU.vue';
 import ProductShowcaseGPU from './ProductShowcaseGPU.vue';
 import ProductShowcaseBattery from './ProductShowcaseBattery.vue';
 import ProductShowcaseML from './ProductShowcaseML.vue';
+import ProductShowcaseBigSur from './ProductShowcaseBigSur.vue';
+import ProductShowcaseExtra from './ProductShowcaseExtra.vue';
 
 export default {
   name: 'MacbookAir',
@@ -36,6 +40,8 @@ export default {
     ProductShowcaseGPU,
     ProductShowcaseBattery,
     ProductShowcaseML,
+    ProductShowcaseBigSur,
+    ProductShowcaseExtra,
   },
 };
 </script>

@@ -1,7 +1,6 @@
 <template>
-  <div class="showcase-cpu">
+  <div class="showcase-ml">
     <div class="topic">Machine Learning</div>
-
     <div class="left">
       <img class="demo" :src="genLink('machine-learning.png')" alt="" />
     </div>
@@ -39,7 +38,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.showcase-cpu {
+.showcase-ml {
   @include sizeWH(80%, 5.5rem);
   background: linear-gradient(to bottom, #061420 0%, #151516 100%);
   margin: 0.3rem auto 0;
