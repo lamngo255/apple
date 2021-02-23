@@ -78,7 +78,7 @@ export default {
   .btn-learn {
     @include textMixin(#fff, 0.15rem, bold);
     border: #fff solid 0.02rem;
-    margin-top: 0.3rem;
+    margin-top: 0.5rem;
     padding: 0.04rem 0.2rem;
     display: inline-block;
     border-radius: 0.2rem;

@@ -1,6 +1,7 @@
 <template>
   <div class="chip-m1">
     <div class="intro">
+      <img class="m1-big" :src="genLink('m1-big.png')" alt="" />
       <div class="title">Small chip. Giant leap.</div>
       <div class="desc">
         Our thinnest, lightest notebook, completely transformed by the Apple M1
@@ -38,6 +39,10 @@ export default {
     @include sizeWH(60%, auto);
     margin: 0 auto;
     text-align: left;
+
+    .m1-big {
+      @include sizeWH(1.5rem, auto);
+    }
 
     .title {
       @include textMixin(#fff, 0.6rem, bold);

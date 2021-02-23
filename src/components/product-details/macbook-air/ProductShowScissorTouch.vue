@@ -64,8 +64,8 @@ export default {
     margin-right: 0.2rem;
 
     .desc {
-      @include textMixin(#fff, 0.24rem, bold, $align: left);
-      font-family: 'San Francisco Bold', sans-serif;
+      @include textMixin(#fff, 0.17rem, $align: left);
+      font-family: 'San Francisco Medium', sans-serif;
       margin-top: 0.2rem;
       width: 4rem;
     }
@@ -90,10 +90,10 @@ export default {
     }
 
     .desc {
-      @include textMixin(#fff, 0.39rem, bold, $align: left);
+      @include textMixin(#fff, 0.42rem, bold, $align: left);
       font-family: 'San Francisco Bold', sans-serif;
       margin-top: 0.24rem;
-      width: 4rem;
+      width: 3rem;
     }
 
     .image {

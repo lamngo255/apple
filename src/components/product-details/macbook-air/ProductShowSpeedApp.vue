@@ -44,7 +44,7 @@ export default {
 
 <style lang="scss" scoped>
 .showcase-speedapp {
-  @include sizeWH(80%, 5rem);
+  @include sizeWH(80%, 5.3rem);
   @include flexCenter(row);
 
   margin: 0.2rem auto 0;
@@ -77,7 +77,7 @@ export default {
     }
 
     .desc {
-      @include textMixin(#fff, 0.17rem, bold, $align: left);
+      @include textMixin(#fff, 0.16rem, bold, $align: left);
       font-family: 'San Francisco', sans-serif;
       margin: 0.24rem auto 0;
     }
@@ -116,7 +116,7 @@ export default {
 
     .image {
       @include sizeWH(3.5rem, auto);
-      @include position(absolute, $bottom: 0.24rem, $left: 50%);
+      @include position(absolute, $bottom: 0.4rem, $left: 50%);
       transform: translate(-50%, 0);
     }
   }

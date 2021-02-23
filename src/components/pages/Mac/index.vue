@@ -69,7 +69,7 @@ export default {
         {
           name: 'Macbook Pro 13”',
           img: 'macbook-pro-13',
-          path: 'shop/macbook-pro-13',
+          path: 'macbook-pro-13',
           new: true,
         },
         {

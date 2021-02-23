@@ -19,6 +19,9 @@
         <ProductShowCameraArray />
         <ProductShowMagicKeyboard />
         <ProductShowScissorTouch />
+        <ProductShowTouchId />
+        <ProductShowConnectivity />
+        <ProductShowConnectivityExtra />
       </div>
     </div>
   </BaseLayout>
@@ -43,6 +46,9 @@ import ProductShowCameraMics from './ProductShowCameraMics.vue';
 import ProductShowCameraArray from './ProductShowCameraArray.vue';
 import ProductShowMagicKeyboard from './ProductShowMagicKeyboard.vue';
 import ProductShowScissorTouch from './ProductShowScissorTouch.vue';
+import ProductShowTouchId from './ProductShowTouchId.vue';
+import ProductShowConnectivity from './ProductShowConnectivity.vue';
+import ProductShowConnectivityExtra from './ProductShowConnectivityExtra.vue';
 
 export default {
   name: 'MacbookAir',
@@ -66,6 +72,9 @@ export default {
     ProductShowCameraArray,
     ProductShowMagicKeyboard,
     ProductShowScissorTouch,
+    ProductShowTouchId,
+    ProductShowConnectivity,
+    ProductShowConnectivityExtra,
   },
 };
 </script>
@@ -77,7 +86,7 @@ export default {
   .showcase {
     @include sizeWH(100%, auto);
     background: #000;
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.7rem;
   }
 }
 </style>

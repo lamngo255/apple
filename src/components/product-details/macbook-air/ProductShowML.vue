@@ -6,17 +6,17 @@
     </div>
     <div class="right">
       <div class="desc">
-        <div>
+        <span>
           Up to 9x faster. Even for a 16‑core Neural Engine, that’s a lot to
           process.
-        </div>
-        <div>
+        </span>
+        <span>
           Apps on MacBook Air can use machine learning (ML) to automatically
           retouch photos like a pro, make smart tools such as magic wands and
           audio filters more accurate at auto‑detection, and so much more.
           That’s not just brain power — that’s the power of a full stack of ML
           technologies.
-        </div>
+        </span>
       </div>
       <div class="btn-learn" @click="$router.push('mac/m1')">
         See how M1 unleashes ML
@@ -62,20 +62,20 @@ export default {
     @include position(absolute, $top: 0.9rem, $left: 5.8rem);
 
     .desc {
-      @include textMixin(#a1a1a6, 0.25rem);
+      @include textMixin(#a1a1a6, 0.24rem);
       margin-top: 0.3rem;
       width: 4rem;
       line-height: 0.28rem;
-      font-family: 'San Francisco Medium', sans-serif;
+      font-family: 'San Francisco Bold', sans-serif;
 
-      div:first-child {
+      span:first-child {
         color: #fff;
       }
     }
     .btn-learn {
       @include textMixin(#fff, 0.15rem, bold);
       border: #fff solid 0.02rem;
-      margin-top: 0.3rem;
+      margin-top: 0.5rem;
       padding: 0.04rem 0.2rem;
       display: inline-block;
       border-radius: 0.2rem;

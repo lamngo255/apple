@@ -39,7 +39,7 @@ export default {
 
 <style lang="scss" scoped>
 .showcase-density-tone {
-  @include sizeWH(80%, 5rem);
+  @include sizeWH(80%, 5.2rem);
   @include flexCenter(row);
 
   margin: 0.2rem auto 0;
@@ -106,8 +106,8 @@ export default {
     }
 
     .image {
-      @include sizeWH(2.5rem, auto);
-      @include position(absolute, $bottom: 0.2rem, $left: 50%);
+      @include sizeWH(2.3rem, auto);
+      @include position(absolute, $bottom: 0.3rem, $left: 50%);
       transform: translate(-50%, 0);
     }
   }
