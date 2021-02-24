@@ -4,7 +4,7 @@
       <div class="container">
         <div class="left">iPhone 12 Pro</div>
         <div class="right">
-          <div>Overview</div>
+          <div class="overview">Overview</div>
           <button class="btn-buy" @click="$router.push('/shop/iphone-12-pro')">
             <span>Buy</span>
           </button>
@@ -47,6 +47,10 @@ export default {
         @include textMixin(#fff, 0.14rem);
         @include flexCenter(row);
         padding-top: 0.08rem;
+
+        .overview {
+          color: #979798;
+        }
 
         div {
           margin-right: 0.2rem;

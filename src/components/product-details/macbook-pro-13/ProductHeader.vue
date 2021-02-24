@@ -4,7 +4,7 @@
       <div class="container">
         <div class="left">MacBook Pro 13”</div>
         <div class="right">
-          <div>Overview</div>
+          <div class="overview">Overview</div>
           <button class="btn-buy" @click="$router.push('/shop/macbook-air')">
             <span>Buy</span>
           </button>
@@ -46,6 +46,10 @@ export default {
       .right {
         @include textMixin(#fff, 0.14rem);
         @include flexCenter(row);
+
+        .overview {
+          color: #979798;
+        }
 
         div {
           margin-right: 0.2rem;
