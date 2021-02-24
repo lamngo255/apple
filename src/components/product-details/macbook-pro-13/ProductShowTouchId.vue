@@ -3,11 +3,12 @@
     <div class="topic">Touch ID</div>
     <div class="content">
       <div class="desc">
-        One touch is all it takes to lock or unlock MacBook Air. Use your
-        fingerprint to rent a movie, buy an app, or access things like secure
-        documents or system settings without having to reenter your password.
-        And when you shop online with Apple Pay, Touch ID fills in your shipping
-        and billing information without sharing your card details.
+        A touch on the sensor instantly unlocks your Mac, and a press locks it.
+        Use your fingerprint to rent movies, buy apps, or access things like
+        locked documents or system settings without having to reenter your
+        password. And when you shop online with Apple Pay, Touch ID
+        automatically fills in your shipping and billing information without
+        sharing your card details.
       </div>
       <div class="wrapper">
         <div class="item">
