@@ -37,7 +37,11 @@
         <div class="topic">Security</div>
         <div class="title">
           <img class="icon" :src="genLink('icon-unlock.png')" alt="" />
-          <div>MacBook Air can keep a secret.</div>
+          <div>
+            <div>MacBook Pro</div>
+            <div>Securely</div>
+            <div>yours.</div>
+          </div>
         </div>
         <div class="btn-learn" @click="$router.push('mac/m1')">
           See how M1 protects your data
@@ -143,7 +147,7 @@ export default {
     background: #151516;
 
     .title {
-      @include textMixin(#a1a1a6, 0.3rem, bold, $align: center);
+      @include textMixin(#a1a1a6, 0.39rem, bold, $align: center);
       @include flexCenter(column);
       font-family: 'San Francisco Bold', sans-serif;
       margin: 0.5rem auto 0;

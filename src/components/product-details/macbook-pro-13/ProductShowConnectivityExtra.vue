@@ -4,7 +4,7 @@
       <div class="content">
         <div class="topic">Wi-Fi 6</div>
         <div class="desc">
-          The next generation of Wi‑Fi isn’t just faster — it keeps MacBook Air
+          The next generation of Wi‑Fi isn’t just faster — it keeps MacBook Pro
           going strong even as more and more devices join the network.
         </div>
 

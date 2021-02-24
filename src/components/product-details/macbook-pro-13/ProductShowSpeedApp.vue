@@ -6,7 +6,7 @@
         <div class="topic">Speed and responsiveness</div>
         <div class="desc">
           The M1 chip and macOS Big Sur work together to make the entire system
-          snappier. MacBook Air wakes instantly from sleep. Everyday tasks from
+          snappier. MacBook Pro wakes instantly from sleep. Everyday tasks from
           flipping through photos to browsing Safari are faster. And your
           hardest-working apps all have access to the power they need.
         </div>
