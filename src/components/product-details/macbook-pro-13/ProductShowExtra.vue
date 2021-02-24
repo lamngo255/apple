@@ -26,8 +26,8 @@
 
         <div class="title-1">
           <div>Up to</div>
-          <div>2x</div>
-          <div>faster SSD.</div>
+          <div>3.3GB/s</div>
+          <div>sequential read speeds</div>
         </div>
       </div>
     </div>
@@ -109,12 +109,7 @@ export default {
     @include sizeWH(34%, 100%);
     position: relative;
     border-radius: 0.3rem;
-    background: linear-gradient(
-      to right top,
-      #604c7c 0%,
-      #257983 50%,
-      #20825a 100%
-    );
+    background: linear-gradient(to right bottom, #1f224b 0%, #2d5d85 100%);
 
     .title,
     .title-1 {

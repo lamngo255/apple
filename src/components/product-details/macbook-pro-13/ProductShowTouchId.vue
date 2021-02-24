@@ -46,13 +46,8 @@ export default {
 <style lang="scss" scoped>
 .showcase-touch-id {
   @include sizeWH(80%, 5rem);
-  background: linear-gradient(
-    229deg,
-    #517281 0%,
-    #3b5d70 27%,
-    #4d5c82 72%,
-    #5d647f 100%
-  );
+  background: linear-gradient(rgba(0, 0, 0, 0), #151b25, #151516),
+    linear-gradient(90deg, #172538, #18263a 50%);
   margin: 0.3rem auto 0;
   text-align: left;
   padding: 0.3rem;

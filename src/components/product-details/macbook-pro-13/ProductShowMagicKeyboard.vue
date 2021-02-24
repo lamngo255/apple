@@ -2,15 +2,14 @@
   <div class="product-show-keyboard">
     <div class="title">
       <div>Magic Keyboard</div>
-      <div>Go ahead. Take the keys.</div>
+      <div>Just your type.</div>
     </div>
     <div class="desc">
-      When a keyboard types like a dream and still does a whole lot more: that’s
-      magic. With new preprogrammed shortcuts, useful features are even easier
-      to access. Get help from Siri, switch keyboard languages, respond with the
-      perfect emoji, find documents with Spotlight — there’s so much you can do
-      with just a tap. And the backlit keys with ambient light sensor help you
-      type in low‑light settings.
+      Magic Keyboard lets you do everything faster and more efficiently. The
+      refined scissor mechanism delivers a responsive, comfortable, and quiet
+      typing experience. The Touch Bar puts the commands you need most right
+      where you need them, saving time and keystrokes. And Touch ID provides
+      fast, easy authentication for secure logins and purchases.
     </div>
     <img class="image" :src="genLink('magic-keyboard.jpg')" />
   </div>
@@ -22,7 +21,7 @@ export default {
 
   methods: {
     genLink(name) {
-      return this.$assetsUrl(`product-details/macbook-air/${name}`);
+      return this.$assetsUrl(`product-details/macbook-pro-13/${name}`);
     },
   },
 };

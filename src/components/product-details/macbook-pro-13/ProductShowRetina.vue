@@ -2,14 +2,16 @@
   <div class="product-show-retina">
     <div class="title">
       <div>Retina display</div>
-      <div>Lifelike colors</div>
-      <div>for unreal beauty.</div>
+      <div>See the better picture.</div>
     </div>
     <div class="desc">
-      Images take on new levels of detail and realism on the brilliant
-      13.3‑inch, 2560‑by‑1600-resolution Retina display. Text is sharp and
-      clear. Colors are more vibrant than ever. And the glass goes right to the
-      edge of the enclosure, so nothing takes away from your gorgeous view.
+      With the brilliant Retina display, images take on an incredible level of
+      detail and realism. Text is sharp and clear. Bright LED backlighting
+      delivers deep blacks and bright whites. P3 wide color brings even more
+      vibrant greens and reds than sRGB. And every MacBook Pro features True
+      Tone technology, so the white balance automatically adjusts to match the
+      color temperature of the light around you — for a more natural viewing
+      experience.
     </div>
     <img class="image" :src="genLink('retina1.png')" />
   </div>
@@ -21,7 +23,7 @@ export default {
 
   methods: {
     genLink(name) {
-      return this.$assetsUrl(`product-details/macbook-air/${name}`);
+      return this.$assetsUrl(`product-details/macbook-pro-13/${name}`);
     },
   },
 };
@@ -56,7 +58,7 @@ export default {
 
   .desc {
     @include textMixin(#a1a1a6, 0.22rem, bold, $align: left);
-    width: 70%;
+    width: 80%;
     margin-top: 0.25rem;
   }
 

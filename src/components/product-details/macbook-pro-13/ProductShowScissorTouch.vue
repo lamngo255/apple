@@ -4,19 +4,22 @@
       <div class="content">
         <div class="topic">Scissor mechanism</div>
         <div class="desc">
-          The refined scissor mechanism delivers the best typing experience ever
-          on a Mac notebook.
+          Every keystroke, thought, or line of code just feels right.
         </div>
         <img class="image" :src="genLink('scissor.png')" alt="" />
       </div>
     </div>
 
     <div class="touch">
-      <img class="overlay" :src="genLink('touch.jpg')" />
       <div class="content">
-        <div class="topic">Force Touch trackpad</div>
+        <div class="topic">Touch Bar</div>
         <div class="desc">
-          Precise control with plenty of room to swipe, pinch, or zoom.
+          <span>More shortcuts to success.</span>
+          <span
+            >Enjoy even more shortcuts and features — like your favorite emoji,
+            preferred languages, and quicker access to Siri.
+          </span>
+          <img class="image" :src="genLink('touch.jpg')" />
         </div>
       </div>
     </div>
@@ -29,7 +32,7 @@ export default {
 
   methods: {
     genLink(name) {
-      return this.$assetsUrl(`product-details/macbook-air/${name}`);
+      return this.$assetsUrl(`product-details/macbook-pro-13/${name}`);
     },
   },
 };
@@ -60,14 +63,14 @@ export default {
     @include sizeWH(50%, 100%);
     position: relative;
     border-radius: 0.3rem;
-    background: linear-gradient(215deg, #c52d47 0%, #a5325c 30%, #8b366d 100%);
+    background: linear-gradient(150deg, #124d86 0%, #14204e 100%);
     margin-right: 0.2rem;
 
     .desc {
-      @include textMixin(#fff, 0.17rem, $align: left);
-      font-family: 'San Francisco Medium', sans-serif;
+      @include textMixin(#fff, 0.25rem, $align: left);
+      font-family: 'San Francisco Bold', sans-serif;
       margin-top: 0.2rem;
-      width: 4rem;
+      width: 2.5rem;
     }
 
     .image {
@@ -83,23 +86,21 @@ export default {
     border-radius: 0.3rem;
     background: #151516;
 
-    .overlay {
-      @include sizeWH(100%, 100%);
-      @include position(absolute, 0, 0, 0, 0);
-      border-radius: 0.3rem;
-    }
-
     .desc {
-      @include textMixin(#fff, 0.42rem, bold, $align: left);
-      font-family: 'San Francisco Bold', sans-serif;
+      @include textMixin(#a2a1a7, 0.16rem, bold, $align: left);
+      font-family: 'San Francisco', sans-serif;
       margin-top: 0.24rem;
-      width: 3rem;
+      width: 4rem;
+
+      span:first-child {
+        color: #fff;
+      }
     }
 
     .image {
-      @include sizeWH(3.8rem, auto);
-      @include position(absolute, $bottom: 0.24rem, $left: 50%);
-      transform: translate(-50%, 0);
+      @include sizeWH(4.8rem, auto);
+      @include position(absolute, $bottom: 0rem, $left: 0);
+      border-bottom-left-radius: 0.3rem;
     }
   }
 }

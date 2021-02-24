@@ -2,13 +2,15 @@
   <div class="product-show-camera">
     <div class="title">
       <div>Camera and mics</div>
-      <div>You’re live on the Air.</div>
+      <div>Be seen. Be heard.</div>
     </div>
     <div class="desc">
-      The image signal processor in the M1 chip helps you look your best for
-      every FaceTime call and video conference. Three built‑in microphones make
-      sure what you say gets heard whether you’re on a call, dictating a note,
-      or asking Siri about the weather.
+      Thanks to M1, the FaceTime HD camera can now take full advantage of our
+      latest image signal processor — improving image quality in video
+      conferences and pulling out more details in both shadows and highlights.
+      And whether you’re running a meeting, hosting a podcast, or connecting
+      with friends and family, new studio-quality mics will make sure everyone
+      hears you loud and clear.
     </div>
     <img class="image" :src="genLink('camera-mics.png')" />
   </div>
@@ -20,7 +22,7 @@ export default {
 
   methods: {
     genLink(name) {
-      return this.$assetsUrl(`product-details/macbook-air/${name}`);
+      return this.$assetsUrl(`product-details/macbook-pro-13/${name}`);
     },
   },
 };

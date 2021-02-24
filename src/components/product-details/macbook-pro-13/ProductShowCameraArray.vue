@@ -4,9 +4,11 @@
       <div class="content">
         <div class="topic">FaceTime HD camera</div>
         <div class="desc">
-          Get clearer, sharper images. See more detail in shadows and
-          highlights. And face detection uses the Neural Engine to adjust white
-          balance and exposure for even more natural‑looking skin tones.
+          The M1 chip even helps you look your best. Highlights in low light
+          have never looked better. Advanced noise reduction makes dark areas
+          sharper. And face detection uses the Neural Engine to better adjust
+          white balance and exposure levels for even more natural‑looking skin
+          tones.
         </div>
         <img class="image" :src="genLink('camera-hd.png')" alt="" />
       </div>
@@ -14,10 +16,13 @@
 
     <div class="mics">
       <div class="content">
-        <div class="topic">Three-microphone array</div>
+        <div class="topic">Three-mic array</div>
         <div class="desc">
-          Say “Hello” to mics that focus on your voice instead of what’s going
-          on around you.
+          <span>Studio quality. Without the studio.</span>
+          <span
+            >An improved signal‑to‑noise ratio rivals that of professional‑grade
+            microphones.</span
+          >
         </div>
         <img class="image" :src="genLink('mics.jpg')" />
       </div>
@@ -31,7 +36,7 @@ export default {
 
   methods: {
     genLink(name) {
-      return this.$assetsUrl(`product-details/macbook-air/${name}`);
+      return this.$assetsUrl(`product-details/macbook-pro-13/${name}`);
     },
   },
 };
@@ -39,7 +44,7 @@ export default {
 
 <style lang="scss" scoped>
 .showcase-camera-array {
-  @include sizeWH(80%, 5.6rem);
+  @include sizeWH(80%, 5rem);
   @include flexCenter(row);
 
   margin: -1rem auto 0;
@@ -59,42 +64,46 @@ export default {
   }
 
   .camera {
-    @include sizeWH(50%, 100%);
+    @include sizeWH(60%, 100%);
     position: relative;
     border-radius: 0.3rem;
     background: #151516;
     margin-right: 0.2rem;
 
     .desc {
-      @include textMixin(#fff, 0.24rem, bold, $align: left);
-      font-family: 'San Francisco Bold', sans-serif;
-      margin-top: 0.4rem;
-      width: 4rem;
+      @include textMixin(#fff, 0.16rem, bold, $align: left);
+      font-family: 'San Francisco', sans-serif;
+      margin-top: 0.2rem;
+      width: 4.5rem;
     }
 
     .image {
-      @include sizeWH(4rem, auto);
+      @include sizeWH(4.5rem, auto);
       @include position(absolute, $bottom: 0.2rem, $left: 50%);
       transform: translate(-50%, 0);
     }
   }
 
   .mics {
-    @include sizeWH(50%, 100%);
+    @include sizeWH(40%, 100%);
     position: relative;
     border-radius: 0.3rem;
     background: #151516;
 
     .desc {
-      @include textMixin(#fff, 0.39rem, bold, $align: left);
+      @include textMixin(#a2a1a7, 0.23rem, bold, $align: left);
       font-family: 'San Francisco Bold', sans-serif;
       margin-top: 0.24rem;
-      width: 4rem;
+      width: 3rem;
+
+      span:first-child {
+        color: #fff;
+      }
     }
 
     .image {
-      @include sizeWH(3.8rem, auto);
-      @include position(absolute, $bottom: 0.24rem, $left: 50%);
+      @include sizeWH(3.2rem, auto);
+      @include position(absolute, $bottom: 0.3rem, $left: 50%);
       transform: translate(-50%, 0);
     }
   }

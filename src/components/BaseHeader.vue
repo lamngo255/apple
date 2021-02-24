@@ -61,8 +61,8 @@ export default {
       showMyBag: false,
       navData: [
         { name: 'Mac', link: '/mac' },
-        { name: 'Ipad', link: '/ipad' },
-        { name: 'Iphone', link: '/iphone' },
+        { name: 'iPad', link: '/ipad' },
+        { name: 'iPhone', link: '/iphone' },
         { name: 'Watch', link: '/watch' },
         { name: 'TV', link: '/tv' },
         { name: 'Music', link: '/music' },
@@ -95,7 +95,7 @@ export default {
   @include flexCenter(row);
   @include textMixin(rgb(226, 223, 223), 0.15rem);
   background: rgba(10, 10, 10, 0.85);
-  padding-left: 0.3rem;
+  padding-left: 0.4rem;
 
   li,
   a {
@@ -127,7 +127,7 @@ export default {
         @include sizeWH(auto, 0.11rem);
         @include textMixin(#000, 0.09rem);
         @include position(absolute, $top: 0.16rem, $left: 0.17rem);
-        background: #eee;
+        background: #d6d6d6;
         border-radius: 0.2rem;
         padding: 0 0.03rem;
       }
