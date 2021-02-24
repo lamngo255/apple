@@ -55,7 +55,9 @@
           <div>$58.25/mo. for 12 mo.**</div>
         </div>
         <button class="btn-buy" @click="redirect('shop/mac-mini')">Buy</button>
-        <button class="btn-learn">Learn more</button>
+        <button class="btn-learn" @click="redirect('shop/mac-mini')">
+          Learn more
+        </button>
       </div>
       <img :src="genMacImage('mac-mini')" alt="" />
     </div>

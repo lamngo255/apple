@@ -66,7 +66,7 @@ export default {
         { name: 'iPhone 12', img: 'ip-12', path: 'shop/iphone-12', new: true },
         { name: 'iPhone SE', img: 'ip-se', path: 'shop/iphone-se' },
         { name: 'iPhone 11', img: 'ip-11', path: 'shop/iphone-11' },
-        { name: 'iPhone Xr', img: 'ip-xr', path: 'shop/iphone-xr' },
+        { name: 'iPhone XR', img: 'ip-xr', path: 'shop/iphone-xr' },
         { name: 'Airpods', img: 'airpods', path: 'shop/airpods' },
         { name: 'Compare', img: 'compare' },
         { name: 'Accessories', img: 'accessories' },

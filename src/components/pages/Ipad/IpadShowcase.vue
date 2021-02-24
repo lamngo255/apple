@@ -6,8 +6,10 @@
         <div class="name">iPad Air</div>
         <div class="desc">Powerful. Colorful. Wonderful.</div>
         <div class="price">From $599 Buy</div>
-        <button class="btn-buy">Buy</button>
-        <button class="btn-learn">Learn more</button>
+        <button class="btn-buy" @click="redirect('shop/ipad-air')">Buy</button>
+        <button class="btn-learn" @click="redirect('shop/ipad-air')">
+          Learn more
+        </button>
       </div>
       <img :src="genIpadImage('ipad-air')" alt="" />
     </div>
@@ -19,8 +21,12 @@
         <div class="name">iPad</div>
         <div class="desc">Delightfully capable. Surprisingly affordable.</div>
         <div class="price">From $329</div>
-        <button class="btn-buy">Buy</button>
-        <button class="btn-learn">Learn more</button>
+        <button class="btn-buy" @click="redirect('shop/ipad-light')">
+          Buy
+        </button>
+        <button class="btn-learn" @click="redirect('shop/ipad-light')">
+          Learn more
+        </button>
       </div>
     </div>
 
@@ -29,8 +35,10 @@
         <div class="name">iPad Pro</div>
         <div class="desc">The ultimate iPad experience.</div>
         <div class="price">From $799</div>
-        <button class="btn-buy">Buy</button>
-        <button class="btn-learn">Learn more</button>
+        <button class="btn-buy" @click="redirect('shop/ipad-pro')">Buy</button>
+        <button class="btn-learn" @click="redirect('shop/ipad-pro')">
+          Learn more
+        </button>
       </div>
       <img :src="genIpadImage('ipad-pro')" alt="" />
     </div>
@@ -41,8 +49,10 @@
         <div class="name">iPad Mini</div>
         <div class="desc">Small in size. Big on capability.</div>
         <div class="price">From $399</div>
-        <button class="btn-buy">Buy</button>
-        <button class="btn-learn">Learn more</button>
+        <button class="btn-buy" @click="redirect('shop/ipad-mini')">Buy</button>
+        <button class="btn-learn" @click="redirect('shop/ipad-mini')">
+          Learn more
+        </button>
       </div>
     </div>
   </div>
@@ -55,6 +65,9 @@ export default {
   methods: {
     genIpadImage(path) {
       return this.$assetsUrl(`pages/ipad/${path}.jpg`);
+    },
+    redirect(path) {
+      this.$router.push(path);
     },
   },
 };
@@ -117,6 +130,7 @@ export default {
 
   .ipad {
     @extend .ipad-air;
+    @include position(relative, $left: -1rem);
     .info {
       @include position(relative, $top: -0.5rem);
     }
