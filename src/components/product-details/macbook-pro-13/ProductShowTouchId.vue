@@ -76,7 +76,7 @@ export default {
   }
 
   .desc {
-    @include textMixin(#fff, 0.25rem);
+    @include textMixin(#fff, 0.24rem);
     margin-top: 0.5rem;
     width: 4.5rem;
     font-family: 'San Francisco Bold', sans-serif;

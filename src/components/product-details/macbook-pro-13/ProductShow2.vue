@@ -8,7 +8,7 @@
         astonishing 16 billion transistors, the Apple M1 system on a chip (SoC)
         integrates the CPU, GPU, Neural Engine, I/O, and so much more onto a
         single tiny chip. With incredible performance, custom technologies, and
-        industry-leading power efficiency,1 M1 is not just a next step for Mac —
+        industry-leading power efficiency, M1 is not just a next step for Mac —
         it’s another level entirely.
       </div>
       <div class="btn-learn" @click="$router.push('mac/m1')">
