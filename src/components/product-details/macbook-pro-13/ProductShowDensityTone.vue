@@ -14,7 +14,7 @@
         <div class="desc">
           <span>Good looking. And easy on the eyes.</span>
           <span>
-            MacBook Air automatically adjusts the white point of your display to
+            MacBook Pro automatically adjusts the white point of your display to
             the color temperature of your environment for a more natural viewing
             experience.
           </span>

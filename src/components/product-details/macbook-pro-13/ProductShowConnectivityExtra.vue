@@ -22,7 +22,7 @@
         <div class="desc">
           Ultra‑high bandwidth meets ultra‑versatility. Thunderbolt enables data
           transfer, charging, and video output all through a single port — and
-          MacBook Air has two of them.
+          MacBook Pro has two of them.
         </div>
         <div class="wrapper">
           <div class="item">
@@ -53,7 +53,7 @@ export default {
 
   methods: {
     genLink(name) {
-      return this.$assetsUrl(`product-details/macbook-air/${name}`);
+      return this.$assetsUrl(`product-details/macbook-pro-13/${name}`);
     },
   },
 };
@@ -64,7 +64,7 @@ export default {
   @include sizeWH(80%, 5.5rem);
   @include flexCenter(row);
 
-  margin: -0.8rem auto 0;
+  margin: -0.2rem auto 0;
   text-align: left;
   position: relative;
 
@@ -84,12 +84,7 @@ export default {
     @include sizeWH(50%, 100%);
     position: relative;
     border-radius: 0.3rem;
-    background-image: linear-gradient(
-      30deg,
-      #214079 1%,
-      #663a7e 55%,
-      #a82b7d 100%
-    );
+    background: #151516;
 
     margin-right: 0.2rem;
 
@@ -122,12 +117,7 @@ export default {
     @include sizeWH(50%, 100%);
     position: relative;
     border-radius: 0.3rem;
-    background-image: linear-gradient(
-      201deg,
-      #ef278e 0%,
-      #81347f 47%,
-      #43407a 100%
-    );
+    background: linear-gradient(-217deg, #621e8f 16%, #762ca6 56%, #cf6e88 99%);
 
     .desc {
       @include textMixin(#fff, 0.17rem, bold, $align: left);

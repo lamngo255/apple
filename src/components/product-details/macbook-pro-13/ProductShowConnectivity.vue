@@ -2,7 +2,8 @@
   <div class="product-show-connectivity">
     <div class="title">
       <div>Connectivity</div>
-      <div>Charges, chats, streams, works, and plays well with others.</div>
+      <div>Make connections.</div>
+      <div>Faster than ever.</div>
     </div>
     <img class="image" :src="genLink('connectivity.jpg')" />
   </div>
@@ -14,7 +15,7 @@ export default {
 
   methods: {
     genLink(name) {
-      return this.$assetsUrl(`product-details/macbook-air/${name}`);
+      return this.$assetsUrl(`product-details/macbook-pro-13/${name}`);
     },
   },
 };
@@ -55,8 +56,8 @@ export default {
   }
 
   .image {
-    @include sizeWH(10rem, 2.7rem);
-    @include position(absolute, $top: 3rem, $left: -1rem);
+    @include sizeWH(auto, 4rem);
+    @include position(absolute, $top: 3rem, $left: -8.1rem);
     text-align: left;
     object-fit: cover;
   }
