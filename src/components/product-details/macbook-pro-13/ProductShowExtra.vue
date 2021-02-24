@@ -6,11 +6,13 @@
         <div class="topic">Unified memory</div>
         <img class="icon" :src="genLink('icon-memory.png')" alt="" />
         <div class="title">
-          The do‑it‑all notebook gets do‑the‑unbelievable memory. The M1 chip
-          brings up to 16GB of superfast unified memory. This single pool of
-          high‑bandwidth, low‑latency memory allows apps to share data between
-          the CPU, GPU, and Neural Engine efficiently — so everything you do is
-          fast and fluid.
+          <span>Runs a tight chip.</span>
+          <span
+            >The M1 chip brings up to 16GB of superfast unified memory. This
+            single pool of high‑bandwidth, low‑latency memory allows apps to
+            share data between the CPU, GPU, and Neural Engine efficiently — so
+            everything you do is fast and fluid.
+          </span>
         </div>
       </div>
     </div>
@@ -38,7 +40,7 @@
         <div class="title">
           <img class="icon" :src="genLink('icon-unlock.png')" alt="" />
           <div>
-            <div>MacBook Pro</div>
+            <div>MacBook Pro.</div>
             <div>Securely</div>
             <div>yours.</div>
           </div>
@@ -98,14 +100,18 @@ export default {
     }
 
     .title {
-      @include textMixin(#fff, 0.2rem, bold, $align: left);
+      @include textMixin(#a1a1a6, 0.2rem, bold, $align: left);
       font-family: 'San Francisco Bold', sans-serif;
       margin: 0.1rem auto 0;
+
+      span:first-child {
+        color: #fff;
+      }
     }
 
     .icon {
       @include sizeWH(0.5rem, 0.5rem);
-      margin-top: 0.5rem;
+      margin-top: 0.8rem;
     }
   }
 
