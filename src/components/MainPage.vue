@@ -12,7 +12,7 @@
           </div>
           <div class="buttons">
             <a class="btn-learn" href="/learn">Learn more</a>
-            <a class="btn-buy" href="/buy">Buy</a>
+            <a class="btn-buy" href="/shop/iphone-12">Buy</a>
           </div>
         </div>
       </div>
@@ -27,8 +27,8 @@
             <p>Buy directly from Apple with special carrier offers.</p>
           </div>
           <div class="buttons">
-            <a class="btn-learn" href="/learn">Learn more</a>
-            <a class="btn-buy" href="/buy">Buy</a>
+            <a class="btn-learn" href="/iphone-12-pro">Learn more</a>
+            <a class="btn-buy" href="/shop/iphone-12-pro">Buy</a>
           </div>
         </div>
       </div>

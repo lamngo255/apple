@@ -256,7 +256,10 @@ export default {
 
       .options {
         @include flexCenter(row);
+        flex-wrap: wrap;
         margin-top: 0.14rem;
+        justify-content: flex-start;
+        width: 4.8rem;
 
         .option {
           @include sizeWH(2.3rem, 0.8rem);
@@ -264,6 +267,7 @@ export default {
           border-radius: 0.1rem;
           padding: 0.15rem 0 0 0.15rem;
           margin-right: 0.1rem;
+          margin-bottom: 0.1rem;
 
           .name {
             @include textMixin(#000, 0.2rem, bold);

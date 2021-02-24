@@ -36,6 +36,7 @@ export default {
           memory: 'Up to 16GB memory',
           storage: 'Up to 2TB storage',
           battery: 'Up to 18 hours battery life',
+          slug: 'macbook-air',
         },
         {
           image: this.$assetsUrl('pages/mac/compare/macbook-pro-13.jpg'),
@@ -46,6 +47,7 @@ export default {
           memory: 'Up to 16GB memory',
           storage: 'Up to 2TB storage',
           battery: 'Up to 20 hours battery life',
+          slug: 'macbook-pro-13',
         },
         {
           image: this.$assetsUrl('pages/mac/compare/macbook-pro-16.jpg'),
@@ -56,6 +58,7 @@ export default {
           memory: 'Up to 64GB memory',
           storage: 'Up to 8TB storage',
           battery: 'Up to 11 hours battery life',
+          slug: 'macbook-pro-16',
         },
       ],
     };

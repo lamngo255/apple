@@ -15,8 +15,12 @@
           <div>From $999</div>
           <div>or $83.25/mo. for 12 mo.**</div>
         </div>
-        <button class="btn-buy">Buy</button>
-        <button class="btn-learn">Learn more</button>
+        <button class="btn-buy" @click="redirect('shop/macbook-air')">
+          Buy
+        </button>
+        <button class="btn-learn" @click="redirect('macbook-air')">
+          Learn more
+        </button>
       </div>
       <img :src="genMacImage('macbook-air')" alt="" />
     </div>
@@ -25,14 +29,19 @@
       <img :src="genMacImage('macbook-pro-13')" alt="" />
       <div class="info">
         <div class="new">New</div>
+        <div class="model">13-inch model</div>
         <div class="name">MacBook Pro</div>
         <div class="desc">All systems Pro.</div>
         <div class="price">
           <div>From $1299 or</div>
           <div>$108.25/mo. for 12 mo.**</div>
         </div>
-        <button class="btn-buy">Buy</button>
-        <button class="btn-learn">Learn more</button>
+        <button class="btn-buy" @click="redirect('shop/macbook-pro-13')">
+          Buy
+        </button>
+        <button class="btn-learn" @click="redirect('macbook-pro-13')">
+          Learn more
+        </button>
       </div>
     </div>
 
@@ -45,7 +54,7 @@
           <div>From $699 or</div>
           <div>$58.25/mo. for 12 mo.**</div>
         </div>
-        <button class="btn-buy">Buy</button>
+        <button class="btn-buy" @click="redirect('shop/mac-mini')">Buy</button>
         <button class="btn-learn">Learn more</button>
       </div>
       <img :src="genMacImage('mac-mini')" alt="" />
@@ -60,6 +69,9 @@ export default {
   methods: {
     genMacImage(path) {
       return this.$assetsUrl(`pages/mac/${path}.jpg`);
+    },
+    redirect(path) {
+      this.$router.push(path);
     },
   },
 };
@@ -111,6 +123,10 @@ export default {
   .new {
     @include textMixin(#f56301, 0.18rem, bold);
     margin-bottom: -0.04rem;
+  }
+  .model {
+    @include textMixin(#fff, 0.2rem, bold);
+    margin-top: 0.05rem;
   }
   .name {
     @include textMixin(#fff, 0.45rem, bold);
