@@ -38,7 +38,7 @@ export default {
 
   methods: {
     genLink(name) {
-      return this.$assetsUrl(`product-details/macbook-air/touch/${name}`);
+      return this.$assetsUrl(`product-details/macbook-pro-13/touch/${name}`);
     },
   },
 };
