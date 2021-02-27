@@ -37,7 +37,7 @@ export default {
 
     .container {
       @include flexCenter(row);
-      width: 65%;
+      width: 60%;
       justify-content: space-between;
 
       .left {

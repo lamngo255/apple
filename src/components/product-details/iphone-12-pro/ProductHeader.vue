@@ -36,11 +36,11 @@ export default {
 
     .container {
       @include flexCenter(row);
-      width: 65%;
+      width: 60%;
       justify-content: space-between;
 
       .left {
-        @include textMixin(#fff, 0.25rem, bold);
+        @include textMixin(#fff, 0.19rem, bold);
         padding-top: 0.07rem;
       }
       .right {

@@ -13,6 +13,7 @@ import Iphone12 from '@/components/product-details/iphone-12';
 import MacbookAir from '@/components/product-details/macbook-air';
 import MacbookPro13 from '@/components/product-details/macbook-pro-13';
 import iMac from '@/components/product-details/imac';
+import iMacPro from '@/components/product-details/imac-pro';
 
 import PageMyBag from '@/components/shop/PageMyBag';
 import PageLogin from '@/components/pages/PageLogin';
@@ -111,6 +112,11 @@ export default new Router({
       path: '/imac',
       name: 'iMac',
       component: iMac,
+    },
+    {
+      path: '/imac-pro',
+      name: 'iMacPro',
+      component: iMacPro,
     },
   ],
 });

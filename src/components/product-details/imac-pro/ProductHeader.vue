@@ -2,7 +2,7 @@
   <div class="product-header">
     <div class="strip">
       <div class="container">
-        <div class="left">Macbook Air</div>
+        <div class="left">iMac Pro</div>
         <div class="right">
           <div class="overview">Overview</div>
           <button class="btn-buy" @click="$router.push('/shop/macbook-air')">
@@ -14,7 +14,8 @@
 
     <div class="offers">
       <span>
-        Get the new MacBook Air starting at $899 in our Education Store.*
+        Get the new 13-inch MacBook Pro starting at $1199 in our Education
+        Store.
       </span>
     </div>
   </div>
