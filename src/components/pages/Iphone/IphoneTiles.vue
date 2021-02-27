@@ -196,14 +196,14 @@ export default {
   justify-content: space-around;
 
   .trade-in {
-    @include sizeWH(49%, 7rem);
+    @include sizeWH(49%, 5.4rem);
     margin-right: 0.3rem;
     background: #fff;
     position: relative;
 
     img {
       @include position(absolute, $bottom: 0.4rem, $left: 0);
-      @include sizeWH(100%, 3.1rem);
+      @include sizeWH(100%, 2rem);
       object-fit: cover;
       object-position: 28% 0;
     }
@@ -214,26 +214,26 @@ export default {
     margin-right: 0;
 
     img {
-      @include sizeWH(100%, 3rem);
-      @include position(relative, 0.6rem);
+      @include sizeWH(100%, 2rem);
+      @include position(absolute, $bottom: 0rem, $left: 0);
     }
   }
 
   .trade-in,
   .upgrade {
     .title {
-      @include textMixin(#000, 0.48rem, bold);
+      @include textMixin(#000, 0.37rem, bold);
       font-family: 'San Francisco Regular', sans-serif;
       margin: 0.35rem auto 0;
-      width: 5.3rem;
+      width: 70%;
     }
     .desc {
-      @include textMixin(#000, 0.21rem);
+      @include textMixin(#000, 0.17rem);
       margin: 0.15rem auto;
-      width: 5rem;
+      width: 80%;
     }
     .btn-learn {
-      @include textMixin(#0171e3, 0.21rem);
+      @include textMixin(#0171e3, 0.16rem);
       border: none;
       background: none;
     }
