@@ -96,7 +96,7 @@ export default {
   position: relative;
 
   .container {
-    @include sizeWH(100%, 1.15rem);
+    @include sizeWH(100%, 0.9rem);
     background: #fbfbfd;
     padding-left: 0.2rem;
   }
@@ -106,20 +106,20 @@ export default {
 
     .product {
       @include position(relative, $top: 0.08rem);
-      margin-right: 0.27rem;
+      margin-right: 0.3rem;
       text-decoration: none;
       position: relative;
       cursor: pointer;
 
       .icon {
-        @include sizeWH(0.5rem, 0.5rem);
+        @include sizeWH(0.42rem, 0.42rem);
       }
       .name {
-        @include textMixin(#000, 0.13rem);
+        @include textMixin(#000, 0.1rem);
       }
       .new {
-        @include textMixin(#e46917, 0.11rem);
-        @include position(absolute, $top: 0.73rem, $left: 50%);
+        @include textMixin(#e46917, 0.09rem, bold);
+        @include position(absolute, $top: 0.6rem, $left: 50%);
         transform: translate(-50%, 0);
       }
 
@@ -132,16 +132,16 @@ export default {
   }
 
   .cashback {
-    @include sizeWH(100%, 0.43rem);
-    @include textMixin(#000, 0.13rem);
-    padding-top: 0.14rem;
+    @include sizeWH(100%, 0.27rem);
+    @include textMixin(#000, 0.1rem);
+    padding-top: 0.07rem;
     background: #f5f5f7;
   }
 
   .wrapper {
     @include sizeWH(100%, auto);
     background: #f5f5f7;
-    padding: 0.3rem 0.7rem;
+    padding: 0.25rem 1.2rem;
   }
 }
 
