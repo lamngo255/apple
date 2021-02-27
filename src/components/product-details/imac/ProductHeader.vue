@@ -5,7 +5,7 @@
         <div class="left">iMac</div>
         <div class="right">
           <div class="overview">Overview</div>
-          <button class="btn-buy" @click="$router.push('/shop/macbook-air')">
+          <button class="btn-buy" @click="$router.push('/shop/imac')">
             <span>Buy</span>
           </button>
         </div>
