@@ -86,30 +86,32 @@ export default {
   }
 
   .new {
-    @include textMixin(#c04800, 0.14rem);
+    @include textMixin(#c04800, 0.12rem);
     margin-bottom: -0.04rem;
   }
   .name {
-    @include textMixin(#000, 0.63rem, bold);
+    @include textMixin(#000, 0.5rem, bold);
     font-family: 'San Francisco Regular', sans-serif;
   }
   .desc {
-    @include textMixin(#000, 0.24rem, bold, $align: left);
+    @include textMixin(#000, 0.18rem, bold, $align: left);
+    font-family: 'San Francisco Regular', sans-serif;
+    width: 80%;
   }
   .price {
-    @include textMixin(#000, 0.18rem);
+    @include textMixin(#000, 0.14rem);
     margin-top: 0.2rem;
   }
   .btn-buy {
-    @include sizeWH(auto, 0.35rem);
-    @include textMixin(#fff, 0.19rem);
-    padding: 0.05rem 0.15rem;
+    @include sizeWH(auto, 0.27rem);
+    @include textMixin(#fff, 0.14rem);
+    padding: 0.02rem 0.13rem;
     border-radius: 0.2rem;
     background: #0171e3;
     margin-top: 0.15rem;
   }
   .btn-learn {
-    @include textMixin(#0171e3, 0.18rem);
+    @include textMixin(#0171e3, 0.15rem);
     margin-top: 0.1rem;
     margin-left: -0.05rem;
     border: none;
@@ -123,8 +125,7 @@ export default {
       width: 20%;
     }
     img {
-      @include sizeWH(5rem, 6rem);
-      margin-left: 0.6rem;
+      @include sizeWH(4.2rem, auto);
     }
   }
 
@@ -135,19 +136,19 @@ export default {
       @include position(relative, $top: -0.5rem);
     }
     img {
-      @include sizeWH(8.8rem, 5rem);
+      @include sizeWH(7.6rem, auto);
       margin-right: 0.1rem;
     }
   }
 
   .ipad-pro {
     @extend .ipad-air;
-    @include position(relative, $left: 1.8rem);
+    @include position(relative, $left: 1.9rem);
     .info {
       @include position(relative, $top: -0.5rem);
     }
     img {
-      @include sizeWH(10rem, 5.5rem);
+      @include sizeWH(9rem, auto);
     }
   }
 
@@ -157,7 +158,7 @@ export default {
       @include position(relative, $top: -0.5rem);
     }
     img {
-      @include sizeWH(6rem, 5rem);
+      @include sizeWH(5rem, auto);
       margin-right: 0.3rem;
     }
   }
