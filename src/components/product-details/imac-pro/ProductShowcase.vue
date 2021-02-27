@@ -1,6 +1,5 @@
 <template>
   <div class="product-showcase">
-    <img class="intro" :src="genLink('intro.jpg')" />
     <div class="title">iMac Pro</div>
     <div class="subtitle">Power to the pro.</div>
     <div class="desc">
@@ -11,6 +10,7 @@
       to musicians to software developers to scientists, iMac Pro is ready to
       turn your biggest ideas into your greatest work.
     </div>
+    <img class="intro" :src="genLink('intro.jpg')" />
   </div>
 </template>
 
@@ -31,10 +31,11 @@ export default {
   @include sizeWH(100%, auto);
   background: #1a1a1a;
   padding-bottom: 2rem;
-  padding-top: 0.7rem;
+  padding-top: 0.3rem;
 
   .intro {
     @include sizeWH(6rem, auto);
+    margin-top: 0.5rem;
   }
   .title {
     @include textMixin(#fff, 0.23rem, bold);

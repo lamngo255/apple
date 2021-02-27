@@ -7,23 +7,7 @@
         <ProductShowProcessor />
         <ProductShowSimulation />
         <ProductShowGraphics />
-        <ProductShowCPU />
-        <ProductShowGPU />
-        <ProductShowML />
-        <ProductShowBigSur />
-        <ProductShowSpeedApp />
-        <ProductShowBattery />
-        <ProductShowExtra />
-        <ProductShowRetina />
-        <ProductShowDisplay />
-        <ProductShowDensityTone />
-        <ProductShowCameraMics />
-        <ProductShowCameraArray />
-        <ProductShowMagicKeyboard />
-        <ProductShowScissorTouch />
-        <ProductShowTouchId />
-        <ProductShowConnectivity />
-        <ProductShowConnectivityExtra />
+        <ProductShow3DCreation />
       </div>
     </div>
   </BaseLayout>
@@ -36,23 +20,7 @@ import ProductShowcase from './ProductShowcase.vue';
 import ProductShowProcessor from './ProductShowProcessor.vue';
 import ProductShowSimulation from './ProductShowSimulation.vue';
 import ProductShowGraphics from './ProductShowGraphics.vue';
-import ProductShowCPU from './ProductShowCPU.vue';
-import ProductShowGPU from './ProductShowGPU.vue';
-import ProductShowBattery from './ProductShowBattery.vue';
-import ProductShowML from './ProductShowML.vue';
-import ProductShowBigSur from './ProductShowBigSur.vue';
-import ProductShowSpeedApp from './ProductShowSpeedApp.vue';
-import ProductShowExtra from './ProductShowExtra.vue';
-import ProductShowRetina from './ProductShowRetina.vue';
-import ProductShowDisplay from './ProductShowDisplay.vue';
-import ProductShowDensityTone from './ProductShowDensityTone.vue';
-import ProductShowCameraMics from './ProductShowCameraMics.vue';
-import ProductShowCameraArray from './ProductShowCameraArray.vue';
-import ProductShowMagicKeyboard from './ProductShowMagicKeyboard.vue';
-import ProductShowScissorTouch from './ProductShowScissorTouch.vue';
-import ProductShowTouchId from './ProductShowTouchId.vue';
-import ProductShowConnectivity from './ProductShowConnectivity.vue';
-import ProductShowConnectivityExtra from './ProductShowConnectivityExtra.vue';
+import ProductShow3DCreation from './ProductShow3DCreation.vue';
 
 export default {
   name: 'MacbookPro13',
@@ -64,23 +32,7 @@ export default {
     ProductShowProcessor,
     ProductShowSimulation,
     ProductShowGraphics,
-    ProductShowCPU,
-    ProductShowGPU,
-    ProductShowBattery,
-    ProductShowML,
-    ProductShowBigSur,
-    ProductShowSpeedApp,
-    ProductShowExtra,
-    ProductShowRetina,
-    ProductShowDisplay,
-    ProductShowDensityTone,
-    ProductShowCameraMics,
-    ProductShowCameraArray,
-    ProductShowMagicKeyboard,
-    ProductShowScissorTouch,
-    ProductShowTouchId,
-    ProductShowConnectivity,
-    ProductShowConnectivityExtra,
+    ProductShow3DCreation,
   },
 };
 </script>
