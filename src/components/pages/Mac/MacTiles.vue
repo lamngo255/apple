@@ -72,7 +72,7 @@ export default {
       width: 4rem;
     }
     .subtitle {
-      @include textMixin(#000, 0.17rem);
+      @include textMixin(#000, 0.16rem);
       margin: 0.1rem auto 0;
       width: 4rem;
     }
@@ -90,7 +90,7 @@ export default {
   justify-content: space-around;
 
   .accessories {
-    @include sizeWH(49%, 7rem);
+    @include sizeWH(49%, 5.8rem);
     margin-right: 0.3rem;
     background: #f2f2f2;
     position: relative;
@@ -106,40 +106,42 @@ export default {
   .apple-trade {
     @extend .accessories;
     margin-right: 0;
+    position: relative;
 
     img {
-      @include sizeWH(auto, 3rem);
-      left: 0.75rem;
+      @include sizeWH(auto, 2.7rem);
+      @include position(absolute, $bottom: 0, $left: 50%);
+      transform: translate(-50%, 0);
     }
   }
 
   .accessories,
   .apple-trade {
     .title {
-      @include textMixin(#000, 0.26rem, bold);
+      @include textMixin(#000, 0.21rem, bold);
       margin-top: 0.5rem;
     }
     .subtitle {
-      @include textMixin(#000, 0.53rem, bold);
+      @include textMixin(#000, 0.38rem, bold);
       font-family: 'San Francisco Regular', sans-serif;
       margin: 0 auto;
-      width: 5.3rem;
+      width: 70%;
     }
     .desc {
-      @include textMixin(#000, 0.18rem);
-      margin: 0.15rem auto;
-      width: 5rem;
+      @include textMixin(#000, 0.14rem);
+      margin: 0.15rem auto 0.08rem;
+      width: 70%;
     }
     .btn-shop {
-      @include textMixin(#fff, 0.19rem);
-      height: 0.37rem;
+      @include textMixin(#fff, 0.16rem);
+      height: 0.3rem;
       border-radius: 0.2rem;
-      padding: 0.05rem 0.14rem;
+      padding: 0.02rem 0.14rem;
       background: #0171e3;
       margin-top: 0.1rem;
     }
     .btn-trade {
-      @include textMixin(#0171e3, 0.19rem);
+      @include textMixin(#0171e3, 0.14rem);
       border: none;
       background: none;
     }
