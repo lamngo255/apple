@@ -52,37 +52,38 @@ export default {
 <style lang="scss" scoped>
 .mac-making {
   .title {
-    @include textMixin(#000, 0.6rem, bold);
+    @include textMixin(#000, 0.5rem, bold);
     font-family: 'San Francisco Regular', sans-serif;
     margin-top: 1.5rem;
   }
   .frame-banner {
-    @include sizeWH(100%, 6rem);
-    margin-top: 0.5rem;
+    @include sizeWH(100%, 4.8rem);
+    margin: 0.5rem auto 0;
     position: relative;
 
     .banner {
       @include sizeWH(100%, 100%);
       object-fit: fill;
     }
-
     .logo {
       @include alignCenter();
-      @include sizeWH(1.7rem, 0.26rem);
+      @include sizeWH(1.4rem, auto);
       margin-top: -0.6rem;
     }
     .tagline {
       @include alignCenter();
-      @include textMixin(#fff, 0.47rem, bold);
-      margin-top: 0rem;
+      @include textMixin(#fff, 0.38rem, bold);
+      font-family: 'San Francisco Regular', sans-serif;
+      margin-top: -0.15rem;
+      width: 7rem;
     }
     .buttons {
       @include alignCenter();
-      margin-top: 0.54rem;
+      margin-top: 0.3rem;
 
       .btn-update,
       .btn-learn {
-        @include textMixin(#fff, 0.18rem);
+        @include textMixin(#fff, 0.16rem);
         border: none;
         background: none;
         margin-right: 0.15rem;
@@ -97,14 +98,14 @@ export default {
   justify-content: space-around;
 
   .continuity {
-    @include sizeWH(49%, 6.4rem);
+    @include sizeWH(49%, 5.5rem);
     margin-right: 0.3rem;
     background: #fafafa;
     position: relative;
 
     img {
       @include position(absolute, $bottom: 0.5rem, $left: 0);
-      @include sizeWH(100%, 3.1rem);
+      @include sizeWH(100%, 2.6rem);
       object-fit: cover;
       object-position: 28% 0;
     }
@@ -115,25 +116,25 @@ export default {
     margin-right: 0;
 
     img {
-      @include sizeWH(auto, 2.4rem);
-      left: 0.75rem;
-      top: 2.9rem;
+      @include sizeWH(auto, 2.2rem);
+      @include position(absolute, $bottom: 0.5rem, $left: 50%);
+      transform: translate(-50%, 0);
     }
   }
 
   .continuity,
   .icloud {
     .title {
-      @include textMixin(#000, 0.26rem, bold);
+      @include textMixin(#000, 0.21rem, bold);
       margin-top: 0.5rem;
     }
     .subtitle {
-      @include textMixin(#000, 0.48rem, bold);
+      @include textMixin(#000, 0.38rem, bold);
       font-family: 'San Francisco Regular', sans-serif;
       margin: 0 auto;
     }
     .btn-learn {
-      @include textMixin(#0171e3, 0.19rem);
+      @include textMixin(#0171e3, 0.14rem);
       margin-top: 0.1rem;
       border: none;
       background: none;
