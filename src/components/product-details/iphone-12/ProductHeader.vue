@@ -43,7 +43,7 @@ export default {
         padding-top: 0.07rem;
       }
       .right {
-        @include textMixin(#000, 0.14rem);
+        @include textMixin(#000, 0.13rem);
         @include flexCenter(row);
         padding-top: 0.08rem;
 

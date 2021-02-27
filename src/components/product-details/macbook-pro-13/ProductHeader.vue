@@ -44,7 +44,7 @@ export default {
         @include textMixin(#fff, 0.19rem, bold);
       }
       .right {
-        @include textMixin(#fff, 0.14rem);
+        @include textMixin(#fff, 0.13rem);
         @include flexCenter(row);
 
         .overview {

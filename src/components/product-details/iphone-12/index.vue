@@ -13,7 +13,7 @@ import ProductHeader from './ProductHeader.vue';
 // import ProductShowcase from './ProductShowcase.vue';
 
 export default {
-  name: 'Iphone12Pro',
+  name: 'Iphone12',
 
   components: {
     BaseLayout,

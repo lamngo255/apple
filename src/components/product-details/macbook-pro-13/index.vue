@@ -51,7 +51,7 @@ import ProductShowConnectivity from './ProductShowConnectivity.vue';
 import ProductShowConnectivityExtra from './ProductShowConnectivityExtra.vue';
 
 export default {
-  name: 'MacbookAir',
+  name: 'MacbookPro13',
 
   components: {
     BaseLayout,

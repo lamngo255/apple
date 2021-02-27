@@ -77,7 +77,7 @@ export default {
           img: 'macbook-pro-16',
           path: 'shop/macbook-pro-16',
         },
-        { name: 'iMac', img: 'imac', path: 'shop/imac' },
+        { name: 'iMac', img: 'imac', path: 'imac' },
         { name: 'iMac Pro', img: 'imac-pro', path: 'shop/imac-pro' },
         { name: 'Mac Pro', img: 'mac-pro', path: 'shop/mac-pro' },
         { name: 'Mac Mini', img: 'mac-mini', path: 'shop/mac-mini', new: true },
