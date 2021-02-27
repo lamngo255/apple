@@ -156,7 +156,7 @@ export default {
 .wrapper {
   @include sizeWH(100%, auto);
   background: #fff;
-  padding: 0.3rem 0.7rem;
+  padding: 0.25rem 1.2rem;
 }
 
 .fade-enter-active,

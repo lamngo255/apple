@@ -58,25 +58,26 @@ export default {
   background: #f2f2f2;
 
   img {
-    @include sizeWH(6.2rem, 3.16rem);
-    margin-right: 0.2rem;
+    @include sizeWH(5.6rem, auto);
+    margin-right: 0.3rem;
+    margin-left: 0.2rem;
   }
 
   .details {
     margin-right: 0.2rem;
     .title {
-      @include textMixin(#000, 0.5rem, bold);
+      @include textMixin(#000, 0.37rem, bold);
       font-family: 'San Francisco Regular', sans-serif;
       margin: 0 auto;
-      width: 5rem;
+      width: 4rem;
     }
     .subtitle {
-      @include textMixin(#000, 0.21rem);
-      margin: 0.1rem auto;
-      width: 5rem;
+      @include textMixin(#000, 0.17rem);
+      margin: 0.1rem auto 0;
+      width: 4rem;
     }
     .btn-learn {
-      @include textMixin(#0171e3, 0.19rem);
+      @include textMixin(#0171e3, 0.16rem);
       border: none;
       background: none;
     }

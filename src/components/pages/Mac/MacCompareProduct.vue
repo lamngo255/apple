@@ -40,11 +40,11 @@ export default {
 <style lang="scss" scoped>
 .mac-product {
   @include flexCenter(column);
-  margin-right: 0.65rem;
-  padding-bottom: 1rem;
+  margin-right: 0.8rem;
+  padding-bottom: 0.7rem;
 
   .image {
-    @include sizeWH(2.5rem, 1.8rem);
+    @include sizeWH(2rem, 1.2rem);
 
     img {
       @include sizeWH(100%, auto);
@@ -64,7 +64,8 @@ export default {
     margin-right: 0.2rem;
 
     .name {
-      @include textMixin(#000, 0.25rem, bold);
+      @include textMixin(#000, 0.22rem, bold);
+      margin-top: 0.2rem;
     }
     .price {
       font-weight: bold;
@@ -75,13 +76,13 @@ export default {
     .memory,
     .storage,
     .battery {
-      @include textMixin(#000, 0.15rem);
+      @include textMixin(#000, 0.12rem);
       margin-bottom: 0.1rem;
       margin-top: 0.03rem;
     }
     .btn-buy {
-      @include sizeWH(auto, 0.25rem);
-      @include textMixin(#fff, 0.13rem);
+      @include sizeWH(auto, 0.21rem);
+      @include textMixin(#fff, 0.11rem);
       padding: 0.02rem 0.1rem;
       border-radius: 0.2rem;
       background: #0171e3;
@@ -89,7 +90,7 @@ export default {
       text-decoration: none;
     }
     .btn-learn {
-      @include textMixin(#0171e3, 0.15rem);
+      @include textMixin(#0171e3, 0.12rem);
       margin-top: 0.1rem;
       margin-left: -0.05rem;
       border: none;
