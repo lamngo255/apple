@@ -141,7 +141,7 @@ export default {
   .wrapper {
     @include sizeWH(100%, auto);
     background: #f5f5f7;
-    padding: 0.25rem 1.2rem;
+    padding: 0.25rem 1.24rem;
   }
 }
 

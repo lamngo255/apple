@@ -48,11 +48,11 @@ export default {
 <style lang="scss" scoped>
 .ipad-product {
   @include flexCenter(column);
-  margin-right: 0.6rem;
+  margin-right: 0.1rem;
   padding-bottom: 1rem;
 
   .image {
-    @include sizeWH(2rem, 2rem);
+    @include sizeWH(1.5rem, 1.5rem);
 
     img {
       @include sizeWH(auto, 100%);
@@ -60,66 +60,66 @@ export default {
   }
 
   .name {
-    @include textMixin(#000, 0.25rem, bold);
+    @include textMixin(#000, 0.2rem, bold);
     margin-top: 0.2rem;
   }
   .price {
-    @include textMixin(#000, 0.16rem);
+    @include textMixin(#000, 0.12rem);
     margin-top: 0.03rem;
   }
   .color {
-    @include imageCDN('color.jpg', 1.23rem, 0.18rem);
+    @include imageCDN('color.jpg', 1.2rem, 0.13rem);
     margin-top: 0.08rem;
   }
   .sep {
-    @include sizeWH(2rem, 0.01rem);
+    @include sizeWH(1.4rem, 0.01rem);
     border-top: 0.01rem solid #d2d2d7;
     margin-top: 0.25rem;
     margin-bottom: 0.23rem;
   }
   .screen-size {
-    @include textMixin(#000, 0.22rem, bold);
+    @include textMixin(#000, 0.16rem, bold);
   }
   .screen-desc {
-    @include textMixin(#000, 0.15rem);
+    @include textMixin(#000, 0.12rem);
     width: 1.7rem;
     margin-top: 0.08rem;
     height: 0.3rem;
   }
   .chip {
     .chip-img {
-      @include sizeWH(0.5rem, 0.5rem);
+      @include sizeWH(0.35rem, auto);
       margin: 0.15rem auto 0.1rem;
     }
     .chip-name {
-      @include textMixin(#000, 0.15rem);
+      @include textMixin(#000, 0.12rem);
     }
   }
   .keyboard {
     height: 1.45rem;
     .keyboard-img {
-      @include sizeWH(0.7rem, 0.5rem);
+      @include sizeWH(0.5rem, auto);
       margin: 0.2rem auto 0.1rem;
     }
     .keyboard-name {
-      @include textMixin(#000, 0.15rem);
-      width: 1.7rem;
+      @include textMixin(#000, 0.12rem);
+      width: 1.2rem;
     }
   }
   .pencil {
     .pencil-img {
-      @include sizeWH(0.6rem, 0.04rem);
+      @include sizeWH(0.5rem, auto);
       margin: 0.2rem auto 0.05rem;
     }
     .pencil-name {
-      @include textMixin(#000, 0.15rem);
-      width: 1.3rem;
+      @include textMixin(#000, 0.12rem);
+      width: 1rem;
     }
   }
 
   .btn-buy {
-    @include sizeWH(auto, 0.25rem);
-    @include textMixin(#fff, 0.15rem);
+    @include sizeWH(auto, 0.2rem);
+    @include textMixin(#fff, 0.12rem);
     padding: 0.02rem 0.1rem;
     border-radius: 0.2rem;
     background: #0171e3;
@@ -127,7 +127,7 @@ export default {
     text-decoration: none;
   }
   .btn-learn {
-    @include textMixin(#0171e3, 0.15rem);
+    @include textMixin(#0171e3, 0.12rem);
     margin-top: 0.1rem;
     margin-left: -0.05rem;
     border: none;

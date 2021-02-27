@@ -92,11 +92,12 @@ export default {
   position: relative;
 
   .title {
-    @include textMixin(#000, 0.6rem, bold);
+    @include textMixin(#000, 0.4rem, bold);
     font-family: 'San Francisco Regular', sans-serif;
   }
   .compare {
-    @include textMixin(#0266cc, 0.21rem);
+    @include textMixin(#0266cc, 0.18rem);
+    font-family: 'San Francisco Regular', sans-serif;
     margin-top: 0.1rem;
   }
 
