@@ -99,7 +99,7 @@ export default {
 <style lang="scss" scoped>
 .ipad-getmore {
   .title {
-    @include textMixin(#000, 0.6rem, bold);
+    @include textMixin(#000, 0.5rem, bold);
     font-family: 'San Francisco Regular', sans-serif;
     margin-top: 1rem;
   }
@@ -111,17 +111,17 @@ export default {
     margin-top: 0.2rem;
 
     img {
-      @include sizeWH(5.7rem, 3.3rem);
-      margin-right: 0.2rem;
+      @include sizeWH(4.3rem, auto);
+      margin-left: 0.2rem;
       margin-top: 0.3rem;
     }
 
     .details {
       img {
-        @include sizeWH(3rem, 0.9rem);
+        @include sizeWH(2.6rem, auto);
       }
       .title {
-        @include textMixin(#000, 0.28rem, bold);
+        @include textMixin(#000, 0.23rem, bold);
         margin: 0.1rem auto;
         width: 5rem;
       }
@@ -130,7 +130,7 @@ export default {
 
         .btn-learn,
         .btn-try {
-          @include textMixin(#0171e3, 0.2rem);
+          @include textMixin(#0171e3, 0.16rem);
           border: none;
           background: none;
           margin-right: 0.2rem;
@@ -146,25 +146,25 @@ export default {
   justify-content: space-around;
 
   .apple-tv {
-    @include sizeWH(49%, 7rem);
+    @include sizeWH(49%, 5.5rem);
     margin-right: 0.3rem;
     background: #000;
     position: relative;
 
     .overlay {
       @include position(absolute, $bottom: 0, $left: 0);
-      @include sizeWH(100%, 4rem);
+      @include sizeWH(100%, 3rem);
       object-fit: cover;
       object-position: 28% 0;
     }
 
     .logo {
-      @include sizeWH(1rem, 0.4rem);
+      @include sizeWH(0.8rem, auto);
       margin-top: 0.6rem;
     }
 
     .desc {
-      @include textMixin(#fff, 0.24rem);
+      @include textMixin(#fff, 0.17rem);
       margin-top: 0.2rem;
       width: 100%;
     }
@@ -175,7 +175,7 @@ export default {
 
       .btn-learn,
       .btn-try {
-        @include textMixin(#2a97ff, 0.23rem);
+        @include textMixin(#2a97ff, 0.16rem);
         border: none;
         background: none;
         margin-right: 0.2rem;
@@ -190,7 +190,7 @@ export default {
 
     .overlay {
       @include position(absolute, $bottom: 0, $left: 0);
-      @include sizeWH(100%, 4.7rem);
+      @include sizeWH(100%, 3.4rem);
       object-fit: cover;
       object-position: 5% 0;
     }
@@ -202,7 +202,7 @@ export default {
       color: #000;
     }
     .btn-learn {
-      @include textMixin(#000, 0.21rem);
+      @include textMixin(#000, 0.16rem);
       border: none;
       background: none;
       margin-top: 0.15rem;
@@ -231,10 +231,10 @@ export default {
     }
     .buttons {
       @include alignCenter();
-      top: 2rem;
+      top: 1.7rem;
       .btn-learn,
       .btn-try {
-        @include textMixin(#fff, 0.2rem);
+        @include textMixin(#fff, 0.16rem);
       }
     }
   }
@@ -253,17 +253,17 @@ export default {
   position: relative;
 
   .overlay {
-    @include sizeWH(10rem, 3.5rem);
+    @include sizeWH(9.7rem, auto);
   }
 
   .details {
-    margin-left: 0.6rem;
+    margin-left: 0.8rem;
 
     .logo {
-      @include sizeWH(2.2rem, 0.4rem);
+      @include sizeWH(2rem, auto);
     }
     .desc {
-      @include textMixin(#000, 0.22rem);
+      @include textMixin(#000, 0.18rem);
       margin: 0.2rem auto;
     }
 
@@ -272,7 +272,7 @@ export default {
 
       .btn-learn,
       .btn-buy {
-        @include textMixin(#0171e3, 0.2rem);
+        @include textMixin(#0171e3, 0.16rem);
         border: none;
         background: none;
         margin-right: 0.2rem;
