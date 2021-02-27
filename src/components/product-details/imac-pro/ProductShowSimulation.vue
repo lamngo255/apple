@@ -1,6 +1,6 @@
 <template>
   <div class="product-show-simulation">
-    <div class="intro">
+    <div class="container">
       <div class="title">Particle simulation? Elementary.</div>
       <div class="desc">
         Billowing smoke. Torrential rain. A wheat field in the wind. With up to
@@ -29,7 +29,8 @@ export default {
 .product-show-simulation {
   background: #0f0f0f;
   padding-top: 0.8rem;
-  .intro {
+
+  .container {
     @include sizeWH(60%, auto);
     margin: 0 auto;
     text-align: left;
@@ -40,13 +41,16 @@ export default {
     }
 
     .title {
-      @include textMixin(#fff, 0.2rem, bold);
+      @include textMixin(#fff, 0.3rem, bold);
+      border-bottom: #515151 solid 0.015rem;
+      padding-bottom: 0.2rem;
+      margin-bottom: 0.2rem;
     }
     .desc {
-      @include textMixin(#cccccc, 0.12rem, bold);
-      line-height: 0.19rem;
-      margin-top: 0.1rem;
-      width: 50%;
+      @include textMixin(#fff, 0.17rem, bold);
+      @include flexCenter(row);
+      line-height: 0.26rem;
+      width: 80%;
     }
     .processor {
       @include sizeWH(6rem, auto);

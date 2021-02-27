@@ -11,13 +11,6 @@
         </div>
       </div>
     </div>
-
-    <div class="offers">
-      <span>
-        Get the new 13-inch MacBook Pro starting at $1199 in our Education
-        Store.
-      </span>
-    </div>
   </div>
 </template>
 
@@ -63,13 +56,6 @@ export default {
         }
       }
     }
-  }
-
-  .offers {
-    @include sizeWH(100%, 0.38rem);
-    @include textMixin(#fff, 0.12rem);
-    background: #151516;
-    padding-top: 0.12rem;
   }
 }
 </style>

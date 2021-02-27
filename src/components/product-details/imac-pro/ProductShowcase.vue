@@ -30,7 +30,7 @@ export default {
 .product-showcase {
   @include sizeWH(100%, auto);
   background: #1a1a1a;
-  padding-bottom: 2rem;
+  padding-bottom: 1.2rem;
   padding-top: 0.3rem;
 
   .intro {

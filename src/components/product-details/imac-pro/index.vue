@@ -8,6 +8,7 @@
         <ProductShowSimulation />
         <ProductShowGraphics />
         <ProductShow3DCreation />
+        <ProductShowStrength />
       </div>
     </div>
   </BaseLayout>
@@ -21,6 +22,7 @@ import ProductShowProcessor from './ProductShowProcessor.vue';
 import ProductShowSimulation from './ProductShowSimulation.vue';
 import ProductShowGraphics from './ProductShowGraphics.vue';
 import ProductShow3DCreation from './ProductShow3DCreation.vue';
+import ProductShowStrength from './ProductShowStrength.vue';
 
 export default {
   name: 'MacbookPro13',
@@ -33,6 +35,7 @@ export default {
     ProductShowSimulation,
     ProductShowGraphics,
     ProductShow3DCreation,
+    ProductShowStrength,
   },
 };
 </script>
