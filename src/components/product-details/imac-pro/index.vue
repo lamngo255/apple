@@ -6,6 +6,7 @@
         <ProductShowcase />
         <ProductShowProcessor />
         <ProductShowSimulation />
+        <ProductShowGraphics />
         <ProductShowCPU />
         <ProductShowGPU />
         <ProductShowML />
@@ -34,6 +35,7 @@ import ProductHeader from './ProductHeader.vue';
 import ProductShowcase from './ProductShowcase.vue';
 import ProductShowProcessor from './ProductShowProcessor.vue';
 import ProductShowSimulation from './ProductShowSimulation.vue';
+import ProductShowGraphics from './ProductShowGraphics.vue';
 import ProductShowCPU from './ProductShowCPU.vue';
 import ProductShowGPU from './ProductShowGPU.vue';
 import ProductShowBattery from './ProductShowBattery.vue';
@@ -61,6 +63,7 @@ export default {
     ProductShowcase,
     ProductShowProcessor,
     ProductShowSimulation,
+    ProductShowGraphics,
     ProductShowCPU,
     ProductShowGPU,
     ProductShowBattery,
