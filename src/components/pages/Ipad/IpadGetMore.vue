@@ -253,12 +253,11 @@ export default {
   position: relative;
 
   .overlay {
-    @include sizeWH(9.7rem, auto);
+    @include sizeWH(8rem, auto);
   }
 
   .details {
     margin-left: 0.8rem;
-
     .logo {
       @include sizeWH(2rem, auto);
     }
