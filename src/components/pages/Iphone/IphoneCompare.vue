@@ -1,7 +1,7 @@
 <template>
   <div class="ipad-find">
     <div class="title">Which iPhone is right for you?</div>
-    <div class="compare">Compare iPhone models</div>
+    <div class="compare">Compare all iPhone models</div>
 
     <div class="products">
       <IphoneCompareProduct
@@ -92,11 +92,12 @@ export default {
   position: relative;
 
   .title {
-    @include textMixin(#000, 0.5rem, bold);
+    @include textMixin(#000, 0.4rem, bold);
     font-family: 'San Francisco Regular', sans-serif;
   }
   .compare {
-    @include textMixin(#0266cc, 0.21rem);
+    @include textMixin(#0266cc, 0.18rem);
+    font-family: 'San Francisco Regular', sans-serif;
     margin-top: 0.1rem;
   }
 

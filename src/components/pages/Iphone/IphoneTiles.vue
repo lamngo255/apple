@@ -9,14 +9,18 @@
       <button class="btn-shop">Shop</button>
       <div class="tiles">
         <div class="creativity">
-          <img :src="genTileImage('photography')" alt="" />
+          <img
+            class="creativity-img"
+            :src="genTileImage('photography')"
+            alt=""
+          />
           <div class="text">
             <p>For lovers of</p>
             <p>photography.</p>
           </div>
         </div>
         <div class="music">
-          <img :src="genTileImage('music')" alt="" />
+          <img class="music-img" :src="genTileImage('music')" alt="" />
           <div class="text">
             <p>For lovers</p>
             <p>of music.</p>
@@ -30,8 +34,8 @@
       <div class="details">
         <div class="title">Get 3% Daily Cash back with Apple Card.</div>
         <div class="subtitle">
-          And pay for your new Mac over 12 months, interest‑free when you choose
-          Apple Card Monthly Installments.
+          And pay for your new iPhone over 24 months, interest‑free when you
+          choose Apple Card Monthly Installments.
         </div>
         <button class="btn-learn">Learn more</button>
       </div>
@@ -82,21 +86,21 @@ export default {
 
 .row-full {
   @include flexCenter(column);
-  @include sizeWH(100%, 5.4rem);
+  @include sizeWH(100%, 4.6rem);
   justify-content: flex-start;
   background: #fff;
   padding-top: 0.3rem;
 
   .title {
-    @include textMixin(#000, 0.5rem, bold);
+    @include textMixin(#000, 0.4rem, bold);
     font-family: 'San Francisco Regular', sans-serif;
   }
   .desc {
-    @include textMixin(#000, 0.22rem);
+    @include textMixin(#000, 0.18rem);
     margin: 0.07rem auto;
   }
   .btn-shop {
-    @include textMixin(#0171e3, 0.23rem);
+    @include textMixin(#0171e3, 0.16rem);
     border: none;
     background: none;
     margin-top: 0.05rem;
@@ -105,7 +109,7 @@ export default {
     @include flexCenter(row);
     width: 100%;
     .creativity {
-      @include sizeWH(47%, 2.8rem);
+      @include sizeWH(47%, 2.6rem);
       background: #f5f5f7;
       margin-top: 0.2rem;
       margin-right: 0.15rem;
@@ -119,16 +123,16 @@ export default {
         @include position(absolute, $top: 1rem, $right: 0.3rem);
         font-family: 'San Francisco Regular', sans-serif;
         p {
-          @include textMixin(#000, 0.32rem, bold);
+          @include textMixin(#000, 0.23rem, bold);
           &:nth-child(2) {
             color: #8e70ff;
           }
         }
       }
 
-      img {
+      .creativity-img {
         @include position(absolute, $top: 0.35rem, $left: 0);
-        @include sizeWH(auto, 2.2rem);
+        @include sizeWH(auto, 2.1rem);
       }
     }
     .music {
@@ -137,14 +141,14 @@ export default {
       margin-left: 0.15rem;
 
       .text {
-        @include position(absolute, $top: 1rem, $right: 4.1rem);
+        @include position(absolute, $top: 1rem, $left: 0.2rem);
         p:nth-child(2) {
           color: #ff0031;
         }
       }
 
-      img {
-        @include position(absolute, $top: 0rem, $left: 1.6rem);
+      .music-img {
+        @include position(absolute, $top: 0rem, $right: 0rem);
         @include sizeWH(auto, 100%);
         border-top-right-radius: 0.2rem;
         border-bottom-right-radius: 0.2rem;
@@ -154,30 +158,32 @@ export default {
 }
 
 .apple-card {
-  @include sizeWH(100%, 5rem);
+  @include sizeWH(100%, 4.6rem);
   @include flexCenter(row);
   background: #fff;
   margin-top: 0.3rem;
 
   img {
-    @include sizeWH(6.2rem, 3.3rem);
-    margin-right: 0.2rem;
+    @include sizeWH(5.6rem, auto);
+    margin-right: 0.3rem;
+    margin-left: 0.2rem;
   }
 
   .details {
+    margin-right: 0.2rem;
     .title {
-      @include textMixin(#000, 0.5rem, bold);
+      @include textMixin(#000, 0.37rem, bold);
       font-family: 'San Francisco Regular', sans-serif;
       margin: 0 auto;
-      width: 5rem;
+      width: 4rem;
     }
     .subtitle {
-      @include textMixin(#000, 0.21rem);
-      margin: 0.1rem auto;
-      width: 5rem;
+      @include textMixin(#000, 0.16rem);
+      margin: 0.1rem auto 0;
+      width: 4rem;
     }
     .btn-learn {
-      @include textMixin(#0171e3, 0.19rem);
+      @include textMixin(#0171e3, 0.16rem);
       border: none;
       background: none;
     }
