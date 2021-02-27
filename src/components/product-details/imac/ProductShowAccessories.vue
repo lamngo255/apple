@@ -98,13 +98,13 @@ export default {
       margin-top: 0.5rem;
 
       .accessories {
-        @include sizeWH(9rem, auto);
-        margin-left: -1rem;
+        @include sizeWH(11rem, auto);
+        margin-left: -2rem;
       }
     }
     .note {
       @include flexCenter(row);
-      margin-top: 0.3rem;
+      margin-top: 0.4rem;
 
       .col {
         @include flexCenter(column);
@@ -115,10 +115,10 @@ export default {
           margin-bottom: 0.4rem;
 
           .title {
-            @include textMixin(#000, 0.14rem);
+            @include textMixin(#000, 0.15rem);
           }
           .subtitle {
-            @include textMixin(#86868b, 0.13rem);
+            @include textMixin(#86868b, 0.14rem);
             margin-top: 0.03rem;
           }
         }

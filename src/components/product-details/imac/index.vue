@@ -13,6 +13,7 @@
         <ProductShowSecurityChip />
         <ProductShowConnectivity />
         <ProductShowAccessories />
+        <ProductShowBigSur />
       </div>
     </div>
   </BaseLayout>
@@ -31,6 +32,7 @@ import ProductShowCameraSpeakers from './ProductShowCameraSpeakers.vue';
 import ProductShowSecurityChip from './ProductShowSecurityChip.vue';
 import ProductShowConnectivity from './ProductShowConnectivity.vue';
 import ProductShowAccessories from './ProductShowAccessories.vue';
+import ProductShowBigSur from './ProductShowBigSur.vue';
 
 export default {
   name: 'iMac',
@@ -48,6 +50,7 @@ export default {
     ProductShowSecurityChip,
     ProductShowConnectivity,
     ProductShowAccessories,
+    ProductShowBigSur,
   },
 };
 </script>
