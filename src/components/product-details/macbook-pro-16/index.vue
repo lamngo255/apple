@@ -6,8 +6,8 @@
         <ProductShowcase />
         <ProductShowRetina />
         <ProductShowLED />
-        <ProductShowNanoGlass />
         <ProductShowProcessorMemory />
+        <ProductShowNanoGlass />
         <ProductShowGraphics />
         <ProductShowStorage />
       </div>
@@ -21,8 +21,8 @@ import ProductHeader from './ProductHeader.vue';
 import ProductShowcase from './ProductShowcase.vue';
 import ProductShowRetina from './ProductShowRetina.vue';
 import ProductShowLED from './ProductShowLED.vue';
-import ProductShowNanoGlass from './ProductShowNanoGlass.vue';
 import ProductShowProcessorMemory from './ProductShowProcessorMemory.vue';
+import ProductShowNanoGlass from './ProductShowNanoGlass.vue';
 import ProductShowGraphics from './ProductShowGraphics.vue';
 import ProductShowStorage from './ProductShowStorage.vue';
 
@@ -35,8 +35,8 @@ export default {
     ProductShowcase,
     ProductShowRetina,
     ProductShowLED,
-    ProductShowNanoGlass,
     ProductShowProcessorMemory,
+    ProductShowNanoGlass,
     ProductShowGraphics,
     ProductShowStorage,
   },

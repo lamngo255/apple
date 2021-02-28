@@ -1,37 +1,39 @@
 <template>
-  <div class="product-nano-glass">
-    <div class="wrapper">
-      <div class="processor">
-        <div class="title">Processor and Memory</div>
-        <div class="desc">
-          <span>From fast to fasten your seatbelt.</span>
-          <span>
-            iMac and powerful processors go hand in hand. Up to a 6-core Intel
-            Core i7 processor gives the 21.5‑inch iMac all the power you need
-            for creating in Photoshop, editing video, or making music. And the
-            27-inch model offers up to a 10-core Intel Core i9 processor to sail
-            through heavy tasks like layering dozens of audio tracks or
-            compiling and testing code.
-          </span>
-        </div>
-        <div class="images">
-          <img class="processor" :src="genLink('processor.png')" />
-          <img class="info" :src="genLink('processor-info.png')" />
-        </div>
+  <div class="product-show-processor-memory">
+    <div class="container">
+      <div class="title">
+        <div>Processor and Memory</div>
+        <div>Working at the speed</div>
+        <div>of thought.</div>
       </div>
 
-      <div class="memory">
-        <img class="image" :src="genLink('memory.png')" />
-        <div class="desc">
-          <span>More memory. For major processing.</span>
-          <span>
-            The 21.5‑inch iMac can be configured to a formidable 32GB of memory.
-            And the 27‑inch iMac can now be configured to 128GB — double the
-            capacity of the previous generation — to fly through the most
-            complex pro workflows up to twice as fast.
-          </span>
+      <div class="images">
+        <div class="producer">
+          <div class="text">
+            <div class="quote">
+              <div>”This MacBook Pro is a</div>
+              <div>game changer.”</div>
+            </div>
+            <div class="author">Oak Felder</div>
+            <div class="role">GRAMMY®️-Nominated Songwriter and Producer</div>
+          </div>
+
+          <img :src="genLink('producer.jpg')" />
         </div>
-        <img class="info" :src="genLink('memory-info.png')" />
+        <img
+          class="processor-fallback"
+          :src="genLink('processor-fallback.jpg')"
+        />
+        <div class="note">
+          The 16-inch MacBook Pro brings a whole new class of performance to the
+          notebook. Thanks to a more advanced thermal design, the
+          <b>Intel Core i9 processor</b> with up to 8 cores and 16 threads of
+          processing power sustains <b>higher performance</b> for longer periods
+          of time — and delivers up to 2.1 times the performance of a quad-core
+          MacBook Pro. So whether you’re layering dozens of tracks and effects,
+          rendering 3D models, or compiling and testing code, you’ll be doing it
+          in no time flat.
+        </div>
       </div>
     </div>
   </div>
@@ -43,73 +45,99 @@ export default {
 
   methods: {
     genLink(name) {
-      return this.$assetsUrl(`product-details/imac/${name}`);
+      return this.$assetsUrl(`product-details/macbook-pro-16/${name}`);
     },
   },
 };
 </script>
 
 <style lang="scss" scoped>
-.product-nano-glass {
+.product-show-processor-memory {
   @include sizeWH(100%, auto);
   background: #fff;
   padding-top: 1rem;
+  padding-bottom: 1rem;
 
-  .wrapper {
+  .container {
     @include sizeWH(58%, auto);
     margin: 0 auto;
     text-align: left;
 
     .title {
-      @include textMixin(#000, 0.2rem, bold);
-      font-family: 'San Francisco Bold', sans-serif;
+      @include textMixin(#000, 0.6rem, bold);
+      display: flex;
+      flex-flow: column wrap;
+      font-family: 'San Francisco Regular', sans-serif;
+
+      div:first-child {
+        color: #acacac;
+      }
     }
     .desc {
       @include textMixin(#86868b, 0.32rem, bold);
       font-family: 'San Francisco Regular', sans-serif;
-      line-height: 0.38rem;
+      line-height: 0.35rem;
       margin-top: 0.1rem;
-      width: 7.5rem;
       letter-spacing: 0.005rem;
-
-      span:first-child {
-        color: #000;
-      }
-    }
-
-    .images {
-      margin-top: 0.5rem;
-
-      .processor {
-        @include sizeWH(9rem, auto);
-        margin-left: -0.5rem;
-      }
-      .info {
-        @include sizeWH(7.4rem, auto);
-      }
-    }
-  }
-
-  .memory {
-    margin-top: 0.7rem;
-    .image {
-      @include sizeWH(8rem, auto);
-    }
-    .desc {
-      @include textMixin(#86868b, 0.15rem, bold);
-      line-height: 0.23rem;
-      margin-top: 0.1rem;
-      margin-left: 0.1rem;
       width: 7rem;
 
       span:first-child {
         color: #000;
       }
     }
-    .info {
-      @include sizeWH(9rem, auto);
-      margin-top: 0.3rem;
-      margin-left: -0.2rem;
+    .images {
+      margin-top: 0.5rem;
+
+      .producer {
+        @include sizeWH(7rem, auto);
+        background: #f2f2f2;
+
+        .text {
+          margin: 0rem auto 0;
+          width: 62%;
+
+          .quote {
+            @include textMixin(#000, 0.38rem, bold);
+            padding-top: 0.5rem;
+
+            div:first-child {
+              margin-left: -0.14rem;
+            }
+          }
+          .author {
+            @include textMixin(#000, 0.16rem, bold);
+            margin-top: 0.1rem;
+          }
+          .role {
+            @include textMixin(#000, 0.15rem);
+            width: 40%;
+            margin-top: 0.03rem;
+          }
+        }
+
+        img {
+          @include sizeWH(100%, auto);
+        }
+      }
+    }
+
+    .processor-fallback {
+      @include sizeWH(8.5rem, auto);
+      margin-left: -0.8rem;
+      margin-top: 0.5rem;
+    }
+
+    .note {
+      @include textMixin(#86868b, 0.29rem, bold, $align: left);
+      font-family: 'San Francisco Regular', sans-serif;
+      line-height: 0.35rem;
+      margin: 0.5rem auto 0;
+      letter-spacing: 0.007rem;
+
+      b {
+        color: #000;
+        font-weight: bold;
+      }
     }
   }
 }
