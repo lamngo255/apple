@@ -15,6 +15,8 @@
         <ProductShowBigScreen />
         <ProductShowRetina />
         <ProductShowTrueColor />
+        <ProductShowDesign />
+        <ProductShowAccessories />
       </div>
     </div>
   </BaseLayout>
@@ -35,6 +37,8 @@ import ProductShowIO from './ProductShowIO.vue';
 import ProductShowBigScreen from './ProductShowBigScreen.vue';
 import ProductShowRetina from './ProductShowRetina.vue';
 import ProductShowTrueColor from './ProductShowTrueColor.vue';
+import ProductShowDesign from './ProductShowDesign.vue';
+import ProductShowAccessories from './ProductShowAccessories.vue';
 
 export default {
   name: 'MacbookPro13',
@@ -54,6 +58,8 @@ export default {
     ProductShowBigScreen,
     ProductShowRetina,
     ProductShowTrueColor,
+    ProductShowDesign,
+    ProductShowAccessories,
   },
 };
 </script>
@@ -65,7 +71,6 @@ export default {
   .showcase {
     @include sizeWH(100%, auto);
     background: #1a1a1a;
-    padding-bottom: 0.7rem;
   }
 }
 </style>
