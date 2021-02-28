@@ -9,6 +9,12 @@
         <ProductShowGraphics />
         <ProductShow3DCreation />
         <ProductShowStrength />
+        <ProductShowMemory />
+        <ProductShowVideoPerf />
+        <ProductShowIO />
+        <ProductShowBigScreen />
+        <ProductShowRetina />
+        <ProductShowTrueColor />
       </div>
     </div>
   </BaseLayout>
@@ -23,6 +29,12 @@ import ProductShowSimulation from './ProductShowSimulation.vue';
 import ProductShowGraphics from './ProductShowGraphics.vue';
 import ProductShow3DCreation from './ProductShow3DCreation.vue';
 import ProductShowStrength from './ProductShowStrength.vue';
+import ProductShowMemory from './ProductShowMemory.vue';
+import ProductShowVideoPerf from './ProductShowVideoPerf.vue';
+import ProductShowIO from './ProductShowIO.vue';
+import ProductShowBigScreen from './ProductShowBigScreen.vue';
+import ProductShowRetina from './ProductShowRetina.vue';
+import ProductShowTrueColor from './ProductShowTrueColor.vue';
 
 export default {
   name: 'MacbookPro13',
@@ -36,6 +48,12 @@ export default {
     ProductShowGraphics,
     ProductShow3DCreation,
     ProductShowStrength,
+    ProductShowMemory,
+    ProductShowVideoPerf,
+    ProductShowIO,
+    ProductShowBigScreen,
+    ProductShowRetina,
+    ProductShowTrueColor,
   },
 };
 </script>

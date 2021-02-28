@@ -20,7 +20,7 @@
         </div>
       </div>
     </div>
-    <img class="processor" :src="genLink('graphics.png')" />
+    <img class="graphics" :src="genLink('graphics.png')" />
   </div>
 </template>
 
@@ -43,10 +43,6 @@ export default {
   text-align: left;
   padding-bottom: 1rem;
   padding-top: 1rem;
-
-  .m1-big {
-    @include sizeWH(1.5rem, auto);
-  }
 
   .title {
     @include textMixin(#fff, 0.3rem, bold);
@@ -76,15 +72,10 @@ export default {
       }
     }
   }
-  .processor {
+  .graphics {
     @include sizeWH(6rem, auto);
     margin: 0.5rem auto 0;
     margin-left: 0.5rem;
   }
-}
-
-video {
-  @include sizeWH(100%, auto);
-  margin: 0 auto;
 }
 </style>

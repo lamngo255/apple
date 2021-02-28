@@ -34,10 +34,6 @@ export default {
   text-align: left;
   padding-bottom: 1rem;
 
-  .m1-big {
-    @include sizeWH(1.5rem, auto);
-  }
-
   .title {
     @include textMixin(#fff, 0.3rem, bold);
     border-bottom: #515151 solid 0.015rem;
@@ -53,11 +49,6 @@ export default {
     @include sizeWH(6rem, auto);
     margin: 0.5rem auto 0;
     margin-left: 0.5rem;
-  }
-
-  video {
-    @include sizeWH(100%, auto);
-    margin: 0 auto;
   }
 }
 </style>
