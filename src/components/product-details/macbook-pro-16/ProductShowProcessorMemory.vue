@@ -98,6 +98,7 @@ export default {
 
           .quote {
             @include textMixin(#000, 0.38rem, bold);
+            font-family: 'San Francisco Regular', sans-serif;
             padding-top: 0.5rem;
 
             div:first-child {
