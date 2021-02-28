@@ -1,5 +1,5 @@
 <template>
-  <div class="product-show1">
+  <div class="product-showcase">
     <div class="subtitle">MacBook Pro</div>
     <div class="title">The best for the brightest</div>
     <img class="hero" :src="genLink('hero.png')" />
@@ -22,7 +22,7 @@
 
 <script>
 export default {
-  name: 'ProductShow1',
+  name: 'ProductShowcase',
 
   methods: {
     genLink(name) {
@@ -33,7 +33,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.product-show1 {
+.product-showcase {
   @include sizeWH(100%, auto);
   background: #fff;
   padding-top: 0.2rem;

@@ -1,6 +1,6 @@
 <template>
   <div class="product-show-retina">
-    <div class="wrapper">
+    <div class="container">
       <div class="title">
         <div>Retina Display</div>
         <div>A big, beautiful workspace.</div>
@@ -55,7 +55,7 @@ export default {
   padding-top: 1rem;
   padding-bottom: 1rem;
 
-  .wrapper {
+  .container {
     @include sizeWH(58%, auto);
     margin: 0 auto;
     text-align: left;
