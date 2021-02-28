@@ -12,6 +12,7 @@ import Iphone12Pro from '@/components/product-details/iphone-12-pro';
 import Iphone12 from '@/components/product-details/iphone-12';
 import MacbookAir from '@/components/product-details/macbook-air';
 import MacbookPro13 from '@/components/product-details/macbook-pro-13';
+import MacbookPro16 from '@/components/product-details/macbook-pro-16';
 import iMac from '@/components/product-details/imac';
 import iMacPro from '@/components/product-details/imac-pro';
 
@@ -107,6 +108,11 @@ export default new Router({
       path: '/macbook-pro-13',
       name: 'MacbookPro13',
       component: MacbookPro13,
+    },
+    {
+      path: '/macbook-pro-16',
+      name: 'MacbookPro16',
+      component: MacbookPro16,
     },
     {
       path: '/imac',
