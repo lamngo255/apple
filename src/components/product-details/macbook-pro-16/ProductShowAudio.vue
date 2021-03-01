@@ -64,22 +64,10 @@ export default {
       @include textMixin(#000, 0.6rem, bold);
       display: flex;
       flex-flow: column wrap;
-      font-family: 'San Francisco Regular', sans-serif;
+      font-family: 'San Francisco Medium', sans-serif;
 
       div:first-child {
         color: #acacac;
-      }
-    }
-    .desc {
-      @include textMixin(#86868b, 0.32rem, bold);
-      font-family: 'San Francisco Regular', sans-serif;
-      line-height: 0.35rem;
-      margin-top: 0.1rem;
-      letter-spacing: 0.005rem;
-      width: 7rem;
-
-      span:first-child {
-        color: #000;
       }
     }
 
