@@ -7,9 +7,11 @@
         <ProductShowRetina />
         <ProductShowLED />
         <ProductShowProcessorMemory />
+        <ProductShowGraphics />
         <ProductShowThermal />
         <ProductShowGraphics />
-        <ProductShowStorage />
+        <ProductShowKeyboard />
+        <ProductShowAudio />
       </div>
     </div>
   </BaseLayout>
@@ -23,6 +25,9 @@ import ProductShowRetina from './ProductShowRetina.vue';
 import ProductShowLED from './ProductShowLED.vue';
 import ProductShowProcessorMemory from './ProductShowProcessorMemory.vue';
 import ProductShowThermal from './ProductShowThermal.vue';
+import ProductShowGraphics from './ProductShowGraphics.vue';
+import ProductShowKeyboard from './ProductShowKeyboard.vue';
+import ProductShowAudio from './ProductShowAudio.vue';
 
 export default {
   name: 'MacbookPro16',
@@ -34,7 +39,10 @@ export default {
     ProductShowRetina,
     ProductShowLED,
     ProductShowProcessorMemory,
+    ProductShowGraphics,
     ProductShowThermal,
+    ProductShowKeyboard,
+    ProductShowAudio,
   },
 };
 </script>
