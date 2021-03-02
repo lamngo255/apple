@@ -12,6 +12,8 @@
         <ProductShowRetina />
         <ProductShowCamera />
         <ProductShowVideo />
+        <ProductShowNight />
+        <ProductShowMagsafe />
       </div>
     </div>
   </BaseLayout>
@@ -29,6 +31,8 @@ import ProductShow5G from './ProductShow5G.vue';
 import ProductShowRetina from './ProductShowRetina.vue';
 import ProductShowCamera from './ProductShowCamera.vue';
 import ProductShowVideo from './ProductShowVideo.vue';
+import ProductShowNight from './ProductShowNight.vue';
+import ProductShowMagsafe from './ProductShowMagsafe.vue';
 
 export default {
   name: 'Iphone12',
@@ -45,6 +49,8 @@ export default {
     ProductShowRetina,
     ProductShowCamera,
     ProductShowVideo,
+    ProductShowNight,
+    ProductShowMagsafe,
   },
 };
 </script>
