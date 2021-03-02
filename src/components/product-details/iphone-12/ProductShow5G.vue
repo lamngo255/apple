@@ -12,7 +12,7 @@
         broadest 5G coverage worldwide
       </div>
       <div class="note">iPhone makes the most of 5G</div>
-      <img class="phone" :src="genLink('5G.jpg')" />
+      <img class="phone" :src="genLink('connection.jpg')" />
     </div>
   </div>
 </template>

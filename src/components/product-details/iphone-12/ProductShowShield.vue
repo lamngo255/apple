@@ -53,6 +53,7 @@ export default {
 
     .shield {
       @include position(absolute, $bottom: 0, $right: 0);
+      @include sizeWH(7rem, auto);
     }
   }
 }

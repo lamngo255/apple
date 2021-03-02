@@ -32,6 +32,7 @@ export default {
 
     .edges {
       @include position(absolute, $bottom: 0, $left: 50%);
+      @include sizeWH(9.5rem, auto);
       transform: translate(-50%, 0);
     }
   }
