@@ -79,8 +79,12 @@ export default {
 
   .container-1 {
     @include sizeWH(100%, auto);
-    padding-top: 1rem;
+    padding-top: 0.5rem;
     background: #fcf6f0;
+
+    .pic1 {
+      @include sizeWH(8rem, auto);
+    }
   }
 
   .container-2 {
