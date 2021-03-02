@@ -43,6 +43,10 @@ export default {
       @include textMixin(#2866cc, 0.18rem);
       margin: 0.3rem auto;
     }
+
+    .compare {
+      @include sizeWH(95%, auto);
+    }
   }
 }
 </style>
