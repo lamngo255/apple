@@ -14,6 +14,9 @@
         <ProductShowVideo />
         <ProductShowNight />
         <ProductShowMagsafe />
+        <ProductShowStackable />
+        <ProductShowTurbo />
+        <ProductShowIos />
       </div>
     </div>
   </BaseLayout>
@@ -33,6 +36,9 @@ import ProductShowCamera from './ProductShowCamera.vue';
 import ProductShowVideo from './ProductShowVideo.vue';
 import ProductShowNight from './ProductShowNight.vue';
 import ProductShowMagsafe from './ProductShowMagsafe.vue';
+import ProductShowStackable from './ProductShowStackable.vue';
+import ProductShowTurbo from './ProductShowTurbo.vue';
+import ProductShowIos from './ProductShowIos.vue';
 
 export default {
   name: 'Iphone12',
@@ -51,6 +57,9 @@ export default {
     ProductShowVideo,
     ProductShowNight,
     ProductShowMagsafe,
+    ProductShowStackable,
+    ProductShowTurbo,
+    ProductShowIos,
   },
 };
 </script>
