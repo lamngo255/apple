@@ -58,7 +58,7 @@ export default {
       show: false,
       productIcons: [
         {
-          name: 'iPphone 12 Pro',
+          name: 'iPhone 12 Pro',
           img: 'ip-12-pro',
           path: 'iphone-12-pro',
           new: true,
