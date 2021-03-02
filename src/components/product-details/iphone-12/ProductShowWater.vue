@@ -49,11 +49,13 @@ export default {
     }
 
     .subtitle {
-      @include textMixin(#000, 0.25rem, bold, $align: left);
+      @include textMixin(#262627, 0.25rem, bold, $align: left);
       @include position(absolute, $top: 3.5rem, $left: 3.5rem);
       font-family: 'San Francisco Regular', sans-serif;
       margin: 0.3rem auto;
       width: 2.5rem;
+      border-top: #262627 solid 0.02rem;
+      padding-top: 0.3rem;
     }
 
     .water {
