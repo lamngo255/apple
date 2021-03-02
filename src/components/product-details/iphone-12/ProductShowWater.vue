@@ -36,7 +36,7 @@ export default {
     background: #f2f2f2;
 
     .title {
-      @include textMixin(#000, 0.5rem, $align: left);
+      @include textMixin(#000, 0.62rem, $align: left);
       @include position(absolute, $top: 2.8rem, $left: 3.5rem);
       font-family: 'San Francisco Bold', sans-serif;
       margin: 0 auto;
