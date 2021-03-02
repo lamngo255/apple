@@ -68,7 +68,7 @@ export default {
 
   .offers {
     @include sizeWH(100%, 0.43rem);
-    @include textMixin(#fff, 0.14rem);
+    @include textMixin(#fff, 0.13rem);
     background: #1d1d20;
     padding-top: 0.12rem;
   }

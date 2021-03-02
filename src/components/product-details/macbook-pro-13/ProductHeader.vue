@@ -5,7 +5,7 @@
         <div class="left">MacBook Pro 13”</div>
         <div class="right">
           <div class="overview">Overview</div>
-          <button class="btn-buy" @click="$router.push('/shop/macbook-air')">
+          <button class="btn-buy" @click="$router.push('/shop/macbook-pro-13')">
             <span>Buy</span>
           </button>
         </div>

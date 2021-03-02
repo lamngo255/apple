@@ -28,22 +28,22 @@ export default {
 <style lang="scss" scoped>
 .product-header {
   .strip {
-    @include sizeWH(100%, 0.55rem);
+    @include sizeWH(100%, 0.42rem);
     @include flexCenter(row);
     border-bottom: #dbdbdb solid 0.01rem;
     background: #fcfcfc;
 
     .container {
       @include flexCenter(row);
-      width: 65%;
+      width: 59%;
       justify-content: space-between;
 
       .left {
-        @include textMixin(#000, 0.25rem, bold);
+        @include textMixin(#000, 0.18rem, bold);
         padding-top: 0.07rem;
       }
       .right {
-        @include textMixin(#000, 0.13rem);
+        @include textMixin(#000, 0.12rem);
         @include flexCenter(row);
         padding-top: 0.08rem;
 
@@ -62,8 +62,8 @@ export default {
   }
 
   .offers {
-    @include sizeWH(100%, 0.43rem);
-    @include textMixin(#000, 0.14rem);
+    @include sizeWH(100%, 0.35rem);
+    @include textMixin(#000, 0.11rem);
     background: #fff;
     padding-top: 0.12rem;
   }
