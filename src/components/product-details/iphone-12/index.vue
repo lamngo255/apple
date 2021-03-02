@@ -6,6 +6,9 @@
         <ProductShowcase />
         <ProductShowSize />
         <ProductShowShield />
+        <ProductShowEdges />
+        <ProductShowWater />
+        <ProductShow5G />
       </div>
     </div>
   </BaseLayout>
@@ -17,6 +20,9 @@ import ProductHeader from './ProductHeader.vue';
 import ProductShowcase from './ProductShowcase.vue';
 import ProductShowSize from './ProductShowSize.vue';
 import ProductShowShield from './ProductShowShield.vue';
+import ProductShowEdges from './ProductShowEdges.vue';
+import ProductShowWater from './ProductShowWater.vue';
+import ProductShow5G from './ProductShow5G.vue';
 
 export default {
   name: 'Iphone12',
@@ -27,6 +33,9 @@ export default {
     ProductShowcase,
     ProductShowSize,
     ProductShowShield,
+    ProductShowEdges,
+    ProductShowWater,
+    ProductShow5G,
   },
 };
 </script>
