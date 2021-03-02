@@ -25,7 +25,7 @@ export default {
   @include sizeWH(100%, auto);
   background: #f2f2f2;
   padding-bottom: 0.1rem;
-  margin-top: 0.3rem;
+  margin-top: 0.2rem;
 
   .container {
     @include sizeWH(100%, auto);
