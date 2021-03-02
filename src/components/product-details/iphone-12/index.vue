@@ -9,6 +9,9 @@
         <ProductShowEdges />
         <ProductShowWater />
         <ProductShow5G />
+        <ProductShowRetina />
+        <ProductShowCamera />
+        <ProductShowVideo />
       </div>
     </div>
   </BaseLayout>
@@ -23,6 +26,9 @@ import ProductShowShield from './ProductShowShield.vue';
 import ProductShowEdges from './ProductShowEdges.vue';
 import ProductShowWater from './ProductShowWater.vue';
 import ProductShow5G from './ProductShow5G.vue';
+import ProductShowRetina from './ProductShowRetina.vue';
+import ProductShowCamera from './ProductShowCamera.vue';
+import ProductShowVideo from './ProductShowVideo.vue';
 
 export default {
   name: 'Iphone12',
@@ -36,6 +42,9 @@ export default {
     ProductShowEdges,
     ProductShowWater,
     ProductShow5G,
+    ProductShowRetina,
+    ProductShowCamera,
+    ProductShowVideo,
   },
 };
 </script>

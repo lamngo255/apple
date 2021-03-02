@@ -45,6 +45,7 @@ export default {
 
   .title {
     @include textMixin(#000, 0.23rem, bold);
+    margin-top: -0.5rem;
   }
   .subtitle {
     @include textMixin(#000, 0.6rem, bold);
