@@ -10,6 +10,7 @@
         <ProductShowVideo />
         <ProductShowSecurity />
         <ProductShowConnections />
+        <ProductShowRackMount />
       </div>
     </div>
   </BaseLayout>
@@ -25,6 +26,7 @@ import ProductShowGraphics from './ProductShowGraphics.vue';
 import ProductShowVideo from './ProductShowVideo.vue';
 import ProductShowSecurity from './ProductShowSecurity.vue';
 import ProductShowConnections from './ProductShowConnections.vue';
+import ProductShowRackMount from './ProductShowRackMount.vue';
 
 export default {
   name: 'MacPro',
@@ -39,6 +41,7 @@ export default {
     ProductShowVideo,
     ProductShowSecurity,
     ProductShowConnections,
+    ProductShowRackMount,
     // ProductShowStorage,
     // ProductShowCameraSpeakers,
     // ProductShowSecurityChip,
