@@ -9,7 +9,6 @@
         <ProductShowProcessorMemory />
         <ProductShowGraphics />
         <ProductShowThermal />
-        <ProductShowGraphics />
         <ProductShowKeyboard />
         <ProductShowAudio />
         <ProductShowStorage />
