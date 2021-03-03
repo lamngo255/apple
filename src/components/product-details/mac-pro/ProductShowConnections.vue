@@ -1,15 +1,16 @@
 <template>
   <div class="product-show-security">
     <div class="wrapper">
-      <div class="title">SECURITY AND STORAGE</div>
+      <div class="title">HIGH-SPEED CONNECTIONS</div>
       <div class="desc">
-        <span>Security taken to new heights.</span>
+        <span>Powerful I/O at hand.</span>
         <span>
-          Mac Pro is the most secure tower we’ve ever built. A Secure Enclave
-          coprocessor provides the foundation for encrypted storage and secure
-          boot capabilities. So you can worry less about protecting your work,
-          code, and intellectual property. And focus more on doing your best
-          thinking.
+          Mac Pro has extremely high‑performance I/O, and lots of it. It begins
+          with four Thunderbolt 3 ports, two USB-A ports, and two 10Gb Ethernet
+          ports. And with every MPX Module you add you get more capability.
+          Connect up to 12 4K displays or up to six Pro Display XDRs from Apple
+          and see your work with over 120 million pixels. It’s now easy to
+          expand at will.
         </span>
       </div>
     </div>
@@ -17,28 +18,23 @@
     <div class="container">
       <div class="inner-wrapper">
         <div class="left">
-          <img class="image" :src="genLink('security.jpg')" />
+          <img class="image" :src="genLink('rear-expansion.jpg')" />
           <div class="text">
-            <span>Apple T2 Security Chip.</span>
+            <span>Rear expansion.</span>
             <span>
-              Data on Mac Pro is protected by the Apple T2 Security Chip. It
-              integrates a Secure Enclave coprocessor and discrete controllers
-              into a single chip. It also ensures that the lowest levels of
-              software aren’t tampered with and that only operating system
-              software trusted by Apple loads at startup.
+              With up to 12 Thunderbolt 3 ports, Mac Pro doesn’t just have room
+              for more ports than any Mac, it integrates them elegantly with
+              each new module added.
             </span>
           </div>
         </div>
         <div class="right">
-          <img class="image" :src="genLink('storage.jpg')" />
+          <img class="image" :src="genLink('top-case.jpg')" />
           <div class="text">
-            <span>Apple T2 Security Chip.</span>
+            <span>Top case.</span>
             <span>
-              Data on Mac Pro is protected by the Apple T2 Security Chip. It
-              integrates a Secure Enclave coprocessor and discrete controllers
-              into a single chip. It also ensures that the lowest levels of
-              software aren’t tampered with and that only operating system
-              software trusted by Apple loads at startup.
+              Two convenient ports on the top allow quick and easy connections
+              to your Thunderbolt 3–compatible devices.
             </span>
           </div>
         </div>

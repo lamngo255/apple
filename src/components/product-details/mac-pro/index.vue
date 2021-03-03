@@ -9,6 +9,7 @@
         <ProductShowGraphics />
         <ProductShowVideo />
         <ProductShowSecurity />
+        <ProductShowConnections />
       </div>
     </div>
   </BaseLayout>
@@ -23,6 +24,7 @@ import ProductShowProcessorMemory from './ProductShowProcessorMemory.vue';
 import ProductShowGraphics from './ProductShowGraphics.vue';
 import ProductShowVideo from './ProductShowVideo.vue';
 import ProductShowSecurity from './ProductShowSecurity.vue';
+import ProductShowConnections from './ProductShowConnections.vue';
 
 export default {
   name: 'MacPro',
@@ -36,6 +38,7 @@ export default {
     ProductShowGraphics,
     ProductShowVideo,
     ProductShowSecurity,
+    ProductShowConnections,
     // ProductShowStorage,
     // ProductShowCameraSpeakers,
     // ProductShowSecurityChip,
