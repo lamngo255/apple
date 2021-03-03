@@ -179,7 +179,7 @@ export default {
 <style lang="scss" scoped>
 .container {
   @include flexCenter(row);
-  padding-bottom: 0.5rem;
+  padding: 0 0.5rem 0.5rem;
 
   &.homepod {
     background: #f5f5f7;
@@ -199,26 +199,28 @@ export default {
     @include flexCenter(column);
     align-self: flex-start;
     width: 32%;
-    margin-right: 1rem;
+    margin-left: 1.4rem;
+    margin-right: 0.9rem;
     margin-top: 0.2rem;
     .photo {
-      @include sizeWH(4.7rem, auto);
+      @include sizeWH(auto, 4.5rem);
     }
     .strip {
       @include flexCenter(row);
-      margin-top: 0.15rem;
+      margin-top: 0.1rem;
       .item {
         @include flexCenter(column);
         align-self: flex-start;
         margin-right: 0.13rem;
       }
       .icon {
-        @include sizeWH(0.3rem, 0.3rem);
+        @include sizeWH(0.22rem, 0.22rem);
       }
       .text {
-        @include textMixin(#333, 0.14rem, bold);
-        margin-top: 0.1rem;
-        width: 1.4rem;
+        @include textMixin(#333, 0.11rem);
+        font-family: 'San Francisco Medium', sans-serif;
+        margin-top: 0.07rem;
+        width: 1rem;
       }
     }
   }
@@ -228,16 +230,16 @@ export default {
     align-self: flex-start;
     align-items: flex-start;
     & > .new {
-      @include textMixin(#ef5601, 0.18rem);
+      @include textMixin(#ef5601, 0.14rem);
       margin-top: 0.3rem;
     }
     & > .title {
-      @include textMixin(#000, 0.46rem, bold);
+      @include textMixin(#000, 0.32rem, bold);
     }
 
     .desc {
-      @include textMixin(#333, 0.18rem, $align: left);
-      line-height: 0.3rem;
+      @include textMixin(#333, 0.13rem, $align: left);
+      line-height: 0.19rem;
       width: 5rem;
 
       /deep/ div {
@@ -250,7 +252,7 @@ export default {
       padding-bottom: 0.25rem;
 
       .title {
-        @include textMixin(#000, 0.2rem, bold);
+        @include textMixin(#000, 0.16rem, bold);
         margin-top: 0.2rem;
       }
 
@@ -259,29 +261,33 @@ export default {
         flex-wrap: wrap;
         margin-top: 0.14rem;
         justify-content: flex-start;
-        width: 4.8rem;
+        width: 4rem;
 
         .option {
-          @include sizeWH(2.3rem, 0.8rem);
-          border: #dbdbdb solid 0.015rem;
-          border-radius: 0.1rem;
-          padding: 0.15rem 0 0 0.15rem;
+          @include sizeWH(3.3rem, 0.65rem);
+          border: #dbdbdb solid 0.01rem;
+          border-radius: 0.05rem;
+          padding: 0.1rem 0 0 0.15rem;
           margin-right: 0.1rem;
           margin-bottom: 0.1rem;
 
           .name {
-            @include textMixin(#000, 0.2rem, bold);
+            @include textMixin(#000, 0.16rem, bold);
           }
           .desc {
-            @include textMixin(#333, 0.15rem);
-            margin-top: 0.03rem;
+            @include textMixin(#333, 0.12rem);
+            margin-top: -0.02rem;
           }
 
-          &:hover,
+          &:hover {
+            border: #868585 solid 0.01rem;
+            cursor: pointer;
+          }
+
           &.selected {
             cursor: pointer;
             border: #2770c9 solid 0.02rem;
-            padding: 0.145rem 0 0 0.145rem;
+            padding: 0.095rem 0 0 0.145rem;
           }
         }
       }
@@ -292,7 +298,7 @@ export default {
       padding-bottom: 0.25rem;
 
       .title {
-        @include textMixin(#000, 0.2rem, bold);
+        @include textMixin(#000, 0.16rem, bold);
         margin-top: 0.1rem;
       }
 
@@ -300,25 +306,28 @@ export default {
         @include flexCenter(row);
         justify-content: flex-start;
         flex-wrap: wrap;
-        width: 5rem;
+        width: 4rem;
 
         .option {
-          @include sizeWH(2.3rem, 1rem);
+          @include sizeWH(1.6rem, 0.8rem);
           @include flexCenter(column);
-          margin-top: 0.15rem;
-          border: #dbdbdb solid 0.015rem;
-          border-radius: 0.1rem;
+          margin-top: 0.12rem;
+          border: #dbdbdb solid 0.01rem;
+          border-radius: 0.03rem;
           margin-right: 0.12rem;
 
           .color {
-            @include sizeWH(0.3rem, 0.3rem);
+            @include sizeWH(0.25rem, 0.25rem);
           }
           .name {
-            @include textMixin(#333, 0.15rem);
-            margin-top: 0.1rem;
+            @include textMixin(#333, 0.11rem);
+            margin-top: 0.04rem;
           }
 
-          &:hover,
+          &:hover {
+            border: #868585 solid 0.01rem;
+            cursor: pointer;
+          }
           &.selected {
             cursor: pointer;
             border: #2770c9 solid 0.02rem;
@@ -332,7 +341,7 @@ export default {
       padding-bottom: 0.25rem;
 
       .title {
-        @include textMixin(#000, 0.2rem, bold);
+        @include textMixin(#000, 0.16rem, bold);
         margin-top: 0.1rem;
       }
 
@@ -340,10 +349,10 @@ export default {
         @include flexCenter(row);
         justify-content: flex-start;
         flex-wrap: wrap;
-        width: 5rem;
+        width: 4rem;
 
         .option {
-          @include sizeWH(1.3rem, 0.6rem);
+          @include sizeWH(1rem, 0.5rem);
           @include flexCenter(row);
           margin-top: 0.15rem;
           border: #dbdbdb solid 0.015rem;
@@ -352,11 +361,11 @@ export default {
           padding-bottom: 0.1rem;
 
           .name {
-            @include textMixin(#333, 0.25rem, bold);
+            @include textMixin(#333, 0.22rem, bold);
             margin-top: 0.1rem;
           }
           .unit {
-            @include textMixin(#333, 0.17rem);
+            @include textMixin(#333, 0.14rem);
           }
 
           &:hover,
@@ -387,13 +396,13 @@ export default {
       margin-top: 0.1rem;
 
       .price {
-        @include textMixin(#000, 0.27rem, bold);
+        @include textMixin(#000, 0.23rem, bold);
       }
       .btn-continue {
-        @include textMixin(#fff, 0.18rem, bold);
+        @include textMixin(#fff, 0.14rem, bold);
         background: linear-gradient(45deg, #3e9eea, #2874cc);
         padding: 0.07rem 1.3rem;
-        margin-top: 0.1rem;
+        margin-top: 0.15rem;
         border-radius: 0.05rem;
       }
 
@@ -402,13 +411,13 @@ export default {
         margin-top: 0.15rem;
 
         .icon {
-          @include sizeWH(0.3rem, 0.3rem);
+          @include sizeWH(0.25rem, 0.25rem);
           @include position(relative, $top: -0.2rem);
           margin-top: 0.2rem;
           margin-right: 0.06rem;
         }
         .wrapper {
-          @include textMixin(#333, 0.13rem);
+          @include textMixin(#333, 0.12rem);
 
           .ship {
             font-weight: bold;

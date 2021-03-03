@@ -2,6 +2,7 @@
   <BaseLayout>
     <div class="page-product-info">
       <PageProductInfoHeader :name="productName" :price="productPrice" />
+      <PageProductTradeIn />
       <PageProductOptions
         v-if="product"
         v-bind="product"
@@ -21,6 +22,7 @@ import { mapState } from 'vuex';
 import { normalizeStr, colorPicker } from '@/mapping';
 import BaseLayout from '@/components/BaseLayout.vue';
 import PageProductInfoHeader from './PageProductInfoHeader.vue';
+import PageProductTradeIn from './PageProductTradeIn.vue';
 import PageProductOptions from './PageProductOptions.vue';
 
 export default {
@@ -29,6 +31,7 @@ export default {
   components: {
     BaseLayout,
     PageProductInfoHeader,
+    PageProductTradeIn,
     PageProductOptions,
   },
 
@@ -82,5 +85,10 @@ export default {
 <style lang="scss" scoped>
 .page-product-info {
   @include sizeWH(100%, auto);
+
+  .info {
+    @include sizeWH(7.2rem, auto);
+    margin-top: 0.05rem;
+  }
 }
 </style>
