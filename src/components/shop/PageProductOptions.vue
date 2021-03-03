@@ -21,6 +21,7 @@
     <div class="right">
       <div class="new">New</div>
       <div class="title">Buy {{ productName }}</div>
+      <div class="tradein">Get up to $220 off with Apple Trade In*</div>
       <div class="desc" v-if="desc" v-html="desc" />
 
       <div class="models" v-if="specs.models">
@@ -200,7 +201,7 @@ export default {
     align-self: flex-start;
     width: 32%;
     margin-left: 1.4rem;
-    margin-right: 0.9rem;
+    margin-right: 0.7rem;
     margin-top: 0.2rem;
     .photo {
       @include sizeWH(auto, 4.5rem);
@@ -236,6 +237,10 @@ export default {
     & > .title {
       @include textMixin(#000, 0.32rem, bold);
     }
+    & > .tradein {
+      @include textMixin(#000, 0.14rem);
+      margin-top: 0.05rem;
+    }
 
     .desc {
       @include textMixin(#333, 0.13rem, $align: left);
@@ -267,16 +272,16 @@ export default {
           @include sizeWH(3.3rem, 0.65rem);
           border: #dbdbdb solid 0.01rem;
           border-radius: 0.05rem;
-          padding: 0.1rem 0 0 0.15rem;
+          padding: 0.13rem 0 0 0.15rem;
           margin-right: 0.1rem;
           margin-bottom: 0.1rem;
 
           .name {
-            @include textMixin(#000, 0.16rem, bold);
+            @include textMixin(#000, 0.15rem, bold);
           }
           .desc {
-            @include textMixin(#333, 0.12rem);
-            margin-top: -0.02rem;
+            @include textMixin(#333, 0.11rem);
+            margin-top: 0.02rem;
           }
 
           &:hover {
@@ -287,7 +292,7 @@ export default {
           &.selected {
             cursor: pointer;
             border: #2770c9 solid 0.02rem;
-            padding: 0.095rem 0 0 0.145rem;
+            padding: 0.125rem 0 0 0.145rem;
           }
         }
       }
@@ -352,7 +357,7 @@ export default {
         width: 4rem;
 
         .option {
-          @include sizeWH(1rem, 0.5rem);
+          @include sizeWH(1rem, 0.4rem);
           @include flexCenter(row);
           margin-top: 0.15rem;
           border: #dbdbdb solid 0.015rem;
@@ -361,11 +366,11 @@ export default {
           padding-bottom: 0.1rem;
 
           .name {
-            @include textMixin(#333, 0.22rem, bold);
+            @include textMixin(#333, 0.2rem, bold);
             margin-top: 0.1rem;
           }
           .unit {
-            @include textMixin(#333, 0.14rem);
+            @include textMixin(#333, 0.12rem);
           }
 
           &:hover,
@@ -396,12 +401,12 @@ export default {
       margin-top: 0.1rem;
 
       .price {
-        @include textMixin(#000, 0.23rem, bold);
+        @include textMixin(#000, 0.21rem, bold);
       }
       .btn-continue {
         @include textMixin(#fff, 0.14rem, bold);
         background: linear-gradient(45deg, #3e9eea, #2874cc);
-        padding: 0.07rem 1.3rem;
+        padding: 0.07rem 1.1rem;
         margin-top: 0.15rem;
         border-radius: 0.05rem;
       }
