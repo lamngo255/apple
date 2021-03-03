@@ -1,6 +1,6 @@
 <template>
   <BaseLayout theme="dark">
-    <div class="macbook-pro-13">
+    <div class="imac">
       <ProductHeader />
       <div class="showcase">
         <ProductShow1 />
@@ -56,7 +56,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.macbook-pro-13 {
+.imac {
   width: 100%;
 
   .showcase {

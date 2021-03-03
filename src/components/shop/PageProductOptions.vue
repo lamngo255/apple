@@ -230,6 +230,7 @@ export default {
     @include flexCenter(column);
     align-self: flex-start;
     align-items: flex-start;
+    margin-left: 0.1rem;
     & > .new {
       @include textMixin(#ef5601, 0.14rem);
       margin-top: 0.3rem;
@@ -245,7 +246,7 @@ export default {
     .desc {
       @include textMixin(#333, 0.13rem, $align: left);
       line-height: 0.19rem;
-      width: 5rem;
+      width: 3.5rem;
 
       /deep/ div {
         margin-top: 0.05rem;

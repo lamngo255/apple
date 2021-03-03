@@ -79,7 +79,7 @@ export default {
         },
         { name: 'iMac', img: 'imac', path: 'imac' },
         { name: 'iMac Pro', img: 'imac-pro', path: 'imac-pro' },
-        { name: 'Mac Pro', img: 'mac-pro', path: 'shop/mac-pro' },
+        { name: 'Mac Pro', img: 'mac-pro', path: 'mac-pro' },
         { name: 'Mac Mini', img: 'mac-mini', path: 'shop/mac-mini', new: true },
         { name: 'Compare', img: 'compare' },
         { name: 'Pro Display XDR', img: 'pro-display-xdr' },
