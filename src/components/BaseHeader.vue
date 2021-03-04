@@ -13,7 +13,6 @@
       <li class="search"></li>
       <li class="bag" @mousedown="showBag" v-on-clickaway="hideBag">
         <div class="badge" v-if="bagSize > 0">{{ bagSize }}</div>
-        <BagPopup v-if="showMyBag" />
       </li>
     </div>
 
@@ -28,6 +27,7 @@
         </p>
       </div>
     </div>
+    <BagPopup v-if="showMyBag" />
   </div>
 </template>
 
@@ -79,7 +79,7 @@ export default {
       this.showMyBag = true;
     },
     hideBag() {
-      this.showMyBag = false;
+      if (this.showMyBag) this.showMyBag = false;
     },
     goTo(link) {
       if (!window.location.pathname.endsWith(link)) this.$router.push(link);
@@ -123,6 +123,7 @@ export default {
     &.bag {
       @include imageCDN('icons/icon-bag.svg', 0.32rem, 0.32rem);
       position: relative;
+
       .badge {
         @include sizeWH(auto, 0.11rem);
         @include textMixin(#000, 0.09rem);
@@ -140,7 +141,7 @@ export default {
 
 .base-header {
   width: 100%;
-  z-index: 1;
+  z-index: 3;
   margin-top: 0.35rem;
   display: unset;
 

@@ -109,13 +109,12 @@ export default {
 
 <style lang="scss" scoped>
 .bag-popup {
-  @include sizeWH(2.8rem, auto);
-  @include position(absolute, $top: 0.4rem, $left: -1.2rem);
+  @include sizeWH(2.3rem, auto);
+  @include position(absolute, $top: 0.4rem, $right: 1.8rem);
   padding-bottom: 0.2rem;
   background: #fff;
   border-radius: 0.2rem;
   border: #d2d2d7 solid 0.01rem;
-  z-index: 4;
 
   .message {
     @include textMixin(#767679, 0.15rem);
@@ -134,21 +133,21 @@ export default {
       margin-top: 0.1rem;
       padding-top: 0.07rem;
       width: 100%;
-      cursor: pointer;
+      // cursor: pointer;
 
       img {
-        @include sizeWH(0.3rem, 0.3rem);
+        @include sizeWH(0.25rem, 0.25rem);
       }
       span {
-        @include textMixin(#2866cc, 0.15rem);
+        @include textMixin(#2866cc, 0.12rem);
         margin-left: 0.06rem;
       }
 
-      &:hover {
-        span {
-          filter: brightness(1.3);
-        }
-      }
+      // &:hover {
+      //   span {
+      //     filter: brightness(1.3);
+      //   }
+      // }
     }
   }
 }
@@ -156,14 +155,14 @@ export default {
 .products {
   display: flex;
   flex-flow: column wrap;
-  margin-top: 0.1rem;
   padding: 0 0.2rem;
 
   .product {
     @include flexCenter(row);
     justify-content: flex-start;
-    padding-top: 0.2rem;
+    padding-top: 0.1rem;
     padding-bottom: 0.1rem;
+    width: 1.8rem;
     border-bottom: #d2d2d7 solid 0.01rem;
 
     &:last-child {
@@ -174,7 +173,7 @@ export default {
       @include sizeWH(0.5rem, 0.5rem);
     }
     .right {
-      @include textMixin(#000, 0.14rem);
+      @include textMixin(#000, 0.12rem);
       width: 1.9rem;
       margin-left: 0.05rem;
       text-align: left;
@@ -187,12 +186,12 @@ export default {
 }
 
 .remaining {
-  @include textMixin(#808084, 0.12rem);
+  @include textMixin(#808084, 0.11rem);
 }
 
 .btn-checkout {
-  @include sizeWH(80%, 0.35rem);
-  @include textMixin(#fff, 0.16rem);
+  @include sizeWH(80%, 0.3rem);
+  @include textMixin(#fff, 0.14rem);
   background: #2d71e3;
   border-radius: 0.1rem;
   margin-top: 0.1rem;

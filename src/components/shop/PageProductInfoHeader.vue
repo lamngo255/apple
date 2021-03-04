@@ -44,7 +44,7 @@ export default {
     position: -webkit-sticky;
     position: sticky;
     top: 0rem;
-    z-index: 2;
+    z-index: 1;
 
     .container {
       @include flexCenter(row);
