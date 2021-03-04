@@ -255,6 +255,10 @@ export default {
     margin-left: 1.4rem;
     margin-right: 0.7rem;
     margin-top: 0.2rem;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0.15rem;
+
     .photo {
       @include sizeWH(auto, 4.4rem);
     }
