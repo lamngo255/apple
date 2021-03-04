@@ -87,6 +87,7 @@ export default {
 
   mounted() {
     document.title = 'Music - Apple';
+    window.scrollTo(0, 0);
     setTimeout(() => {
       this.show = true;
     }, 150);

@@ -61,6 +61,10 @@ export default {
     ProductShowTurbo,
     ProductShowIos,
   },
+
+  mounted() {
+    window.scrollTo(0, 0);
+  },
 };
 </script>
 

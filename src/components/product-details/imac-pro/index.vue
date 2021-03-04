@@ -61,6 +61,10 @@ export default {
     ProductShowDesign,
     ProductShowAccessories,
   },
+
+  mounted() {
+    window.scrollTo(0, 0);
+  },
 };
 </script>
 

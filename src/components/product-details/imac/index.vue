@@ -52,6 +52,10 @@ export default {
     ProductShowAccessories,
     ProductShowBigSur,
   },
+
+  mounted() {
+    window.scrollTo(0, 0);
+  },
 };
 </script>
 

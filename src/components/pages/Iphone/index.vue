@@ -84,7 +84,7 @@ export default {
 
   async mounted() {
     document.title = 'iPhone - Apple';
-
+    window.scrollTo(0, 0);
     setTimeout(() => {
       this.show = true;
     }, 150);

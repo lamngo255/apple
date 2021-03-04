@@ -42,12 +42,10 @@ export default {
     ProductShowSecurity,
     ProductShowConnections,
     ProductShowRackMount,
-    // ProductShowStorage,
-    // ProductShowCameraSpeakers,
-    // ProductShowSecurityChip,
-    // ProductShowConnectivity,
-    // ProductShowAccessories,
-    // ProductShowBigSur,
+  },
+
+  mounted() {
+    window.scrollTo(0, 0);
   },
 };
 </script>

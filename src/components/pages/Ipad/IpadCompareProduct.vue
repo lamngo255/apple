@@ -23,8 +23,10 @@
     </div>
     <div class="sep" />
 
-    <button class="btn-buy">Buy</button>
-    <button class="btn-learn">Learn more</button>
+    <button class="btn-buy" @click="$router.push(pathBuy)">Buy</button>
+    <button class="btn-learn" @click="$router.push(pathView)">
+      Learn more
+    </button>
   </div>
 </template>
 
@@ -41,6 +43,8 @@ export default {
     chip: { type: Object, required: true },
     keyboard: { type: String, required: true },
     pencil: { type: String, required: true },
+    pathBuy: { type: String, required: true },
+    pathView: { type: String, required: true },
   },
 };
 </script>

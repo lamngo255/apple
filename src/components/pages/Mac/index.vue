@@ -97,6 +97,7 @@ export default {
 
   mounted() {
     document.title = 'Mac - Apple';
+    window.scrollTo(0, 0);
     setTimeout(() => {
       this.show = true;
     }, 150);

@@ -38,6 +38,8 @@ export default {
           },
           keyboard: 'Compatible with Magic Keyboard and Smart Keyboard Folio',
           pencil: 'Compatible with Apple Pencil (2nd generation)',
+          pathBuy: 'shop/iphone-12-pro',
+          pathView: 'iphone-12-pro',
         },
         {
           image: this.$assetsUrl('pages/iphone/compare/ip-12.jpg'),
@@ -51,6 +53,8 @@ export default {
           },
           keyboard: 'Compatible with Magic Keyboard and Smart Keyboard Folio',
           pencil: 'Compatible with Apple Pencil (2nd generation)',
+          pathBuy: 'shop/iphone-12',
+          pathView: 'iphone-12',
         },
         {
           image: this.$assetsUrl('pages/iphone/compare/ip-se.jpg'),
@@ -64,6 +68,8 @@ export default {
           },
           keyboard: 'Compatible with Smart Keyboard',
           pencil: 'Compatible with Apple Pencil (1st generation)',
+          pathBuy: 'shop/iphone-se',
+          pathView: 'shop/iphone-se',
         },
         {
           image: this.$assetsUrl('pages/iphone/compare/ip-11.jpg'),
@@ -77,6 +83,8 @@ export default {
           },
           keyboard: 'Compatible with Smart Keyboard',
           pencil: 'Compatible with Apple Pencil (1st generation)',
+          pathBuy: 'shop/iphone-11',
+          pathView: 'shop/iphone-11',
         },
       ],
     };

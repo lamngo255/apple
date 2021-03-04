@@ -99,6 +99,8 @@ export default new Router({
       name: 'Iphone-12',
       component: Iphone12,
     },
+
+    // Macbook + iMac + MacPro
     {
       path: '/macbook-air',
       name: 'MacbookAir',

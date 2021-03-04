@@ -83,6 +83,7 @@ export default {
 
   mounted() {
     document.title = 'iPad - Apple';
+    window.scrollTo(0, 0);
     setTimeout(() => {
       this.show = true;
     }, 150);

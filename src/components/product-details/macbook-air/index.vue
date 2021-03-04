@@ -76,6 +76,10 @@ export default {
     ProductShowConnectivity,
     ProductShowConnectivityExtra,
   },
+
+  mounted() {
+    window.scrollTo(0, 0);
+  },
 };
 </script>
 

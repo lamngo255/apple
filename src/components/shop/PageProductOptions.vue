@@ -260,7 +260,7 @@ export default {
     top: 0.2rem;
 
     .photo {
-      @include sizeWH(auto, 4.4rem);
+      @include sizeWH(4.5rem, auto);
     }
     .strip {
       @include flexCenter(row);

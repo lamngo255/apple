@@ -7,7 +7,7 @@
         <div class="subtitle">Blast past fast.</div>
         <div class="desc">From $29.12/mo. or $699 before trade‑in</div>
         <div class="buttons">
-          <button class="btn-buy" @click="rediret('shop/iphone-12')">
+          <button class="btn-buy" @click="redirect('shop/iphone-12')">
             Buy
           </button>
           <a class="btn-learn" @click="redirect('iphone-12')">Learn more</a>

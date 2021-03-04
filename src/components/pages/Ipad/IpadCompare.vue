@@ -38,6 +38,8 @@ export default {
           },
           keyboard: 'Compatible with Magic Keyboard and Smart Keyboard Folio',
           pencil: 'Compatible with Apple Pencil (2nd generation)',
+          pathBuy: 'shop/ipad-pro',
+          pathView: 'shop/ipad-pro',
         },
         {
           image: this.$assetsUrl('pages/ipad/compare/ipad-air.png'),
@@ -51,6 +53,8 @@ export default {
           },
           keyboard: 'Compatible with Magic Keyboard and Smart Keyboard Folio',
           pencil: 'Compatible with Apple Pencil (2nd generation)',
+          pathBuy: 'shop/ipad-air',
+          pathView: 'shop/ipad-air',
         },
         {
           image: this.$assetsUrl('pages/ipad/compare/ipad.png'),
@@ -64,6 +68,8 @@ export default {
           },
           keyboard: 'Compatible with Smart Keyboard',
           pencil: 'Compatible with Apple Pencil (1st generation)',
+          pathBuy: 'shop/ipad-light',
+          pathView: 'shop/ipad-light',
         },
         {
           image: this.$assetsUrl('pages/ipad/compare/ipad-mini.png'),
@@ -77,6 +83,8 @@ export default {
           },
           keyboard: 'Compatible with Smart Keyboard',
           pencil: 'Compatible with Apple Pencil (1st generation)',
+          pathBuy: 'shop/ipad-mini',
+          pathView: 'shop/ipad-mini',
         },
       ],
     };
