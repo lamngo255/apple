@@ -128,7 +128,7 @@ export default {
   position: relative;
 
   .container {
-    @include sizeWH(100%, 1.2rem);
+    @include sizeWH(100%, 0.9rem);
     background: #000;
     padding-left: 0.2rem;
   }
@@ -137,23 +137,23 @@ export default {
     @include flexCenter(row);
 
     .product {
-      @include position(relative, $top: 0.1rem);
+      @include position(relative, $top: 0.08rem);
       @include flexCenter(column);
       align-self: flex-start;
-      margin-right: 0.2rem;
+      margin-right: 0.17rem;
       position: relative;
       text-decoration: none;
       cursor: pointer;
 
       .icon {
-        @include sizeWH(0.5rem, 0.5rem);
+        @include sizeWH(0.42rem, 0.42rem);
       }
       .name {
-        @include textMixin(#fff, 0.13rem);
+        @include textMixin(#fff, 0.1rem);
         width: 0.8rem;
       }
       .new {
-        @include textMixin(#e46917, 0.11rem);
+        @include textMixin(#e46917, 0.09rem, bold);
       }
 
       &:hover {
@@ -165,15 +165,15 @@ export default {
   }
 
   .trade-in {
-    @include sizeWH(100%, 0.38rem);
-    @include textMixin(#000, 0.14rem);
-    padding-top: 0.11rem;
+    @include sizeWH(100%, 0.27rem);
+    @include textMixin(#000, 0.1rem);
+    padding-top: 0.07rem;
     background: #f5f5f7;
   }
 
   .cashback {
-    @include sizeWH(100%, 0.35rem);
-    @include textMixin(#fff, 0.13rem);
+    @include sizeWH(100%, 0.33rem);
+    @include textMixin(#fff, 0.11rem);
     padding-top: 0.1rem;
     background: #1d1d20;
   }

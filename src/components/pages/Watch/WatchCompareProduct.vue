@@ -43,10 +43,10 @@ export default {
   padding-bottom: 1rem;
 
   .image {
-    @include sizeWH(2.5rem, 1.8rem);
+    @include sizeWH(2.2rem, 1.3rem);
 
     img {
-      @include sizeWH(80%, auto);
+      @include sizeWH(70%, auto);
     }
 
     &.big {
@@ -61,13 +61,10 @@ export default {
     @include flexCenter(column);
     align-items: flex-start;
     margin-top: 0.7rem;
-    margin-right: 0.2rem;
+    margin-left: 0.3rem;
 
     .name {
-      @include textMixin(#000, 0.25rem, bold);
-    }
-    .price {
-      font-weight: bold;
+      @include textMixin(#000, 0.22rem, bold);
     }
     .price,
     .case,
@@ -75,13 +72,17 @@ export default {
     .memory,
     .storage,
     .battery {
-      @include textMixin(#000, 0.15rem);
+      @include textMixin(#000, 0.12rem);
       margin-bottom: 0.1rem;
       margin-top: 0.03rem;
     }
+    .price {
+      font-size: 0.14rem;
+      font-weight: bold;
+    }
     .btn-buy {
-      @include sizeWH(auto, 0.32rem);
-      @include textMixin(#fff, 0.19rem);
+      @include sizeWH(auto, 0.27rem);
+      @include textMixin(#fff, 0.14rem);
       padding: 0.02rem 0.15rem;
       border-radius: 0.2rem;
       background: #0171e3;
@@ -89,7 +90,7 @@ export default {
       text-decoration: none;
     }
     .btn-learn {
-      @include textMixin(#0171e3, 0.17rem);
+      @include textMixin(#0171e3, 0.14rem);
       margin-top: 0.1rem;
       margin-left: -0.05rem;
       border: none;

@@ -69,12 +69,12 @@ export default {
   margin-top: 0.4rem;
 
   .title {
-    @include textMixin(#000, 0.5rem, bold);
+    @include textMixin(#000, 0.4rem, bold);
     font-family: 'San Francisco Regular', sans-serif;
     margin: 0 auto;
   }
   .compare {
-    @include textMixin(#0266cc, 0.21rem);
+    @include textMixin(#0266cc, 0.17rem);
     margin-top: 0.2rem;
   }
 

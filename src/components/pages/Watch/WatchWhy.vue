@@ -35,10 +35,10 @@ export default {
     margin-right: 0.5rem;
 
     .title {
-      @include textMixin(#000, 0.26rem, bold);
+      @include textMixin(#000, 0.22rem, bold);
     }
     .subtitle {
-      @include textMixin(#000, 0.46rem, bold);
+      @include textMixin(#000, 0.37rem, bold);
       font-family: 'San Francisco Regular', sans-serif;
       margin-top: 0.1rem;
       width: 5rem;
@@ -48,14 +48,14 @@ export default {
       margin-top: 0.2rem;
 
       .btn-learn {
-        @include textMixin(#2866cc, 0.23rem);
+        @include textMixin(#2866cc, 0.18rem);
         background: none;
       }
     }
   }
 
   .right {
-    @include sizeWH(7rem, auto);
+    @include sizeWH(6rem, auto);
     @include position(relative, $top: 0.6rem);
   }
 }

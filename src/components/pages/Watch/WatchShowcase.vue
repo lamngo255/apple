@@ -66,7 +66,7 @@ export default {
 <style lang="scss" scoped>
 .watch-showcase {
   .section-1 {
-    @include sizeWH(100%, 10rem);
+    @include sizeWH(100%, 8.5rem);
     @include flexCenter(row);
     background: #000;
     position: relative;
@@ -77,15 +77,15 @@ export default {
       margin-right: 6.5rem;
 
       .logo {
-        @include imageCDN('pages/watch/logo.png', 1.51rem, 0.71rem);
+        @include imageCDN('pages/watch/logo.png', 1.21rem, 0.41rem);
       }
       .title {
-        @include textMixin(#fff, 0.7rem, bold);
+        @include textMixin(#fff, 0.6rem, bold);
         margin-top: 0.1rem;
       }
       .desc {
-        @include textMixin(#fff, 0.23rem);
-        width: 4.7rem;
+        @include textMixin(#fff, 0.18rem);
+        width: 4.5rem;
         margin-top: 0.4rem;
       }
       .btn-find {
@@ -96,7 +96,7 @@ export default {
 
         span {
           @include position(absolute, $top: 0, $left: 0);
-          @include textMixin(#fff, 0.2rem);
+          @include textMixin(#fff, 0.17rem);
           padding-top: 0.08rem;
           z-index: 1;
           width: 2rem;
@@ -123,12 +123,12 @@ export default {
 
     .right {
       .black-unity {
-        @include imageCDN('pages/watch/black-unity.jpg', 6.88rem, 9.68rem);
-        @include position(absolute, $top: 0, $right: 0);
+        @include imageCDN('pages/watch/black-unity.jpg', 5.88rem, 7.68rem);
+        @include position(absolute, $top: 0.2rem, $right: 0);
       }
       .front {
-        @include sizeWH(2.9rem, 5rem);
-        @include position(absolute, $top: 2.3rem, $right: 3.7rem);
+        @include sizeWH(2.3rem, 4rem);
+        @include position(absolute, $top: 2rem, $right: 3.1rem);
         border-radius: 0.8rem;
         z-index: 2;
       }
@@ -136,17 +136,17 @@ export default {
 
     .red-shape {
       @include imageCDN('pages/watch/shape-red.svg', 300%, 1.8rem);
-      @include position(absolute, $top: 0, $right: -15rem);
+      @include position(absolute, $top: 0, $right: -13rem);
     }
     .green-shape {
       @include imageCDN('pages/watch/shape-green.svg', 300%, 2rem);
-      @include position(absolute, $bottom: 0.1rem, $left: -16rem);
+      @include position(absolute, $bottom: 0.1rem, $left: -15rem);
       z-index: 1;
     }
   }
 
   .section-2 {
-    @include sizeWH(100%, 8.7rem);
+    @include sizeWH(100%, 7rem);
     position: relative;
     background: #000;
     margin-bottom: 1rem;
@@ -158,7 +158,7 @@ export default {
 
       .left,
       .right {
-        @include sizeWH(49%, 5rem);
+        @include sizeWH(49%, 4rem);
         background: #111;
         margin-right: 0.1rem;
         text-align: left;
@@ -166,15 +166,15 @@ export default {
         position: relative;
 
         .title {
-          @include textMixin(#fff, 0.25rem, bold);
+          @include textMixin(#fff, 0.22rem, bold);
         }
         .price {
-          @include textMixin(#fff, 0.17rem, bold);
+          @include textMixin(#fff, 0.15rem, bold);
           margin-top: 0.05rem;
         }
         .btn-buy {
-          @include textMixin(#fff, 0.18rem);
-          padding: 0.05rem 0.17rem;
+          @include textMixin(#fff, 0.14rem);
+          padding: 0.02rem 0.12rem;
           background: #2d71e3;
           margin-top: 0.2rem;
           border-radius: 0.2rem;
@@ -184,7 +184,7 @@ export default {
       .left {
         .photo {
           @include position(absolute, $bottom: 0, $left: 50%);
-          @include sizeWH(75%, auto);
+          @include sizeWH(70%, auto);
           transform: translate(-50%, 0);
         }
       }
@@ -192,13 +192,13 @@ export default {
       .right {
         .photo {
           @include position(absolute, $bottom: 0, $right: 0);
-          @include sizeWH(94%, auto);
+          @include sizeWH(80%, auto);
         }
       }
     }
 
     .watch-face {
-      @include sizeWH(69.2%, 2.7rem);
+      @include sizeWH(69.2%, 2rem);
       @include flexCenter(row);
       @include position(relative, $left: -0.05rem);
       background: #111;
@@ -209,9 +209,9 @@ export default {
       }
 
       .desc {
-        @include textMixin(#fff, 0.26rem, bold, $align: left);
+        @include textMixin(#fff, 0.19rem, bold, $align: left);
         width: 4rem;
-        margin-left: 0.2rem;
+        margin-left: 0.24rem;
       }
     }
   }
