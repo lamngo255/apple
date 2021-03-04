@@ -1,6 +1,6 @@
 <template>
   <div :class="['base-header', { nofloat: !showExtra }]">
-    <div id="navbar">
+    <div class="navbar">
       <li class="logo" @click="$router.push('/')" />
       <li
         v-for="(data, i) in navData"
@@ -89,7 +89,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#navbar {
+.navbar {
   @include position(fixed, $top: 0, $left: 0);
   @include sizeWH(100%, 0.35rem);
   @include flexCenter(row);
@@ -142,9 +142,10 @@ export default {
   width: 100%;
   z-index: 1;
   margin-top: 0.35rem;
+  display: unset;
 
   &.nofloat {
-    #navbar {
+    .navbar {
       position: absolute;
       background: #0a0a0a;
     }
@@ -161,7 +162,7 @@ export default {
 
   .shop-online {
     @include sizeWH(100%, 0.35rem);
-    @include textMixin(#1e1e1f, 0.12rem);
+    @include textMixin(#1e1e1f, 0.115rem);
     padding-top: 0.07rem;
     background: #f5f5f7;
     line-height: 0.2rem;

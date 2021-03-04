@@ -2,10 +2,10 @@
   <div class="product-header">
     <div class="strip">
       <div class="container">
-        <div class="left">Mac Pro</div>
+        <div class="left" @click="$router.go()">Mac Pro</div>
         <div class="right">
           <div class="overview">Overview</div>
-          <button class="btn-buy" @click="$router.push('/shop/imac')">
+          <button class="btn-buy" @click="$router.push('/shop/mac-pro')">
             <span>Buy</span>
           </button>
         </div>
@@ -22,10 +22,16 @@ export default {
 
 <style lang="scss" scoped>
 .product-header {
+  display: unset;
+
   .strip {
     @include sizeWH(100%, 0.42rem);
     @include flexCenter(row);
     background: #fff;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0rem;
+    z-index: 2;
 
     .container {
       @include flexCenter(row);
@@ -34,6 +40,7 @@ export default {
 
       .left {
         @include textMixin(#000, 0.18rem, bold);
+        cursor: pointer;
       }
       .right {
         @include textMixin(#7c7c7c, 0.12rem);

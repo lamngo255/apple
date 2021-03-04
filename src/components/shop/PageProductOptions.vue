@@ -16,6 +16,14 @@
           <div class="text">Free and easy returns</div>
         </div>
       </div>
+
+      <div class="chat">
+        <img class="inner-left" :src="$assetsUrl('shop/chat.png')" />
+        <div class="inner-right">
+          <div class="question">Have questions about buying an iPhone?</div>
+          <div class="specialist">Chat with an iPhone Specialist</div>
+        </div>
+      </div>
     </div>
 
     <div class="right">
@@ -40,7 +48,7 @@
       </div>
 
       <div class="colors" v-if="specs.colors">
-        <div class="title">Choose your color.</div>
+        <div class="title">Choose your finish.</div>
         <div class="options">
           <div
             :class="['option', { selected: colorId === i }]"
@@ -54,6 +62,30 @@
         </div>
       </div>
 
+      <div class="carriers" v-if="specs.carriers">
+        <div class="title">Choose your carrier.</div>
+        <div class="note">
+          We’ll work with the carrier you choose to activate your new iPhone so
+          you can keep your number. For 5G service, some carriers may require an
+          upgrade to a 5G plan.
+        </div>
+        <div class="options">
+          <div
+            :class="['option', { selected: carrierId === i }]"
+            v-for="(carrier, i) in carriers"
+            :key="i"
+            @click="selectCarrier(i)"
+          >
+            <div class="offers">Special Offers Available</div>
+            <img class="carrier" :src="carrier.image" />
+            <div class="tradein">
+              From ${{ priceMonth }}/mo.per month or ${{ currentPrice }} before
+              trade-in
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="capacities" v-if="specs.capacities">
         <div class="title">Choose your capacity.</div>
         <div class="options">
@@ -63,11 +95,20 @@
             :key="i"
             @click="selectCapacity(i)"
           >
-            <span class="name">{{ cap }}</span>
-            <span class="unit">
-              <span v-if="cap < 10">TB</span>
-              <span v-else>GB</span>
-            </span>
+            <div class="wrapper">
+              <span class="name">{{ cap }}</span>
+              <span class="unit">
+                <span v-if="cap < 10">TB</span>
+                <span v-else>GB</span>
+              </span>
+            </div>
+
+            <div class="tradein">
+              From ${{ (prices[i] / 24).toFixed(2) }}/mo.per month or ${{
+                prices[i]
+              }}
+              before trade-in
+            </div>
           </div>
         </div>
       </div>
@@ -117,6 +158,7 @@ export default {
     productName: { type: String, default: '' },
     productImages: { type: Array, default: () => {} },
     colors: { type: Array, default: () => {} },
+    carriers: { type: Array, default: () => {} },
     mainImage: { type: String, default: '' },
     prices: { type: Array, default: () => {} },
     desc: { type: String, default: '' },
@@ -125,9 +167,11 @@ export default {
   data() {
     return {
       colorId: -1,
+      carrierId: -1,
       modelId: -1,
       capacityId: -1,
       sizeId: -1,
+      currentPrice: this.prices[0],
     };
   },
 
@@ -142,6 +186,10 @@ export default {
     currentImage() {
       if (this.colorId === -1) return this.mainImage;
       return this.productImages[this.colorId];
+    },
+
+    priceMonth() {
+      return (this.currentPrice / 24).toFixed(2);
     },
   },
 
@@ -166,9 +214,13 @@ export default {
     selectColor(id) {
       this.colorId = id;
     },
+    selectCarrier(id) {
+      this.carrierId = id;
+    },
     selectCapacity(id) {
       this.capacityId = id;
       this.$emit('setPrice', this.prices[id]);
+      this.currentPrice = this.prices[id];
     },
     selectSize(id) {
       this.sizeId = id;
@@ -204,11 +256,14 @@ export default {
     margin-right: 0.7rem;
     margin-top: 0.2rem;
     .photo {
-      @include sizeWH(auto, 4.5rem);
+      @include sizeWH(auto, 4.4rem);
     }
     .strip {
       @include flexCenter(row);
       margin-top: 0.1rem;
+      border-bottom: #dbdbdb solid 0.01rem;
+      padding-bottom: 0.2rem;
+
       .item {
         @include flexCenter(column);
         align-self: flex-start;
@@ -224,13 +279,38 @@ export default {
         width: 1rem;
       }
     }
+
+    .chat {
+      @include flexCenter(row);
+      margin-top: 0.3rem;
+
+      .inner-left {
+        @include sizeWH(0.3rem, 0.3rem);
+        margin-right: 0.15rem;
+      }
+      .inner-right {
+        @include textMixin(#000, 0.12rem, $align: left);
+        display: flex;
+        flex-flow: column wrap;
+        width: 2.2rem;
+
+        .question {
+          font-weight: bold;
+          margin-bottom: 0.05rem;
+        }
+        .specialist {
+          color: #2a77cb;
+          font-size: 0.11rem;
+        }
+      }
+    }
   }
 
   .right {
     @include flexCenter(column);
     align-self: flex-start;
     align-items: flex-start;
-    margin-left: 0.1rem;
+    margin-left: 0.3rem;
     & > .new {
       @include textMixin(#ef5601, 0.14rem);
       margin-top: 0.3rem;
@@ -255,10 +335,12 @@ export default {
 
     .models {
       text-align: left;
-      padding-bottom: 0.25rem;
+      padding-bottom: 0.2rem;
+      width: 3.3rem;
+      border-bottom: #dbdbdb solid 0.01rem;
 
       .title {
-        @include textMixin(#000, 0.16rem, bold);
+        @include textMixin(#000, 0.15rem, bold);
         margin-top: 0.2rem;
       }
 
@@ -278,7 +360,7 @@ export default {
           margin-bottom: 0.1rem;
 
           .name {
-            @include textMixin(#000, 0.15rem, bold);
+            @include textMixin(#000, 0.14rem, bold);
           }
           .desc {
             @include textMixin(#333, 0.11rem);
@@ -302,9 +384,12 @@ export default {
     .colors {
       text-align: left;
       padding-bottom: 0.25rem;
+      border-bottom: #dbdbdb solid 0.01rem;
+      margin-top: 0.1rem;
+      width: 3.3rem;
 
       .title {
-        @include textMixin(#000, 0.16rem, bold);
+        @include textMixin(#000, 0.15rem, bold);
         margin-top: 0.1rem;
       }
 
@@ -342,12 +427,75 @@ export default {
       }
     }
 
+    .carriers {
+      text-align: left;
+      padding-bottom: 0.25rem;
+      border-bottom: #dbdbdb solid 0.01rem;
+      margin-top: 0.1rem;
+      width: 3.3rem;
+
+      .title {
+        @include textMixin(#000, 0.15rem, bold);
+        margin-top: 0.1rem;
+      }
+
+      .note {
+        @include textMixin(#000, 0.11rem);
+        line-height: 0.14rem;
+        margin-top: 0.1rem;
+        margin-bottom: 0.03rem;
+      }
+
+      .options {
+        @include flexCenter(row);
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        width: 4rem;
+
+        .option {
+          @include sizeWH(1.6rem, 1rem);
+          @include flexCenter(column);
+          margin-top: 0.12rem;
+          border: #dbdbdb solid 0.01rem;
+          border-radius: 0.03rem;
+          margin-right: 0.12rem;
+
+          .offers {
+            @include textMixin(#ef5b0b, 0.09rem);
+            margin-bottom: 0.03rem;
+          }
+          .carrier {
+            @include sizeWH(auto, 0.3rem);
+          }
+          .name {
+            @include textMixin(#333, 0.11rem);
+            margin-top: 0.04rem;
+          }
+          .tradein {
+            @include textMixin(#333, 0.1rem, $align: center);
+            margin-top: 0.05rem;
+            width: 1.2rem;
+          }
+
+          &:hover {
+            border: #868585 solid 0.01rem;
+            cursor: pointer;
+          }
+          &.selected {
+            cursor: pointer;
+            border: #2770c9 solid 0.02rem;
+          }
+        }
+      }
+    }
+
     .capacities {
       text-align: left;
       padding-bottom: 0.25rem;
+      margin-top: 0.1rem;
 
       .title {
-        @include textMixin(#000, 0.16rem, bold);
+        @include textMixin(#000, 0.15rem, bold);
         margin-top: 0.1rem;
       }
 
@@ -358,20 +506,31 @@ export default {
         width: 4rem;
 
         .option {
-          @include sizeWH(1rem, 0.4rem);
-          @include flexCenter(row);
+          @include sizeWH(1.6rem, 0.8rem);
+          @include flexCenter(column);
           margin-top: 0.15rem;
           border: #dbdbdb solid 0.015rem;
-          border-radius: 0.1rem;
+          border-radius: 0.03rem;
           margin-right: 0.15rem;
           padding-bottom: 0.1rem;
 
-          .name {
-            @include textMixin(#333, 0.2rem, bold);
-            margin-top: 0.1rem;
+          .wrapper {
+            @include flexCenter(row);
+            .name {
+              @include textMixin(#333, 0.23rem, bold);
+              margin-top: 0.1rem;
+            }
+            .unit {
+              @include textMixin(#333, 0.15rem, bold);
+              margin-top: 0.15rem;
+              margin-left: 0.01rem;
+            }
           }
-          .unit {
-            @include textMixin(#333, 0.12rem);
+
+          .tradein {
+            @include textMixin(#333, 0.1rem, $align: center);
+            margin-top: 0.05rem;
+            width: 1.2rem;
           }
 
           &:hover,
@@ -386,7 +545,7 @@ export default {
     .sizes {
       @extend .capacities;
       .mm {
-        @include textMixin(#333, 0.17rem);
+        @include textMixin(#333, 0.14rem);
       }
     }
 

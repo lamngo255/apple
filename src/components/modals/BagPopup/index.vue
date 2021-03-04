@@ -110,12 +110,12 @@ export default {
 <style lang="scss" scoped>
 .bag-popup {
   @include sizeWH(2.8rem, auto);
-  @include position(absolute, $top: 0.5rem, $left: -1.2rem);
+  @include position(absolute, $top: 0.4rem, $left: -1.2rem);
   padding-bottom: 0.2rem;
   background: #fff;
   border-radius: 0.2rem;
   border: #d2d2d7 solid 0.01rem;
-  z-index: 2;
+  z-index: 4;
 
   .message {
     @include textMixin(#767679, 0.15rem);

@@ -20,6 +20,7 @@ const ipadPro = () => {
         },
       ],
       capacities: [128, 256, 512],
+      carriers: ['att', 'sprint', 'tmobile', 'verizon'],
       colors: ['spaceGray', 'silver'],
     },
   };
@@ -41,6 +42,7 @@ const ipadAir = () => {
     prices: [599, 749],
     specs: {
       capacities: [64, 256],
+      carriers: ['att', 'sprint', 'tmobile', 'verizon'],
       colors: ['spaceGray', 'silver', 'roseGold', 'green', 'skyBlue'],
     },
   };

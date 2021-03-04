@@ -1,4 +1,5 @@
 const colorLink = `${process.env.CDN}/shop/color-plates`;
+const carrierLink = `${process.env.CDN}/shop`;
 
 const colorMapping = {
   pacificBlue: {
@@ -99,6 +100,25 @@ const colorMapping = {
   },
 };
 
+const carrierMapping = {
+  att: {
+    name: 'AT&T',
+    image: `${carrierLink}/carrier-att.png`,
+  },
+  sprint: {
+    name: 'Sprint',
+    image: `${carrierLink}/carrier-sprint.png`,
+  },
+  tmobile: {
+    name: 'T-Mobile',
+    image: `${carrierLink}/carrier-tmobile.png`,
+  },
+  verizon: {
+    name: 'Verizon',
+    image: `${carrierLink}/carrier-verizon.png`,
+  },
+};
+
 const productMapping = {
   'iphone-12-pro': 'iPhone 12 Pro',
   'iphone-12': 'iPhone 12',
@@ -135,4 +155,8 @@ export const normalizeStr = (str) => {
 
 export const colorPicker = (code) => {
   return colorMapping[code];
+};
+
+export const carrierPicker = (code) => {
+  return carrierMapping[code];
 };

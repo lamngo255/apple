@@ -34,11 +34,17 @@ export default {
 
 <style lang="scss" scoped>
 .page-product-header {
+  display: unset;
+
   .strip {
     @include sizeWH(100%, 0.38rem);
     @include flexCenter(row);
     background: #fff;
     border-bottom: #dbdbdb solid 0.015rem;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0rem;
+    z-index: 2;
 
     .container {
       @include flexCenter(row);

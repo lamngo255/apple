@@ -168,15 +168,16 @@ section.row {
     transform: translate(-50%, 0);
 
     .title {
-      @include textMixin(#000, 0.47rem, bold);
+      @include textMixin(#000, 0.43rem, bold);
       font-family: 'San Francisco Regular', sans-serif;
       margin-top: 0.35rem;
     }
     .subtitle {
-      @include textMixin(#000, 0.25rem);
+      @include textMixin(#000, 0.22rem);
+      font-family: 'San Francisco Regular', sans-serif;
     }
     .desc {
-      @include textMixin(#86868b, 0.18rem);
+      @include textMixin(#86868b, 0.14rem);
       margin-top: 0.14rem;
     }
     .buttons {
@@ -187,6 +188,7 @@ section.row {
         @include position(relative, $top: 0.1rem);
         font-size: 0.17rem;
         margin-right: 0.4rem;
+        color: #2866cc;
       }
     }
   }
@@ -209,15 +211,15 @@ section.row {
     transform: translate(-50%, 0);
 
     .title {
-      @include textMixin(#fff, 0.47rem, bold);
+      @include textMixin(#fff, 0.43rem, bold);
       font-family: 'San Francisco Regular', sans-serif;
       margin-top: 0.35rem;
     }
     .subtitle {
-      @include textMixin(#fff, 0.25rem);
+      @include textMixin(#fff, 0.22rem);
     }
     .desc {
-      @include textMixin(#86868b, 0.18rem);
+      @include textMixin(#86868b, 0.14rem);
       margin-top: 0.14rem;
     }
     .buttons {
@@ -226,7 +228,7 @@ section.row {
       .btn-learn,
       .btn-buy {
         @include position(relative, $top: 0.1rem);
-        font-size: 0.17rem;
+        font-size: 0.16rem;
         margin-right: 0.4rem;
       }
     }
@@ -254,7 +256,7 @@ section.row {
       margin: 0.4rem auto 0.2rem;
     }
     .subtitle {
-      @include textMixin(#fff, 0.25rem);
+      @include textMixin(#fff, 0.22rem);
     }
     .buttons {
       @include flexCenter(row);
@@ -262,7 +264,7 @@ section.row {
       .btn-learn,
       .btn-buy {
         @include position(relative, $top: 0.1rem);
-        font-size: 0.17rem;
+        font-size: 0.16rem;
         margin-right: 0.4rem;
       }
     }
@@ -296,7 +298,7 @@ section.row {
       margin-top: 0.35rem;
     }
     .subtitle {
-      @include textMixin(#000, 0.2rem);
+      @include textMixin(#000, 0.18rem);
     }
     .buttons {
       @include flexCenter(row);
@@ -304,7 +306,7 @@ section.row {
       .btn-learn,
       .btn-buy {
         @include position(relative, $top: 0.1rem);
-        font-size: 0.19rem;
+        font-size: 0.16rem;
         margin-right: 0.4rem;
       }
     }
@@ -332,7 +334,7 @@ section.row {
       margin: 0.4rem auto 0.2rem;
     }
     .subtitle {
-      @include textMixin(#000, 0.2rem);
+      @include textMixin(#000, 0.18rem);
     }
     .buttons {
       @include flexCenter(row);
@@ -340,7 +342,7 @@ section.row {
       .btn-learn,
       .btn-buy {
         @include position(relative, $top: 0.1rem);
-        font-size: 0.19rem;
+        font-size: 0.16rem;
         margin-right: 0.4rem;
       }
     }
@@ -368,7 +370,7 @@ section.row {
       margin: 0.4rem auto 0.13rem;
     }
     .subtitle {
-      @include textMixin(#000, 0.2rem);
+      @include textMixin(#000, 0.18rem);
       width: 3.5rem;
     }
     .buttons {
@@ -377,7 +379,7 @@ section.row {
       .btn-learn,
       .btn-buy {
         @include position(relative, $top: 0.1rem);
-        font-size: 0.19rem;
+        font-size: 0.16rem;
         margin-right: 0.4rem;
       }
     }
@@ -405,19 +407,19 @@ section.row {
       margin: 0.4rem auto 0rem;
     }
     .title {
-      @include textMixin(#000, 0.45rem, bold);
+      @include textMixin(#000, 0.4rem, bold);
       font-family: 'San Francisco Regular', sans-serif;
       width: 2.5rem;
     }
     .subtitle {
-      @include textMixin(#000, 0.2rem);
+      @include textMixin(#000, 0.18rem);
     }
     .buttons {
       @include flexCenter(row);
 
       .btn-shop {
         @include position(relative, $top: 0.1rem);
-        font-size: 0.19rem;
+        font-size: 0.16rem;
       }
     }
   }
@@ -444,7 +446,7 @@ section.row {
       margin: 0.4rem auto 0.13rem;
     }
     .subtitle {
-      @include textMixin(#000, 0.2rem);
+      @include textMixin(#000, 0.18rem);
       width: 3rem;
     }
     .buttons {
@@ -452,7 +454,7 @@ section.row {
 
       .btn-learn {
         @include position(relative, $top: 0.1rem);
-        font-size: 0.19rem;
+        font-size: 0.16rem;
       }
     }
   }

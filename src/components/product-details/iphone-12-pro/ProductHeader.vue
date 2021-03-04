@@ -2,7 +2,7 @@
   <div class="product-header">
     <div class="strip">
       <div class="container">
-        <div class="left">iPhone 12 Pro</div>
+        <div class="left" @click="$router.go()">iPhone 12 Pro</div>
         <div class="right">
           <div class="overview">Overview</div>
           <button class="btn-buy" @click="$router.push('/shop/iphone-12-pro')">
@@ -29,10 +29,16 @@ export default {
 
 <style lang="scss" scoped>
 .product-header {
+  display: unset;
+
   .strip {
     @include sizeWH(100%, 0.55rem);
     @include flexCenter(row);
     background: #000;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0rem;
+    z-index: 2;
 
     .container {
       @include flexCenter(row);
@@ -42,6 +48,7 @@ export default {
       .left {
         @include textMixin(#fff, 0.19rem, bold);
         padding-top: 0.07rem;
+        cursor: pointer;
       }
       .right {
         @include textMixin(#fff, 0.13rem);

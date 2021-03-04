@@ -2,7 +2,7 @@
   <div class="product-header">
     <div class="strip">
       <div class="container">
-        <div class="left">Macbook Air</div>
+        <div class="left" @click="$router.go()">Macbook Air</div>
         <div class="right">
           <div class="overview">Overview</div>
           <button class="btn-buy" @click="$router.push('/shop/macbook-air')">
@@ -28,11 +28,17 @@ export default {
 
 <style lang="scss" scoped>
 .product-header {
+  display: unset;
+
   .strip {
     @include sizeWH(100%, 0.42rem);
     @include flexCenter(row);
     background: #141414;
     border-bottom: #464646 solid 0.01rem;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0rem;
+    z-index: 2;
 
     .container {
       @include flexCenter(row);
@@ -41,6 +47,7 @@ export default {
 
       .left {
         @include textMixin(#fff, 0.19rem, bold);
+        cursor: pointer;
       }
       .right {
         @include textMixin(#fff, 0.13rem);

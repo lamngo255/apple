@@ -7,6 +7,7 @@
         v-if="product"
         v-bind="product"
         :colors="colors"
+        :carriers="carriers"
         :productId="productId"
         :productPrice="productPrice"
         :productImages="productImages"
@@ -19,7 +20,7 @@
 
 <script>
 import { mapState } from 'vuex';
-import { normalizeStr, colorPicker } from '@/mapping';
+import { normalizeStr, colorPicker, carrierPicker } from '@/mapping';
 import BaseLayout from '@/components/BaseLayout.vue';
 import PageProductInfoHeader from './PageProductInfoHeader.vue';
 import PageProductTradeIn from './PageProductTradeIn.vue';
@@ -68,6 +69,11 @@ export default {
         return this.specs.colors.map((color) => colorPicker(color));
       return [];
     },
+    carriers() {
+      if (this.specs && this.specs.carriers)
+        return this.specs.carriers.map((color) => carrierPicker(color));
+      return [];
+    },
   },
 
   methods: {
@@ -78,6 +84,7 @@ export default {
 
   mounted() {
     this.currentPrice = -1;
+    window.scrollTo(0, 0);
   },
 };
 </script>

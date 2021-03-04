@@ -25,6 +25,7 @@ const iphone12Pro = () => {
         },
       ],
       capacities: [128, 256, 512],
+      carriers: ['att', 'sprint', 'tmobile', 'verizon'],
       colors: ['pacificBlue', 'gold', 'graphite', 'silver'],
     },
   };
@@ -55,6 +56,7 @@ const iphone12 = () => {
           desc: '6.1-inch display',
         },
       ],
+      carriers: ['att', 'sprint', 'tmobile', 'verizon'],
       capacities: [128, 256, 512],
       colors: ['white', 'black', 'blue', 'green', 'red'],
     },
@@ -97,6 +99,7 @@ const iphone11 = () => {
     prices: [599, 649, 749],
     specs: {
       capacities: [64, 128, 256],
+      carriers: ['att', 'sprint', 'tmobile', 'verizon'],
       colors: ['white', 'black', 'green', 'yellow', 'purple', 'red'],
     },
   };
