@@ -140,7 +140,7 @@ export default {
       @include position(relative, $top: 0.08rem);
       @include flexCenter(column);
       align-self: flex-start;
-      margin-right: 0.17rem;
+      margin-right: 0.1rem;
       position: relative;
       text-decoration: none;
       cursor: pointer;

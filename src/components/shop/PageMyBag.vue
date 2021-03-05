@@ -104,7 +104,7 @@ export default {
 
 <style lang="scss" scoped>
 .my-bag {
-  @include sizeWH(65%, auto);
+  @include sizeWH(58%, auto);
   text-align: left;
   margin: 0 auto;
   padding-bottom: 0.3rem;
@@ -146,8 +146,9 @@ export default {
 
   .container {
     .title {
-      @include textMixin(#000, 0.38rem, bold);
-      margin-top: 0.5rem;
+      @include textMixin(#000, 0.32rem, bold);
+      font-family: 'San Francisco Regular', sans-serif;
+      margin-top: 0.35rem;
     }
     .subtitle {
       @include textMixin(#000, 0.14rem, bold);
@@ -174,7 +175,7 @@ export default {
     }
 
     .left {
-      @include sizeWH(1.1rem, 1.3rem);
+      @include sizeWH(1rem, 1.2rem);
     }
     .right {
       @include textMixin(#000, 0.22rem, bold);
