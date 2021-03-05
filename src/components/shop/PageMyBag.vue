@@ -17,6 +17,12 @@
             </button>
           </div>
         </template>
+        <template v-else>
+          <div class="free">Free delivery and free returns.</div>
+          <button class="btn-shopping" @click="$router.push('/')">
+            Continue Shopping
+          </button>
+        </template>
       </div>
 
       <div class="container" v-else>
@@ -153,7 +159,7 @@ export default {
       const { specs } = item;
       if (!specs) return '';
 
-      let itemName = item.name;
+      let itemName = this.allProducts[item.id].name;
       if (item.capacityId >= 0) {
         const cap = specs.capacities[item.capacityId];
         if (cap < 10) {
@@ -183,12 +189,30 @@ export default {
 
   .empty {
     .title {
-      @include textMixin(#000, 0.37rem, bold);
+      @include textMixin(#000, 0.3rem, bold);
       margin-top: 0.5rem;
     }
     .signin {
       @include textMixin(#1d1d20, 0.18rem);
       margin-top: 0.1rem;
+    }
+
+    .free {
+      @include textMixin(#1d1d20, 0.15rem);
+      margin-top: 0.07rem;
+    }
+
+    .btn-shopping {
+      @include textMixin(#fff, 0.14rem);
+      background: #ebebeb;
+      color: #000;
+      padding: 0.13rem 0.8rem;
+      border-radius: 0.1rem;
+      margin-top: 0.23rem;
+
+      &:hover {
+        filter: brightness(1);
+      }
     }
 
     .buttons {
@@ -250,7 +274,7 @@ export default {
   margin-top: 0.1rem;
   padding: 0 0.2rem;
   border-bottom: #dbdbdb solid 0.01rem;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.3rem;
 
   .product {
     @include flexCenter(row);
@@ -338,7 +362,7 @@ export default {
 
 .checkout {
   @include flexCenter(column);
-  margin: 0.3rem auto 0;
+  margin: 0.2rem auto 0;
 
   .row {
     @include flexCenter(row);
