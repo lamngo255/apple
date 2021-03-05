@@ -71,7 +71,9 @@ export default {
     },
 
     remaining() {
-      return this.myBag.slice(3).reduce((acc, item) => acc + item.quantity, 0);
+      return this.myBag
+        .slice(3)
+        .reduce((acc, item) => acc + parseInt(item.quantity, 10), 0);
     },
 
     bagSize() {

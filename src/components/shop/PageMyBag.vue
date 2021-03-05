@@ -40,7 +40,11 @@
         </div>
         <div class="products">
           <div class="product" v-for="(product, i) in parsedBag" :key="i">
-            <img class="left" :src="product.image" alt="" />
+            <img
+              class="left"
+              :src="product.image"
+              @click="$router.push(`${product.id}`)"
+            />
             <div class="right">
               <div class="row">
                 <div class="name">{{ product.name }}</div>
@@ -293,6 +297,7 @@ export default {
       flex-flow: column wrap;
       align-self: flex-start;
       align-items: flex-start;
+      cursor: pointer;
     }
 
     .right {
