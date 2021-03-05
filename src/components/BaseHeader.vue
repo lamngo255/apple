@@ -49,7 +49,10 @@ export default {
     ...mapState('Apple', ['myBag']),
 
     bagSize() {
-      return this.myBag.reduce((acc, item) => acc + item.quantity, 0);
+      return this.myBag.reduce(
+        (acc, item) => acc + parseInt(item.quantity, 10),
+        0,
+      );
     },
     showExtra() {
       return window.location.pathname === '/home';

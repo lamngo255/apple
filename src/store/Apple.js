@@ -1,5 +1,6 @@
 import services from '@/services';
 import utils from '@/utils';
+import Vue from 'vue';
 import { withLoading, withErrorHandling } from './hooks';
 
 const initialState = {
@@ -13,6 +14,7 @@ const initialState = {
       sizeId: -1,
       capacityId: 2,
       quantity: 2,
+      basePrice: 1600,
     },
     {
       id: 'iphone-12',
@@ -21,6 +23,7 @@ const initialState = {
       sizeId: -1,
       capacityId: 1,
       quantity: 3,
+      basePrice: 799,
     },
   ],
   product: null,
@@ -33,6 +36,7 @@ const UPDATE_PROFILE = 'UPDATE_PROFILE';
 const UPDATE_CURRENT_PRODUCT = 'UPDATE_CURRENT_PRODUCT';
 const UPDATE_ALL_PRODUCTS = 'UPDATE_ALL_PRODUCTS';
 const UPDATE_BAG_ADD = 'UPDATE_BAG_ADD';
+const UPDATE_BAG_QTY = 'UPDATE_BAG_QTY';
 const UPDATE_BAG_REMOVE = 'UPDATE_BAG_REMOVE';
 
 // common actions
@@ -62,6 +66,14 @@ const actions = {
 
   addProductToBag({ commit }, product) {
     commit(UPDATE_BAG_ADD, product);
+  },
+
+  removeProductFromBag({ commit }, product) {
+    commit(UPDATE_BAG_REMOVE, product);
+  },
+
+  updateBagQty({ commit }, product) {
+    commit(UPDATE_BAG_QTY, product);
   },
 
   openPopup({ commit }, openedPopup) {
@@ -112,6 +124,32 @@ const mutations = {
 
     if (!exist) {
       state.myBag.push({ ...product, quantity: 1 });
+    }
+  },
+  [UPDATE_BAG_QTY](state, product) {
+    let exist = -1;
+    state.myBag.forEach((item, i) => {
+      if (compareProducts(item, product)) {
+        exist = i;
+      }
+    });
+
+    if (exist >= 0) {
+      Vue.set(state.myBag, exist, product);
+    } else {
+      state.myBag.push({ ...product, quantity: 1 });
+    }
+  },
+  [UPDATE_BAG_REMOVE](state, product) {
+    let exist = -1;
+    state.myBag.forEach((item, i) => {
+      if (compareProducts(item, product)) {
+        exist = i;
+      }
+    });
+
+    if (exist >= 0) {
+      Vue.delete(state.myBag, exist);
     }
   },
   [SET_ERROR](state, error) {

@@ -28,6 +28,7 @@ export default {
 .base-layout {
   @include flexCenter(column);
   @include sizeWH(100%, 100vh);
+  overflow-x: hidden;
   justify-content: flex-start;
   position: relative;
 }

@@ -202,6 +202,7 @@ export default {
         modelId: this.modelId,
         capacityId: this.capacityId,
         sizeId: this.sizeId,
+        basePrice: this.currentPrice,
       };
       this.addProductToBag(product);
     },
