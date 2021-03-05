@@ -38,12 +38,12 @@ export default {
     .logo-music {
       @include sizeWH(0.8rem, auto);
       @include alignCenter();
-      top: 3.1rem;
+      top: 3.3rem;
     }
     .title {
-      @include textMixin(#fff, 0.55rem, bold);
+      @include textMixin(#fff, 0.4rem, bold);
       @include alignCenter();
-      top: 3.95rem;
+      top: 4.2rem;
     }
     .buttons {
       @include flexCenter(row);
@@ -51,14 +51,14 @@ export default {
       top: 4.8rem;
 
       .btn-try {
-        @include textMixin(#fff, 0.21rem);
+        @include textMixin(#fff, 0.17rem);
         background: #fa233c;
-        padding: 0.12rem 0.2rem;
+        padding: 0.1rem 0.15rem;
         border-radius: 0.3rem;
         margin-right: 0.3rem;
       }
       .btn-learn {
-        @include textMixin(#fff, 0.21rem);
+        @include textMixin(#fff, 0.17rem);
         background: none;
       }
     }

@@ -101,7 +101,7 @@ export default {
   position: relative;
 
   .container {
-    @include sizeWH(100%, 1.2rem);
+    @include sizeWH(100%, 0.9rem);
     background: #151515;
     padding-left: 0.2rem;
   }
@@ -110,23 +110,23 @@ export default {
     @include flexCenter(row);
 
     .product {
-      @include position(relative, $top: 0.1rem);
+      @include position(relative, $top: 0.08rem);
       @include flexCenter(column);
       align-self: flex-start;
-      margin-right: 0.1rem;
+      margin-right: 0.05rem;
       position: relative;
       text-decoration: none;
       cursor: pointer;
 
       .icon {
-        @include sizeWH(0.5rem, 0.5rem);
+        @include sizeWH(0.42rem, 0.42rem);
       }
       .name {
-        @include textMixin(#fff, 0.13rem);
-        width: 0.9rem;
+        @include textMixin(#fff, 0.1rem);
+        width: 0.8rem;
       }
       .new {
-        @include textMixin(#e46917, 0.11rem);
+        @include textMixin(#e46917, 0.09rem);
       }
 
       &:hover {
@@ -138,9 +138,9 @@ export default {
   }
 
   .apple-one {
-    @include sizeWH(100%, 0.5rem);
-    @include textMixin(#fff, 0.16rem);
-    padding-top: 0.15rem;
+    @include sizeWH(100%, 0.4rem);
+    @include textMixin(#fff, 0.117rem);
+    padding-top: 0.12rem;
     background: #1d1d20;
   }
 }
