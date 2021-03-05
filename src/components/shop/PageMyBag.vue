@@ -76,7 +76,18 @@
         <div class="checkout">
           <div class="row">
             <div class="text">Subtotal</div>
-            <div class="price">{{ totalPrice }}</div>
+            <div class="price">${{ totalPrice }}</div>
+          </div>
+          <div class="row">
+            <div class="text">Shipping</div>
+            <div class="price">FREE</div>
+          </div>
+          <div class="row">
+            <div class="text">Total</div>
+            <div class="price">${{ totalPrice }}.00</div>
+          </div>
+          <div class="row">
+            <button class="btn-checkout">Check out</button>
           </div>
         </div>
       </div>
@@ -216,7 +227,7 @@ export default {
       margin-top: 0.1rem;
     }
     .pay {
-      @include sizeWH(98%, 0.5rem);
+      @include sizeWH(93%, 0.5rem);
       @include flexCenter(row);
       background: #f5f5f7;
       margin-top: 0.3rem;
@@ -272,7 +283,7 @@ export default {
 
       .row {
         @include flexCenter(row);
-        width: 6.2rem;
+        width: 5.7rem;
         justify-content: space-between;
       }
 
@@ -317,6 +328,7 @@ export default {
         .btn-remove {
           @include textMixin(#2866cc, 0.14rem);
           margin-top: 0.1rem;
+          margin-right: -0.03rem;
           background: none;
         }
       }
@@ -326,13 +338,35 @@ export default {
 
 .checkout {
   @include flexCenter(column);
-  width: 60%;
-  height: 1rem;
+  margin: 0.3rem auto 0;
 
   .row {
     @include flexCenter(row);
-    width: 7rem;
+    @include textMixin(#000, 0.14rem);
+    font-family: 'San Francisco Regular', sans-serif;
+    margin-left: 0.7rem;
+    width: 5.7rem;
     justify-content: space-between;
+    margin-top: 0.03rem;
+
+    &:nth-child(2) {
+      border-bottom: #dbdbdb solid 0.01rem;
+      padding-bottom: 0.15rem;
+    }
+    &:nth-child(3) {
+      margin-top: 0.15rem;
+      @include textMixin(#000, 0.2rem, bold);
+    }
+    &:nth-child(4) {
+      justify-content: flex-end;
+      .btn-checkout {
+        @include textMixin(#fff, 0.15rem);
+        margin-top: 0.1rem;
+        background: #2d71e3;
+        padding: 0.13rem 1.1rem;
+        border-radius: 0.1rem;
+      }
+    }
   }
 }
 </style>
