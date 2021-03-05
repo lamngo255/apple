@@ -115,11 +115,11 @@ export default {
 
     parsedBag() {
       return this.bagList.map((item) => ({
+        ...item,
         name: this.genName(item),
         image: item.colorId >= 0 ? item.images[item.colorId] : item.mainImage,
         quantity: item.quantity,
         basePrice: item.basePrice,
-        ...item,
       }));
     },
 
