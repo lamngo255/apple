@@ -11,8 +11,12 @@
             <p>Buy directly from Apple with special carrier offers.</p>
           </div>
           <div class="buttons">
-            <a class="btn-learn" href="/learn">Learn more</a>
-            <a class="btn-buy" href="/shop/iphone-12">Buy</a>
+            <button class="btn-learn" @click="redirect('iphone-12')">
+              Learn more
+            </button>
+            <button class="btn-buy" @click="redirect('shop/iphone-12')">
+              Buy
+            </button>
           </div>
         </div>
       </div>
@@ -27,8 +31,12 @@
             <p>Buy directly from Apple with special carrier offers.</p>
           </div>
           <div class="buttons">
-            <a class="btn-learn" href="/iphone-12-pro">Learn more</a>
-            <a class="btn-buy" href="/shop/iphone-12-pro">Buy</a>
+            <button class="btn-learn" @click="redirect('iphone-12-pro')">
+              Learn more
+            </button>
+            <button class="btn-buy" @click="redirect('shop/iphone-12-pro')">
+              Buy
+            </button>
           </div>
         </div>
       </div>
@@ -38,8 +46,18 @@
           <div class="logo" />
           <div class="subtitle">The future of health is on your wrist.</div>
           <div class="buttons">
-            <a class="btn-learn" href="/learn">Learn more</a>
-            <a class="btn-buy" href="/buy">Buy</a>
+            <button
+              class="btn-learn"
+              @click="redirect('/shop/apple-watch-series-6')"
+            >
+              Learn more
+            </button>
+            <button
+              class="btn-buy"
+              @click="redirect('/shop/apple-watch-series-6')"
+            >
+              Buy
+            </button>
           </div>
           <img class="watch" :src="$assetsUrl('main-page/apple-watch.jpg')" />
         </div>
@@ -139,6 +157,12 @@ export default {
   components: {
     BaseLayout,
   },
+
+  methods: {
+    redirect(path) {
+      this.$router.push(path);
+    },
+  },
 };
 </script>
 
@@ -189,6 +213,7 @@ section.row {
         font-size: 0.17rem;
         margin-right: 0.4rem;
         color: #2866cc;
+        background: none;
       }
     }
   }
@@ -230,6 +255,7 @@ section.row {
         @include position(relative, $top: 0.1rem);
         font-size: 0.16rem;
         margin-right: 0.4rem;
+        background: none;
       }
     }
   }
@@ -266,6 +292,8 @@ section.row {
         @include position(relative, $top: 0.1rem);
         font-size: 0.16rem;
         margin-right: 0.4rem;
+        color: #2866cc;
+        background: none;
       }
     }
 
