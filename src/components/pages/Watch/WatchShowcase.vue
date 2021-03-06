@@ -30,7 +30,12 @@
         <div class="left">
           <div class="title">Apple Watch Series 6 Black Unity</div>
           <div class="price">From $399</div>
-          <button class="btn-buy">Buy</button>
+          <button
+            class="btn-buy"
+            @click="redirect('shop/apple-watch-series-6')"
+          >
+            Buy
+          </button>
           <img class="photo" :src="genLink('unity-black-left.jpg')" />
         </div>
         <div class="right">
@@ -58,6 +63,10 @@ export default {
   methods: {
     genLink(name) {
       return this.$assetsUrl(`pages/watch/tiles/${name}`);
+    },
+
+    redirect(path) {
+      this.$router.push(path);
     },
   },
 };
