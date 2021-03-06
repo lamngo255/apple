@@ -1,7 +1,9 @@
 <template>
   <div class="product-showcase">
     <div class="wrapper">
-      <img class="hero" :src="genLink('hero.jpg')" />
+      <div class="figure">
+        <img class="hero" :src="genLink('hero.jpg')" />
+      </div>
       <div class="title">iPhone 12 and iPhone 12 mini</div>
       <div class="subtitle">Blast past fast.</div>
       <div class="desc">
@@ -45,8 +47,12 @@ export default {
   .wrapper {
     background: #f2f2f2;
     padding-bottom: 0.7rem;
-    .hero {
-      @include sizeWH(9rem, auto);
+
+    .figure {
+      @include sizeWH(100%, 6.8rem);
+      .hero {
+        @include sizeWH(9rem, auto);
+      }
     }
 
     .title {
