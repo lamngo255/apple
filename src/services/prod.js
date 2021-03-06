@@ -22,7 +22,16 @@ export default {
   getProfile() {
     return api('get', 'profile');
   },
-  getBalances() {
-    return api('get', 'profile/bal/');
+  getAllProducts() {
+    return api('get', 'products');
+  },
+  getProduct(payload) {
+    return api('get', 'products', payload);
+  },
+  login() {
+    return api('post', 'login');
+  },
+  logout() {
+    return api('post', 'logout');
   },
 };
