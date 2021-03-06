@@ -128,13 +128,13 @@ export default {
   margin: 0 auto;
 
   .policies {
-    @include textMixin(#929296, 0.13rem, $align: left);
+    @include textMixin(#929296, 0.11rem, $align: left);
     margin: 0.2rem auto;
   }
 
   .grid {
     @include flexCenter(row);
-    @include textMixin(#515154, 0.12rem, $align: left);
+    @include textMixin(#515154, 0.11rem, $align: left);
     justify-content: space-around;
     align-items: flex-start;
 

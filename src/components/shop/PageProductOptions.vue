@@ -246,13 +246,13 @@ export default {
     background: #f5f5f7;
 
     .left .photo {
-      @include sizeWH(8rem, auto);
+      @include sizeWH(5.3rem, auto);
     }
   }
 
   &.homepodMini {
     .left .photo {
-      @include sizeWH(8rem, auto);
+      @include sizeWH(5.3rem, auto);
     }
   }
 

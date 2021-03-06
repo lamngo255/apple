@@ -302,7 +302,7 @@ export default {
     }
 
     .left {
-      @include sizeWH(1rem, 1.2rem);
+      @include sizeWH(1rem, auto);
       display: flex;
       flex-flow: column wrap;
       align-self: flex-start;

@@ -23,6 +23,7 @@
       </div>
 
       <MusicShowcase />
+      <MusicTiles />
     </div>
   </BaseLayout>
 </template>
@@ -30,6 +31,7 @@
 <script>
 import BaseLayout from '@/components/BaseLayout.vue';
 import MusicShowcase from './MusicShowcase.vue';
+import MusicTiles from './MusicTiles.vue';
 
 export default {
   name: 'Music',
@@ -37,6 +39,7 @@ export default {
   components: {
     BaseLayout,
     MusicShowcase,
+    MusicTiles,
   },
 
   data() {

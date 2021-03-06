@@ -178,7 +178,7 @@ export default {
     }
 
     .left {
-      @include sizeWH(0.5rem, 0.5rem);
+      @include sizeWH(0.5rem, auto);
     }
     .right {
       @include textMixin(#000, 0.12rem);
