@@ -38,6 +38,7 @@ const UPDATE_ALL_PRODUCTS = 'UPDATE_ALL_PRODUCTS';
 const UPDATE_BAG_ADD = 'UPDATE_BAG_ADD';
 const UPDATE_BAG_QTY = 'UPDATE_BAG_QTY';
 const UPDATE_BAG_REMOVE = 'UPDATE_BAG_REMOVE';
+const CLEAR_BAG = 'CLEAR_BAG';
 
 // common actions
 const SET_ERROR = 'SET_ERROR';
@@ -70,6 +71,10 @@ const actions = {
 
   removeProductFromBag({ commit }, product) {
     commit(UPDATE_BAG_REMOVE, product);
+  },
+
+  clearBag({ commit }) {
+    commit(CLEAR_BAG);
   },
 
   updateBagQty({ commit }, product) {
@@ -151,6 +156,9 @@ const mutations = {
     if (exist >= 0) {
       Vue.delete(state.myBag, exist);
     }
+  },
+  [CLEAR_BAG](state) {
+    state.myBag = [];
   },
   [SET_ERROR](state, error) {
     state.error = error;

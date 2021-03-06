@@ -2,6 +2,7 @@
   <MountingPortal append mountTo="body">
     <transition name="modal">
       <ModalError v-if="error" />
+      <ModalCheckout v-else-if="openedPopup === 'checkout'" />
     </transition>
   </MountingPortal>
 </template>
@@ -10,12 +11,14 @@
 import { mapState } from 'vuex';
 import { MountingPortal } from 'portal-vue';
 import ModalError from './modals/ModalError.vue';
+import ModalCheckout from './modals/ModalCheckout.vue';
 
 export default {
   name: 'ModalContainer',
 
   components: {
     ModalError,
+    ModalCheckout,
     MountingPortal,
   },
 

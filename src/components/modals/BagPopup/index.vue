@@ -1,24 +1,27 @@
 <template>
   <div class="bag-popup">
     <div class="message" v-if="bagSize === 0">Your Bag is empty!</div>
-    <div class="products" v-else>
-      <div class="product" v-for="(product, i) in parsedBag" :key="i">
-        <img class="left" :src="product.image" alt="" />
-        <div class="right">
-          <div class="name">{{ product.name }}</div>
-          <div class="quantity">x{{ product.quantity }}</div>
+    <template v-else>
+      <div class="products">
+        <div class="product" v-for="(product, i) in parsedBag" :key="i">
+          <img class="left" :src="product.image" alt="" />
+          <div class="right">
+            <div class="name">{{ product.name }}</div>
+            <div class="quantity">x{{ product.quantity }}</div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="remaining" v-if="remaining">
-      {{ remaining }} more items in your Bag
-    </div>
-    <button
-      class="btn-checkout"
-      @click="$router.push('/shop/bag').catch((err) => {})"
-    >
-      Checkout
-    </button>
+      <div class="remaining" v-if="remaining">
+        {{ remaining }} more items in your Bag
+      </div>
+      <button
+        class="btn-checkout"
+        @click="$router.push('/shop/bag').catch((err) => {})"
+      >
+        Checkout
+      </button>
+    </template>
+
     <ul class="list">
       <li class="item" @click="$router.push('/shop/bag').catch((err) => {})">
         <img :src="genIcon('bag')" />
@@ -122,7 +125,7 @@ export default {
   border: #d2d2d7 solid 0.01rem;
 
   .message {
-    @include textMixin(#767679, 0.15rem);
+    @include textMixin(#767679, 0.13rem);
     margin-top: 0.24rem;
   }
 
@@ -138,7 +141,7 @@ export default {
       margin-top: 0.1rem;
       padding-top: 0.07rem;
       width: 100%;
-      // cursor: pointer;
+      cursor: pointer;
 
       img {
         @include sizeWH(0.25rem, 0.25rem);
@@ -147,12 +150,6 @@ export default {
         @include textMixin(#2866cc, 0.12rem);
         margin-left: 0.06rem;
       }
-
-      // &:hover {
-      //   span {
-      //     filter: brightness(1.3);
-      //   }
-      // }
     }
   }
 }
@@ -160,7 +157,7 @@ export default {
 .products {
   display: flex;
   flex-flow: column wrap;
-  padding: 0 0.2rem;
+  padding: 0.1rem 0.2rem 0;
 
   .product {
     @include flexCenter(row);

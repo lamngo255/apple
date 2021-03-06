@@ -97,7 +97,7 @@
             <div class="price">${{ totalPrice }}.00</div>
           </div>
           <div class="row">
-            <button class="btn-checkout">Check out</button>
+            <button class="btn-checkout" @click="checkOut()">Check out</button>
           </div>
         </div>
       </div>
@@ -153,7 +153,12 @@ export default {
   },
 
   methods: {
-    ...mapActions('Apple', ['updateBagQty', 'removeProductFromBag']),
+    ...mapActions('Apple', [
+      'updateBagQty',
+      'removeProductFromBag',
+      'openPopup',
+      'clearBag',
+    ]),
 
     changeQuantity(product) {
       this.updateBagQty(product);
@@ -179,6 +184,11 @@ export default {
         itemName += ` ${colorName}`;
       }
       return itemName;
+    },
+
+    checkOut() {
+      this.clearBag();
+      this.openPopup('checkout');
     },
   },
 };

@@ -37,23 +37,23 @@ export default {
 }
 
 .header {
-  @include textMixin(#e4cda0, 0.38rem, bold, uppercase);
-
-  font-family: refrigerator-deluxe, sans-serif;
+  @include textMixin(#000, 0.38rem, bold);
   margin-top: 0.3rem;
+  font-family: 'San Francisco Regular', sans-serif;
 }
 
 .dialog {
-  @include sizeWH(8.31rem, 4.79rem);
+  @include sizeWH(6rem, 3.79rem);
   @include flexCenter(column);
 
-  background: #2e2e2e;
+  background: #fff;
   position: relative;
+  border-radius: 0.2rem;
 }
 
 .btn-close {
-  @include position(absolute, 0.05rem, $right: 0.05rem);
-  @include imageCDN('btn-close.png', 0.62rem, 0.62rem);
+  @include position(absolute, 0.12rem, $left: 0.12rem);
+  @include imageCDN('shop/btn-close.png', 0.4rem, 0.4rem);
 
   border: none;
   z-index: 2;
@@ -75,6 +75,14 @@ export default {
   @include flexCenter(column);
 
   padding: 0.2rem 0.16rem 0.35rem;
+
+  .btn-confirm {
+    @include textMixin(#fff, 0.2rem);
+    font-family: 'San Francisco', sans-serif;
+    background: #2d71e3;
+    border-radius: 0.1rem;
+    padding: 0.1rem 1rem;
+  }
 }
 
 .token {
