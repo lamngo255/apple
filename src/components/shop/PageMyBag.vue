@@ -207,7 +207,7 @@ export default {
       margin-top: 0.5rem;
     }
     .signin {
-      @include textMixin(#1d1d20, 0.18rem);
+      @include textMixin(#1d1d20, 0.14rem);
       margin-top: 0.1rem;
     }
 
@@ -236,9 +236,9 @@ export default {
       margin-bottom: 0.5rem;
 
       .btn-signin {
-        @include textMixin(#fff, 0.19rem);
+        @include textMixin(#fff, 0.16rem);
         background: #2d71e3;
-        padding: 0.17rem 1.2rem;
+        padding: 0.1rem 1rem;
         border-radius: 0.15rem;
         margin-right: 0.2rem;
       }

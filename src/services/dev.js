@@ -8,7 +8,7 @@ export default {
     // return null;
     return utils.camelizeKeys({
       account_id: '123456789',
-      name: 'Lâm Ngô',
+      name: 'Anh A',
     });
   },
 
@@ -25,6 +25,10 @@ export default {
       accountId: '12345678',
       name: payload.username,
     };
+  },
+
+  async logout() {
+    return {};
   },
 
   async getProduct(payload) {

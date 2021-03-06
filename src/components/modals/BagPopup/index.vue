@@ -36,17 +36,17 @@
         <img :src="genIcon('account')" />
         <span>Account</span>
       </li>
-      <li class="item" @click="$router.push('/login')">
+      <li class="item">
         <img :src="genIcon('signin')" />
-        <span v-if="!isLoggedIn">Sign in</span>
-        <span v-else>Sign out {{ profile.name }}</span>
+        <span v-if="!isLoggedIn" @click="$router.push('/login')">Sign in</span>
+        <span v-else @click="signOut">Sign out {{ profile.name }}</span>
       </li>
     </ul>
   </div>
 </template>
 
 <script>
-import { mapState, mapGetters } from 'vuex';
+import { mapState, mapGetters, mapActions } from 'vuex';
 import { colorPicker } from '@/mapping';
 
 export default {
@@ -88,6 +88,8 @@ export default {
   },
 
   methods: {
+    ...mapActions('Apple', ['logoutApple']),
+
     genName(item) {
       const { specs } = item;
       let itemName = item.name;
@@ -110,6 +112,10 @@ export default {
 
     genIcon(icon) {
       return this.$assetsUrl(`icons/${icon}.svg`);
+    },
+
+    async signOut() {
+      await this.logoutApple();
     },
   },
 };

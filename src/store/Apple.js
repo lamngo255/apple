@@ -65,6 +65,14 @@ const actions = {
     }),
   ),
 
+  logoutApple: withLoading(
+    withErrorHandling(async ({ commit }) => {
+      await services.logout();
+      commit(UPDATE_PROFILE, null);
+      commit(CLEAR_BAG);
+    }),
+  ),
+
   addProductToBag({ commit }, product) {
     commit(UPDATE_BAG_ADD, product);
   },

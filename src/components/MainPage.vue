@@ -12,10 +12,12 @@
           </div>
           <div class="buttons">
             <button class="btn-learn" @click="redirect('iphone-12')">
-              Learn more
+              <span>Learn more</span>
+              <i />
             </button>
             <button class="btn-buy" @click="redirect('shop/iphone-12')">
-              Buy
+              <span>Buy</span>
+              <i />
             </button>
           </div>
         </div>
@@ -32,10 +34,12 @@
           </div>
           <div class="buttons">
             <button class="btn-learn" @click="redirect('iphone-12-pro')">
-              Learn more
+              <span>Learn more</span>
+              <i />
             </button>
             <button class="btn-buy" @click="redirect('shop/iphone-12-pro')">
-              Buy
+              <span>Buy</span>
+              <i />
             </button>
           </div>
         </div>
@@ -50,13 +54,15 @@
               class="btn-learn"
               @click="redirect('/shop/apple-watch-series-6')"
             >
-              Learn more
+              <span>Learn more</span>
+              <i />
             </button>
             <button
               class="btn-buy"
               @click="redirect('/shop/apple-watch-series-6')"
             >
-              Buy
+              <span>Buy</span>
+              <i />
             </button>
           </div>
           <img class="watch" :src="$assetsUrl('main-page/apple-watch.jpg')" />
@@ -70,8 +76,14 @@
             <div class="title">iPad Air</div>
             <div class="subtitle">Powerful. Colorful. Wonderful.</div>
             <div class="buttons">
-              <a class="btn-learn" href="/learn">Learn more</a>
-              <a class="btn-buy" href="/buy">Buy</a>
+              <button class="btn-learn" @click="redirect('shop/ipad-air')">
+                <span>Learn more</span>
+                <i />
+              </button>
+              <button class="btn-buy" @click="redirect('shop/ipad-air')">
+                <span>Buy</span>
+                <i />
+              </button>
             </div>
           </div>
         </div>
@@ -84,8 +96,20 @@
               A new fitness experience for everyone. Powered by Apple Watch.
             </div>
             <div class="buttons">
-              <a class="btn-learn" href="/learn">Learn more</a>
-              <a class="btn-buy" href="/buy">Try it free</a>
+              <button
+                class="btn-learn"
+                @click="redirect('shop/apple-watch-nike')"
+              >
+                <span>Learn more</span>
+                <i />
+              </button>
+              <button
+                class="btn-buy"
+                @click="redirect('shop/apple-watch-nike')"
+              >
+                <span>Buy</span>
+                <i />
+              </button>
             </div>
           </div>
         </div>
@@ -100,8 +124,14 @@
               Bundle up to six Apple services. And enjoy more or less.
             </div>
             <div class="buttons">
-              <a class="btn-learn" href="/learn">Learn more</a>
-              <a class="btn-buy" href="/buy">Buy</a>
+              <a class="btn-learn" href="#">
+                <span>Learn more</span>
+                <i />
+              </a>
+              <a class="btn-buy" href="#">
+                <span>Buy</span>
+                <i />
+              </a>
             </div>
           </div>
         </div>
@@ -112,7 +142,7 @@
             <div class="logo" />
             <div class="title">For lovers of Apple</div>
             <div class="buttons">
-              <a class="btn-shop" href="/shop">Shop gifts</a>
+              <a class="btn-shop" href="#">Shop gifts</a>
             </div>
           </div>
         </div>
@@ -128,7 +158,10 @@
               Card.
             </div>
             <div class="buttons">
-              <a class="btn-learn" href="/learn">Learn more</a>
+              <a class="btn-learn" href="#">
+                <span>Learn more</span>
+                <i />
+              </a>
             </div>
           </div>
         </div>
@@ -139,7 +172,7 @@
             <div class="logo" />
             <div class="headline" />
             <div class="buttons">
-              <a class="btn-watch" href="/watch">Watch the film</a>
+              <a class="btn-watch" href="#">Watch the film</a>
             </div>
           </div>
         </div>
@@ -210,10 +243,14 @@ section.row {
       .btn-learn,
       .btn-buy {
         @include position(relative, $top: 0.1rem);
-        font-size: 0.17rem;
+        @include flexCenter(row);
+        font-size: 0.15rem;
         margin-right: 0.4rem;
         color: #2866cc;
         background: none;
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
   }
@@ -253,9 +290,11 @@ section.row {
       .btn-learn,
       .btn-buy {
         @include position(relative, $top: 0.1rem);
-        font-size: 0.16rem;
+        @include flexCenter(row);
+        font-size: 0.15rem;
         margin-right: 0.4rem;
         background: none;
+        color: #2866cc;
       }
     }
   }
@@ -290,6 +329,7 @@ section.row {
       .btn-learn,
       .btn-buy {
         @include position(relative, $top: 0.1rem);
+        @include flexCenter(row);
         font-size: 0.16rem;
         margin-right: 0.4rem;
         color: #2866cc;
@@ -334,8 +374,11 @@ section.row {
       .btn-learn,
       .btn-buy {
         @include position(relative, $top: 0.1rem);
+        @include flexCenter(row);
+        color: #2866cc;
         font-size: 0.16rem;
         margin-right: 0.4rem;
+        background: none;
       }
     }
   }
@@ -370,8 +413,11 @@ section.row {
       .btn-learn,
       .btn-buy {
         @include position(relative, $top: 0.1rem);
+        @include flexCenter(row);
+        color: #2866cc;
         font-size: 0.16rem;
         margin-right: 0.4rem;
+        background: none;
       }
     }
   }
@@ -407,8 +453,11 @@ section.row {
       .btn-learn,
       .btn-buy {
         @include position(relative, $top: 0.1rem);
+        @include flexCenter(row);
+        color: #2866cc;
         font-size: 0.16rem;
         margin-right: 0.4rem;
+        background: none;
       }
     }
   }
@@ -482,6 +531,8 @@ section.row {
 
       .btn-learn {
         @include position(relative, $top: 0.1rem);
+        @include flexCenter(row);
+        color: #2866cc;
         font-size: 0.16rem;
       }
     }
@@ -521,5 +572,11 @@ section.row {
       }
     }
   }
+}
+
+i {
+  @include imageCDN('main-page/arrow-up.png', 0.1rem, 0.1rem);
+  @include position(relative, $top: 0.01rem, $left: 0.02rem);
+  transform: rotate(90deg);
 }
 </style>

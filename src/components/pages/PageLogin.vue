@@ -75,25 +75,25 @@ export default {
     width: 65%;
 
     .title {
-      @include textMixin(#000, 0.4rem, bold);
+      @include textMixin(#000, 0.3rem, bold);
       margin-top: 0.5rem;
     }
     .desc {
-      @include textMixin(#1d1d20, 0.14rem);
+      @include textMixin(#1d1d20, 0.12rem);
       margin-top: 0.1rem;
-      width: 4rem;
+      width: 3.2rem;
     }
     .form {
       display: flex;
       flex-flow: column wrap;
-      margin-top: 0.2rem;
+      margin-top: 0.1rem;
 
       input {
-        @include sizeWH(4rem, 0.5rem);
+        @include sizeWH(3.2rem, 0.4rem);
         border: #d2d2d7 solid 0.01rem;
         border-radius: 0.1rem;
         margin-top: 0.1rem;
-        font-size: 0.17rem;
+        font-size: 0.14rem;
         padding-left: 0.15rem;
       }
     }
@@ -105,15 +105,15 @@ export default {
       margin-bottom: 0.5rem;
 
       .btn-signin {
-        @include textMixin(#fff, 0.19rem);
+        @include textMixin(#fff, 0.15rem);
         background: #2d71e3;
-        padding: 0.17rem 1.6rem;
+        padding: 0.12rem 1.3rem;
         border-radius: 0.15rem;
         margin-right: 0.2rem;
-        width: 4rem;
+        width: 3.2rem;
       }
       .register {
-        @include textMixin(#2d71e3, 0.17rem);
+        @include textMixin(#2d71e3, 0.13rem);
         margin-top: 0.1rem;
       }
     }
