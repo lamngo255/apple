@@ -12,8 +12,10 @@
       <div class="storage">{{ storage }}</div>
       <div class="battery">{{ battery }}</div>
 
-      <button class="btn-buy">Buy</button>
-      <button class="btn-learn">Learn more</button>
+      <button class="btn-buy" @click="$router.push(pathBuy)">Buy</button>
+      <button class="btn-learn" @click="$router.push(pathView)">
+        Learn more
+      </button>
     </div>
   </div>
 </template>
@@ -32,6 +34,8 @@ export default {
     storage: { type: String, required: true },
     battery: { type: String, required: true },
     big: { type: Boolean, default: false },
+    pathView: { type: String, required: true },
+    pathBuy: { type: String, required: true },
   },
 };
 </script>

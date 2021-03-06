@@ -35,6 +35,8 @@ export default {
           memory: 'Up to 16GB memory',
           storage: 'Up to 2TB storage',
           battery: 'Up to 18 hours battery life',
+          pathBuy: 'shop/apple-watch-series-6',
+          pathView: 'shop/apple-watch-series-6',
         },
         {
           image: this.$assetsUrl('pages/watch/compare/aw-se.jpg'),
@@ -45,6 +47,8 @@ export default {
           memory: 'Up to 16GB memory',
           storage: 'Up to 2TB storage',
           battery: 'Up to 20 hours battery life',
+          pathBuy: 'shop/apple-watch-se',
+          pathView: 'shop/apple-watch-se',
         },
         {
           image: this.$assetsUrl('pages/watch/compare/aw-series-3.jpg'),
@@ -55,6 +59,8 @@ export default {
           memory: 'Up to 64GB memory',
           storage: 'Up to 8TB storage',
           battery: 'Up to 11 hours battery life',
+          pathBuy: 'shop/apple-watch-series-3',
+          pathView: 'shop/apple-watch-series-3',
         },
       ],
     };
