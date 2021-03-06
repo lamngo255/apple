@@ -122,8 +122,10 @@
             :key="i"
             @click="selectSize(i)"
           >
-            <span class="name">{{ size }}</span>
-            <span class="mm">mm</span>
+            <div class="wrapper">
+              <span class="name">{{ size }}</span>
+              <span class="unit">mm</span>
+            </div>
           </div>
         </div>
       </div>
