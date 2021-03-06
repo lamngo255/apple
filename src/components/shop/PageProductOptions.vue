@@ -146,7 +146,7 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex';
+import { mapActions, mapState } from 'vuex';
 
 export default {
   name: 'PageProductOptions',
@@ -176,6 +176,8 @@ export default {
   },
 
   computed: {
+    ...mapState('Apple', ['profile']),
+
     homepod() {
       return this.productName === 'HomePod';
     },
@@ -196,6 +198,11 @@ export default {
   methods: {
     ...mapActions('Apple', ['addProductToBag']),
     addToBag() {
+      if (!this.profile) {
+        this.$router.push('/login');
+        return;
+      }
+
       const product = {
         id: this.productId,
         colorId: this.colorId,
