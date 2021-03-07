@@ -2,7 +2,9 @@
   <div class="product-showcase">
     <div class="wrapper">
       <div class="figure">
-        <img class="hero" :src="genLink('hero.jpg')" />
+        <video autoplay playsinline muted>
+          <source :src="genLink('hero.mp4')" />
+        </video>
       </div>
       <div class="title">iPhone 12 and iPhone 12 mini</div>
       <div class="subtitle">Blast past fast.</div>
@@ -49,8 +51,8 @@ export default {
     padding-bottom: 0.7rem;
 
     .figure {
-      @include sizeWH(100%, 6.8rem);
-      .hero {
+      @include sizeWH(100%, 7.4rem);
+      video {
         @include sizeWH(9rem, auto);
       }
     }
