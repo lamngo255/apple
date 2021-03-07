@@ -85,7 +85,7 @@ export default {
   },
 
   methods: {
-    ...mapActions('Apple', ['removeProductFromBag', 'openPopup', 'clearBag']),
+    ...mapActions('Apple', ['openPopup', 'clearBag']),
 
     genName(item) {
       const { specs } = item;

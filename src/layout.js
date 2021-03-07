@@ -10,5 +10,5 @@ export default () => {
     docEl.style.width = `${imax}px`;
   }
   resetRoot();
-  // window.addEventListener('resize', resetRoot);
+  window.addEventListener('resize', resetRoot);
 };
