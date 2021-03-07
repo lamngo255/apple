@@ -1,7 +1,7 @@
 <template>
   <BaseLayout>
     <div class="my-bag">
-      <PageMyBagHeader />
+      <PageMyBagHeader :totalPrice="totalPrice" />
 
       <div class="products">
         <div class="product" v-for="(product, i) in parsedBag" :key="i">

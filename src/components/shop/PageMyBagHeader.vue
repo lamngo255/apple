@@ -25,15 +25,9 @@
     </div>
 
     <div class="container">
-      <div class="title">Review your bag</div>
+      <div class="title">Your bag total is ${{ totalPrice }}.00</div>
       <div class="subtitle">Free delivery and free returns.</div>
-      <div class="pay">
-        <img class="applecard" :src="$assetsUrl('shop/logo-applecard.jpeg')" />
-        <div class="note">
-          Pay $68.16/mo.per month at 0% APR for eligible items in your order
-          with Apple Card Monthly Installments.
-        </div>
-      </div>
+      <button class="btn-checkout">Checkout</button>
     </div>
   </div>
 </template>
@@ -43,6 +37,10 @@ import { mapState, mapGetters } from 'vuex';
 
 export default {
   name: 'PageMyBagHeader',
+
+  props: {
+    totalPrice: { type: Number, default: 0 },
+  },
 
   computed: {
     ...mapState('Apple', ['myBag']),
@@ -110,6 +108,11 @@ export default {
 }
 
 .container {
+  text-align: center;
+  margin-top: 0.4rem;
+  border-bottom: #dbdbdb solid 0.01rem;
+  padding-bottom: 0.4rem;
+
   .title {
     @include textMixin(#000, 0.32rem, bold);
     font-family: 'San Francisco Regular', sans-serif;
@@ -119,20 +122,12 @@ export default {
     @include textMixin(#000, 0.14rem, bold);
     margin-top: 0.1rem;
   }
-  .pay {
-    @include sizeWH(93%, 0.5rem);
-    @include flexCenter(row);
-    background: #f5f5f7;
-    margin-top: 0.3rem;
-    border-radius: 0.08rem;
-
-    .applecard {
-      @include sizeWH(0.17rem, 0.17rem);
-    }
-    .note {
-      @include textMixin(#000, 0.12rem);
-      margin-left: 0.05rem;
-    }
+  .btn-checkout {
+    @include textMixin(#fff, 0.15rem);
+    margin-top: 0.2rem;
+    background: #2d71e3;
+    padding: 0.06rem 1rem;
+    border-radius: 0.1rem;
   }
 }
 </style>
