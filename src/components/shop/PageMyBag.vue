@@ -228,7 +228,7 @@ export default {
             border: #dbdbdb solid 0.01rem;
             border-radius: 0.07rem;
             margin-top: 0.1rem;
-            padding-left: 0.05rem;
+            padding-left: 0.1rem;
           }
           .btn-apply {
             @include textMixin(#2866cc, 0.14rem);
