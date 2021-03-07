@@ -3,63 +3,33 @@
     <div class="my-bag">
       <PageMyBagHeader :totalPrice="totalPrice" />
 
-      <div class="products">
-        <div class="product" v-for="(product, i) in parsedBag" :key="i">
-          <img
-            class="left"
-            :src="product.image"
-            @click="$router.push(`${product.id}`)"
+      <template v-if="!emptyBag">
+        <div class="products">
+          <PageMyBagItem
+            v-for="(product, i) in parsedBag"
+            :product="product"
+            :key="i"
           />
-          <div class="right">
-            <div class="row">
-              <div class="name">{{ product.name }}</div>
-              <div class="quantity">
-                <span>x</span>
-                <input
-                  type="number"
-                  min="1"
-                  v-model="product.quantity"
-                  @change="changeQuantity(product)"
-                />
-              </div>
-              <div class="price">
-                ${{ product.basePrice * product.quantity }}
-              </div>
-            </div>
+        </div>
 
-            <div class="row">
-              <div class="apr">Pay 0% APR for 12 months:</div>
-              <div class="month">
-                ${{ ((product.basePrice * product.quantity) / 12).toFixed(2) }}
-              </div>
-            </div>
-
-            <div class="row">
-              <button class="btn-remove" @click="removeProductFromBag(product)">
-                Remove
-              </button>
-            </div>
+        <div class="checkout">
+          <div class="row">
+            <div class="text">Subtotal</div>
+            <div class="price">${{ totalPrice }}</div>
+          </div>
+          <div class="row">
+            <div class="text">Shipping</div>
+            <div class="price">FREE</div>
+          </div>
+          <div class="row">
+            <div class="text">Total</div>
+            <div class="price">${{ totalPrice }}.00</div>
+          </div>
+          <div class="row">
+            <button class="btn-checkout" @click="checkOut()">Check out</button>
           </div>
         </div>
-      </div>
-
-      <div class="checkout">
-        <div class="row">
-          <div class="text">Subtotal</div>
-          <div class="price">${{ totalPrice }}</div>
-        </div>
-        <div class="row">
-          <div class="text">Shipping</div>
-          <div class="price">FREE</div>
-        </div>
-        <div class="row">
-          <div class="text">Total</div>
-          <div class="price">${{ totalPrice }}.00</div>
-        </div>
-        <div class="row">
-          <button class="btn-checkout" @click="checkOut()">Check out</button>
-        </div>
-      </div>
+      </template>
     </div>
   </BaseLayout>
 </template>
@@ -69,6 +39,7 @@ import { mapState, mapActions } from 'vuex';
 import { colorPicker } from '@/mapping';
 import BaseLayout from '@/components/BaseLayout.vue';
 import PageMyBagHeader from './PageMyBagHeader.vue';
+import PageMyBagItem from './PageMyBagItem.vue';
 
 export default {
   name: 'PageMyBag',
@@ -76,6 +47,7 @@ export default {
   components: {
     BaseLayout,
     PageMyBagHeader,
+    PageMyBagItem,
   },
 
   computed: {
@@ -113,16 +85,7 @@ export default {
   },
 
   methods: {
-    ...mapActions('Apple', [
-      'updateBagQty',
-      'removeProductFromBag',
-      'openPopup',
-      'clearBag',
-    ]),
-
-    changeQuantity(product) {
-      this.updateBagQty(product);
-    },
+    ...mapActions('Apple', ['removeProductFromBag', 'openPopup', 'clearBag']),
 
     genName(item) {
       const { specs } = item;
@@ -169,90 +132,6 @@ export default {
   padding: 0 0.2rem;
   border-bottom: #dbdbdb solid 0.01rem;
   padding-bottom: 0.3rem;
-
-  .product {
-    @include flexCenter(row);
-    justify-content: flex-start;
-    padding-top: 0.2rem;
-    padding-bottom: 0.2rem;
-    border-bottom: #d2d2d7 solid 0.01rem;
-
-    &:last-child {
-      border-bottom: none;
-    }
-
-    .left {
-      @include sizeWH(1rem, auto);
-      display: flex;
-      flex-flow: column wrap;
-      align-self: flex-start;
-      align-items: flex-start;
-      cursor: pointer;
-    }
-
-    .right {
-      display: flex;
-      flex-flow: column wrap;
-      align-self: flex-start;
-      align-items: flex-start;
-      margin-left: 0.2rem;
-      text-align: left;
-      // height: 0.9rem;
-      padding-top: 0.1rem;
-
-      .row {
-        @include flexCenter(row);
-        width: 5.7rem;
-        justify-content: space-between;
-      }
-
-      .row:first-child {
-        .name {
-          @include textMixin(#000, 0.2rem, bold);
-          padding-right: 0.3rem;
-          width: 3rem;
-        }
-
-        .quantity {
-          @include textMixin(#000, 0.2rem, bold);
-          flex-grow: 1;
-          span {
-            margin-right: -0.03rem;
-          }
-          input {
-            width: 0.32rem;
-            text-align: left;
-            border: none;
-          }
-        }
-
-        .price {
-          @include textMixin(#000, 0.2rem, bold);
-        }
-      }
-
-      .row:nth-child(2) {
-        margin-top: 0.1rem;
-        .apr {
-          @include textMixin(#000, 0.12rem);
-        }
-        .month {
-          @include textMixin(#000, 0.14rem);
-        }
-      }
-
-      .row:nth-child(3) {
-        justify-content: flex-end;
-
-        .btn-remove {
-          @include textMixin(#2866cc, 0.14rem);
-          margin-top: 0.1rem;
-          margin-right: -0.03rem;
-          background: none;
-        }
-      }
-    }
-  }
 }
 
 .checkout {

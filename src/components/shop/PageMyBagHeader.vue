@@ -24,16 +24,16 @@
       </template>
     </div>
 
-    <div class="container">
+    <div class="container" v-if="totalPrice > 0">
       <div class="title">Your bag total is ${{ totalPrice }}.00</div>
       <div class="subtitle">Free delivery and free returns.</div>
-      <button class="btn-checkout">Checkout</button>
+      <button class="btn-checkout" @click="checkOut">Check Out</button>
     </div>
   </div>
 </template>
 
 <script>
-import { mapState, mapGetters } from 'vuex';
+import { mapState, mapGetters, mapActions } from 'vuex';
 
 export default {
   name: 'PageMyBagHeader',
@@ -48,6 +48,15 @@ export default {
 
     emptyBag() {
       return this.myBag.length === 0;
+    },
+  },
+
+  methods: {
+    ...mapActions('Apple', ['clearBag', 'openPopup']),
+
+    checkOut() {
+      this.clearBag();
+      this.openPopup('checkout');
     },
   },
 };

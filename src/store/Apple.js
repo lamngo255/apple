@@ -85,8 +85,8 @@ const actions = {
     commit(CLEAR_BAG);
   },
 
-  updateBagQty({ commit }, product) {
-    commit(UPDATE_BAG_QTY, product);
+  updateBagQty({ commit }, { product, qty }) {
+    commit(UPDATE_BAG_QTY, { product, qty });
   },
 
   openPopup({ commit }, openedPopup) {
@@ -139,7 +139,7 @@ const mutations = {
       state.myBag.push({ ...product, quantity: 1 });
     }
   },
-  [UPDATE_BAG_QTY](state, product) {
+  [UPDATE_BAG_QTY](state, { product, qty }) {
     let exist = -1;
     state.myBag.forEach((item, i) => {
       if (compareProducts(item, product)) {
@@ -148,7 +148,10 @@ const mutations = {
     });
 
     if (exist >= 0) {
-      Vue.set(state.myBag, exist, product);
+      Vue.set(state.myBag, exist, {
+        ...product,
+        quantity: qty,
+      });
     } else {
       state.myBag.push({ ...product, quantity: 1 });
     }
