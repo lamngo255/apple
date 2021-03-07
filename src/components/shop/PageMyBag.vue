@@ -1,104 +1,63 @@
 <template>
   <BaseLayout>
     <div class="my-bag">
-      <div class="empty" v-if="emptyBag">
-        <div class="title">Your bag is empty.</div>
+      <PageMyBagHeader />
 
-        <template v-if="!isLoggedIn">
-          <div class="signin">
-            Sign in to see if you have any saved items. Or continue shopping.
-          </div>
-          <div class="buttons">
-            <button class="btn-signin" @click="$router.push('/login')">
-              Sign In
-            </button>
-            <button class="btn-continue" @click="$router.push('/')">
-              Continue Shopping
-            </button>
-          </div>
-        </template>
-        <template v-else>
-          <div class="free">Free delivery and free returns.</div>
-          <button class="btn-shopping" @click="$router.push('/')">
-            Continue Shopping
-          </button>
-        </template>
-      </div>
-
-      <div class="container" v-else>
-        <div class="title">Review your bag</div>
-        <div class="subtitle">Free delivery and free returns.</div>
-        <div class="pay">
+      <div class="products">
+        <div class="product" v-for="(product, i) in parsedBag" :key="i">
           <img
-            class="applecard"
-            :src="$assetsUrl('shop/logo-applecard.jpeg')"
+            class="left"
+            :src="product.image"
+            @click="$router.push(`${product.id}`)"
           />
-          <div class="note">
-            Pay $68.16/mo.per month at 0% APR for eligible items in your order
-            with Apple Card Monthly Installments.
-          </div>
-        </div>
-        <div class="products">
-          <div class="product" v-for="(product, i) in parsedBag" :key="i">
-            <img
-              class="left"
-              :src="product.image"
-              @click="$router.push(`${product.id}`)"
-            />
-            <div class="right">
-              <div class="row">
-                <div class="name">{{ product.name }}</div>
-                <div class="quantity">
-                  <span>x</span>
-                  <input
-                    type="number"
-                    min="1"
-                    v-model="product.quantity"
-                    @change="changeQuantity(product)"
-                  />
-                </div>
-                <div class="price">
-                  ${{ product.basePrice * product.quantity }}
-                </div>
+          <div class="right">
+            <div class="row">
+              <div class="name">{{ product.name }}</div>
+              <div class="quantity">
+                <span>x</span>
+                <input
+                  type="number"
+                  min="1"
+                  v-model="product.quantity"
+                  @change="changeQuantity(product)"
+                />
               </div>
+              <div class="price">
+                ${{ product.basePrice * product.quantity }}
+              </div>
+            </div>
 
-              <div class="row">
-                <div class="apr">Pay 0% APR for 12 months:</div>
-                <div class="month">
-                  ${{
-                    ((product.basePrice * product.quantity) / 12).toFixed(2)
-                  }}
-                </div>
+            <div class="row">
+              <div class="apr">Pay 0% APR for 12 months:</div>
+              <div class="month">
+                ${{ ((product.basePrice * product.quantity) / 12).toFixed(2) }}
               </div>
+            </div>
 
-              <div class="row">
-                <button
-                  class="btn-remove"
-                  @click="removeProductFromBag(product)"
-                >
-                  Remove
-                </button>
-              </div>
+            <div class="row">
+              <button class="btn-remove" @click="removeProductFromBag(product)">
+                Remove
+              </button>
             </div>
           </div>
         </div>
+      </div>
 
-        <div class="checkout">
-          <div class="row">
-            <div class="text">Subtotal</div>
-            <div class="price">${{ totalPrice }}</div>
-          </div>
-          <div class="row">
-            <div class="text">Shipping</div>
-            <div class="price">FREE</div>
-          </div>
-          <div class="row">
-            <div class="text">Total</div>
-            <div class="price">${{ totalPrice }}.00</div>
-          </div>
-          <div class="row">
-            <button class="btn-checkout" @click="checkOut()">Check out</button>
-          </div>
+      <div class="checkout">
+        <div class="row">
+          <div class="text">Subtotal</div>
+          <div class="price">${{ totalPrice }}</div>
+        </div>
+        <div class="row">
+          <div class="text">Shipping</div>
+          <div class="price">FREE</div>
+        </div>
+        <div class="row">
+          <div class="text">Total</div>
+          <div class="price">${{ totalPrice }}.00</div>
+        </div>
+        <div class="row">
+          <button class="btn-checkout" @click="checkOut()">Check out</button>
         </div>
       </div>
     </div>
@@ -106,20 +65,21 @@
 </template>
 
 <script>
-import { mapState, mapGetters, mapActions } from 'vuex';
+import { mapState, mapActions } from 'vuex';
 import { colorPicker } from '@/mapping';
 import BaseLayout from '@/components/BaseLayout.vue';
+import PageMyBagHeader from './PageMyBagHeader.vue';
 
 export default {
   name: 'PageMyBag',
 
   components: {
     BaseLayout,
+    PageMyBagHeader,
   },
 
   computed: {
     ...mapState('Apple', ['myBag', 'allProducts']),
-    ...mapGetters('Apple', ['isLoggedIn']),
 
     emptyBag() {
       return this.myBag.length === 0;
@@ -200,86 +160,6 @@ export default {
   text-align: left;
   margin: 0 auto;
   padding-bottom: 0.3rem;
-
-  .empty {
-    .title {
-      @include textMixin(#000, 0.3rem, bold);
-      margin-top: 0.5rem;
-    }
-    .signin {
-      @include textMixin(#1d1d20, 0.14rem);
-      margin-top: 0.1rem;
-    }
-
-    .free {
-      @include textMixin(#1d1d20, 0.15rem);
-      margin-top: 0.07rem;
-    }
-
-    .btn-shopping {
-      @include textMixin(#fff, 0.14rem);
-      background: #ebebeb;
-      color: #000;
-      padding: 0.13rem 0.8rem;
-      border-radius: 0.1rem;
-      margin-top: 0.23rem;
-
-      &:hover {
-        filter: brightness(1);
-      }
-    }
-
-    .buttons {
-      @include flexCenter(row);
-      justify-content: flex-start;
-      margin-top: 0.4rem;
-      margin-bottom: 0.5rem;
-
-      .btn-signin {
-        @include textMixin(#fff, 0.16rem);
-        background: #2d71e3;
-        padding: 0.1rem 1rem;
-        border-radius: 0.15rem;
-        margin-right: 0.2rem;
-      }
-      .btn-continue {
-        @extend .btn-signin;
-        background: #ebebeb;
-        color: #000;
-
-        &:hover {
-          filter: brightness(1);
-        }
-      }
-    }
-  }
-
-  .container {
-    .title {
-      @include textMixin(#000, 0.32rem, bold);
-      font-family: 'San Francisco Regular', sans-serif;
-      margin-top: 0.35rem;
-    }
-    .subtitle {
-      @include textMixin(#000, 0.14rem, bold);
-      margin-top: 0.1rem;
-    }
-    .pay {
-      @include sizeWH(93%, 0.5rem);
-      @include flexCenter(row);
-      background: #f5f5f7;
-      margin-top: 0.3rem;
-      border-radius: 0.08rem;
-
-      .applecard {
-        @include sizeWH(0.17rem, 0.17rem);
-      }
-      .note {
-        @include textMixin(#000, 0.12rem);
-        margin-left: 0.05rem;
-      }
-    }
-  }
 }
 
 .products {
