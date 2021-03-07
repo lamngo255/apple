@@ -2,7 +2,7 @@
   "name": "apple",
   "version": "1.0.0",
   "description": "Apple",
-  "author": "lamngo",
+  "author": "Apple",
   "private": true,
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack",
