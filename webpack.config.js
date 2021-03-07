@@ -7,7 +7,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
-const CopyPlugin = require("copy-webpack-plugin");
+const CopyPlugin = require('copy-webpack-plugin');
 
 const extendedConfig = require('./webpack.config.extend');
 
@@ -139,9 +139,10 @@ const config = {
     }),
     new CopyPlugin({
       patterns: [
-        { from: './_redirects', to: "./"}
-      ]
-    })
+        { from: './_redirects', to: './' },
+        { from: './favicon.png', to: './' },
+      ],
+    }),
   ],
 
   devServer: {

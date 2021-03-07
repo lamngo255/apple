@@ -15,14 +15,7 @@
       async
       src="https://www.googletagmanager.com/gtag/js?id=<%= `${htmlWebpackPlugin.options.gaId}` %>"
     ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-      gtag('config', '<%= `${htmlWebpackPlugin.options.gaId}` %>');
-    </script>
+    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
   </head>
   <body>
     <div id="app"></div>
