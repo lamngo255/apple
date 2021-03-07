@@ -32,7 +32,7 @@
             <i />
             <span>Add AppleCare+ for {{ orginalName }} for $149.00</span>
           </div>
-          <div class="note" v-if="appleCare">
+          <div class="note" v-if="product.appleCare">
             Automatically registered with your Apple hardware.
           </div>
           <div v-else>
@@ -47,13 +47,15 @@
         </div>
 
         <div class="inner-right">
-          <div v-if="appleCare">
+          <div v-if="product.appleCare">
             <div class="price">$149.00</div>
-            <button class="btn-remove" @click="appleCare = false">
+            <button class="btn-remove" @click="changeAppleCare(false)">
               Remove
             </button>
           </div>
-          <button class="btn-add" v-else @click="appleCare = true">Add</button>
+          <button class="btn-add" v-else @click="changeAppleCare(true)">
+            Add
+          </button>
         </div>
       </div>
 
@@ -118,12 +120,20 @@ export default {
   methods: {
     ...mapActions('Apple', [
       'updateBagQty',
+      'updateBagAppleCare',
       'removeProductFromBag',
       'openPopup',
     ]),
 
     changeQuantity() {
       this.updateBagQty({ product: this.product, qty: this.qty });
+    },
+
+    changeAppleCare(appleCare) {
+      this.updateBagAppleCare({
+        product: this.product,
+        appleCare,
+      });
     },
 
     confirmMessage(msg) {
@@ -134,6 +144,7 @@ export default {
 
   mounted() {
     this.qty = this.product.quantity;
+    this.appleCare = this.product.appleCare;
   },
 };
 </script>

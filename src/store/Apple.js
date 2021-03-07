@@ -15,6 +15,7 @@ const initialState = {
       capacityId: 2,
       quantity: 2,
       basePrice: 1600,
+      appleCare: true,
     },
     {
       id: 'iphone-12',
@@ -24,6 +25,7 @@ const initialState = {
       capacityId: 1,
       quantity: 3,
       basePrice: 799,
+      appleCare: false,
     },
   ],
   product: null,
@@ -37,6 +39,7 @@ const UPDATE_CURRENT_PRODUCT = 'UPDATE_CURRENT_PRODUCT';
 const UPDATE_ALL_PRODUCTS = 'UPDATE_ALL_PRODUCTS';
 const UPDATE_BAG_ADD = 'UPDATE_BAG_ADD';
 const UPDATE_BAG_QTY = 'UPDATE_BAG_QTY';
+const UPDATE_BAG_APPLE_CARE = 'UPDATE_BAG_APPLE_CARE';
 const UPDATE_BAG_REMOVE = 'UPDATE_BAG_REMOVE';
 const CLEAR_BAG = 'CLEAR_BAG';
 
@@ -87,6 +90,10 @@ const actions = {
 
   updateBagQty({ commit }, { product, qty }) {
     commit(UPDATE_BAG_QTY, { product, qty });
+  },
+
+  updateBagAppleCare({ commit }, { product, appleCare }) {
+    commit(UPDATE_BAG_APPLE_CARE, { product, appleCare });
   },
 
   openPopup({ commit }, openedPopup) {
@@ -154,6 +161,21 @@ const mutations = {
       });
     } else {
       state.myBag.push({ ...product, quantity: 1 });
+    }
+  },
+  [UPDATE_BAG_APPLE_CARE](state, { product, appleCare }) {
+    let exist = -1;
+    state.myBag.forEach((item, i) => {
+      if (compareProducts(item, product)) {
+        exist = i;
+      }
+    });
+
+    if (exist >= 0) {
+      Vue.set(state.myBag, exist, {
+        ...product,
+        appleCare,
+      });
     }
   },
   [UPDATE_BAG_REMOVE](state, product) {
