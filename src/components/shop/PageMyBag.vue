@@ -25,12 +25,12 @@
             <div class="left">
               <div class="text">
                 <span class="tax">Estimated tax for:</span>
-                <span class="zipcode" v-if="zipcode" @click="zipcode = ''">
+                <span class="zipcode" v-if="!showZip" @click="showZip = true">
                   <span>{{ zipcode }}</span>
                   <i />
                 </span>
               </div>
-              <div class="form" v-if="!zipcode">
+              <div class="form" v-if="showZip">
                 <input
                   type="text"
                   placeholder="Zip code"
@@ -41,7 +41,9 @@
                 <button class="btn-apply" @click="confirmZipcode()">
                   Apply
                 </button>
-                <button class="btn-cancel">Cancel</button>
+                <button class="btn-cancel" @click="showZip = false">
+                  Cancel
+                </button>
               </div>
             </div>
             <div class="price">$ -</div>
@@ -116,6 +118,7 @@ export default {
     return {
       code: '',
       zipcode: '123456',
+      showZip: false,
     };
   },
 
@@ -159,6 +162,7 @@ export default {
 
     confirmZipcode() {
       this.zipcode = this.code;
+      this.showZip = false;
     },
   },
 };
